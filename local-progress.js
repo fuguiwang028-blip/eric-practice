@@ -80,8 +80,9 @@ function cardCatalog(progress) {
 function localCollection(progress) {
   return {available:credits(progress),total:cardTotal(progress),cards:cardCatalog(progress)};
 }
+const CARD_WEIGHT_SCALE = 100;
 function pickLocalCard(roll) {
-  for(const card of CARDS){roll-=card.weight;if(roll<0)return card;}
+  for(const card of CARDS){roll-=Math.round(card.weight*CARD_WEIGHT_SCALE);if(roll<0)return card;}
   throw Error('卡池概率设置有误。');
 }
 function conflict(message) {
@@ -174,7 +175,7 @@ async function localAPI(path,body) {
       let id=has(progress.draws,body.requestId)?progress.draws[body.requestId]:null;
       if(!id) {
         if(!credits(progress)) throw conflict('暂无抽卡次数。');
-        id=pickLocalCard(Math.floor(Math.random()*100)).id;
+        id=pickLocalCard(Math.floor(Math.random()*100*CARD_WEIGHT_SCALE)).id;
         progress.draws={...progress.draws,[body.requestId]:id};
         progress.cards[id]=(progress.cards[id]||0)+1;
         persist(progress);
