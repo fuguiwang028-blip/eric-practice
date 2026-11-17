@@ -42,11 +42,28 @@ function validateProgress(state) {
   return state;
 }
 function scored(lesson) {return lesson.questions.filter(q=>q.kind!=='read');}
+function countCorrect(results){return results.filter(r=>r.correct===true||r.matches===true).length;}
+function restoreMissedScores(progress){
+  const courses=new Map(courseList().map(course=>[runKey('',course).slice(1),course]));
+  let changed=false;
+  for(const [key,results] of Object.entries(progress.runs)){
+    if(!results.some(r=>r.matches===true&&r.correct!==true))continue;
+    const course=courses.get(key.slice(11));
+    if(!course||results.length!==course.questions.length)continue;
+    const correct=countCorrect(results);
+    const stats=progress.lessons[course.category]||{attempts:1,best:0};
+    if(stats.best<correct){progress.lessons[course.category]={...stats,best:correct};changed=true;}
+    const award=taskKey(key.slice(0,10),course.category);
+    if(correct>=9&&!progress.awards[award]){progress.awards[award]=true;changed=true;}
+  }
+  if(changed)saveProgress(progress);
+  return progress;
+}
 function progressKey(){const profile=currentProfile();return profile?KEY+':'+profile.id:KEY;}
 function readProgress() {
   try {
     const stored=JSON.parse(localStorage.getItem(progressKey()));
-    return stored ? {...empty(),...validateProgress(stored)} : empty();
+    return stored ? restoreMissedScores({...empty(),...validateProgress(stored)}) : empty();
   } catch {return empty();}
 }
 function saveProgress(next) {
@@ -118,12 +135,12 @@ async function localAPI(path,body) {
         Object.assign(result,{correct:body.choice===q.answer,answer:q.answer});
       } else if(q.kind==='check'){
         const matches=String(body.response||'').trim().toLowerCase()===q.reference.trim().toLowerCase();
-        Object.assign(result,{matches,reference:q.reference});
+        Object.assign(result,{matches,correct:matches,reference:q.reference});
       } else if(q.kind==='read'&&!body.selfCheck) throw Error('请先完成跟读。');
       const key=taskKey(day,course.category);
       const results=[...module.results,result];
       const completed=results.length===module.task.questions.length;
-      const correctCount=results.filter(r=>r.correct).length;
+      const correctCount=countCorrect(results);
       progress.runs[runKey(day,course)]=results;
       if(completed) {
         progress.climbs[key]=true;

@@ -93,9 +93,9 @@ function review(key,id,mode){
 function task(m,view,back){
   const title=sectionHeader(E(m.task?.title||m.label)+' · 练习',state.day);
   if(m.completed||!m.task){
-    const correct=m.results.filter(r=>r.correct===true).length;
+    const correct=countCorrect(m.results);
     view.innerHTML=title+`<section class="panel"><h2>${m.completed?'本轮训练完成':'老师还没有发布今日练习'}</h2>
-      ${m.completed?`<p>本轮答对 ${correct} / ${m.results.length} 道。单轮答对至少 9 道可获一次抽卡机会。</p>`:''}
+      ${m.completed?`<p>本轮答对 ${correct} / ${scored(m.task).length} 道计分题。单轮答对至少 9 道可获一次抽卡机会。</p>`:''}
       <div class="action-row"><a class="secondary" href="${back}">返回课程复习</a>
       ${m.completed?`<button class="secondary" id="retry-practice">重新练习</button>${correct>=9?'<a class="primary" href="#collection">去抽卡</a>':''}`:''}</div></section>`;
     if(m.completed)$('retry-practice').onclick=async event=>{
@@ -168,7 +168,7 @@ function task(m,view,back){
         <strong>${reading?(scores?'讯飞朗读评分 '+scores.total+' / 100':'已回听并完成跟读'):checking?(result.matches?'✓ 与参考答案一致':'请对照参考答案'):result.correct?'✓ 答对了':'还差一点'}</strong>
         ${!reading?`<p>${checking?'参考答案':'正确答案'}：${E(checking?result.reference:question.choices[result.answer])}</p>`:''}
         ${details?`<p>${E(details)}</p>`:''}${words?`<p>建议再读：${words}</p>`:''}
-        <p>${E(result.explanation)}</p>${completed?`<strong>本轮答对 ${correctCount??m.results.filter(r=>r.correct).length} 道</strong>`:''}</div>`;
+        <p>${E(result.explanation)}</p>${completed?`<strong>本轮答对 ${correctCount??countCorrect(m.results)} 道</strong>`:''}</div>`;
       submit.hidden=true;
       const next=$('next-question');
       next.hidden=false;
