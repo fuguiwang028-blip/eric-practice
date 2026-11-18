@@ -105,6 +105,45 @@ function pickLocalCard(roll) {
 function conflict(message) {
   return Object.assign(new Error(message),{status:409});
 }
+function speechEndpoint(){
+  try{
+    const url=new URL(globalThis.ERIC_SPEECH_ENDPOINT);
+    return location.protocol==='https:'&&url.protocol==='https:'&&!url.username&&!url.password
+      ?new URL('/assess',url):null;
+  }catch{return null;}
+}
+let speechHealth;
+async function assessmentReady(){
+  const endpoint=speechEndpoint();
+  if(!endpoint||!location.hash.endsWith('/practice'))return false;
+  if(!speechHealth||Date.now()>speechHealth.expires){
+    const controller=new AbortController();
+    const timer=setTimeout(()=>controller.abort(),3000);
+    const check=fetch(new URL('/health',endpoint),{cache:'no-store',signal:controller.signal})
+      .then(async response=>response.ok&&(await response.json()).ready===true)
+      .catch(()=>false)
+      .finally(()=>clearTimeout(timer));
+    speechHealth={expires:Date.now()+30000,check};
+  }
+  return speechHealth.check;
+}
+async function assessSpeech(text,audio){
+  const endpoint=speechEndpoint();
+  if(!endpoint)throw Error('发音评测尚未配置。');
+  let response;
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),40000);
+  try{
+    response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({text,audio}),signal:controller.signal});
+  }catch{throw Error('发音评测暂不可用，请稍后重试。');}
+  finally{clearTimeout(timeout);}
+  const data=await response.json().catch(()=>null);
+  if(!response.ok)throw Error(data?.error||'评测请求失败。');
+  if(!Number.isFinite(data?.scores?.total)||data.scores.total<0||data.scores.total>100)
+    throw Error('没有收到有效的评测分数。');
+  return data.scores;
+}
 async function localAPI(path,body) {
   const [route]=path.split('?');
   const day=localDay(), progress=readProgress();
@@ -113,7 +152,7 @@ async function localAPI(path,body) {
       const completedKeys=new Set([...Object.keys(progress.climbs),...Object.keys(progress.awards).filter(k=>!k.endsWith(':words'))]);
       const user=currentProfile();
       const modules=Object.keys(MODULES).map(id=>localModule(progress,findCourse(id),day));
-      return {day,user,rank:user?[{...user,floor:completedKeys.size}]:[],speechReady:false,
+      return {day,user,rank:user?[{...user,floor:completedKeys.size}]:[],speechReady:await assessmentReady(),
         modules,vocabulary:localBook(progress,day).added};
     }
     case 'retry-practice':{
@@ -136,7 +175,11 @@ async function localAPI(path,body) {
       } else if(q.kind==='check'){
         const matches=String(body.response||'').trim().toLowerCase()===q.reference.trim().toLowerCase();
         Object.assign(result,{matches,correct:matches,reference:q.reference});
-      } else if(q.kind==='read'&&!body.selfCheck) throw Error('请先完成跟读。');
+      } else if(q.kind==='read'){
+        if(body.audio&&speechEndpoint()){
+          result.scores=await assessSpeech(q.prompt,body.audio);
+        } else if(!body.selfCheck) throw Error('请先完成跟读。');
+      }
       const key=taskKey(day,course.category);
       const results=[...module.results,result];
       const completed=results.length===module.task.questions.length;

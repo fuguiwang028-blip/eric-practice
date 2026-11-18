@@ -113,7 +113,7 @@ function task(m,view,back){
     <p class="eyebrow" style="margin-top:15px">第 ${index+1} / ${total} 题 · ${question.bonus?'王者冲刺 · ':''}${reading?'朗读题':checking?'作答后对照':'选择题'}</p>
     <div class="steps" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${index}"><i style="width:${index/total*100}%"></i></div>
     <form id="answer-form"><fieldset><legend>${E(question.prompt)}</legend>
-    ${reading?`<div id="read-box"><p class="muted">${state.speechReady?'提交后，录音将发送给讯飞获取评测结果。':'录音仅供本机回听。跟读后可以确认完成。'}</p>
+    ${reading?`<div id="read-box"><p class="muted">${state.speechReady?'提交后，录音会发送到评测服务，由讯飞生成发音反馈。':'录音仅供本机回听。跟读后可以确认完成。'}</p>
       <div class="action-row"><button class="secondary" type="button" id="listen" ${typeof speechSynthesis==='undefined'?'hidden':''}>听范读</button>
       <button type="button" class="secondary" data-record>开始录音</button><button type="button" class="secondary" data-stop disabled>停止录音</button></div>
       <p class="grade" data-record-status role="status"></p><audio class="media" controls hidden></audio></div>`:
@@ -163,9 +163,9 @@ function task(m,view,back){
       const scores=result.scores;
       const scoreLabels={accuracy:'准确度',fluency:'流畅度',integrity:'完整度'};
       const details=scores?Object.entries(scoreLabels).filter(([key])=>scores[key]!==undefined).map(([key,label])=>label+' '+scores[key]).join(' · '):'';
-      const words=scores?.words?.filter(w=>w.score<70).map(w=>E(w.text)).join('、');
+      const words=Array.isArray(scores?.words)?scores.words.filter(w=>w.score<70).map(w=>E(w.text)).join('、'):'';
       $('feedback').innerHTML=`<div class="feedback ${result.correct===false?'wrong':''}">
-        <strong>${reading?(scores?'讯飞朗读评分 '+scores.total+' / 100':'已回听并完成跟读'):checking?(result.matches?'✓ 与参考答案一致':'请对照参考答案'):result.correct?'✓ 答对了':'还差一点'}</strong>
+        <strong>${reading?(scores?'讯飞朗读评分 '+E(scores.total)+' / 100':'已回听并完成跟读'):checking?(result.matches?'✓ 与参考答案一致':'请对照参考答案'):result.correct?'✓ 答对了':'还差一点'}</strong>
         ${!reading?`<p>${checking?'参考答案':'正确答案'}：${E(checking?result.reference:question.choices[result.answer])}</p>`:''}
         ${details?`<p>${E(details)}</p>`:''}${words?`<p>建议再读：${words}</p>`:''}
         <p>${E(result.explanation)}</p>${completed?`<strong>本轮答对 ${correctCount??countCorrect(m.results)} 道</strong>`:''}</div>`;
