@@ -168,9 +168,10 @@ function task(m,view,back){
     notice();
     try{
       if(reading){
-        if(state.speechReady&&!activeRecorder.audio())throw new Error('请先完成录音。');
-        if(state.speechReady)payload.audio=await pcmFromRecording(activeRecorder.audio());
-        else payload.selfCheck=true;
+        if(state.speechReady){
+          payload.audio=activeRecorder.audio();
+          if(!payload.audio)throw new Error('请先完成录音，并确认回听有声音。');
+        }else payload.selfCheck=true;
       }else if(checking)payload.response=new FormData(screen).get('response');
       else payload.choice=Number(new FormData(screen).get('choice'));
       const {result,completed,correctCount}=await api('question',payload);
