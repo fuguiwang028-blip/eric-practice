@@ -1,5 +1,21 @@
 globalThis.ERIC_PUBLISHED_COURSES = [
   {
+    "id": "speech-test-ship",
+    "testOnly": true,
+    "category": "phonics",
+    "version": 1,
+    "title": "讯飞朗读测试 · ship",
+    "board": "点击「听范读」听 ship，然后录音朗读一次。若显示「提交评测」，读完后可以查看讯飞评分。",
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "ship",
+        "explanation": "ship 表示“船”。开头 sh 连起来读 /ʃ/。",
+        "bonus": false
+      }
+    ]
+  },
+  {
     "title": "短元音 u",
     "board": "短元音 u 读 /ʌ/。\n-ut：nut、hut、cut\n-ub：cub、tub\n-um：gum、hum\n-un：bun、run、fun",
     "category": "phonics",
