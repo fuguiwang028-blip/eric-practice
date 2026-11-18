@@ -10,52 +10,6 @@ function popup(content){
 const api = localAPI;
 function notice(message=''){$('notice').textContent=message;$('notice').hidden=!message;}
 const doneCount=()=>state.modules.filter(m=>m.climbed).length;
-function avatar(student,mine){
-  return `<span class="window ${mine?'own':''}" title="${E(student.alias)}"><span class="profile-avatar" aria-hidden="true">${E(student.avatar)}</span><span class="window-name">${E(student.alias)}${mine?' · 我':''}</span></span>`;
-}
-function tower(path){
-  const {rank,user}=state;
-  const me=rank.find(x=>x.id===user.id);
-  const top=rank[0]?.floor??0;
-  const here=me?.floor??top;
-  const groups=new Map();
-  for(const item of rank){
-    if(!groups.has(item.floor))groups.set(item.floor,[]);
-    groups.get(item.floor).push(item);
-  }
-  const ordered=new Set([0,top,here,...groups.keys()]);
-  for(const n of [...ordered])for(let d=-2;d<=2;d++)if(n+d>=0&&n+d<=top)ordered.add(n+d);
-  let previous;
-  const floors=[...ordered].sort((a,b)=>b-a).map(f=>{
-    const gap=previous!==undefined&&previous-f>1?`<div class="storey-gap">${previous-1}–${f+1} 层</div>`:'';
-    previous=f;
-    return gap+`<div class="storey ${me?.floor===f?'current':''} ${f===0?'foundation':''}" id="floor-${f}">
-      <span class="floor-sign">${f===0?'大厅':f+' F'}</span><div class="windows">
-      ${groups.has(f)?groups.get(f).map(x=>avatar(x,me?.id===x.id)).join(''):'<span class="window empty-window" aria-label="空楼层"></span>'}
-      </div></div>`;
-  }).join('');
-  $('view').innerHTML=`
-    <div class="hero"><div class="hero-copy"><p class="eyebrow">${state.day} · 个人楼层</p><h1>今天登楼了吗？</h1>
-    <p class="muted">每天完成三个模块的练习，各可登一层。</p>${user.slogan?`<p class="profile-slogan">${E(user.slogan)}</p>`:''}</div>
-    <div class="progress"><p class="eyebrow">${me?'我的楼层':'最高楼层'}</p><div class="progress-number">${here}<span>层</span></div>
-    <p>${me?`今日已登 ${doneCount()} / 3 层`:`${rank.length} 位学生`}</p></div></div>
-    <div class="tower-layout"><section class="tower-shell"><div class="tower-top"><h2>个人楼塔</h2>
-    <div><button class="plain" id="locate">${me?'回到我的楼层':'查看最高层'}</button><button class="plain" id="to-top">到顶层</button></div></div>
-    <div class="sky"><i class="cloud c1"></i><i class="cloud c2"></i><i class="cloud c3"></i><i class="bird"></i><i class="bird b2"></i>
-      <div class="scene-scroll" id="tower-scroll" tabindex="0" aria-label="按楼层查看个人进度"><div class="building"><div class="roof"></div>${floors}</div></div></div></section>
-    <section class="panel"><h2>今日路线</h2><div class="path-items daily-route">${moduleLinks()}
-    ${me?`<a class="path-item" href="#wordbook"><span>我的生词本</span><small>今日点亮 ${state.vocabulary}/5</small></a>
-    <a class="secondary" href="#collection">去抽卡</a>`:''}</div></section></div>`;
-  function locate(n,smooth){
-    const sc=$('tower-scroll'),floor=$('floor-'+n);
-    if(!sc||!floor)return;
-    const target=floor.getBoundingClientRect().top-sc.getBoundingClientRect().top+sc.scrollTop-(sc.clientHeight-floor.offsetHeight)/2;
-    sc.scrollTo({top:target,behavior:smooth&&!matchMedia('(prefers-reduced-motion: reduce)').matches?'smooth':'auto'});
-  }
-  $('locate').onclick=()=>locate(here,true);
-  $('to-top').onclick=()=>locate(top,true);
-  requestAnimationFrame(()=>locate(here,false));
-}
 function moduleLinks(active){
   return state.modules.map(m=>`<a class="path-item" href="#review/${m.key}" ${m.key===active?'aria-current="page"':''}><span>${m.label}</span><small>${m.climbed?'今日已登楼':''}</small></a>`).join('');
 }
@@ -130,7 +84,7 @@ function task(m,view,back){
     view.innerHTML=title+`<section class="panel"><h2>${m.completed?'本轮训练完成':'老师还没有发布今日练习'}</h2>
       ${m.completed?summary:''}
       <div class="action-row"><a class="secondary" href="${back}">返回课程复习</a>
-      ${m.completed?`<button class="secondary" id="retry-practice">重新练习</button>${correct>=9?'<a class="primary" href="#collection">去抽卡</a>':''}`:''}</div></section>`;
+      ${m.completed?`${m.task.testOnly?'':'<a class="primary" href="#tower">回摩天楼看施工</a>'}<button class="secondary" id="retry-practice">重新练习</button>${correct>=9?'<a class="primary" href="#collection">去抽卡</a>':''}`:''}</div></section>`;
     if(m.completed)$('retry-practice').onclick=async event=>{
       const button=event.currentTarget;button.disabled=true;
       try{await api('retry-practice',{module:m.key});await refresh();}
@@ -330,6 +284,7 @@ function render(){
   for(const a of $('menu').querySelectorAll('a')){
     if(a.hash==='#'+nav)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   }
+  const tower=cityTower;
   const pages={tower,review,collection,words:wordCanvas,wordbook,backup};
   (Object.hasOwn(pages,page)?pages[page]:tower)(key,id,mode);
 }

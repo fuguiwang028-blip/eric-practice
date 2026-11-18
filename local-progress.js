@@ -186,6 +186,7 @@ async function localAPI(path,body) {
       const correctCount=countCorrect(results);
       progress.runs[runKey(day,course)]=results;
       if(completed&&!course.testOnly) {
+        progress.city=citySettings(progress);
         progress.climbs[key]=true;
         const old=progress.lessons[course.category]||{attempts:0,best:0};
         progress.lessons[course.category]={attempts:old.attempts+1,best:Math.max(old.best,correctCount)};
