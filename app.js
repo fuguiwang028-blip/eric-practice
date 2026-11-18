@@ -112,15 +112,17 @@ function task(m,view,back){
   const index=m.results.length;
   const question=m.task.questions[index];
   if(!question){$('view').textContent='任务进度已更新，请刷新。';return;}
+  const shipSample=question.prompt.trim().toLowerCase()==='ship';
   const reading=question.kind==='read', checking=question.kind==='check', total=m.task.questions.length;
   view.innerHTML=`<div class="question-wrap">${title}<section class="panel"><details><summary>查看复习板书${m.task.hasAudio?'与音频':''}</summary>${material(m,m.task)}</details>
     <p class="eyebrow" style="margin-top:15px">第 ${index+1} / ${total} 题 · ${question.bonus?'王者冲刺 · ':''}${reading?'朗读题':checking?'作答后对照':'选择题'}</p>
     <div class="steps" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${index}"><i style="width:${index/total*100}%"></i></div>
     <form id="answer-form"><fieldset><legend>${E(question.prompt)}</legend>
     ${reading?`<div id="read-box"><p class="muted">${state.speechReady?'提交后，录音会发送到评测服务，由讯飞生成发音反馈。':'录音仅供本机回听。跟读后可以确认完成。'}</p>
-      <div class="action-row"><button class="secondary" type="button" id="listen" ${typeof speechSynthesis==='undefined'?'hidden':''}>听范读</button>
+      <div class="action-row"><button class="secondary" type="button" id="listen" ${!shipSample&&typeof speechSynthesis==='undefined'?'hidden':''}>听范读</button>
       <button type="button" class="secondary" data-record>开始录音</button><button type="button" class="secondary" data-stop disabled>停止录音</button></div>
-      <p class="grade" data-record-status role="status"></p><audio class="media" controls hidden></audio></div>`:
+      <p class="grade" data-record-status role="status"></p><audio class="media" controls hidden></audio>
+      ${shipSample?'<small>范读来源：<a href="https://commons.wikimedia.org/wiki/File:En-us-ship.ogg" target="_blank" rel="noopener">Dvortygirl / Wikimedia Commons</a></small>':''}</div>`:
       checking?'<label>你的答案<input name="response" maxlength="2000" required autocomplete="off" placeholder="输入后按回车"></label>':question.choices.map((x,i)=>`<label class="choice"><input type="radio" required name="choice" value="${i}">${E(x)}</label>`).join('')}
     </fieldset><div id="feedback" role="status"></div>
     <button id="submit-answer" class="primary" style="margin-top:12px" ${reading?(state.speechReady?'disabled':''):'hidden'}>${reading?(state.speechReady?'提交评测':'确认已跟读'):''}</button>
@@ -130,10 +132,25 @@ function task(m,view,back){
     recorder=attachRecorder(host);
     host.addEventListener('recorded',()=>$('submit-answer').disabled=false);
     host.addEventListener('recording',()=>$('submit-answer').disabled=state.speechReady);
-    $('listen').onclick=()=>{
+    const sample=shipSample?new Audio('https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a9/En-us-ship.ogg/En-us-ship.ogg.mp3'):null;
+    function browserVoice(){
+      if(typeof speechSynthesis==='undefined'){notice('没有可用的范读，请点下方音频来源播放。');return;}
       speechSynthesis.cancel();
-      const line=new SpeechSynthesisUtterance(question.prompt);line.lang='en-US';line.rate=.83;speechSynthesis.speak(line);
+      const line=new SpeechSynthesisUtterance(question.prompt);
+      line.lang='en-US';line.rate=.83;
+      const voices=speechSynthesis.getVoices();
+      line.voice=voices.find(v=>v.localService&&v.lang==='en-US')||voices.find(v=>v.lang==='en-US')||null;
+      line.onerror=event=>{
+        if(!['canceled','interrupted'].includes(event.error)&&host.isConnected)notice('英语语音播放失败，请检查浏览器的语音与音量设置。');
+      };
+      speechSynthesis.speak(line);
+    }
+    $('listen').onclick=()=>{
+      if(!sample){browserVoice();return;}
+      sample.currentTime=0;
+      sample.play().catch(()=>{if(host.isConnected)browserVoice();});
     };
+    if(sample)host.querySelector('[data-record]').addEventListener('click',()=>{sample.pause();if(typeof speechSynthesis!=='undefined')speechSynthesis.cancel();});
   }
   const screen=$('answer-form');
   if(!checking&&!reading)screen.onchange=()=>screen.requestSubmit();
