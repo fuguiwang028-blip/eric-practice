@@ -90,13 +90,24 @@ function review(key,id,mode){
     <div class="path-items">${courses.map(c=>`<div class="course-row"><a class="path-item" href="${path}/${c.id}"><span>${E(c.title)}</span><small>${c.questions.length} 题</small></a>${local?`<button class="secondary" data-edit-course="${c.id}">编辑</button>`:''}</div>`).join('')}</div></section>`;
   if(local)wireCourseEditor(category);
 }
+function pronunciationFeedback(scores,prompt){
+  if(!scores)return '';
+  const errors=(scores.phoneIssues||0)+(scores.syllableIssues||0);
+  const needsRetry=errors>0||(scores.accuracy??scores.total)<85||
+    (Array.isArray(scores.words)&&scores.words.some(word=>word.score<75));
+  const detailed=Number.isInteger(scores.phoneIssues)||Number.isInteger(scores.syllableIssues);
+  const verdict=needsRetry?'建议再读一次。':detailed?'本次未检出明显发音问题。':'本次只有整体评分，单个音是否准确还需回听确认。';
+  const hint=prompt.trim().toLowerCase()==='ship'
+    ? '<p>听中间的短元音 <strong>/ɪ/</strong>：ship /ʃɪp/。嘴巴放松、少张开，别把它读成更张口的 /æ/。</p>':'';
+  return `<p${needsRetry?' class="muted"':''}>${verdict}${errors?' 讯飞检测到音素或音节有偏差。':''}</p>${hint}`;
+}
 function task(m,view,back){
   const title=sectionHeader(E(m.task?.title||m.label)+' · 练习',state.day);
   if(m.completed||!m.task){
     const correct=countCorrect(m.results);
     const testScore=m.results[0]?.scores?.total;
     const summary=m.task?.testOnly
-      ? Number.isFinite(testScore)?`<p>讯飞朗读评分 <strong>${E(testScore)} / 100</strong></p>`:'<p>已完成跟读，本次没有评测分数。</p>'
+      ? Number.isFinite(testScore)?`<p>讯飞朗读评分 <strong>${E(testScore)} / 100</strong></p>${pronunciationFeedback(m.results[0].scores,m.task.questions[0].prompt)}`:'<p>已完成跟读，本次没有评测分数。</p>'
       : `<p>本轮答对 ${correct} / ${m.task?scored(m.task).length:0} 道计分题。单轮答对至少 9 道可获一次抽卡机会。</p>`;
     view.innerHTML=title+`<section class="panel"><h2>${m.completed?'本轮训练完成':'老师还没有发布今日练习'}</h2>
       ${m.completed?summary:''}
@@ -189,7 +200,7 @@ function task(m,view,back){
       $('feedback').innerHTML=`<div class="feedback ${result.correct===false?'wrong':''}">
         <strong>${reading?(scores?'讯飞朗读评分 '+E(scores.total)+' / 100':'已回听并完成跟读'):checking?(result.matches?'✓ 与参考答案一致':'请对照参考答案'):result.correct?'✓ 答对了':'还差一点'}</strong>
         ${!reading?`<p>${checking?'参考答案':'正确答案'}：${E(checking?result.reference:question.choices[result.answer])}</p>`:''}
-        ${details?`<p>${E(details)}</p>`:''}${words?`<p>建议再读：${words}</p>`:''}
+        ${details?`<p>${E(details)}</p>`:''}${reading?pronunciationFeedback(scores,question.prompt):''}${words?`<p>建议再读：${words}</p>`:''}
         <p>${E(result.explanation)}</p>${completed&&!m.task.testOnly?`<strong>本轮答对 ${correctCount??countCorrect(m.results)} 道</strong>`:''}</div>`;
       submit.hidden=true;
       const next=$('next-question');
