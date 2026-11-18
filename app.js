@@ -92,14 +92,32 @@ function review(key,id,mode){
 }
 function pronunciationFeedback(scores,prompt){
   if(!scores)return '';
+  const words=Array.isArray(scores.words)?scores.words:[];
+  const phones=Array.isArray(scores.phones)?scores.phones:[];
   const errors=(scores.phoneIssues||0)+(scores.syllableIssues||0);
-  const needsRetry=errors>0||(scores.accuracy??scores.total)<85||
-    (Array.isArray(scores.words)&&scores.words.some(word=>word.score<75));
-  const detailed=Number.isInteger(scores.phoneIssues)||Number.isInteger(scores.syllableIssues);
-  const verdict=needsRetry?'建议再读一次。':detailed?'本次未检出明显发音问题。':'本次只有整体评分，单个音是否准确还需回听确认。';
-  const hint=prompt.trim().toLowerCase()==='ship'
-    ? '<p>听中间的短元音 <strong>/ɪ/</strong>：ship /ʃɪp/。嘴巴放松、少张开，别把它读成更张口的 /æ/。</p>':'';
-  return `<p${needsRetry?' class="muted"':''}>${verdict}${errors?' 讯飞检测到音素或音节有偏差。':''}</p>${hint}`;
+  const statusByCode={16:['red','漏读'],32:['yellow','多读'],64:['yellow','重复'],128:['red','读成别的音或词']};
+  const singleWord=/^[A-Za-z]+(?:['-][A-Za-z]+)*$/.test(prompt.trim());
+  const wordStatus=word=>{
+    if(statusByCode[word.code])return statusByCode[word.code];
+    if((singleWord&&errors>0)||(Number.isFinite(word.score)&&word.score<85))return ['yellow','建议再读'];
+    if(singleWord&&!phones.length)return ['neutral','未收到逐音素状态'];
+    if(Number.isFinite(word.score))return ['green','读得较清楚'];
+    return ['neutral','无单词得分'];
+  };
+  const needsRetry=errors>0||(scores.accuracy??scores.total)<85||words.some(w=>['red','yellow'].includes(wordStatus(w)[0]));
+  const hasDetails=words.length||phones.length;
+  const verdict=needsRetry?'建议再读一次。':hasDetails?'以下是讯飞返回的分项结果。':'讯飞本次未返回可定位的分项，单个音是否准确还需回听确认。';
+  const chip=(text,[color,label])=>`<span class="speech-chip speech-${color}"><strong>${E(text)}</strong><small>${E(label)}</small></span>`;
+  const isShip=prompt.trim().toLowerCase()==='ship';
+  const shipSymbols={sh:'/ʃ/',ih:'/ɪ/',i:'/ɪ/',p:'/p/'};
+  const wordView=words.length?`<h4>逐词反馈</h4><div class="speech-chips">${words.map(w=>chip(w.text,wordStatus(w))).join('')}</div>`:'';
+  const phoneView=phones.length?`<h4>音素反馈</h4><div class="speech-chips">${phones.map(p=>{
+    const label=isShip&&Object.hasOwn(shipSymbols,p.symbol.toLowerCase())?shipSymbols[p.symbol.toLowerCase()]:p.symbol;
+    return chip(label,statusByCode[p.code]||['neutral','未标出漏读或替换']);
+  }).join('')}</div>`:'';
+  const hint=isShip?'<p><strong>ship /ʃɪp/</strong> 中间是短元音 /ɪ/。嘴巴放松、少张开，别读成更张口的 /æ/。</p>':'';
+  const missing=hasDetails&&!phones.length?'<p class="muted">本次未返回逐音素状态，无法定位到某一个音。</p>':'';
+  return `<p>${verdict}</p>${wordView}${phoneView}${missing}${hint}`;
 }
 function task(m,view,back){
   const title=sectionHeader(E(m.task?.title||m.label)+' · 练习',state.day);
@@ -196,11 +214,10 @@ function task(m,view,back){
       const scores=result.scores;
       const scoreLabels={accuracy:'准确度',fluency:'流畅度',integrity:'完整度'};
       const details=scores?Object.entries(scoreLabels).filter(([key])=>scores[key]!==undefined).map(([key,label])=>label+' '+scores[key]).join(' · '):'';
-      const words=Array.isArray(scores?.words)?scores.words.filter(w=>w.score<70).map(w=>E(w.text)).join('、'):'';
       $('feedback').innerHTML=`<div class="feedback ${result.correct===false?'wrong':''}">
         <strong>${reading?(scores?'讯飞朗读评分 '+E(scores.total)+' / 100':'已回听并完成跟读'):checking?(result.matches?'✓ 与参考答案一致':'请对照参考答案'):result.correct?'✓ 答对了':'还差一点'}</strong>
         ${!reading?`<p>${checking?'参考答案':'正确答案'}：${E(checking?result.reference:question.choices[result.answer])}</p>`:''}
-        ${details?`<p>${E(details)}</p>`:''}${reading?pronunciationFeedback(scores,question.prompt):''}${words?`<p>建议再读：${words}</p>`:''}
+        ${details?`<p>${E(details)}</p>`:''}${reading?pronunciationFeedback(scores,question.prompt):''}
         <p>${E(result.explanation)}</p>${completed&&!m.task.testOnly?`<strong>本轮答对 ${correctCount??countCorrect(m.results)} 道</strong>`:''}</div>`;
       submit.hidden=true;
       const next=$('next-question');
