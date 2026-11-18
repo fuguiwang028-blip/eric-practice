@@ -1,18 +1,19 @@
 const lexicalDetails=async()=>WORD_DATA[1];
 const lexicon=async()=>WORD_DATA[0];
 
+let wordRecording;
+function stopWordRecording(){
+  wordRecording?.pause();
+  wordRecording=null;
+}
 function pronounce(word){
-  if(!('speechSynthesis' in window)){notice('当前浏览器暂不支持朗读。');return;}
-  speechSynthesis.cancel();
-  const line=new SpeechSynthesisUtterance(({a:'ay',i:'I',mrs:'missus'})[word]||word);
-  line.lang='en-US';
-  const voices=speechSynthesis.getVoices();
-  line.voice=voices.find(v=>v.localService&&v.lang==='en-US')||voices.find(v=>v.localService&&v.lang.startsWith('en'))||null;
-  line.rate=.84;
-  line.onerror=event=>{
-    if(!['canceled','interrupted'].includes(event.error))notice('未能播放，请检查设备的英语语音设置。');
-  };
-  speechSynthesis.speak(line);
+  stopWordRecording();
+  if(!recordedWords.has(word))return;
+  const audio=new Audio('./word-audio/'+encodeURIComponent(word)+'.ogg');
+  wordRecording=audio;
+  audio.play().catch(()=>{
+    if(wordRecording===audio)notice('录音暂时无法播放，请再试一次。');
+  });
 }
 function rankSummary(rank){
   rank=rank||{medals:[0,0,0,0,0,0,0],stars:0,attempts:0,best:0,streak:0};
@@ -25,8 +26,8 @@ function rankSummary(rank){
 async function wordCanvas(){
   const view=$('view');
   view.innerHTML=sectionHeader('我的1000词')+`<section id="word-page" class="panel">
-    <div class="row word-top"><div><p id="word-status" class="muted">正在读取词表…</p></div>
-    <div class="action-row"><button class="secondary" id="random-words" disabled>随机补足 5 个</button><a class="primary" href="#wordbook">我的生词本</a></div></div>
+    <div class="row word-top"><div><p id="word-status" class="muted">正在读取词表…</p><small><a href="./word-audio/credits.html" target="_blank" rel="noopener">真人发音署名</a></small></div>
+    <div class="action-row"><button class="secondary" id="random-words" disabled>按词频补足 5 个</button><a class="primary" href="#wordbook">我的生词本</a></div></div>
     <div class="word-tools"><label>查找单词 <input id="find-word" type="search" autocomplete="off"></label>
     <button class="secondary" id="zoom-in" aria-label="放大">＋</button><button class="secondary" id="zoom-out" aria-label="缩小">−</button>
     <button class="secondary" id="reset-words">全览</button></div>
@@ -61,16 +62,25 @@ async function wordCanvas(){
       if(drag?.moved)return;
       selected?.classList.remove('selected');
       selected=buttons.get(word);selected.classList.add('selected');
-      popup(`<h2>${E(word)}</h2><p class="lexical-detail">${E(meta[word]?.pos||'')} ${E(meta[word]?.ipa||'')}</p><p class="word-meaning">${E(words[word])}</p><div class="action-row">
-        <button class="primary" id="light-word" ${owned.has(word)?'disabled':''}>${owned.has(word)?'已点亮':'点亮 · 加入生词本'}</button></div><p id="word-dialog-status" role="status"></p>`);
-      pronounce(word);
+      stopWordRecording();
+      const detail=meta[word]||{};
+      popup(`<section class="word-card">
+        <div class="word-card-title"><h2>${E(word)}</h2>${recordedWords.has(word)?`<button type="button" class="secondary" id="play-word" aria-label="播放 ${E(word)} 的真人发音" title="听真人发音">🔊</button>`:''}</div>
+        <p class="lexical-detail word-card-ipa">${E(detail.ipa)}</p>
+        <p class="word-meaning">${detail.pos?`<span class="word-card-pos">${E(detail.pos)}</span>`:''}${E(words[word])}</p>
+        ${recordedWords.has(word)?'':'<small class="muted">真人录音待补</small>'}
+        <button class="primary" id="light-word" ${owned.has(word)?'disabled':''}>${owned.has(word)?'已点亮':'点亮 · 加入生词本'}</button>
+        <p id="word-dialog-status" role="status"></p>
+      </section>`);
+      const replay=$('play-word');
+      if(replay)replay.onclick=()=>pronounce(word);
       $('light-word').onclick=async()=>{
         const status=$('word-dialog-status'),btn=$('light-word');
         btn.disabled=true;
         try{
           const data=await api('words',{word});
           if(page.isConnected)update(data);
-          if(status.isConnected)status.textContent='已加入生词本。复习 5 个到期词可获一次抽卡机会。';
+          if(status.isConnected)status.textContent='已加入生词本。一天成功复习 5 个到期词可建一层，并获得一次抽卡机会。';
           btn.textContent='已点亮';
         }catch(error){if(status.isConnected)status.textContent=error.message;btn.disabled=false;}
       };
@@ -162,7 +172,7 @@ async function wordbook(){
     const variant=Math.floor(Math.random()*4);
     function home(){
       host.innerHTML=`<div class="row"><h2>今日待复习 ${data.due} 个</h2><a class="secondary" href="#words">去点亮单词</a></div>
-          <p>已点亮 ${data.words.length} 个 · 今日新增 ${data.added}/5 · 今日复习 ${data.reviewed}/5</p>
+          <p>已点亮 ${data.words.length} 个 · 今日新增 ${data.added}/5 · 今日复习 ${Math.min(data.reviewed,5)}/5 · ${data.climbed?'今日已登楼':'成功复习 5 词可建一层'}</p>
           <h3>艾宾浩斯复习计划</h3><div class="curve"><svg viewBox="0 0 540 105" role="img" aria-label="记忆随时间减弱，复习后回升示意"><path d="M5 20 Q20 70 74 76 L80 20 Q110 63 166 72 L172 20 Q215 53 260 67 L266 20 Q305 48 350 60 L356 20 Q404 46 440 54 L446 20 Q485 33 535 49" fill="none" stroke="currentColor" stroke-width="3"/></svg></div>
           <p class="muted">答对后逐步延长复习间隔（${data.intervals.join('、')} 天）。答错或选不认识的词会留在今天的复习列表。</p>
           <button class="primary" id="start-review" ${queue.length?'':'disabled'}>开始复习（本组 ${queue.length} 词）</button>
@@ -171,10 +181,12 @@ async function wordbook(){
     }
     function question(){
       if(index>=queue.length){
-        host.innerHTML=`<h2>本组复习完成</h2><p>已复习 ${queue.length} 词，答对或认识 ${correct} 词。</p><button class="primary" id="review-back">返回生词本</button>`;
+        host.innerHTML=`<h2>本组复习完成</h2><p>已复习 ${queue.length} 词，答对或认识 ${correct} 词。</p><div class="action-row"><button class="primary" id="review-back">返回生词本</button><a class="secondary" href="#tower">回摩天楼</a></div>`;
         $('review-back').onclick=wordbook;return;
       }
-      const row=queue[index],word=row.word, meaning=words[word],type=(index+variant)%4;
+      stopWordRecording();
+      const row=queue[index],word=row.word, meaning=words[word],plannedType=(index+variant)%4;
+      const type=plannedType<2&&!recordedWords.has(word)?plannedType+2:plannedType;
       let options=[];
       if(type<2){
         const available=shuffled(Object.keys(words).filter(w=>w!==word&&words[w]!==meaning));
@@ -199,7 +211,7 @@ async function wordbook(){
           const outcome=await api('words-review',{word,stage:row.stage,known});
           if(!form.isConnected)return;
           if(known)correct++;
-          $('word-feedback').innerHTML=`<p class="feedback ${known?'':'wrong'}"><strong>${known?'✓ 已记住':'稍后再复习'}</strong><br>${E(word)} · ${E(meaning)}<br>下次复习 ${E(outcome.due)}</p><button class="primary" id="word-next">继续</button>`;
+          $('word-feedback').innerHTML=`<p class="feedback ${known?'':'wrong'}"><strong>${known?'✓ 已记住':'稍后再复习'}</strong><br>${E(word)} · ${E(meaning)}<br>下次复习 ${E(outcome.due)}${outcome.newFloor?'<br>今日生词本已打卡，可回摩天楼看施工。':''}</p><button class="primary" id="word-next">继续</button>`;
           $('word-next').onclick=()=>{index++;question();};
           $('word-next').focus();
         }catch(error){if(form.isConnected){notice(error.message);controls.forEach(el=>el.disabled=false);}}

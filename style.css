@@ -233,3 +233,11 @@ button.city-lot.moving{outline:3px solid #f9d769;z-index:1}
 .city-digits b{min-width:18px;text-align:center;padding-inline:2px;font:1000 1.1rem/1.4 ui-monospace,monospace;color:#fffdeb;text-shadow:1px 2px #191713,-1px -1px #191713;background:linear-gradient(#9d988d 47%,#584e42 48% 53%,#82776a 54%);border:1px solid #222}
 @media(max-width:780px){.city-stage{min-height:615px}}
 @media(prefers-reduced-motion:reduce){.city-aircraft span{animation:none}}
+
+.word-card{clear:both;display:grid;justify-items:center;gap:12px;text-align:center;padding:0 4px 8px}
+.word-card-title{display:flex;align-items:center;justify-content:center;position:relative;max-width:100%;padding-inline:50px}
+.word-card-title h2{margin:0;overflow-wrap:anywhere}
+.word-card-title button{position:absolute;right:0;padding:5px 9px}
+.word-card .word-card-ipa,.word-card .word-meaning,.word-card #word-dialog-status{margin:0}
+.word-card-pos{display:inline-block;margin-inline-end:.65em;font-size:.46em;color:var(--muted);vertical-align:middle}
+.word-card #word-dialog-status:empty{display:none}

@@ -33,7 +33,7 @@ function validateProgress(state) {
   }
   for (const [key,value] of Object.entries(state.climbs||{})) {
     const [day,id,...rest]=key.split(':');
-    if(rest.length||!datePattern.test(day)||!has(LESSONS,id)||value!==true) throw Error('楼层记录格式有误。');
+    if(rest.length||!datePattern.test(day)||!(id==='words'||has(LESSONS,id))||value!==true) throw Error('楼层记录格式有误。');
   }
   for (const [request,card] of Object.entries(state.draws||{})) {
     if(!request||request.length>100||!CARDS.some(c=>c.id===card)||!state.cards[card]) throw Error('抽卡记录格式有误。');
@@ -86,7 +86,8 @@ function localModule(progress,course,day) {
 function localBook(progress,day){
   const words=Object.entries(progress.words).map(([word,info])=>({word,...info}));
   return {words,day,intervals,due:words.filter(w=>w.due<=day).length,
-    added:words.filter(w=>w.added===day).length,reviewed:words.filter(w=>w.reviewed===day).length};
+    added:words.filter(w=>w.added===day).length,reviewed:words.filter(w=>w.reviewed===day).length,
+    climbed:!!progress.climbs[taskKey(day,'words')]};
 }
 function cardCatalog(progress) {
   return CARDS.map(card=>{
@@ -149,11 +150,11 @@ async function localAPI(path,body) {
   const day=localDay(), progress=readProgress();
   switch(route) {
     case 'state':{
-      const completedKeys=new Set([...Object.keys(progress.climbs),...Object.keys(progress.awards).filter(k=>!k.endsWith(':words'))]);
+      const book=localBook(progress,day);
       const user=currentProfile();
       const modules=Object.keys(MODULES).map(id=>localModule(progress,findCourse(id),day));
-      return {day,user,rank:user?[{...user,floor:completedKeys.size}]:[],speechReady:await assessmentReady(),
-        modules,vocabulary:localBook(progress,day).added};
+      return {day,user,rank:user?[{...user,floor:cityFloorCount(progress)}]:[],speechReady:await assessmentReady(),
+        modules,vocabulary:book.added,wordReview:{reviewed:book.reviewed,climbed:book.climbed}};
     }
     case 'retry-practice':{
       const course=findCourse(body.module);
@@ -200,12 +201,8 @@ async function localAPI(path,body) {
       const [dictionary]=WORD_DATA;
       let selected=[body.word];
       if(body.random) {
-        const available=Object.keys(dictionary).filter(w=>!has(progress.words,w));
-        const limit=Math.min(available.length,Math.max(0,5-localBook(progress,day).added));
-        for(let i=0;i<limit;i++){
-          const j=i+Math.floor(Math.random()*(available.length-i));
-          [available[i],available[j]]=[available[j],available[i]];
-        }
+        const available=WORD_FREQUENCY.filter(word=>!has(progress.words,word));
+        const limit=Math.max(0,5-localBook(progress,day).added);
         selected=available.slice(0,limit);
       }
       for(const word of selected){
@@ -219,16 +216,25 @@ async function localAPI(path,body) {
       const {word,stage,known}=body;
       const entry=progress.words[word];
       if(!has(progress.words,word)||entry.stage!==stage||entry.due>day) throw conflict('该词的复习进度已变化。');
+      let newFloor=false;
       if(known){
         const due=new Date(day+'T00:00:00Z');
         due.setUTCDate(due.getUTCDate()+intervals[entry.stage]);
         entry.due=due.toISOString().slice(0,10);
         entry.stage=Math.min(entry.stage+1,intervals.length-1);
         entry.reviewed=day;
-        if(localBook(progress,day).reviewed>=5) progress.awards[taskKey(day,'words')]=true;
+        if(localBook(progress,day).reviewed>=5){
+          const key=taskKey(day,'words');
+          progress.awards[key]=true;
+          if(!progress.climbs[key]){
+            progress.city=citySettings(progress);
+            progress.climbs[key]=true;
+            newFloor=true;
+          }
+        }
       }
       persist(progress);
-      return {due:entry.due};
+      return {due:entry.due,newFloor};
     }
     case 'collection':return localCollection(progress);
     case 'draw':{

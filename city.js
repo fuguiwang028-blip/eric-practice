@@ -117,9 +117,9 @@ function cityTower(){
           <p class="muted city-map-help">拖动楼栋换位置，也可以先点楼栋，再点目标格。</p><div id="city-map-pager" class="city-map-pager"></div><h3>下一栋楼的风格</h3><p class="muted" id="city-style-note"></p>
           <div id="city-styles" class="city-styles"></div>
         </section>
-        <section class="panel"><h2>今日路线</h2><p class="muted">已打卡 ${doneCount()} / 3 · 每完成一个模块，建一层</p>
+        <section class="panel"><h2>今日路线</h2><p class="muted">已打卡 ${doneCount()+Number(state.wordReview.climbed)} / 4 · 每项打卡建一层</p>
           <div class="path-items daily-route">${moduleLinks()}
-            <a class="path-item" href="#wordbook"><span>我的生词本</span><small>今日点亮 ${state.vocabulary}/5</small></a>
+            <a class="path-item" href="#wordbook"><span>我的生词本</span><small>${state.wordReview.climbed?'今日已登楼':'今日复习 '+state.wordReview.reviewed+'/5'}</small></a>
             <a class="secondary" href="#collection">去抽卡</a>
           </div>
         </section>

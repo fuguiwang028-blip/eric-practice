@@ -2,7 +2,7 @@ const $=id=>document.getElementById(id);
 const E=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 let state, recorder;
 $('popup-close').onclick=()=>$('popup').close();
-$('popup').addEventListener('close',()=>{$('popup-content').replaceChildren();});
+$('popup').addEventListener('close',()=>{if($('popup-content').querySelector('.word-card'))stopWordRecording();$('popup-content').replaceChildren();});
 function popup(content){
   $('popup-content').innerHTML=content;
   if(!$('popup').open)$('popup').showModal();
@@ -268,6 +268,7 @@ function backup() {
   $('restore').onclick=()=>{if(pending && saveProgress(pending)){backup();notify('进度已恢复。');}};
 }
 function cleanupRecorder(){
+  stopWordRecording();
   recorder?.dispose();
   recorder=null;
   if(typeof speechSynthesis!=='undefined')speechSynthesis.cancel();
