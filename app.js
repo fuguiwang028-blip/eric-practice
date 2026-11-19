@@ -133,7 +133,6 @@ function pronunciationFeedback(scores,prompt){
   const wordStatus=word=>{
     if(statusByCode[word.code])return statusByCode[word.code];
     if((singleWord&&errors>0)||(Number.isFinite(word.score)&&word.score<85))return ['yellow','建议再读'];
-    if(singleWord&&!phones.length)return ['neutral','未收到逐音素状态'];
     if(Number.isFinite(word.score))return ['green','读得较清楚'];
     return ['neutral','无单词得分'];
   };
@@ -142,14 +141,7 @@ function pronunciationFeedback(scores,prompt){
   const verdict=needsRetry?'建议再读一次。':hasDetails?'以下是讯飞返回的分项结果。':'讯飞本次未返回可定位的分项，单个音是否准确还需回听确认。';
   const chip=(text,[color,label])=>`<span class="speech-chip speech-${color}"><strong>${E(text)}</strong><small>${E(label)}</small></span>`;
   const isShip=prompt.trim().toLowerCase()==='ship';
-  const phoneSymbols={aa:'ɑː',ae:'æ',ah:'ʌ',ao:'ɔː',ar:'eə',aw:'aʊ',ax:'ə',ay:'aɪ',eh:'e',er:'ɜː',ey:'eɪ',ih:'ɪ',ir:'ɪə',iy:'iː',oo:'ɒ',ow:'əʊ',oy:'ɔɪ',uh:'ʊ',uw:'uː',ur:'ʊə',hh:'h',jh:'dʒ',ng:'ŋ',sh:'ʃ',th:'θ',dh:'ð',y:'j',zh:'ʒ',ch:'tʃ',b:'b',d:'d',f:'f',g:'g',k:'k',l:'l',m:'m',n:'n',p:'p',r:'r',s:'s',t:'t',v:'v',w:'w',z:'z'};
-  const phoneStatus=phone=>phone.code===0?['neutral','已对齐 · 准确度未知']:statusByCode[phone.code]||['neutral','? 未返回状态'];
   const wordView=words.length?`<h4>逐词反馈</h4><div class="speech-chips">${words.map(w=>chip(w.text,wordStatus(w))).join('')}</div>`:'';
-  const phoneView=phones.length?`<h4>音素对齐（不是准确度评分）</h4><div class="speech-chips">${phones.map(p=>{
-    const symbol=String(p.symbol||'');
-    const ipa=phoneSymbols[symbol.toLowerCase()];
-    return chip(ipa?`/${ipa}/`:symbol,phoneStatus(p));
-  }).join('')}</div><p class="muted">灰色：准确度未知 · 黄色：多读或重复 · 红色：漏读或替换。<br>讯飞可能将错误发音对齐到目标音素；这些符号不是你实际读出的音，也不能据此判定发音正确。</p>`:'';
   const syllables=Array.isArray(scores.syllables)?scores.syllables:[];
   const syllableView=syllables.length?`<h4>音节评分</h4><div class="speech-chips">${syllables.map(s=>{
     const hasScore=Number.isFinite(s.score);
@@ -158,8 +150,7 @@ function pronunciationFeedback(scores,prompt){
   }).join('')}</div><p class="muted">音节分数来自讯飞，不是每个音素的独立分数。</p>`:'';
   const unlocated=phones.length&&!phones.some(p=>p.code!==0)&&(scores.accuracy??scores.total)<90?'<p><strong>本次发音尚未达标，但引擎没有定位到具体错音。请回听并对照范读。</strong></p>':'';
   const hint=isShip?'<p><strong>ship /ʃɪp/</strong> 中间是短元音 /ɪ/。嘴巴放松、少张开，别读成更张口的 /æ/。</p>':'';
-  const missing=hasDetails&&!phones.length?'<p class="muted">本次未返回逐音素状态，无法定位到某一个音。</p>':'';
-  return `<p>${verdict}</p>${wordView}${syllableView}${unlocated}${phoneView}${missing}${hint}`;
+  return `<p>${verdict}</p>${wordView}${syllableView}${unlocated}${hint}`;
 }
 function task(m,view,back){
   const title=sectionHeader(E(m.task?.title||m.label)+' · 练习',state.day);
