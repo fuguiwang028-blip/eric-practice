@@ -19,29 +19,108 @@ function sectionHeader(title,label=''){
 function material(m,model){
   if(!model)return '<p class="muted">老师还没有发布这个模块。</p>';
   const src=model.audioCourse?'/api/course-audio?id='+encodeURIComponent(model.audioCourse):'/api/module-audio?'+new URLSearchParams({module:m.key,day:model.date});
+  const boards=(model.boards||[]).filter(validBoard);
   return `<h3>${E(model.title)}</h3>${model.board?`<h4>复习板书</h4><div class="board">${E(model.board)}</div>`:''}
-  ${(model.boards||[]).map(image=>`<img class="lesson-board" src="${E(image)}" alt="复习板书" loading="lazy">`).join('')}
+  ${boards.length?`<section class="review-slides" aria-label="复习图片">
+    <div class="review-slide-stage" tabindex="0" aria-label="向左或向右滑动，也可按左右方向键"><img alt="" decoding="async"><p class="muted" data-slide-error hidden></p></div>
+    <div class="review-slide-controls"><button class="secondary" type="button" data-slide-prev>上一页</button><span data-slide-count aria-live="polite"></span><button class="secondary" type="button" data-slide-next>下一页</button></div></section>`:''}
   ${model.hasAudio?`<h4>音频</h4><audio class="media" controls preload="none" src="${E(src)}"></audio>`:''}`;
 }
-function review(key,id,mode){
+let releaseReviewImage;
+function wireReviewSlides(host,model){
+  const stage=host.querySelector('.review-slide-stage');
+  if(!stage)return;
+  const boards=model.boards.filter(validBoard);
+  const image=stage.querySelector('img'), error=stage.querySelector('[data-slide-error]');
+  const prev=host.querySelector('[data-slide-prev]'), next=host.querySelector('[data-slide-next]');
+  const counter=host.querySelector('[data-slide-count]');
+  let position=0, start=null, generation=0, objectUrl;
+  releaseReviewImage?.();
+  const release=()=>{if(objectUrl)URL.revokeObjectURL(objectUrl);objectUrl=null;};
+  releaseReviewImage=()=>{generation++;release();};
+  async function show(target){
+    position=Math.min(boards.length-1,Math.max(0,target));
+    const request=++generation;
+    release();
+    image.removeAttribute('src');
+    image.alt='第 '+(position+1)+' 页复习图片';
+    error.hidden=true;
+    prev.disabled=position===0;next.disabled=position===boards.length-1;
+    counter.textContent=(position+1)+' / '+boards.length;
+    try{
+      let src=boards[position];
+      if(localCourseEditor()&&src.startsWith('./course-media/')){
+        const blob=await readCourseMedia(src);
+        if(request!==generation||!stage.isConnected)return;
+        if(blob)src=objectUrl=URL.createObjectURL(blob);
+      }
+      image.src=src;
+    }catch{
+      if(request===generation){error.textContent='这张复习图暂时无法加载。';error.hidden=false;}
+    }
+  }
+  image.onerror=()=>{error.textContent='这张复习图暂时无法加载。';error.hidden=false;};
+  prev.onclick=()=>show(position-1);
+  next.onclick=()=>show(position+1);
+  stage.onkeydown=event=>{
+    if(event.key==='ArrowLeft'||event.key==='ArrowRight'){
+      event.preventDefault();
+      show(position+(event.key==='ArrowLeft'?-1:1));
+    }
+  };
+  stage.ontouchstart=event=>{start=event.changedTouches[0];};
+  stage.ontouchcancel=()=>{start=null;};
+  stage.ontouchend=event=>{
+    if(!start)return;
+    const touch=event.changedTouches[0],dx=touch.clientX-start.clientX,dy=touch.clientY-start.clientY;
+    start=null;
+    if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy))show(position+(dx<0?1:-1));
+  };
+  show(0);
+}
+async function review(key,id,mode){
   const category=Object.hasOwn(MODULES,key)?key:Object.keys(MODULES)[0];
   const path=`#review/${category}`;
-  const local=globalThis.ERIC_LOCAL_EDITOR===true&&location.protocol==='file:';
+  const local=localCourseEditor();
   const courses=courseList(category);
   const course=id==='today'?findCourse(category):courses.find(c=>c.id===id);
   $('view').innerHTML=sectionHeader('课程复习')+`<nav class="review-tabs" aria-label="课程模块">${moduleLinks(category)}</nav><div id="review-content"></div>`;
   const host=$('review-content');
+  const progress=readProgress();
   if(course){
-    const module=localModule(readProgress(),course,state.day);
+    const module=localModule(progress,course,state.day);
     const href=path+'/'+course.id;
-    if(mode==='practice'){task(module,host,href);return;}
-    host.innerHTML=`<section class="panel">${material(module,module.task)}<div class="action-row"><a class="secondary" href="${path}">返回课次</a>
-    <a class="primary" href="${href}/practice">${module.completed?'查看练习结果':module.results.length?'继续练习':'开始练习'} · ${module.task.questions.length} 题</a></div></section>`;
+    if(mode==='practice'){
+      if(practiceUnlocked(progress,course)){task(module,host,href+'/review');return;}
+      host.innerHTML=`<section class="panel"><p>请先打开本课复习，再开始练习。</p><a class="primary" href="${href}/review">打开复习</a></section>`;
+      return;
+    }
+    host.innerHTML=`<section class="panel">${material(module,module.task)}<div class="action-row"><a class="secondary" href="${path}">返回课次</a><span id="review-unlock"></span></div></section>`;
+    wireReviewSlides(host,module.task);
+    try{
+      await api('open-review',{module:course.id});
+      if(host.isConnected)$('review-unlock').innerHTML=`<a class="primary" href="${href}/practice">${module.completed?'查看练习结果':module.results.length?'继续练习':'开始练习'} · ${module.task.questions.length} 题</a>`;
+    }catch(error){if(host.isConnected)notice(error.message);}
     return;
   }
+  const folders=new Map();
+  for(const course of courses){
+    const folder=course.folder||'未分组';
+    if(!folders.has(folder))folders.set(folder,[]);
+    folders.get(folder).push(course);
+  }
+  function courseRow(c){
+    const href=path+'/'+c.id;
+    const isNew=recentlyPublished(c,state.day)&&!courseFinished(progress,c);
+    return `<div class="course-row"><div class="path-item ${isNew?'has-new':''}">${isNew?'<span class="course-new">NEW</span>':''}<span>${E(c.title)}</span><small>${c.questions.length} 题${coursePassed(progress,c)?' · 已完成':''}</small></div>
+      <div class="course-actions"><a class="secondary" href="${href}/review">复习</a>
+      ${practiceUnlocked(progress,c)?`<a class="primary" href="${href}/practice">练习</a>`:'<button class="primary" disabled title="打开复习后解锁">练习</button>'}
+      ${local?`<button class="secondary" data-edit-course="${c.id}">编辑</button><button class="secondary" data-move-course="${c.id}" data-offset="-1">上移</button><button class="secondary" data-move-course="${c.id}" data-offset="1">下移</button><button class="secondary course-delete" data-delete-course="${c.id}">删除</button>`:''}</div></div>
+      ${local?`<details class="course-question-list"><summary>题目名称</summary><ol>${c.questions.map(q=>`<li>${E(q.prompt)}</li>`).join('')}</ol></details>`:''}`;
+  }
   host.innerHTML=`<section class="panel course-list"><div class="row course-head"><h2>课次</h2>
-    ${local?'<div class="action-row"><label>导入课程 JSON <input id="course-import" type="file" accept=".json,application/json"></label><button id="publish-courses" class="secondary">导出发布课程</button></div>':''}</div>
-    <div class="path-items">${courses.map(c=>`<div class="course-row"><a class="path-item" href="${path}/${c.id}"><span>${E(c.title)}</span><small>${c.questions.length} 题</small></a>${local?`<button class="secondary" data-edit-course="${c.id}">编辑</button>`:''}</div>`).join('')}</div></section>`;
+    ${local?'<div class="action-row"><label>批量导入课程 JSON <input id="course-import" type="file" multiple accept=".json,application/json"></label><button id="publish-courses" class="secondary">导出发布课程</button><button id="publish-course-media" class="secondary">导出课件媒体</button></div>':''}</div>
+    ${[...folders].map(([name,items])=>`<details class="course-folder" ${folders.size===1?'open':''}><summary>${E(name)} <small>${items.length} 个课次</small></summary><div class="path-items">${local?`<div class="course-folder-tools"><button class="secondary" type="button" data-rename-folder="${E(name)}">修改目录名</button></div>`:''}${items.map(courseRow).join('')}</div></details>`).join('')||'<p class="muted">这个模块暂无课次。</p>'}</section>`;
   if(local)wireCourseEditor(category);
 }
 function pronunciationFeedback(scores,prompt){
@@ -78,13 +157,16 @@ function task(m,view,back){
   if(m.completed||!m.task){
     const correct=countCorrect(m.results);
     const testScore=m.results[0]?.scores?.total;
+    const earned=m.earned??m.results.at(-1)?.earned;
+    const percentage=coursePercentage(m.results,m.task?.questions.length||0);
+    const passed=m.completed&&percentage>=90;
     const summary=m.task?.testOnly
       ? Number.isFinite(testScore)?`<p>讯飞朗读评分 <strong>${E(testScore)} / 100</strong></p>${pronunciationFeedback(m.results[0].scores,m.task.questions[0].prompt)}`:'<p>已完成跟读，本次没有评测分数。</p>'
-      : `<p>本轮答对 ${correct} / ${m.task?scored(m.task).length:0} 道计分题。单轮答对至少 9 道可获一次抽卡机会。</p>`;
-    view.innerHTML=title+`<section class="panel"><h2>${m.completed?'本轮训练完成':'老师还没有发布今日练习'}</h2>
+      : `<p>本轮 ${Math.round(percentage*10)/10} 分，答对 ${correct} / ${m.task?scored(m.task).length:0} 题。${passed?(m.results.at(-1)?.newFloor?'首次达标，楼层 +1。':'已完成，本次为复练。'):'达到 90 分才能显示已完成并建楼。'}${earned?'本次获得一次抽卡机会。':'首次完成课次且达到 90 分可获抽卡机会，每天最多 4 次。'}</p>`;
+    view.innerHTML=title+`<section class="panel"><h2>${m.completed?(passed?'已完成':'本轮结束 · 请再练习'):'老师还没有发布今日练习'}</h2>
       ${m.completed?summary:''}
       <div class="action-row"><a class="secondary" href="${back}">返回课程复习</a>
-      ${m.completed?`${m.task.testOnly?'':'<a class="primary" href="#tower">回摩天楼看施工</a>'}<button class="secondary" id="retry-practice">重新练习</button>${correct>=9?'<a class="primary" href="#collection">去抽卡</a>':''}`:''}</div></section>`;
+      ${m.completed?`${m.task.testOnly?'':'<a class="primary" href="#tower">回摩天楼看施工</a>'}<button class="secondary" id="retry-practice">重新练习</button>${earned?'<a class="primary" href="#collection">去抽卡</a>':''}`:''}</div></section>`;
     if(m.completed)$('retry-practice').onclick=async event=>{
       const button=event.currentTarget;button.disabled=true;
       try{await api('retry-practice',{module:m.key});await refresh();}
@@ -93,29 +175,55 @@ function task(m,view,back){
     return;
   }
   const index=m.results.length;
+  const rewardNote=m.task.testOnly?'':'每个课次首次整套达到 90 分可建一层。'+(coursePassed(readProgress(),m.task)?'本课已完成，可继续复练。':'首次完成达标可获抽卡机会，每天最多 4 次。');
   const question=m.task.questions[index];
   if(!question){$('view').textContent='任务进度已更新，请刷新。';return;}
   const shipSample=question.prompt.trim().toLowerCase()==='ship';
+  const providedSample=question.audio&&validReadAudio(question.audio)?question.audio:'';
   const reading=question.kind==='read', checking=question.kind==='check', total=m.task.questions.length;
-  view.innerHTML=`<div class="question-wrap">${title}<section class="panel"><details><summary>查看复习板书${m.task.hasAudio?'与音频':''}</summary>${material(m,m.task)}</details>
-    <p class="eyebrow" style="margin-top:15px">第 ${index+1} / ${total} 题 · ${question.bonus?'王者冲刺 · ':''}${reading?'朗读题':checking?'作答后对照':'选择题'}</p>
+  view.innerHTML=`<div class="question-wrap">${title}<section class="panel">${rewardNote?'<p class="muted">'+rewardNote+'</p>':''}<p><a href="${back}">返回课次复习资料</a></p>
+    <p class="eyebrow" style="margin-top:15px">第 ${index+1} / ${total} 题 · ${question.bonus?'王者冲刺 · ':''}${reading?'朗读题':checking?'作答后对照':providedSample?'听音选择题':'选择题'}</p>
     <div class="steps" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${index}"><i style="width:${index/total*100}%"></i></div>
     <form id="answer-form"><fieldset><legend>${E(question.prompt)}</legend>
-    ${reading?`<div id="read-box"><p class="muted">${state.speechReady?'提交后，录音会发送到评测服务，由讯飞生成发音反馈。':'录音仅供本机回听。跟读后可以确认完成。'}</p>
-      <div class="action-row"><button class="secondary" type="button" id="listen" ${!shipSample&&typeof speechSynthesis==='undefined'?'hidden':''}>听范读</button>
+    ${reading?`<div id="read-box"><p class="muted">${state.speechReady?'提交后由讯飞评测，90 分及以上算对；不足 90 分可重录或跳过。':'当前可本机录音回听。评分服务接通后，90 分及以上算对，也可跳过本题。'}</p>
+      <div class="action-row"><button class="secondary" type="button" id="listen" ${!shipSample&&!providedSample&&typeof speechSynthesis==='undefined'?'hidden':''}>听范读</button>
       <button type="button" class="secondary" data-record>开始录音</button><button type="button" class="secondary" data-stop disabled>停止录音</button></div>
       <p class="grade" data-record-status role="status"></p><audio class="media" controls hidden></audio>
       ${shipSample?'<small>范读来源：<a href="https://commons.wikimedia.org/wiki/File:En-us-ship.ogg" target="_blank" rel="noopener">Dvortygirl / Wikimedia Commons</a></small>':''}</div>`:
-      checking?'<label>你的答案<input name="response" maxlength="2000" required autocomplete="off" placeholder="输入后按回车"></label>':question.choices.map((x,i)=>`<label class="choice"><input type="radio" required name="choice" value="${i}">${E(x)}</label>`).join('')}
+      checking?'<label>你的答案<input name="response" maxlength="2000" required autocomplete="off" placeholder="输入后按回车"></label>':(providedSample?'<div class="question-listening"><button type="button" class="secondary" id="play-question-audio">▶ 播放题目音频</button><p id="question-audio-status" role="status"></p></div>':'')+question.choices.map((x,i)=>`<label class="choice"><input type="radio" required name="choice" value="${i}">${E(x)}</label>`).join('')}
     </fieldset><div id="feedback" role="status"></div>
-    <button id="submit-answer" class="primary" style="margin-top:12px" ${reading?(state.speechReady?'disabled':''):'hidden'}>${reading?(state.speechReady?'提交评测':'确认已跟读'):''}</button>
+    <button id="submit-answer" class="primary" style="margin-top:12px" ${reading?'disabled':'hidden'}>${reading?(state.speechReady?'提交评测':'评测暂不可用'):''}</button>
+    ${reading?'<button type="button" class="secondary" id="skip-reading">跳过本题</button>':''}
     <button id="next-question" type="button" class="primary" hidden></button></form></section></div>`;
+  if(!reading&&providedSample){
+    const host=$('answer-form');
+    const audio=new Audio(providedSample);
+    audio.preload='none';
+    let sampleUrl,loading=false;
+    const previous=releaseReviewImage;
+    releaseReviewImage=()=>{audio.pause();if(sampleUrl)URL.revokeObjectURL(sampleUrl);previous?.();};
+    $('play-question-audio').onclick=async()=>{
+      if(loading)return;
+      loading=true;
+      try{
+        if(localCourseEditor()&&providedSample.startsWith('./course-media/')&&!sampleUrl){
+          const blob=await readCourseMedia(providedSample);
+          if(!host.isConnected)return;
+          if(blob)audio.src=sampleUrl=URL.createObjectURL(blob);
+        }
+        audio.currentTime=0;
+        await audio.play();
+        if(host.isConnected)$('question-audio-status').textContent='';
+      }catch{if(host.isConnected)$('question-audio-status').textContent='音频暂时无法播放，请检查课件媒体文件。';}
+      finally{loading=false;}
+    };
+  }
   if(reading){
     const host=$('read-box');
     recorder=attachRecorder(host);
-    host.addEventListener('recorded',()=>$('submit-answer').disabled=false);
+    host.addEventListener('recorded',()=>{$('submit-answer').disabled=!state.speechReady;});
     host.addEventListener('recording',()=>$('submit-answer').disabled=state.speechReady);
-    const sample=shipSample?new Audio('https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a9/En-us-ship.ogg/En-us-ship.ogg.mp3'):null;
+    let sample=providedSample?new Audio(providedSample):shipSample?new Audio('https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a9/En-us-ship.ogg/En-us-ship.ogg.mp3'):null;
     function browserVoice(){
       if(typeof speechSynthesis==='undefined'){notice('没有可用的范读，请点下方音频来源播放。');return;}
       speechSynthesis.cancel();
@@ -128,10 +236,21 @@ function task(m,view,back){
       };
       speechSynthesis.speak(line);
     }
-    $('listen').onclick=()=>{
+    let sampleUrl;
+    const disposeSample=()=>{sample?.pause();if(sampleUrl)URL.revokeObjectURL(sampleUrl);};
+    const disposeReview=releaseReviewImage;
+    releaseReviewImage=()=>{disposeSample();disposeReview?.();};
+    $('listen').onclick=async()=>{
+      if(localCourseEditor()&&providedSample.startsWith('./course-media/')&&!sampleUrl){
+        try{
+          const blob=await readCourseMedia(providedSample);
+          if(!host.isConnected)return;
+          if(blob){sampleUrl=URL.createObjectURL(blob);sample.src=sampleUrl;}
+        }catch{notice('无法读取本地范读音频。');return;}
+      }
       if(!sample){browserVoice();return;}
       sample.currentTime=0;
-      sample.play().catch(()=>{if(host.isConnected)browserVoice();});
+      sample.play().catch(()=>{if(host.isConnected)notice('指定范读无法播放，请检查音频链接或文件。');});
     };
     if(sample)host.querySelector('[data-record]').addEventListener('click',()=>{sample.pause();if(typeof speechSynthesis!=='undefined')speechSynthesis.cancel();});
   }
@@ -140,6 +259,11 @@ function task(m,view,back){
   if(checking)screen.elements.response.addEventListener('keydown',event=>{
     if(event.key==='Enter'&&!event.isComposing){event.preventDefault();screen.requestSubmit();}
   });
+  let skipReading=false;
+  if(reading)$('skip-reading').onclick=()=>{
+    if($('submit-answer').dataset.busy==='1')return;
+    skipReading=true;screen.requestSubmit();
+  };
   screen.onsubmit=async event=>{
     event.preventDefault();
     const submit=$('submit-answer');
@@ -148,20 +272,29 @@ function task(m,view,back){
     const payload={day:state.day,module:m.key,index,version:m.task.version};
     const activeRecorder=recorder;
     submit.disabled=true;
+    if(reading)$('skip-reading').disabled=true;
     notice();
     try{
       if(reading){
-        if(state.speechReady){
+        if(skipReading)payload.skip=true;
+        else if(state.speechReady){
           payload.audio=activeRecorder.audio();
           if(!payload.audio)throw new Error('请先完成录音，并确认回听有声音。');
-        }else payload.selfCheck=true;
+        }else throw Error('评测暂不可用，可以选择跳过本题。');
       }else if(checking)payload.response=new FormData(screen).get('response');
       else payload.choice=Number(new FormData(screen).get('choice'));
-      const {result,completed,correctCount}=await api('question',payload);
+      const {result,completed,correctCount,earned,retry}=await api('question',payload);
       if(!screen.isConnected)return;
+      if(retry){
+        $('feedback').innerHTML=`<div class="feedback wrong"><strong>本次 ${E(result.scores.total)} 分，达到 90 分才算对，请再读一次。</strong>${pronunciationFeedback(result.scores,question.prompt)}</div>`;
+        submit.dataset.busy='0';submit.disabled=false;
+        submit.textContent='重新提交评测';
+        $('skip-reading').disabled=false;
+        return;
+      }
       if(completed){
         m.completed=true;
-
+        m.earned=earned;
       }
       m.results[index]=result;
       screen.querySelectorAll('input, textarea, [data-record], [data-stop]').forEach(el=>el.disabled=true);
@@ -169,7 +302,7 @@ function task(m,view,back){
       const scoreLabels={accuracy:'准确度',fluency:'流畅度',integrity:'完整度'};
       const details=scores?Object.entries(scoreLabels).filter(([key])=>scores[key]!==undefined).map(([key,label])=>label+' '+scores[key]).join(' · '):'';
       $('feedback').innerHTML=`<div class="feedback ${result.correct===false?'wrong':''}">
-        <strong>${reading?(scores?'讯飞朗读评分 '+E(scores.total)+' / 100':'已回听并完成跟读'):checking?(result.matches?'✓ 与参考答案一致':'请对照参考答案'):result.correct?'✓ 答对了':'还差一点'}</strong>
+        <strong>${reading?(result.skipped?'已跳过 · 本题未计正确':scores?'✓ 朗读达标 '+E(scores.total)+' / 100':'本题未计正确'):checking?(result.matches?'✓ 与参考答案一致':'请对照参考答案'):result.correct?'✓ 答对了':'还差一点'}</strong>
         ${!reading?`<p>${checking?'参考答案':'正确答案'}：${E(checking?result.reference:question.choices[result.answer])}</p>`:''}
         ${details?`<p>${E(details)}</p>`:''}${reading?pronunciationFeedback(scores,question.prompt):''}
         <p>${E(result.explanation)}</p>${completed&&!m.task.testOnly?`<strong>本轮答对 ${correctCount??countCorrect(m.results)} 道</strong>`:''}</div>`;
@@ -181,7 +314,8 @@ function task(m,view,back){
       next.focus();
     }catch(error){
       if(!screen.isConnected)return;
-      notice(error.message);submit.dataset.busy='0';submit.disabled=false;
+      notice(error.message);submit.dataset.busy='0';submit.disabled=reading&&!state.speechReady;
+      if(reading){skipReading=false;$('skip-reading').disabled=false;}
     }
   };
 }
@@ -202,7 +336,7 @@ async function collection(){
   function show(data){
     if(!host.isConnected)return;
     host.innerHTML=`<div class="row"><h2>卡片册</h2><button class="primary" id="draw" ${data.available||sessionStorage.getItem(requestKey)?'':'disabled'}>抽卡</button></div>
-    <p class="muted">可抽 ${data.available} 次。单轮训练答对至少 9 题、复习 5 个到期词可获得次数。</p>
+    <p class="muted">可抽 ${data.available} 次，今日还可抽 ${data.remaining} 次。首次完成课次达 90 分、复习 5 个到期词可获抽卡机会，每日最多 4 次。</p>
     <div class="card-grid">${data.cards.map((c,i)=>c.quantity
       ? `<button type="button" class="collection-card owned-card" data-card="${i}"><img loading="lazy" src="${E(c.image)}?owned=1" alt=""><span>${E(c.name)} · ${E(c.number)}</span><span class="card-quantity">${E(c.rarity)} 级 · 已获得 ${c.quantity} 张</span></button>`
       : '<div class="collection-card locked-card"><div class="locked-card-face" aria-hidden="true">?</div><span>未获得</span></div>').join('')}</div>
@@ -268,6 +402,8 @@ function backup() {
   $('restore').onclick=()=>{if(pending && saveProgress(pending)){backup();notify('进度已恢复。');}};
 }
 function cleanupRecorder(){
+  releaseReviewImage?.();
+  releaseReviewImage=null;
   stopWordRecording();
   recorder?.dispose();
   recorder=null;

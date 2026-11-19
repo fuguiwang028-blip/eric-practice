@@ -6,10 +6,11 @@ const CITY_STYLES = {
 };
 const CITY_STYLE_IDS=Object.keys(CITY_STYLES);
 const CITY_TILE_SIZE=84;
+const CITY_FOUNDATION_HEIGHT=26;
 const CITY_VISIBLE_FLOORS=4;
 
 function cityFloorCount(progress){
-  return new Set([...Object.keys(progress.climbs),...Object.keys(progress.awards).filter(k=>!k.endsWith(':words'))]).size;
+  return new Set([...Object.keys(progress.climbs),...Object.keys(progress.awards).filter(k=>!k.endsWith(':words')&&!k.slice(11).startsWith('course-'))]).size+sum(Object.values(progress.courseFloors||{}));
 }
 function citySettings(progress,total=cityFloorCount(progress)){
   const input=progress.city;
@@ -71,14 +72,15 @@ function updateCity(profileKey,mutate){
   mutate(city,cityFloorCount(progress));
   return saveProgress({...progress,city});
 }
-function cityStorey(){
+function cityStorey(entrance=false){
+  if(entrance)return '<div class="city-storey city-entrance" aria-hidden="true"><b></b><span><em></em><em></em></span><b></b></div>';
   return '<div class="city-storey" aria-hidden="true"><i></i><i></i></div>';
 }
 function cityRoof(){
   return '<div class="city-roof" aria-hidden="true"><i></i></div>';
 }
 function cityBuilding(style,count){
-  return `<div class="city-building theme-${style}">${count===CITY_STYLES[style].floors?cityRoof():''}${cityStorey().repeat(Math.min(count,CITY_VISIBLE_FLOORS))}<div class="city-foundation" aria-hidden="true"></div></div>`;
+  return `<div class="city-building theme-${style}">${count===CITY_STYLES[style].floors?cityRoof():''}${cityStorey().repeat(Math.min(Math.max(0,count-1),CITY_VISIBLE_FLOORS))}${count>0&&count<=CITY_VISIBLE_FLOORS?cityStorey(true):''}<div class="city-foundation" aria-hidden="true"></div></div>`;
 }
 function cityTower(){
   const user=state.user;
@@ -106,10 +108,16 @@ function cityTower(){
         <div class="city-skyline" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <div class="city-aircraft" id="city-aircraft" aria-hidden="true"></div>
         <div class="city-ground" aria-hidden="true"></div>
+        <div class="city-site" aria-hidden="true">
+          <div class="city-site-hedge"></div><div class="city-site-tree"><i></i></div>
+          <div class="city-site-mesh"><i></i><i></i><i></i></div>
+          <div class="city-site-hoarding"><i></i></div>
+          <div class="city-site-cone city-site-cone-left"></div><div class="city-site-cone city-site-cone-right"></div>
+        </div>
         <div class="city-scene-top"><span id="city-building-name"></span><span id="city-altitude"></span></div>
         <div id="city-construction" class="city-construction"></div>
         <div id="city-residents" class="city-residents" aria-hidden="true"></div>
-        <p id="city-status" class="city-status" role="status">完成一次打卡，吊车就会放下一层。</p>
+        <p id="city-status" class="city-status" role="status">新课次首次达到 90 分，吊车就会放下一层。</p>
       </section>
       <aside class="city-side">
         <section class="panel city-plan"><div class="city-section-head"><h2>城市规划</h2><span id="city-building-total"></span></div>
@@ -117,7 +125,7 @@ function cityTower(){
           <p class="muted city-map-help">拖动楼栋换位置，也可以先点楼栋，再点目标格。</p><div id="city-map-pager" class="city-map-pager"></div><h3>下一栋楼的风格</h3><p class="muted" id="city-style-note"></p>
           <div id="city-styles" class="city-styles"></div>
         </section>
-        <section class="panel"><h2>今日路线</h2><p class="muted">已打卡 ${doneCount()+Number(state.wordReview.climbed)} / 4 · 每项打卡建一层</p>
+        <section class="panel"><h2>今日路线</h2><p class="muted">今日练习建楼 ${state.todayFloors} 层 · 每课首次达 90 分建一层</p>
           <div class="path-items daily-route">${moduleLinks()}
             <a class="path-item" href="#wordbook"><span>我的生词本</span><small>${state.wordReview.climbed?'今日已登楼':'今日复习 '+state.wordReview.reviewed+'/5'}</small></a>
             <a class="secondary" href="#collection">去抽卡</a>
@@ -143,7 +151,7 @@ function cityTower(){
     $('city-building-floor').textContent=`${count}/${cityCapacity(city,index)}`;
     stage.style.setProperty('--built',Math.min(count,CITY_VISIBLE_FLOORS));
     construction.innerHTML=cityBuilding(style,count)+
-      (count<cityCapacity(city,index)?`<div class="city-crane theme-${style}" id="city-crane" aria-hidden="true"><div class="city-cable"></div><div class="city-hook"></div>${cityStorey()}</div>`:'');
+      (count<cityCapacity(city,index)?`<div class="city-crane theme-${style}" id="city-crane" aria-hidden="true"><div class="city-cable"></div><div class="city-hook"></div>${cityStorey(count===0)}</div>`:'');
   }
   function setStats(){
     $('city-floor-count').textContent=visible;
@@ -195,7 +203,7 @@ function cityTower(){
         index=occupants.get(lot);
         selectedLot=selectedLot===lot?null:lot;
         renderScene();renderPlan();
-        $('city-status').textContent=selectedLot!==null?'已选楼栋，点目标格移动。':index===next?'完成打卡，吊车就会放下一层。':'这栋楼已经封顶。';
+        $('city-status').textContent=selectedLot!==null?'已选楼栋，点目标格移动。':index===next?'新课次首次达到 90 分，吊车就会放下一层。':'这栋楼已经封顶。';
       };
       button.ondragstart=event=>{event.dataTransfer.setData('text/plain',String(lot));event.dataTransfer.effectAllowed='move';};
       button.ondragover=event=>{if(!buildingInProgress)event.preventDefault();};
@@ -231,7 +239,7 @@ function cityTower(){
       $('city-status').textContent='打卡完成！吊车正在安装新楼层。';
       const crane=$('city-crane');
       if(motion()&&crane?.animate){
-        const offset=construction.offsetHeight-Math.min(cityCountAt(city,visible,index),CITY_VISIBLE_FLOORS)*CITY_TILE_SIZE-26-CITY_TILE_SIZE-105;
+        const offset=construction.offsetHeight-Math.min(cityCountAt(city,visible,index),CITY_VISIBLE_FLOORS)*CITY_TILE_SIZE-CITY_FOUNDATION_HEIGHT-CITY_TILE_SIZE-105;
         const animation=crane.animate([{transform:'translate(-50%, 0)'},{transform:`translate(-50%, ${Math.max(45,offset)}px)`}],{duration:720,easing:'cubic-bezier(.6,.05,.65,1)',fill:'forwards'});
         await animation.finished.catch(()=>{});
       }

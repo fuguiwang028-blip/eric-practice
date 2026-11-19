@@ -6,49 +6,49 @@ const CARDS = [
     "id": "silverfish",
     "name": "Silverfish",
     "number": "No.001",
-    "weight": 15.8,
+    "weight": 18.8,
     "rarity": "S"
   },
   {
     "id": "phantom",
     "name": "Phantom",
     "number": "No.002",
-    "weight": 15.8,
+    "weight": 18.8,
     "rarity": "S"
   },
   {
     "id": "ghast",
     "name": "Ghast",
     "number": "No.003",
-    "weight": 15.8,
+    "weight": 18.8,
     "rarity": "S"
   },
   {
     "id": "shulker",
     "name": "Shulker",
     "number": "No.004",
-    "weight": 15.8,
+    "weight": 18.8,
     "rarity": "S"
   },
   {
     "id": "creeper",
     "name": "Creeper",
     "number": "No.005",
-    "weight": 15.8,
+    "weight": 18.8,
     "rarity": "S"
   },
   {
     "id": "blaze",
     "name": "Blaze",
     "number": "No.006",
-    "weight": 10,
+    "weight": 2.5,
     "rarity": "SS"
   },
   {
     "id": "enderman",
     "name": "Enderman",
     "number": "No.007",
-    "weight": 10,
+    "weight": 2.5,
     "rarity": "SS"
   },
   {
