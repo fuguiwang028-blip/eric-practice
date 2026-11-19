@@ -288,3 +288,24 @@ button.city-lot.moving{outline:3px solid #f9d769;z-index:1}
 .review-slide-stage{display:grid;place-items:center;min-height:140px;background:#eef4e9;border-radius:12px;overflow:hidden;touch-action:pan-y pinch-zoom}
 .review-slide-stage img{max-width:100%;max-height:68vh;object-fit:contain;display:block}
 .review-slide-controls{display:flex;justify-content:center;align-items:center;gap:14px;margin:12px 0}
+
+/* Beijing-time city life */
+.city-heading .city-greeting{font-size:clamp(1.15rem,2.6vw,1.65rem);font-weight:800;margin-bottom:10px;color:#195447}
+.city-celestial{position:absolute;top:86px;right:12%;width:66px;height:66px;border-radius:50%;background:#ffe27a;box-shadow:0 0 45px #ffe58a88;pointer-events:none;z-index:0}
+.city-stage[data-time=morning]:not([data-scene=space]){background:linear-gradient(#8cbadb,#f9d4aa 65%,#f3bd8d)}
+.city-stage[data-time=morning] .city-celestial{top:155px;right:15%;background:#ffb55f;box-shadow:0 0 55px #ffd38dbb}
+.city-stage[data-time=day]:not([data-scene=space]){background:linear-gradient(#73b7e1,#cce9ef 72%,#d8e4c8)}
+.city-stage[data-time=sunset]:not([data-scene=space]){background:linear-gradient(#6f80b7,#e3a1a0 57%,#f6ba7e)}
+.city-stage[data-time=sunset] .city-celestial{top:175px;background:#ffba72;box-shadow:0 0 60px #ffb56f99}
+.city-stage[data-time=night]:not([data-scene=space]){background:linear-gradient(#0f1e3e,#263c62 65%,#53617a)}
+.city-stage[data-time=night] .city-celestial{background:transparent;box-shadow:inset -15px -8px #fff3c5,0 0 30px #d0e4ff33}
+.city-stage[data-time=night] .city-skyline{filter:brightness(.48) saturate(.7)}
+.city-stage[data-time=night] .city-storey i{background:linear-gradient(135deg,#ffe89b,#b8863d);box-shadow:0 0 0 2px var(--trim),0 0 8px #ffce7366}
+.city-stars{position:absolute;inset:0;pointer-events:none;opacity:0;background-image:radial-gradient(circle,#e7efff 1px,transparent 1.5px),radial-gradient(circle,#fff6d8 1px,transparent 1.7px);background-size:127px 149px,193px 211px;background-position:20px 45px,63px 9px}
+.city-stage[data-time=night] .city-stars{opacity:.7}
+.city-speech-bubble{position:absolute;z-index:5;box-sizing:border-box;width:min(240px,calc(100% - 32px));padding:12px 15px;border:2px solid #335a4a;border-radius:17px;background:#fffdf3;color:#233c32;box-shadow:0 5px 0 #142f3029;font-size:1rem;line-height:1.5;pointer-events:none;overflow-wrap:anywhere;animation:city-speech-pop .16s ease-out}
+.city-speech-bubble::after{content:'';position:absolute;bottom:-9px;left:var(--tail-at,50%);width:14px;height:14px;background:#fffdf3;border-right:2px solid #335a4a;border-bottom:2px solid #335a4a;transform:translateX(-50%) rotate(45deg)}
+.city-speech-bubble small{display:block;margin-bottom:3px;color:#4c7060;font-size:.8rem;font-weight:750}
+#city-phrase-input{box-sizing:border-box;width:100%;font:inherit;line-height:1.6}
+@keyframes city-speech-pop{from{opacity:0;transform:translateY(5px) scale(.96)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.city-speech-bubble{animation:none}}

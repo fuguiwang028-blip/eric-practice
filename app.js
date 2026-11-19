@@ -132,11 +132,11 @@ function pronunciationFeedback(scores,prompt){
   const singleWord=/^[A-Za-z]+(?:['-][A-Za-z]+)*$/.test(prompt.trim());
   const wordStatus=word=>{
     if(statusByCode[word.code])return statusByCode[word.code];
-    if((singleWord&&errors>0)||(Number.isFinite(word.score)&&word.score<85))return ['yellow','建议再读'];
+    if((singleWord&&errors>0)||(Number.isFinite(word.score)&&word.score<READ_PASS_SCORE))return ['yellow','建议再读'];
     if(Number.isFinite(word.score))return ['green','读得较清楚'];
     return ['neutral','无单词得分'];
   };
-  const needsRetry=errors>0||(scores.accuracy??scores.total)<85||words.some(w=>['red','yellow'].includes(wordStatus(w)[0]));
+  const needsRetry=errors>0||(scores.accuracy??scores.total)<READ_PASS_SCORE||words.some(w=>['red','yellow'].includes(wordStatus(w)[0]));
   const hasDetails=words.length||phones.length;
   const verdict=needsRetry?'建议再读一次。':hasDetails?'以下是讯飞返回的分项结果。':'讯飞本次未返回可定位的分项，单个音是否准确还需回听确认。';
   const chip=(text,[color,label])=>`<span class="speech-chip speech-${color}"><strong>${E(text)}</strong><small>${E(label)}</small></span>`;
@@ -145,10 +145,10 @@ function pronunciationFeedback(scores,prompt){
   const syllables=Array.isArray(scores.syllables)?scores.syllables:[];
   const syllableView=syllables.length?`<h4>音节评分</h4><div class="speech-chips">${syllables.map(s=>{
     const hasScore=Number.isFinite(s.score);
-    const status=s.error===1||s.error===2049?['red','发音需纠正']:hasScore?[s.score>=90?'green':s.score>=60?'yellow':'red',`${s.score} 分`]:['neutral','无音节分数'];
+    const status=s.error===1||s.error===2049?['red','发音需纠正']:hasScore?[s.score>=READ_PASS_SCORE?'green':s.score>=60?'yellow':'red',`${s.score} 分`]:['neutral','无音节分数'];
     return chip(s.text,status);
   }).join('')}</div><p class="muted">音节分数来自讯飞，不是每个音素的独立分数。</p>`:'';
-  const unlocated=phones.length&&!phones.some(p=>p.code!==0)&&(scores.accuracy??scores.total)<90?'<p><strong>本次发音尚未达标，但引擎没有定位到具体错音。请回听并对照范读。</strong></p>':'';
+  const unlocated=phones.length&&!phones.some(p=>p.code!==0)&&(scores.accuracy??scores.total)<READ_PASS_SCORE?'<p><strong>本次发音尚未达标，但引擎没有定位到具体错音。请回听并对照范读。</strong></p>':'';
   const hint=isShip?'<p><strong>ship /ʃɪp/</strong> 中间是短元音 /ɪ/。嘴巴放松、少张开，别读成更张口的 /æ/。</p>':'';
   return `<p>${verdict}</p>${wordView}${syllableView}${unlocated}${hint}`;
 }
@@ -185,7 +185,7 @@ function task(m,view,back){
     <p class="eyebrow" style="margin-top:15px">第 ${index+1} / ${total} 题 · ${question.bonus?'王者冲刺 · ':''}${reading?'朗读题':checking?'作答后对照':providedSample?'听音选择题':'选择题'}</p>
     <div class="steps" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${index}"><i style="width:${index/total*100}%"></i></div>
     <form id="answer-form"><fieldset><legend>${E(question.prompt)}</legend>
-    ${reading?`<div id="read-box"><p class="muted">${state.speechReady?'提交后由讯飞评测，90 分及以上算对；不足 90 分可重录或跳过。':'当前可本机录音回听。评分服务接通后，90 分及以上算对，也可跳过本题。'}</p>
+    ${reading?`<div id="read-box"><p class="muted">${state.speechReady?`提交后由讯飞评测，${READ_PASS_SCORE} 分及以上算对；不足 ${READ_PASS_SCORE} 分可重录或跳过。`:`当前可本机录音回听。评分服务接通后，${READ_PASS_SCORE} 分及以上算对，也可跳过本题。`}</p>
       <div class="action-row"><button class="secondary" type="button" id="listen" ${!shipSample&&!providedSample&&typeof speechSynthesis==='undefined'?'hidden':''}>听范读</button>
       <button type="button" class="secondary" data-record>开始录音</button><button type="button" class="secondary" data-stop disabled>停止录音</button></div>
       <p class="grade" data-record-status role="status"></p><audio class="media" controls hidden></audio>
@@ -301,7 +301,7 @@ function task(m,view,back){
       clearInterval(pendingTimer);
       if(!screen.isConnected)return;
       if(retry){
-        $('feedback').innerHTML=`<div class="feedback wrong"><strong>本次 ${E(result.scores.total)} 分，达到 90 分才算对，请再读一次。</strong>${pronunciationFeedback(result.scores,question.prompt)}</div>`;
+        $('feedback').innerHTML=`<div class="feedback wrong"><strong>本次 ${E(result.scores.total)} 分，达到 ${READ_PASS_SCORE} 分才算对，请再读一次。</strong>${pronunciationFeedback(result.scores,question.prompt)}</div>`;
         submit.dataset.busy='0';submit.disabled=false;
         submit.textContent='重新提交评测';
         for(const [button,wasDisabled] of recordingControls)button.disabled=wasDisabled;
@@ -424,6 +424,8 @@ function backup() {
 function cleanupRecorder(){
   releaseReviewImage?.();
   releaseReviewImage=null;
+  releaseCityScene?.();
+  releaseCityScene=null;
   stopWordRecording();
   recorder?.dispose();
   recorder=null;

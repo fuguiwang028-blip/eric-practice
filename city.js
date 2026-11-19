@@ -9,6 +9,51 @@ const CITY_TILE_SIZE=84;
 const CITY_FOUNDATION_HEIGHT=26;
 const CITY_VISIBLE_FLOORS=4;
 
+let releaseCityScene;
+const CITY_PHRASES_KEY='eric-city-phrases-v1';
+function cityTime(now=new Date()){
+  const hour=Number(new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Shanghai',hour:'2-digit',hourCycle:'h23'}).format(now));
+  const greeting=hour<5?'夜深了':hour<11?'早上好':hour<13?'中午好':hour<18?'下午好':'晚上好';
+  const phase=hour<5||hour>=19?'night':hour<11?'morning':hour<17?'day':'sunset';
+  return {hour,greeting,phase};
+}
+function validCityPhrases(value){
+  return Array.isArray(value)&&value.length<=500&&value.every(line=>typeof line==='string'&&line.trim().length>0&&line.length<=160);
+}
+function cityPhrases(){
+  if(location.protocol==='file:')try{
+    const draft=JSON.parse(localStorage.getItem(CITY_PHRASES_KEY));
+    if(validCityPhrases(draft))return draft;
+  }catch{}
+  return validCityPhrases(globalThis.ERIC_CITY_PHRASES)?globalThis.ERIC_CITY_PHRASES:[];
+}
+let lastCityPhrase;
+function randomCityPhrase(){
+  const phrases=[...new Set(cityPhrases())];
+  const options=phrases.length>1?phrases.filter(line=>line!==lastCityPhrase):phrases;
+  if(!options.length)return '';
+  lastCityPhrase=options[Math.floor(Math.random()*options.length)];
+  return lastCityPhrase;
+}
+function editCityPhrases(){
+  if(location.protocol!=='file:')return;
+  popup(`<h2>住户流行语库</h2><p>每行一句，最多 500 句，每句不超过 160 字。留空可以关闭气泡。</p><label>流行语<textarea id="city-phrase-input" rows="12">${E(cityPhrases().join('\n'))}</textarea></label><div class="action-row"><button class="primary" id="city-phrase-save">保存到本地</button><button class="secondary" id="city-phrase-export">保存并导出发布文件</button></div><p id="city-phrase-message" role="status"></p>`);
+  function save(){
+    const lines=$('city-phrase-input').value.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+    if(!validCityPhrases(lines))throw Error('最多 500 句，每句不超过 160 字。');
+    localStorage.setItem(CITY_PHRASES_KEY,JSON.stringify(lines));
+    $('city-phrase-message').textContent='已保存 '+lines.length+' 句。网页版需替换导出的同名文件后发布。';
+    return lines;
+  }
+  $('city-phrase-save').onclick=()=>{try{save();}catch(e){$('city-phrase-message').textContent=e.message;}};
+  $('city-phrase-export').onclick=()=>{try{
+    const lines=save();
+    const url=URL.createObjectURL(new Blob(['globalThis.ERIC_CITY_PHRASES = '+JSON.stringify(lines,null,2)+';\n'],{type:'text/javascript'}));
+    const link=document.createElement('a');link.href=url;link.download='published-city-phrases.js';link.click();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }catch(e){$('city-phrase-message').textContent=e.message;}};
+}
+
 function cityFloorCount(progress){
   return new Set([...Object.keys(progress.climbs),...Object.keys(progress.awards).filter(k=>!k.endsWith(':words')&&!k.slice(11).startsWith('course-'))]).size+sum(Object.values(progress.courseFloors||{}));
 }
@@ -96,7 +141,7 @@ function cityTower(){
   let mapPage=Math.floor((cityLotAssignments(city,index+1).get(index)||0)/25);
   const view=$('view');
   view.innerHTML=`
-    <header class="city-heading"><div><p class="eyebrow">${E(state.day)} · 个人进度</p><h1>我的摩天楼</h1>${user.slogan?`<p class="city-slogan">${E(user.slogan)}</p>`:''}</div>
+    <header class="city-heading"><div><p class="eyebrow">${E(state.day)} · 个人进度</p><p class="city-greeting" id="city-greeting"></p><h1>我的摩天楼</h1>${user.slogan?`<p class="city-slogan">${E(user.slogan)}</p>`:''}</div>
       <div class="city-console">
         <div class="city-height-hud" aria-label="当前建筑楼层"><span class="city-hud-icon city-building-icon" aria-hidden="true"></span><strong id="city-building-floor"></strong></div>
         <div class="city-pop-hud"><span class="city-hud-icon city-people-icon" aria-hidden="true"></span><div id="city-population" class="city-digits" aria-label="城市人口"></div></div>
@@ -105,6 +150,7 @@ function cityTower(){
     </header>
     <div class="city-layout">
       <section class="city-stage" id="city-stage" aria-label="摩天楼施工场景">
+        <div class="city-celestial" aria-hidden="true"></div><div class="city-stars" aria-hidden="true"></div>
         <div class="city-skyline" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <div class="city-aircraft" id="city-aircraft" aria-hidden="true"></div>
         <div class="city-ground" aria-hidden="true"></div>
@@ -125,6 +171,7 @@ function cityTower(){
           <p class="muted city-map-help">拖动楼栋换位置，也可以先点楼栋，再点目标格。</p><div id="city-map-pager" class="city-map-pager"></div><h3>下一栋楼的风格</h3><p class="muted" id="city-style-note"></p>
           <div id="city-styles" class="city-styles"></div>
         </section>
+        ${location.protocol==='file:'?'<section class="panel city-phrase-editor"><h2>住户流行语</h2><p class="muted">每次回家随机一句，气泡显示 3 秒。</p><button type="button" class="secondary" id="city-edit-phrases">编辑 / 导出流行语库</button></section>':''}
         <section class="panel"><h2>今日路线</h2><p class="muted">今日练习建楼 ${state.todayFloors} 层 · 每课首次达 90 分建一层</p>
           <div class="path-items daily-route">${moduleLinks()}
             <a class="path-item" href="#wordbook"><span>我的生词本</span><small>${state.wordReview.climbed?'今日已登楼':'今日复习 '+state.wordReview.reviewed+'/5'}</small></a>
@@ -135,6 +182,37 @@ function cityTower(){
     </div>`;
   const stage=$('city-stage'),construction=$('city-construction');
   const stillHere=()=>stage.isConnected&&progressKey()===profileKey;
+  let bubbleTimer, bubbleShown=false;
+  function updateTime(){
+    if(!stillHere())return;
+    const {phase,greeting}=cityTime();
+    stage.dataset.time=phase;
+    $('city-greeting').textContent=greeting+'！'+user.alias+'市长';
+  }
+  updateTime();
+  const clockTimer=setInterval(updateTime,60000);
+  releaseCityScene=()=>{clearInterval(clockTimer);clearTimeout(bubbleTimer);};
+  if(location.protocol==='file:')$('city-edit-phrases').onclick=editCityPhrases;
+  function showResidentBubble(){
+    if(bubbleShown||!stillHere())return;
+    const floors=[...construction.querySelectorAll('.city-building > .city-storey')];
+    const phrase=randomCityPhrase();
+    if(!floors.length||!phrase)return;
+    bubbleShown=true;
+    const floor=floors[Math.floor(Math.random()*floors.length)];
+    const bubble=document.createElement('div');bubble.className='city-speech-bubble';
+    bubble.setAttribute('role','status');
+    const label=document.createElement('small');label.textContent='住户说';
+    const content=document.createElement('span');content.textContent=phrase;
+    bubble.append(label,content);stage.append(bubble);
+    const rect=floor.getBoundingClientRect(), bounds=stage.getBoundingClientRect();
+    const targetX=rect.left-bounds.left+rect.width/2;
+    const left=Math.max(14,Math.min(bounds.width-bubble.offsetWidth-14,targetX-bubble.offsetWidth/2));
+    bubble.style.left=left+'px';
+    bubble.style.setProperty('--tail-at',Math.max(20,Math.min(bubble.offsetWidth-20,targetX-left))+'px');
+    bubble.style.top=Math.max(64,rect.top-bounds.top+rect.height*.35-bubble.offsetHeight-14)+'px';
+    bubbleTimer=setTimeout(()=>bubble.remove(),3000);
+  }
   const motion=()=>!matchMedia('(prefers-reduced-motion: reduce)').matches;
   const pause=ms=>new Promise(resolve=>setTimeout(resolve,motion()?ms:0));
   function renderScene(){
@@ -282,5 +360,5 @@ function cityTower(){
   }
   if(!progress.city)updateCity(profileKey,()=>{});
   setStats();renderScene();renderPlan();
-  buildPending().catch(()=>{if(stillHere())notice('施工动画暂未完成，返回首页可以重播。');});
+  buildPending().then(showResidentBubble).catch(()=>{if(stillHere())notice('施工动画暂未完成，返回首页可以重播。');});
 }

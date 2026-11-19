@@ -50,7 +50,7 @@ function validateProgress(state) {
   if (cardTotal(state) > Object.keys(state.awards).length) throw Error('收藏和抽卡机会不一致。');
   return state;
 }
-const READ_PASS_SCORE=90;
+const READ_PASS_SCORE=80;
 const DAILY_DRAW_LIMIT=4;
 function coursePercentage(results,total){return total?countCorrect(results)/total*100:0;}
 function dailyAwards(progress,day){return Object.keys(progress.awards).filter(key=>key.startsWith(day+':')).length;}
