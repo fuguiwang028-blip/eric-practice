@@ -156,23 +156,28 @@ async function assessmentReady(){
 async function assessSpeech(text,audio){
   const endpoint=speechEndpoint();
   if(!endpoint)throw Error('发音评测尚未配置。');
-  let response;
   const controller=new AbortController();
   const timeout=setTimeout(()=>controller.abort(),40000);
   try{
-    response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},
+    const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({text,audio}),signal:controller.signal});
+    let data;
+    try{data=await response.json();}
+    catch(error){
+      if(controller.signal.aborted)throw error;
+      throw Error('评测服务返回了无法读取的结果，请重新提交。');
+    }
+    if(!response.ok)throw Error(data?.error||'评测请求失败（HTTP '+response.status+'）。');
+    if(!Number.isFinite(data?.scores?.total)||data.scores.total<0||data.scores.total>100)
+      throw Error('没有收到有效的评测分数。');
+    return data.scores;
   }catch(error){
-    if(error.name==='AbortError')throw Error('评测连接超过 40 秒，请检查网络后重新提交。');
-    throw Error('无法连接评测服务，请检查网络连接后重新提交。');
-  }
-  finally{clearTimeout(timeout);}
-  const data=await response.json().catch(()=>null);
-  if(!response.ok)throw Error(data?.error||'评测请求失败。');
-  if(!Number.isFinite(data?.scores?.total)||data.scores.total<0||data.scores.total>100)
-    throw Error('没有收到有效的评测分数。');
-  return data.scores;
+    if(controller.signal.aborted)throw Error('评测连接超过 40 秒，请检查网络后重新提交。');
+    if(error instanceof TypeError)throw Error('无法连接评测服务，请检查网络连接后重新提交。');
+    throw error;
+  }finally{clearTimeout(timeout);}
 }
+
 async function localAPI(path,body) {
   const [route]=path.split('?');
   const day=localDay(), progress=readProgress();

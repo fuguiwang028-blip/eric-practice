@@ -192,7 +192,7 @@ function task(m,view,back){
       ${shipSample?'<small>范读来源：<a href="https://commons.wikimedia.org/wiki/File:En-us-ship.ogg" target="_blank" rel="noopener">Dvortygirl / Wikimedia Commons</a></small>':''}</div>`:
       checking?'<label>你的答案<input name="response" maxlength="2000" required autocomplete="off" placeholder="输入后按回车"></label>':(providedSample?'<div class="question-listening"><button type="button" class="secondary" id="play-question-audio">▶ 播放题目音频</button><p id="question-audio-status" role="status"></p></div>':'')+question.choices.map((x,i)=>`<label class="choice"><input type="radio" required name="choice" value="${i}">${E(x)}</label>`).join('')}
     </fieldset><div id="feedback" role="status"></div>
-    <button id="submit-answer" class="primary" style="margin-top:12px" ${reading?'disabled':'hidden'}>${reading?(state.speechReady?'提交评测':'请在正式网页进行评测'):''}</button>
+    <button id="submit-answer" type="submit" class="primary" style="margin-top:12px" ${reading?'disabled':'hidden'}>${reading?(state.speechReady?'提交评测':'请在正式网页进行评测'):''}</button>
     ${reading?'<button type="button" class="secondary" id="skip-reading">跳过本题</button>':''}
     <button id="next-question" type="button" class="primary" hidden></button></form></section></div>`;
   if(!reading&&providedSample){
@@ -271,6 +271,9 @@ function task(m,view,back){
     submit.dataset.busy='1';
     const payload={day:state.day,module:m.key,index,version:m.task.version};
     const activeRecorder=recorder;
+    let pendingTimer;
+    const recordingControls=reading?[...screen.querySelectorAll('[data-record], [data-stop], #listen')].map(button=>[button,button.disabled]):[];
+    const originalLabel=submit.textContent;
     submit.disabled=true;
     if(reading)$('skip-reading').disabled=true;
     notice();
@@ -283,12 +286,25 @@ function task(m,view,back){
         }else throw Error('评测暂不可用，可以选择跳过本题。');
       }else if(checking)payload.response=new FormData(screen).get('response');
       else payload.choice=Number(new FormData(screen).get('choice'));
+      if(reading&&!skipReading){
+        submit.textContent='正在评测…';
+        for(const [button] of recordingControls)button.disabled=true;
+        let elapsed=0;
+        const showPending=()=>{
+          if(!screen.isConnected)return;
+          $('feedback').innerHTML=`<p class="feedback" role="status">正在提交录音并等待讯飞评分… ${elapsed} 秒${elapsed>=10?'。连接较慢，最迟 40 秒会显示结果或超时提示。':''}</p>`;
+        };
+        showPending();
+        pendingTimer=setInterval(()=>{elapsed++;showPending();},1000);
+      }
       const {result,completed,correctCount,earned,retry}=await api('question',payload);
+      clearInterval(pendingTimer);
       if(!screen.isConnected)return;
       if(retry){
         $('feedback').innerHTML=`<div class="feedback wrong"><strong>本次 ${E(result.scores.total)} 分，达到 90 分才算对，请再读一次。</strong>${pronunciationFeedback(result.scores,question.prompt)}</div>`;
         submit.dataset.busy='0';submit.disabled=false;
         submit.textContent='重新提交评测';
+        for(const [button,wasDisabled] of recordingControls)button.disabled=wasDisabled;
         $('skip-reading').disabled=false;
         return;
       }
@@ -314,9 +330,13 @@ function task(m,view,back){
       next.focus();
     }catch(error){
       if(!screen.isConnected)return;
-      notice(error.message);submit.dataset.busy='0';submit.disabled=reading&&!state.speechReady;
+      notice(error.message);
+      $('feedback').innerHTML=`<div class="feedback wrong"><strong>${E(error.message)}</strong>${reading?'<p>录音已保留，可以重新提交或跳过本题。</p>':''}</div>`;
+      submit.dataset.busy='0';submit.disabled=reading&&!state.speechReady;
+      submit.textContent=originalLabel;
+      for(const [button,wasDisabled] of recordingControls)button.disabled=wasDisabled;
       if(reading){skipReading=false;$('skip-reading').disabled=false;}
-    }
+    }finally{clearInterval(pendingTimer);}
   };
 }
 function cardDetail(c){
