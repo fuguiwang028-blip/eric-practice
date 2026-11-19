@@ -1,2 +1,2 @@
-// Enter the deployed Worker HTTPS address here. Empty keeps listen-and-repeat mode.
-globalThis.ERIC_SPEECH_ENDPOINT = 'https://eric-speech-assessment.eric-english.workers.dev';
+// Deployed speech relay HTTPS base URL. Empty keeps listen-and-repeat mode.
+globalThis.ERIC_SPEECH_ENDPOINT = 'https://1536437293-48weq91qnl.ap-hongkong.tencentscf.com';
