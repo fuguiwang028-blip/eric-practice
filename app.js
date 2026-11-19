@@ -192,7 +192,7 @@ function task(m,view,back){
       ${shipSample?'<small>范读来源：<a href="https://commons.wikimedia.org/wiki/File:En-us-ship.ogg" target="_blank" rel="noopener">Dvortygirl / Wikimedia Commons</a></small>':''}</div>`:
       checking?'<label>你的答案<input name="response" maxlength="2000" required autocomplete="off" placeholder="输入后按回车"></label>':(providedSample?'<div class="question-listening"><button type="button" class="secondary" id="play-question-audio">▶ 播放题目音频</button><p id="question-audio-status" role="status"></p></div>':'')+question.choices.map((x,i)=>`<label class="choice"><input type="radio" required name="choice" value="${i}">${E(x)}</label>`).join('')}
     </fieldset><div id="feedback" role="status"></div>
-    <button id="submit-answer" class="primary" style="margin-top:12px" ${reading?'disabled':'hidden'}>${reading?(state.speechReady?'提交评测':'评测暂不可用'):''}</button>
+    <button id="submit-answer" class="primary" style="margin-top:12px" ${reading?'disabled':'hidden'}>${reading?(state.speechReady?'提交评测':'请在正式网页进行评测'):''}</button>
     ${reading?'<button type="button" class="secondary" id="skip-reading">跳过本题</button>':''}
     <button id="next-question" type="button" class="primary" hidden></button></form></section></div>`;
   if(!reading&&providedSample){

@@ -148,20 +148,10 @@ function speechEndpoint(){
       ?new URL('/assess',url):null;
   }catch{return null;}
 }
-let speechHealth;
 async function assessmentReady(){
-  const endpoint=speechEndpoint();
-  if(!endpoint||!location.hash.endsWith('/practice'))return false;
-  if(!speechHealth||Date.now()>speechHealth.expires){
-    const controller=new AbortController();
-    const timer=setTimeout(()=>controller.abort(),3000);
-    const check=fetch(new URL('/health',endpoint),{cache:'no-store',signal:controller.signal})
-      .then(async response=>response.ok&&(await response.json()).ready===true)
-      .catch(()=>false)
-      .finally(()=>clearTimeout(timer));
-    speechHealth={expires:Date.now()+30000,check};
-  }
-  return speechHealth.check;
+  // A separate health request can time out even when an assessment request succeeds.
+  // Keep submission available whenever the HTTPS endpoint is configured.
+  return Boolean(speechEndpoint()&&location.hash.endsWith('/practice'));
 }
 async function assessSpeech(text,audio){
   const endpoint=speechEndpoint();
@@ -172,7 +162,10 @@ async function assessSpeech(text,audio){
   try{
     response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({text,audio}),signal:controller.signal});
-  }catch{throw Error('发音评测暂不可用，请稍后重试。');}
+  }catch(error){
+    if(error.name==='AbortError')throw Error('评测连接超过 40 秒，请检查网络后重新提交。');
+    throw Error('无法连接评测服务，请检查网络连接后重新提交。');
+  }
   finally{clearTimeout(timeout);}
   const data=await response.json().catch(()=>null);
   if(!response.ok)throw Error(data?.error||'评测请求失败。');
