@@ -204,7 +204,16 @@ function wireCourseEditor(category){
     if(!files.length)return;
     try{
       const batch=[];
+      const packageMedia=new Map();
+      input.disabled=true;
+      notice('正在读取课程与媒体…');
       for(const file of files){
+        if(file.name.toLowerCase().endsWith('.zip')){
+          const parsed=await parseCoursePackage(file,category);
+          batch.push(...parsed.courses);
+          for(const [path,blob] of parsed.media)packageMedia.set(path,blob);
+          continue;
+        }
         if(file.size>8*1024*1024)throw Error(file.name+' 文件过大。');
         try{
           const payload=JSON.parse(await file.text());
@@ -214,20 +223,24 @@ function wireCourseEditor(category){
         }catch(error){throw Error(file.name+'：'+error.message);}
       }
       if(!input.isConnected)return;
-      if(batch.length===1){
+      if(batch.length===1&&!files.some(file=>file.name.toLowerCase().endsWith('.zip'))){
         openCourseEditor(batch[0].category,null,batch[0]);return;
       }
       const counts=Object.keys(MODULES).map(key=>[MODULES[key],batch.filter(c=>c.category===key).length])
         .filter(([,count])=>count>0);
-      popup(`<h2>批量导入 ${batch.length} 个课次</h2><ul>${counts.map(([label,count])=>`<li>${E(label)} · ${count} 个课次</li>`).join('')}</ul><button class="primary" id="import-batch">保存全部课次</button><p id="batch-error" role="status"></p>`);
-      $('import-batch').onclick=()=>{
+      popup(`<h2>批量导入 ${batch.length} 个课次</h2><p>已自动匹配 ${packageMedia.size} 个音频或图片文件。</p><ul>${counts.map(([label,count])=>`<li>${E(label)} · ${count} 个课次</li>`).join('')}</ul><button class="primary" id="import-batch">保存全部课次</button><p id="batch-error" role="status"></p>`);
+      $('import-batch').onclick=async event=>{
+        const button=event.currentTarget;
+        button.disabled=true;
         try{
+          await storeCourseMedia(packageMedia);
           saveCourseDrafts(batch.map(course=>makeDraft(course)));
           $('popup').close();
           refresh().then(()=>notice('已保存，可逐个编辑或导出发布文件。')).catch(e=>notice(e.message));
-        }catch(error){$('batch-error').textContent=error.message;}
+        }catch(error){if($('batch-error'))$('batch-error').textContent=error.message;button.disabled=false;}
       };
     }catch(e){if(input.isConnected)notice(e instanceof SyntaxError?'无法读取该 JSON 文件。':e.message);}
+    finally{if(input.isConnected)input.disabled=false;}
   };
   $('publish-courses').onclick=()=>{try{downloadPublishedCourses();}catch(error){notice(error.message);}};
   $('publish-course-media').onclick=()=>downloadCourseMedia().catch(error=>notice(error.message));

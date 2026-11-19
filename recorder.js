@@ -25,6 +25,26 @@ function wavFromPcm(pcm){
   header.setUint32(40,pcm.length,true);
   return new Blob([header.buffer,pcm],{type:'audio/wav'});
 }
+function trimRecordingSilence(samples,rate){
+  const frame=Math.max(1,Math.round(rate*.02));
+  const energy=[];
+  let maximum=0;
+  for(let start=0;start<samples.length;start+=frame){
+    let square=0;
+    const end=Math.min(samples.length,start+frame);
+    for(let i=start;i<end;i++)square+=samples[i]*samples[i];
+    const rms=Math.sqrt(square/(end-start));
+    energy.push(rms);maximum=Math.max(maximum,rms);
+  }
+  const threshold=Math.max(.002,maximum*.06);
+  const first=energy.findIndex(value=>value>=threshold);
+  if(first<0)return samples;
+  let last=energy.length-1;
+  while(last>first&&energy[last]<threshold)last--;
+  const from=Math.max(0,first*frame-Math.round(rate*.15));
+  const to=Math.min(samples.length,(last+1)*frame+Math.round(rate*.25));
+  return samples.subarray(from,Math.max(to,Math.min(samples.length,from+Math.round(rate*.2))));
+}
 async function toAssessmentPcm(chunks,count,rate){
   const size=Math.min(Math.floor(count*pcmRate/rate),captureSeconds*pcmRate);
   const resampler=new OfflineAudioContext(1,size,pcmRate);
@@ -36,7 +56,7 @@ async function toAssessmentPcm(chunks,count,rate){
   source.buffer=buffer;
   source.connect(resampler.destination);
   source.start();
-  return packPcm((await resampler.startRendering()).getChannelData(0));
+  return packPcm(trimRecordingSilence((await resampler.startRendering()).getChannelData(0),pcmRate));
 }
 function attachRecorder(host){
   const record=host.querySelector('[data-record]');

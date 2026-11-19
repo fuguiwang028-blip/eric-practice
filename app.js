@@ -119,7 +119,7 @@ async function review(key,id,mode){
       ${local?`<details class="course-question-list"><summary>题目名称</summary><ol>${c.questions.map(q=>`<li>${E(q.prompt)}</li>`).join('')}</ol></details>`:''}`;
   }
   host.innerHTML=`<section class="panel course-list"><div class="row course-head"><h2>课次</h2>
-    ${local?'<div class="action-row"><label>批量导入课程 JSON <input id="course-import" type="file" multiple accept=".json,application/json"></label><button id="publish-courses" class="secondary">导出发布课程</button><button id="publish-course-media" class="secondary">导出课件媒体</button></div>':''}</div>
+    ${local?'<div class="action-row"><label>导入课件 ZIP / JSON <input id="course-import" type="file" multiple accept=".zip,.json,application/zip,application/json"></label><button id="publish-courses" class="secondary">导出发布课程</button><button id="publish-course-media" class="secondary">导出课件媒体</button></div>':''}</div>
     ${[...folders].map(([name,items])=>`<details class="course-folder" ${folders.size===1?'open':''}><summary>${E(name)} <small>${items.length} 个课次</small></summary><div class="path-items">${local?`<div class="course-folder-tools"><button class="secondary" type="button" data-rename-folder="${E(name)}">修改目录名</button></div>`:''}${items.map(courseRow).join('')}</div></details>`).join('')||'<p class="muted">这个模块暂无课次。</p>'}</section>`;
   if(local)wireCourseEditor(category);
 }
@@ -292,7 +292,7 @@ function task(m,view,back){
         let elapsed=0;
         const showPending=()=>{
           if(!screen.isConnected)return;
-          $('feedback').innerHTML=`<p class="feedback" role="status">正在提交录音并等待讯飞评分… ${elapsed} 秒${elapsed>=10?'。连接较慢，最迟 40 秒会显示结果或超时提示。':''}</p>`;
+          $('feedback').innerHTML=`<p class="feedback" role="status">正在提交 ${(atob(payload.audio).length/32000).toFixed(1)} 秒录音并等待讯飞评分… ${elapsed} 秒${elapsed>=10?'。连接较慢，最迟 45 秒会显示结果或超时提示。':''}</p>`;
         };
         showPending();
         pendingTimer=setInterval(()=>{elapsed++;showPending();},1000);

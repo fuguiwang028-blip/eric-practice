@@ -157,7 +157,7 @@ async function assessSpeech(text,audio){
   const endpoint=speechEndpoint();
   if(!endpoint)throw Error('发音评测尚未配置。');
   const controller=new AbortController();
-  const timeout=setTimeout(()=>controller.abort(),40000);
+  const timeout=setTimeout(()=>controller.abort(),45000);
   try{
     const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},
       body:JSON.stringify({text,audio}),signal:controller.signal});
@@ -172,7 +172,7 @@ async function assessSpeech(text,audio){
       throw Error('没有收到有效的评测分数。');
     return data.scores;
   }catch(error){
-    if(controller.signal.aborted)throw Error('评测连接超过 40 秒，请检查网络后重新提交。');
+    if(controller.signal.aborted)throw Error('评测连接超过 45 秒，请检查网络后重新提交。');
     if(error instanceof TypeError)throw Error('无法连接评测服务，请检查网络连接后重新提交。');
     throw error;
   }finally{clearTimeout(timeout);}
