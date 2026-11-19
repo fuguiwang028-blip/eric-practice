@@ -143,16 +143,23 @@ function pronunciationFeedback(scores,prompt){
   const chip=(text,[color,label])=>`<span class="speech-chip speech-${color}"><strong>${E(text)}</strong><small>${E(label)}</small></span>`;
   const isShip=prompt.trim().toLowerCase()==='ship';
   const phoneSymbols={aa:'ɑː',ae:'æ',ah:'ʌ',ao:'ɔː',ar:'eə',aw:'aʊ',ax:'ə',ay:'aɪ',eh:'e',er:'ɜː',ey:'eɪ',ih:'ɪ',ir:'ɪə',iy:'iː',oo:'ɒ',ow:'əʊ',oy:'ɔɪ',uh:'ʊ',uw:'uː',ur:'ʊə',hh:'h',jh:'dʒ',ng:'ŋ',sh:'ʃ',th:'θ',dh:'ð',y:'j',zh:'ʒ',ch:'tʃ',b:'b',d:'d',f:'f',g:'g',k:'k',l:'l',m:'m',n:'n',p:'p',r:'r',s:'s',t:'t',v:'v',w:'w',z:'z'};
-  const phoneStatus=phone=>phone.code===0?['green','✓ 正常读出']:statusByCode[phone.code]||['neutral','? 未返回状态'];
+  const phoneStatus=phone=>phone.code===0?['neutral','已对齐 · 准确度未知']:statusByCode[phone.code]||['neutral','? 未返回状态'];
   const wordView=words.length?`<h4>逐词反馈</h4><div class="speech-chips">${words.map(w=>chip(w.text,wordStatus(w))).join('')}</div>`:'';
-  const phoneView=phones.length?`<h4>音素反馈</h4><div class="speech-chips">${phones.map(p=>{
+  const phoneView=phones.length?`<h4>音素对齐（不是准确度评分）</h4><div class="speech-chips">${phones.map(p=>{
     const symbol=String(p.symbol||'');
     const ipa=phoneSymbols[symbol.toLowerCase()];
     return chip(ipa?`/${ipa}/`:symbol,phoneStatus(p));
-  }).join('')}</div><p class="muted">绿色：正常读出 · 黄色：多读或重复 · 红色：漏读或替换 · 灰色：未返回状态。<br>颜色依据讯飞的增漏读标记，不代表逐音素得分；正常读出也可能存在发音偏差。</p>`:'';
+  }).join('')}</div><p class="muted">灰色：准确度未知 · 黄色：多读或重复 · 红色：漏读或替换。<br>讯飞可能将错误发音对齐到目标音素；这些符号不是你实际读出的音，也不能据此判定发音正确。</p>`:'';
+  const syllables=Array.isArray(scores.syllables)?scores.syllables:[];
+  const syllableView=syllables.length?`<h4>音节评分</h4><div class="speech-chips">${syllables.map(s=>{
+    const hasScore=Number.isFinite(s.score);
+    const status=s.error===1||s.error===2049?['red','发音需纠正']:hasScore?[s.score>=90?'green':s.score>=60?'yellow':'red',`${s.score} 分`]:['neutral','无音节分数'];
+    return chip(s.text,status);
+  }).join('')}</div><p class="muted">音节分数来自讯飞，不是每个音素的独立分数。</p>`:'';
+  const unlocated=phones.length&&!phones.some(p=>p.code!==0)&&(scores.accuracy??scores.total)<90?'<p><strong>本次发音尚未达标，但引擎没有定位到具体错音。请回听并对照范读。</strong></p>':'';
   const hint=isShip?'<p><strong>ship /ʃɪp/</strong> 中间是短元音 /ɪ/。嘴巴放松、少张开，别读成更张口的 /æ/。</p>':'';
   const missing=hasDetails&&!phones.length?'<p class="muted">本次未返回逐音素状态，无法定位到某一个音。</p>':'';
-  return `<p>${verdict}</p>${wordView}${phoneView}${missing}${hint}`;
+  return `<p>${verdict}</p>${wordView}${syllableView}${unlocated}${phoneView}${missing}${hint}`;
 }
 function task(m,view,back){
   const title=sectionHeader(E(m.task?.title||m.label)+' · 练习',state.day);
