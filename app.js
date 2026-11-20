@@ -189,7 +189,7 @@ function task(m,view,back){
       <div class="action-row"><button class="secondary" type="button" id="listen" ${!shipSample&&!providedSample&&typeof speechSynthesis==='undefined'?'hidden':''}>听范读</button>
       <button type="button" class="secondary" data-record>开始录音</button><button type="button" class="secondary" data-stop disabled>停止录音</button></div>
       <p class="grade" data-record-status role="status"></p><audio class="media" controls hidden></audio>
-      ${shipSample?'<small>范读来源：<a href="https://commons.wikimedia.org/wiki/File:En-us-ship.ogg" target="_blank" rel="noopener">Dvortygirl / Wikimedia Commons</a></small>':''}</div>`:
+      ${shipSample?'<small>范读来源：<a href="https://commons.wikimedia.org/wiki/File:En-us-ship.ogg" target="_blank" rel="noopener">Dvortygirl / Wikimedia Commons</a></small>':''}</div>${providedSample?'<div class="read-sample"><p class="muted">教材范读 · 可拖动进度条定位</p><audio id="read-sample-player" class="media" controls preload="metadata" aria-label="教材范读播放器"></audio></div>':''}`:
       checking?'<label>你的答案<input name="response" maxlength="2000" required autocomplete="off" placeholder="输入后按回车"></label>':(providedSample?'<div class="question-listening"><button type="button" class="secondary" id="play-question-audio">▶ 播放题目音频</button><p id="question-audio-status" role="status"></p></div>':'')+question.choices.map((x,i)=>`<label class="choice"><input type="radio" required name="choice" value="${i}">${E(x)}</label>`).join('')}
     </fieldset><div id="feedback" role="status"></div>
     <button id="submit-answer" type="submit" class="primary" style="margin-top:12px" ${reading?'disabled':'hidden'}>${reading?(state.speechReady?'提交评测':'请在正式网页进行评测'):''}</button>
@@ -223,7 +223,7 @@ function task(m,view,back){
     recorder=attachRecorder(host);
     host.addEventListener('recorded',()=>{$('submit-answer').disabled=!state.speechReady;});
     host.addEventListener('recording',()=>$('submit-answer').disabled=state.speechReady);
-    let sample=providedSample?new Audio(providedSample):shipSample?new Audio('https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a9/En-us-ship.ogg/En-us-ship.ogg.mp3'):null;
+    let sample=providedSample?$('read-sample-player'):shipSample?new Audio('https://upload.wikimedia.org/wikipedia/commons/transcoded/a/a9/En-us-ship.ogg/En-us-ship.ogg.mp3'):null;
     function browserVoice(){
       if(typeof speechSynthesis==='undefined'){notice('没有可用的范读，请点下方音频来源播放。');return;}
       speechSynthesis.cancel();
@@ -236,18 +236,23 @@ function task(m,view,back){
       };
       speechSynthesis.speak(line);
     }
-    let sampleUrl;
+    let sampleUrl,preparingSample;
+    function prepareSample(){
+      if(!providedSample)return Promise.resolve();
+      return preparingSample??=(async()=>{
+        let blob;
+        if(localCourseEditor()&&providedSample.startsWith('./course-media/'))blob=await readCourseMedia(providedSample);
+        if(!host.isConnected)return;
+        sample.src=blob?(sampleUrl=URL.createObjectURL(blob)):providedSample;
+      })().catch(error=>{preparingSample=null;throw error;});
+    }
     const disposeSample=()=>{sample?.pause();if(sampleUrl)URL.revokeObjectURL(sampleUrl);};
     const disposeReview=releaseReviewImage;
     releaseReviewImage=()=>{disposeSample();disposeReview?.();};
+    if(providedSample)prepareSample().catch(()=>{if(host.isConnected)notice('无法读取本地范读音频，请重新导入课件媒体。');});
     $('listen').onclick=async()=>{
-      if(localCourseEditor()&&providedSample.startsWith('./course-media/')&&!sampleUrl){
-        try{
-          const blob=await readCourseMedia(providedSample);
-          if(!host.isConnected)return;
-          if(blob){sampleUrl=URL.createObjectURL(blob);sample.src=sampleUrl;}
-        }catch{notice('无法读取本地范读音频。');return;}
-      }
+      try{await prepareSample();}catch{if(host.isConnected)notice('无法读取范读音频，请检查课件媒体。');return;}
+      if(!host.isConnected)return;
       if(!sample){browserVoice();return;}
       sample.currentTime=0;
       sample.play().catch(()=>{if(host.isConnected)notice('指定范读无法播放，请检查音频链接或文件。');});
