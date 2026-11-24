@@ -1,4 +1,3 @@
-// Edit in the local city phrase editor, then export and replace this file when publishing.
 globalThis.ERIC_CITY_PHRASES = [
   "中国人能飞，边飞边发MJ。",
   "忘情牛肉面，吃了不烧心才对。",
@@ -7,5 +6,13 @@ globalThis.ERIC_CITY_PHRASES = [
   "大狗对我叫，鼻屎弄得奶奶笑。",
   "白菜对我笑，来杯好茶摇一摇。",
   "学功夫练武术，师傅教我闪身步。",
-  "你的胆子真是肥嘟嘟"
+  "你的胆子真是肥嘟嘟",
+  "Eric真是太帅了！",
+  "我真是Eric的粉丝！",
+  "房东，没水了！",
+  "有小强！",
+  "我是Eric的小黑粉！",
+  "没钱交房租...哭泣...",
+  "第一次来南沙，请多关照～",
+  "听说这附近有一个Eric的大帅哥？"
 ];

@@ -7,6 +7,7 @@ function packagePath(name){
   return name.replace(/^\.\//,'');
 }
 async function parseCoursePackage(file,category){
+  if(typeof globalThis.JSZip?.loadAsync!=='function')throw Error('ZIP 解析组件未加载。请使用完整本地编辑版，确认 vendor/jszip.min.js 存在后重新打开页面。');
   if(file.size>100*1024*1024)throw Error('单个课件 ZIP 请控制在 100 MB 以内。');
   const zip=await JSZip.loadAsync(await file.arrayBuffer());
   const entries=Object.values(zip.files).filter(entry=>!entry.dir&&!entry.name.startsWith('__MACOSX/')&&!entry.name.split('/').at(-1).startsWith('.'));

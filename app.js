@@ -182,7 +182,7 @@ function task(m,view,back){
   const providedSample=question.audio&&validReadAudio(question.audio)?question.audio:'';
   const reading=question.kind==='read', checking=question.kind==='check', total=m.task.questions.length;
   view.innerHTML=`<div class="question-wrap">${title}<section class="panel">${rewardNote?'<p class="muted">'+rewardNote+'</p>':''}<p><a href="${back}">返回课次复习资料</a></p>
-    <p class="eyebrow" style="margin-top:15px">第 ${index+1} / ${total} 题 · ${question.bonus?'王者冲刺 · ':''}${reading?'朗读题':checking?'作答后对照':providedSample?'听音选择题':'选择题'}</p>
+    <p class="eyebrow" style="margin-top:15px">第 ${index+1} / ${total} 题 · ${question.bonus?'王者冲刺 · ':''}${reading?'朗读题':checking?(providedSample?'听音写单词':'作答后对照'):providedSample?'听音选择题':'选择题'}</p>
     <div class="steps" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${index}"><i style="width:${index/total*100}%"></i></div>
     <form id="answer-form"><fieldset><legend>${E(question.prompt)}</legend>
     ${reading?`<div id="read-box"><p class="muted">${state.speechReady?`提交后由讯飞评测，${READ_PASS_SCORE} 分及以上算对；不足 ${READ_PASS_SCORE} 分可重录或跳过。`:`当前可本机录音回听。评分服务接通后，${READ_PASS_SCORE} 分及以上算对，也可跳过本题。`}</p>
@@ -190,9 +190,9 @@ function task(m,view,back){
       <button type="button" class="secondary" data-record>开始录音</button><button type="button" class="secondary" data-stop disabled>停止录音</button></div>
       <p class="grade" data-record-status role="status"></p><audio class="media" controls hidden></audio>
       ${shipSample?'<small>范读来源：<a href="https://commons.wikimedia.org/wiki/File:En-us-ship.ogg" target="_blank" rel="noopener">Dvortygirl / Wikimedia Commons</a></small>':''}</div>${providedSample?'<div class="read-sample"><p class="muted">教材范读 · 可拖动进度条定位</p><audio id="read-sample-player" class="media" controls preload="metadata" aria-label="教材范读播放器"></audio></div>':''}`:
-      checking?'<label>你的答案<input name="response" maxlength="2000" required autocomplete="off" placeholder="输入后按回车"></label>':(providedSample?'<div class="question-listening"><button type="button" class="secondary" id="play-question-audio">▶ 播放题目音频</button><p id="question-audio-status" role="status"></p></div>':'')+question.choices.map((x,i)=>`<label class="choice"><input type="radio" required name="choice" value="${i}">${E(x)}</label>`).join('')}
+      checking?(providedSample?'<div class="question-listening"><button type="button" class="secondary" id="play-question-audio">▶ 播放题目音频</button><p id="question-audio-status" role="status"></p></div>':'')+'<label>你的答案<input name="response" maxlength="2000" required autocomplete="off" placeholder="输入后按回车"></label>':(providedSample?'<div class="question-listening"><button type="button" class="secondary" id="play-question-audio">▶ 播放题目音频</button><p id="question-audio-status" role="status"></p></div>':'')+question.choices.map((x,i)=>`<label class="choice"><input type="radio" required name="choice" value="${i}">${E(x)}</label>`).join('')}
     </fieldset><div id="feedback" role="status"></div>
-    <button id="submit-answer" type="submit" class="primary" style="margin-top:12px" ${reading?'disabled':'hidden'}>${reading?(state.speechReady?'提交评测':'请在正式网页进行评测'):''}</button>
+    <button id="submit-answer" type="submit" class="primary" style="margin-top:12px" ${reading?'disabled':checking?'':'hidden'}>${reading?(state.speechReady?'提交评测':'请在正式网页进行评测'):checking?'提交答案':''}</button>
     ${reading?'<button type="button" class="secondary" id="skip-reading">跳过本题</button>':''}
     <button id="next-question" type="button" class="primary" hidden></button></form></section></div>`;
   if(!reading&&providedSample){
@@ -355,52 +355,39 @@ function showCardSide(c,back){
 }
 async function collection(){
   const view=$('view');
-  view.innerHTML=sectionHeader('我的收藏')+`<section class="panel" id="collection-panel">正在读取卡片册…</section>`;
-  const host=$('collection-panel');
-  const requestKey='draw-request-'+state.user.id;
+  view.innerHTML=`<section class="collection-page"><header class="collection-banner"><h1>我的收藏</h1><span>抽卡与收藏分区</span><div class="collection-skyline" aria-hidden="true"></div></header><div id="collection-panel">正在读取卡片册…</div></section>`;
+  const host=$('collection-panel'),requestKey='draw-request-'+state.user.id;
+  let busy=false,latest,rarity='all',order='number',ownership='all';
   function show(data){
     if(!host.isConnected)return;
-    host.innerHTML=`<div class="row"><h2>卡片册</h2><button class="primary" id="draw" ${data.available||sessionStorage.getItem(requestKey)?'':'disabled'}>抽卡</button></div>
-    <p class="muted">可抽 ${data.available} 次，今日还可抽 ${data.remaining} 次。首次完成课次达 90 分、复习 5 个到期词可获抽卡机会，每日最多 4 次。</p>
-    <div class="card-grid">${data.cards.map((c,i)=>c.quantity
-      ? `<button type="button" class="collection-card owned-card" data-card="${i}"><img loading="lazy" src="${E(c.image)}?owned=1" alt=""><span>${E(c.name)} · ${E(c.number)}</span><span class="card-quantity">${E(c.rarity)} 级 · 已获得 ${c.quantity} 张</span></button>`
-      : '<div class="collection-card locked-card"><div class="locked-card-face" aria-hidden="true">?</div><span>未获得</span></div>').join('')}</div>
-    <p class="collection-total" aria-live="polite">共 ${data.total} 张</p>`;
-    host.querySelectorAll('[data-card]').forEach(b=>b.onclick=()=>cardDetail(data.cards[b.dataset.card]));
+    latest=data;const owned=data.cards.filter(c=>c.quantity).length;
+    const rarities=[...new Set(data.cards.filter(c=>c.quantity).map(c=>c.rarity))];
+    host.innerHTML=`<div class="collection-layout"><section class="draw-station"><h2>▱ 抽卡站</h2><div class="draw-station-body"><div class="station-pack"><img src="./collection-assets/pack.png" alt="城市卡包"></div><div class="draw-balances"><span>可抽 <b>${data.available}</b> 次</span><span>今日剩余额度 <b>${data.remaining}</b> 次</span></div><button class="primary station-draw" id="draw" ${busy||!(data.available||sessionStorage.getItem(requestKey))?'disabled':''}>${busy?'正在开包…':'抽卡'}</button><section class="draw-rules"><h3>获得规则</h3><p>首次完成课次达90分、成功复习5个到期词，可获抽卡机会；每日最多4次。</p><p>允许重复获得，重复卡会累计张数。</p></section></div></section><section class="collection-album"><header><h2>▤ 收藏册</h2><p>已收集 <b>${owned}</b> / ${data.cards.length}</p></header><div class="album-filters"><label><span class="sr-only">获得状态</span><select id="album-ownership"><option value="all">全部卡片</option><option value="owned">已获得</option><option value="locked">未获得</option></select></label><label><span class="sr-only">稀有度</span><select id="album-rarity"><option value="all">全部稀有度</option>${rarities.map(r=>`<option value="${E(r)}">${E(r)}级</option>`).join('')}</select></label><label><span class="sr-only">排列方式</span><select id="album-order"><option value="number">按卡片编号</option><option value="quantity">按获得数量</option></select></label></div><div class="card-grid" id="album-grid"></div><p class="collection-total" aria-live="polite">共 ${data.total} 张</p></section></div>`;
+    $('album-ownership').value=ownership;$('album-rarity').value=rarity;$('album-order').value=order;
+    function renderCards(){
+      const list=data.cards.map((c,i)=>({c,i})).filter(({c})=>(ownership==='all'||(ownership==='owned'?!!c.quantity:!c.quantity))&&(rarity==='all'||c.quantity&&c.rarity===rarity));
+      if(order==='quantity')list.sort((a,b)=>b.c.quantity-a.c.quantity||a.i-b.i);
+      $('album-grid').innerHTML=list.map(({c,i})=>c.quantity?`<button type="button" class="collection-card owned-card" data-card="${i}"><img loading="lazy" src="${E(c.image)}?owned=1" alt="${E(c.name)}"><span>${E(c.name)} · ${E(c.number)}</span><span class="card-quantity">${E(c.rarity)}级 · 已获得 ${c.quantity} 张</span></button>`:'<div class="collection-card locked-card"><div class="locked-card-face" aria-hidden="true">?</div><span>未获得</span></div>').join('')||'<p class="muted">暂无符合条件的卡片。</p>';
+      host.querySelectorAll('[data-card]').forEach(b=>b.onclick=()=>cardDetail(data.cards[b.dataset.card]));
+    }
+    $('album-ownership').onchange=e=>{ownership=e.target.value;renderCards();};$('album-rarity').onchange=e=>{rarity=e.target.value;renderCards();};$('album-order').onchange=e=>{order=e.target.value;renderCards();};renderCards();
     $('draw').onclick=async()=>{
-      $('draw').disabled=true;
-      const requestId=sessionStorage.getItem(requestKey)||(globalThis.crypto?.randomUUID?.()||Date.now()+'-'+Math.random());
-      sessionStorage.setItem(requestKey,requestId);
-      $('popup-close').disabled=true;
-      popup('<h2>卡片正在旋转</h2><div class="spinning-card" aria-hidden="true">?</div><button id="reveal-draw" class="primary" disabled>等待揭晓…</button>');
-      const reveal=$('reveal-draw');
-      const dialog=$('popup');
-      dialog.oncancel=event=>event.preventDefault();
+      if(busy)return;busy=true;$('draw').disabled=true;$('draw').textContent='正在准备卡包…';
+      const requestId=sessionStorage.getItem(requestKey)||(globalThis.crypto?.randomUUID?.()||Date.now()+'-'+Math.random());sessionStorage.setItem(requestKey,requestId);
       try{
-        const [result]=await Promise.all([api('draw',{requestId}),new Promise(resolve=>setTimeout(resolve,3600))]);
-        reveal.textContent='揭晓卡片';
-        reveal.disabled=false;
-        reveal.onclick=()=>{
-          sessionStorage.removeItem(requestKey);
-          show(result);
-          $('popup-close').disabled=false;
-          dialog.oncancel=null;
-          if(result.card){
-            const c=result.card;
-            popup(`<h2>${c.quantity>1?'再次获得':'获得'} ${E(c.name)} · ${E(c.number)}</h2><img class="draw-card" src="${E(c.image)}?owned=1" alt=""><p>这张卡已累计获得 ${c.quantity} 张。</p><button class="primary" id="draw-detail">查看卡片</button>`);
-            $('draw-detail').onclick=()=>cardDetail(c);
-          }else popup('<h2>这次没有抽到卡片</h2><p>下次再来试试。</p>');
-        };
-      }catch(error){
-        if(error.status===409)sessionStorage.removeItem(requestKey);
-        dialog.oncancel=null;$('popup-close').disabled=false;dialog.close();
-        notice(error.message);
-        try{show(await api('collection'));}catch{}
-      }
+        const result=await api('draw',{requestId});sessionStorage.removeItem(requestKey);show(result);
+        if(!result.card){busy=false;show(result);return;}
+        const c=result.card,dialog=$('popup');
+        popup(`<section class="pack-opening"><h2>拆开今天的学习奖励</h2><div class="pack-stage running"><div class="pack-halo"></div><div class="pack-reward"><div class="pack-face pack-back">▥</div><img class="pack-face pack-front" src="${E(c.image)}?owned=1" alt="${E(c.name)}"></div><div class="opening-pack"><img class="opening-body" src="./collection-assets/pack-body.png" alt=""><img class="opening-seal" src="./collection-assets/pack-seal.png" alt=""></div></div><div id="pack-result" hidden><h3>${c.quantity>1?'再次获得':'获得'} ${E(c.name)} · ${E(c.number)}</h3><p>${E(c.rarity)}级 · 这张卡已累计获得 ${c.quantity} 张</p><button class="primary" id="draw-detail">查看卡片</button></div><button class="secondary" id="skip-pack">跳过动画</button></section>`);
+        let timer,finished=false;const section=$('popup-content').querySelector('.pack-opening');
+        function finish(){if(finished)return;finished=true;clearTimeout(timer);dialog.removeEventListener('close',finish);busy=false;show(result);if(section.isConnected){section.querySelector('.pack-stage').className='pack-stage done';$('pack-result').hidden=false;$('skip-pack').hidden=true;}}
+        $('skip-pack').onclick=finish;$('draw-detail').onclick=()=>{finish();cardDetail(c);};dialog.addEventListener('close',finish,{once:true});timer=setTimeout(finish,4800);
+      }catch(error){busy=false;if(error.status===409)sessionStorage.removeItem(requestKey);notice(error.message);try{show(await api('collection'));}catch{show(latest);}}
     };
   }
   try{show(await api('collection'));}catch(error){host.textContent=error.message;}
 }
+
 function backup() {
   $('view').innerHTML='<section class="panel"><h1>进度备份</h1><p>练习、单词和卡片存在当前浏览器。换设备前先导出，再在新设备导入。导入会替换当前进度。</p><div class="row"><button id="export" class="primary">导出进度</button><label>选择备份文件 <input type="file" id="import" accept=".json,application/json"></label><button id="restore" disabled>确认替换进度</button></div></section>';
   $('export').onclick=()=>{
@@ -453,6 +440,7 @@ function render(){
   (Object.hasOwn(pages,page)?pages[page]:tower)(key,id,mode);
 }
 async function refresh(){
+  if(typeof initCourseDraftStore==='function')await initCourseDraftStore();
   state=await api('state');
   render();
 }

@@ -1,20 +1,18 @@
 if(location.protocol==='file:')globalThis.ERIC_LOCAL_EDITOR=true;
 
-function saveCourseDrafts(courses){
-  const drafts=new Map(storedDraftCourses().map(course=>[course.id,course]));
-  for(const course of courses)drafts.set(course.id,course);
-  localStorage.setItem(COURSE_DRAFTS_KEY,JSON.stringify([...drafts.values()]));
+async function saveCourseDrafts(courses){
+  await persistCourseDrafts(courses);
 }
 function makeDraft(course,existing){
   const id=existing?.id||course.category+'-'+(globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+'-'+Math.random().toString(36).slice(2));
   const version=existing?existing.version+1:1;
   return {...existing,...course,id,version,...(!existing?{pendingPublication:true}:{})};
 }
-function downloadPublishedCourses(){
+async function downloadPublishedCourses(){
   const today=localDay();
   const releasing=storedDraftCourses().filter(course=>course.pendingPublication)
     .map(({pendingPublication,...course})=>({...course,publishedAt:today}));
-  if(releasing.length)saveCourseDrafts(releasing);
+  if(releasing.length)await saveCourseDrafts(releasing);
   const source='globalThis.ERIC_PUBLISHED_COURSES = '+JSON.stringify(courseList(),null,2)+';\n'+
     'globalThis.ERIC_DELETED_COURSES = '+JSON.stringify([...deletedCourseIds()])+';\n';
   const url=URL.createObjectURL(new Blob([source],{type:'text/javascript'}));
@@ -150,7 +148,7 @@ function openCourseEditor(category,existing,seed){
     function fields(){
       for(const [name,group] of [['choice','data-choice'],['check','data-check'],['read','data-read']]){
         const box=item.querySelector('['+group+']');
-        box.hidden=group==='data-read'?kind.value==='check':kind.value!==name;
+        box.hidden=group==='data-read'?false:kind.value!==name;
         box.querySelectorAll('input,textarea').forEach(el=>el.disabled=box.hidden);
       }
     }
@@ -183,13 +181,13 @@ function openCourseEditor(category,existing,seed){
         const q={kind,prompt:value('prompt'),explanation:value('explanation'),bonus:item.querySelector('[name="bonus"]').checked};
         if(kind==='choice')Object.assign(q,{choices:value('choices').split(/\r?\n/).map(x=>x.trim()).filter(Boolean),answer:Number(value('answer'))-1});
         if(kind==='check')q.reference=value('reference');
-        if(kind==='read'||kind==='choice')q.audio=value('audio');
+        q.audio=value('audio');
         return q;
       });
       const parsed=normalizeCourse({title:form.get('title'),board:form.get('board'),folder:form.get('folder'),boards:boards.map(item=>item.path),questions},category);
       const referenced=new Set([...parsed.boards,...parsed.questions.map(question=>question.audio).filter(Boolean)]);
       await storeCourseMedia(new Map([...pendingMedia].filter(([path])=>referenced.has(path))));
-      saveCourseDrafts([makeDraft(parsed,existing)]);
+      await saveCourseDrafts([makeDraft(parsed,existing)]);
       $('popup').close();
       if(location.hash===`#review/${category}`)refresh().catch(e=>notice(e.message));
       else location.hash=`#review/${category}`;
@@ -234,7 +232,7 @@ function wireCourseEditor(category){
         button.disabled=true;
         try{
           await storeCourseMedia(packageMedia);
-          saveCourseDrafts(batch.map(course=>makeDraft(course)));
+          await saveCourseDrafts(batch.map(course=>makeDraft(course)));
           $('popup').close();
           refresh().then(()=>notice('已保存，可逐个编辑或导出发布文件。')).catch(e=>notice(e.message));
         }catch(error){if($('batch-error'))$('batch-error').textContent=error.message;button.disabled=false;}
@@ -242,20 +240,20 @@ function wireCourseEditor(category){
     }catch(e){if(input.isConnected)notice(e instanceof SyntaxError?'无法读取该 JSON 文件。':e.message);}
     finally{if(input.isConnected)input.disabled=false;}
   };
-  $('publish-courses').onclick=()=>{try{downloadPublishedCourses();}catch(error){notice(error.message);}};
+  $('publish-courses').onclick=async()=>{try{await downloadPublishedCourses();}catch(error){notice(error.message);}};
   $('publish-course-media').onclick=()=>downloadCourseMedia().catch(error=>notice(error.message));
   $('view').querySelectorAll('[data-move-course]').forEach(button=>{
     const courses=courseList(category),course=findCourse(button.dataset.moveCourse);
     const group=courses.filter(item=>(item.folder||'未分组')===(course.folder||'未分组'));
     const index=group.findIndex(item=>item.id===course.id),offset=Number(button.dataset.offset);
     button.disabled=index+offset<0||index+offset>=group.length;
-    button.onclick=()=>{
+    button.onclick=async()=>{
       const target=group[index+offset];
       if(!target)return;
       const first=courses.findIndex(item=>item.id===course.id),second=courses.findIndex(item=>item.id===target.id);
       [courses[first],courses[second]]=[courses[second],courses[first]];
       try{
-        saveCourseDrafts(courses.map((item,order)=>({...item,order})));
+        await saveCourseDrafts(courses.map((item,order)=>({...item,order})));
         refresh().catch(error=>notice(error.message));
       }catch(error){notice(error.message);}
     };
@@ -280,12 +278,12 @@ function wireCourseEditor(category){
     button.onclick=()=>{
       const oldName=button.dataset.renameFolder;
       popup(`<h2>修改目录名称</h2><form id="folder-name-form" class="form"><label>目录名称<input name="folder" value="${E(oldName)}" maxlength="80" required></label><button class="primary">保存</button></form>`);
-      $('folder-name-form').onsubmit=event=>{
+      $('folder-name-form').onsubmit=async event=>{
         event.preventDefault();
         const folder=new FormData(event.currentTarget).get('folder').trim();
         if(!folder)return;
         try{
-          saveCourseDrafts(courseList(category).filter(course=>(course.folder||'未分组')===oldName).map(course=>({...course,folder})));
+          await saveCourseDrafts(courseList(category).filter(course=>(course.folder||'未分组')===oldName).map(course=>({...course,folder})));
           $('popup').close();refresh().catch(error=>notice(error.message));
         }catch(error){notice(error.message);}
       };

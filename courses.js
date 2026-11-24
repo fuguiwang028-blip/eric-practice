@@ -35,7 +35,7 @@ function normalizeCourse(input,category){
       }
     }
     if(!answer) throw Error('第 '+(i+1)+' 题缺少参考答案。');
-    return {kind:'check',prompt,reference:answer,explanation,bonus};
+    return {kind:'check',prompt,reference:answer,explanation,bonus,...(audio?{audio}:{})};
   });
   return {title,board,category,folder,boards,questions};
 }
@@ -60,6 +60,7 @@ function defaultCourses(){
 }
 function storedDraftCourses(){
   if(!globalThis.ERIC_LOCAL_EDITOR||location.protocol!=='file:')return [];
+  if(typeof courseDraftCache!=='undefined'&&Array.isArray(courseDraftCache))return courseDraftCache;
   try{return JSON.parse(localStorage.getItem(COURSE_DRAFTS_KEY))||[];}
   catch{return [];}
 }

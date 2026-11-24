@@ -63,7 +63,7 @@ function attachRecorder(host){
   const stop=host.querySelector('[data-stop]');
   const playback=host.querySelector('audio');
   const status=host.querySelector('[data-record-status]');
-  let session=null,url=null,pcm=null,disposed=false;
+  let session=null,url=null,pcm=null,disposed=false,recordingInfo=null;
   function cleanup(current){
     clearTimeout(current.timer);
     current.graph?.disconnect();
@@ -77,7 +77,7 @@ function attachRecorder(host){
     playback.hidden=true;
     if(url)URL.revokeObjectURL(url);
     url=null;
-    pcm=null;
+    pcm=null;recordingInfo=null;
   }
   function collect(current,chunk){
     if(!chunk.length||disposed||current!==session)return;
@@ -117,6 +117,18 @@ function attachRecorder(host){
       const data=await toAssessmentPcm(current.chunks,current.count,rate);
       if(disposed||current!==session)return;
       pcm=data;
+      const view=new DataView(data.buffer,data.byteOffset,data.byteLength);
+      let square=0,peak=0,clipped=0;
+      for(let i=0;i<data.length;i+=2){
+        const value=view.getInt16(i,true)/32768;
+        square+=value*value;peak=Math.max(peak,Math.abs(value));
+        if(Math.abs(value)>=.99)clipped++;
+      }
+      recordingInfo={seconds:data.length/(pcmRate*2),bytes:data.length,outputRate:pcmRate,
+        inputRate:rate,peak:Math.round(peak*1000)/1000,
+        rms:Math.round(Math.sqrt(square/(data.length/2))*1000)/1000,
+        clippedPercent:Math.round(clipped/(data.length/2)*10000)/100,
+        settings:current.settings||{}};
       url=URL.createObjectURL(wavFromPcm(data));
       playback.src=url;
       playback.hidden=false;
@@ -149,6 +161,9 @@ function attachRecorder(host){
       if(disposed){cleanup(current);return;}
       await resumed;
       if(disposed){cleanup(current);return;}
+      const settings=current.mic.getAudioTracks()[0]?.getSettings?.()||{};
+      current.settings=Object.fromEntries(['sampleRate','channelCount','echoCancellation','noiseSuppression','autoGainControl']
+        .filter(key=>settings[key]!==undefined).map(key=>[key,settings[key]]));
       current.source=context.createMediaStreamSource(current.mic);
       if(context.audioWorklet){
         try{
@@ -186,6 +201,14 @@ function attachRecorder(host){
   stop.onclick=finish;
   return {
     audio:()=>pcm&&encodeBase64(pcm),
+    info:()=>recordingInfo,
+    download(){
+      if(!pcm)return;
+      const address=URL.createObjectURL(wavFromPcm(pcm));
+      const link=document.createElement('a');
+      link.href=address;link.download='eric-reading.wav';link.click();
+      setTimeout(()=>URL.revokeObjectURL(address),10000);
+    },
     dispose(){
       disposed=true;
       if(session)cleanup(session);

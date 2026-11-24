@@ -1,137 +1,5 @@
 globalThis.ERIC_PUBLISHED_COURSES = [
   {
-    "title": "U7基础 · 短元音 u",
-    "board": "短元音 u 读 /ʌ/。\n-ut：nut、hut、cut\n-ub：cub、tub\n-um：gum、hum\n-un：bun、run、fun",
-    "category": "phonics",
-    "questions": [
-      {
-        "kind": "choice",
-        "prompt": "哪一个词和 hut 押韵？",
-        "explanation": "hut 和 cut 的词尾都是 -ut。",
-        "bonus": false,
-        "choices": [
-          "tub",
-          "cut",
-          "hum"
-        ],
-        "answer": 1
-      },
-      {
-        "kind": "choice",
-        "prompt": "哪一个词表示「浴缸」？",
-        "explanation": "tub 表示浴缸。",
-        "bonus": false,
-        "choices": [
-          "tub",
-          "nut",
-          "gum"
-        ],
-        "answer": 0
-      },
-      {
-        "kind": "choice",
-        "prompt": "哪一个词和 gum 属于同一词族？",
-        "explanation": "gum 和 hum 的词尾都是 -um。",
-        "bonus": false,
-        "choices": [
-          "bun",
-          "hut",
-          "hum"
-        ],
-        "answer": 2
-      },
-      {
-        "kind": "choice",
-        "prompt": "b + un 拼成什么？",
-        "explanation": "b 加 -un 拼成 bun。",
-        "bonus": false,
-        "choices": [
-          "run",
-          "bun",
-          "fun"
-        ],
-        "answer": 1
-      },
-      {
-        "kind": "choice",
-        "prompt": "哪一个词表示「坚果」？",
-        "explanation": "nut 表示坚果。",
-        "bonus": false,
-        "choices": [
-          "nut",
-          "cub",
-          "cut"
-        ],
-        "answer": 0
-      },
-      {
-        "kind": "choice",
-        "prompt": "c + ub 拼成什么？",
-        "explanation": "c 加 -ub 拼成 cub。",
-        "bonus": false,
-        "choices": [
-          "cut",
-          "cub",
-          "cup"
-        ],
-        "answer": 1
-      },
-      {
-        "kind": "choice",
-        "prompt": "run 的词尾是哪个？",
-        "explanation": "run 由 r 和 -un 拼成。",
-        "bonus": false,
-        "choices": [
-          "-ut",
-          "-um",
-          "-un"
-        ],
-        "answer": 2
-      },
-      {
-        "kind": "choice",
-        "prompt": "哪个词和 bun 押韵？",
-        "explanation": "bun 和 fun 都以 -un 结尾。",
-        "bonus": false,
-        "choices": [
-          "gum",
-          "fun",
-          "hut"
-        ],
-        "answer": 1
-      },
-      {
-        "kind": "choice",
-        "prompt": "「哼唱」对应哪个词？",
-        "explanation": "hum 表示哼唱。",
-        "bonus": false,
-        "choices": [
-          "hum",
-          "hut",
-          "gum"
-        ],
-        "answer": 0
-      },
-      {
-        "kind": "choice",
-        "prompt": "「小熊」对应哪个词？",
-        "explanation": "cub 表示幼兽，这里指小熊。",
-        "bonus": false,
-        "choices": [
-          "fun",
-          "cub",
-          "nut"
-        ],
-        "answer": 1
-      }
-    ],
-    "id": "phonics",
-    "version": 3,
-    "folder": "牛津自然拼读 第二册",
-    "order": 0,
-    "boards": []
-  },
-  {
     "title": "Unit 1 · Look at Me! · 基础",
     "board": "draw 画画；paint 用颜料画；dance 跳舞；walk 走路；jump 跳跃。\nI 表示“我”，can 表示“能、会”。\nI can + 动词原形，表示“我会……”。\nBen 会画画，Tania 会用颜料画，Susie 会跳舞，Tommy 会走路，Lexy 会跳跃。",
     "category": "starter",
@@ -20923,7 +20791,7 @@ globalThis.ERIC_PUBLISHED_COURSES = [
       }
     ],
     "id": "phonics-1a692750-a1d3-400b-a778-a6af9f68da4f",
-    "version": 2,
+    "version": 5,
     "publishedAt": "2026-11-20"
   },
   {
@@ -41656,6 +41524,13481 @@ globalThis.ERIC_PUBLISHED_COURSES = [
     "id": "grammar-f4d261ae-6942-4de0-b9d2-7d8dcc3d9d07",
     "version": 1,
     "publishedAt": "2026-11-20"
+  },
+  {
+    "title": "Unit 1 · 简单",
+    "board": "Unit 1 长元音 a：a_e 通常发 /eɪ/，词尾 e 不单独发音。\n\ntape：胶带\ncape：披风\ncane：手杖\nmane：鬃毛\ngame：游戏\ncake：蛋糕\nname：名字\nlake：湖\ngate：大门\nwave：海浪\nskate：冰鞋（单数）\ncave：洞穴\n\n押韵词：tape/cape；cane/mane；game/name；cake/lake；gate/skate；wave/cave。\nwave 在本课表示海浪；也可作动词表示挥手。skate 在词汇页指冰鞋，在 skate on a lake 中表示滑冰；一双冰鞋用 skates。\n朗读80分及以上算对；输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "tape 的意思是什么？",
+        "explanation": "tape 是胶带，tap 则是水龙头。",
+        "bonus": false,
+        "choices": [
+          "胶带",
+          "手杖",
+          "披风"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“披风”对应哪个单词？",
+        "explanation": "披风是 cape，注意词尾 e；cap 是帽子。",
+        "bonus": false,
+        "choices": [
+          "cap",
+          "cape",
+          "cane"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "cane 的意思是什么？",
+        "explanation": "cane 是手杖，can 则可表示罐子。",
+        "bonus": false,
+        "choices": [
+          "蛋糕",
+          "鬃毛",
+          "手杖"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "“鬃毛”对应哪个单词？",
+        "explanation": "mane 是鬃毛；man 是男人，name 是名字。",
+        "bonus": false,
+        "choices": [
+          "mane",
+          "name",
+          "man"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：游戏",
+        "reference": "game",
+        "explanation": "游戏是 game，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：蛋糕",
+        "reference": "cake",
+        "explanation": "蛋糕是 cake，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：名字",
+        "reference": "name",
+        "explanation": "名字是 name，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：湖",
+        "reference": "lake",
+        "explanation": "湖是 lake，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "It is winter.",
+        "explanation": "现在是冬天。 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/0.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My cane is new.",
+        "explanation": "我的手杖是新的。 按原声朗读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/1.mp3"
+      }
+    ],
+    "id": "phonics-f7bf7c03-61d3-465e-9586-9b2427ec9634",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 1 · 进阶",
+    "board": "Unit 1 长元音 a：a_e 通常发 /eɪ/，词尾 e 不单独发音。\n\ntape：胶带\ncape：披风\ncane：手杖\nmane：鬃毛\ngame：游戏\ncake：蛋糕\nname：名字\nlake：湖\ngate：大门\nwave：海浪\nskate：冰鞋（单数）\ncave：洞穴\n\n押韵词：tape/cape；cane/mane；game/name；cake/lake；gate/skate；wave/cave。\nwave 在本课表示海浪；也可作动词表示挥手。skate 在词汇页指冰鞋，在 skate on a lake 中表示滑冰；一双冰鞋用 skates。\n朗读80分及以上算对；输入题只填要求的英文单词。\nTrack12 是单词吟唱，不强行改成句子。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "词汇页中 wave 的意思是什么？",
+        "explanation": "本课配图是海浪，wave 也有挥手的用法。",
+        "bonus": false,
+        "choices": [
+          "挥手",
+          "海浪",
+          "洞穴"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：胶带",
+        "reference": "tape",
+        "explanation": "胶带是 tape，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：披风",
+        "reference": "cape",
+        "explanation": "披风是 cape，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：手杖",
+        "reference": "cane",
+        "explanation": "手杖是 cane，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：鬃毛",
+        "reference": "mane",
+        "explanation": "鬃毛是 mane，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：大门",
+        "reference": "gate",
+        "explanation": "大门是 gate，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：海浪",
+        "reference": "wave",
+        "explanation": "海浪是 wave，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The man has tape and a cane.",
+        "explanation": "这个男人有胶带和一根手杖。 歌曲完整保留，可拖进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/2.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "name",
+        "explanation": "名字。本首 chant 为单词吟唱；找到 name 的原声后，只朗读 name。 歌曲完整保留，可拖进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/3.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see a skate in a cave.",
+        "explanation": "我看到洞穴里有一只冰鞋。 歌曲完整保留，可拖进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/4.mp3"
+      }
+    ],
+    "id": "phonics-6d6ef2be-5038-411d-9780-ef88625a9696",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 1 · 困难",
+    "board": "Unit 1 长元音 a：a_e 通常发 /eɪ/，词尾 e 不单独发音。\n\ntape：胶带\ncape：披风\ncane：手杖\nmane：鬃毛\ngame：游戏\ncake：蛋糕\nname：名字\nlake：湖\ngate：大门\nwave：海浪\nskate：冰鞋（单数）\ncave：洞穴\n\n押韵词：tape/cape；cane/mane；game/name；cake/lake；gate/skate；wave/cave。\nwave 在本课表示海浪；也可作动词表示挥手。skate 在词汇页指冰鞋，在 skate on a lake 中表示滑冰；一双冰鞋用 skates。\n朗读80分及以上算对；输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪组单词押韵？",
+        "explanation": "wave 和 cave 都以 /eɪv/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "cake / cane",
+          "wave / cave",
+          "name / lake"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：冰鞋（单数）",
+        "reference": "skate",
+        "explanation": "冰鞋（单数）是 skate，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：洞穴",
+        "reference": "cave",
+        "explanation": "洞穴是 cave，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "给 cap 末尾加一个 e，写出表示“披风”的新单词。",
+        "reference": "cape",
+        "explanation": "cap → cape，元音由短音变成长音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：My _____ is Kate.（名字）",
+        "reference": "name",
+        "explanation": "名字是 name，name 与 game 押韵。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：This is a _____.（湖）",
+        "reference": "lake",
+        "explanation": "湖是 lake，lake 与 cake 押韵。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Kate and her dad skate on a lake.",
+        "explanation": "凯特和爸爸在湖面上滑冰。 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/5.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My skates are old.",
+        "explanation": "我的冰鞋旧了。 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/6.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Your name is on the cave, too.",
+        "explanation": "洞穴上也有你的名字。 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/7.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "And your name is on the cake!",
+        "explanation": "蛋糕上也有你的名字！ 按原声朗读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/8.mp3"
+      }
+    ],
+    "id": "phonics-ed01b587-47dd-45f6-b931-337e1e49b17e",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 1 · 完整故事朗读与理解",
+    "board": "Kate's Skates｜凯特的冰鞋\n先理解意思，再听范读、逐句朗读。\n\n1. It is winter.\n现在是冬天。\n\n2. Kate and her dad skate on a lake.\n凯特和爸爸在湖面上滑冰。\n\n3. My cane is new.\n我的手杖是新的。\n\n4. My skates are old.\n我的冰鞋旧了。\n\n5. Look.\n看！\n\n6. My name is on the gate.\n大门上有我的名字。\n\n7. Your name is on the cave, too.\n洞穴上也有你的名字。\n\n8. And your name is on the cake!\n蛋糕上也有你的名字！\n\n9. New skates!\n新冰鞋！\n\n重点表达\nwinter 冬天；dad 爸爸；new 新的；old 旧的。\nskate on a lake 在湖面上滑冰；on the gate 在大门上。\nMy name is ... 我的名字是……；too 也。\n课文中 Look. 单独成句；New skates! 是感叹短语，均保留原文。\n9道原句朗读＋1道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "It is winter.",
+        "explanation": "现在是冬天。 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/0.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Kate and her dad skate on a lake.",
+        "explanation": "凯特和爸爸在湖面上滑冰。 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/5.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My cane is new.",
+        "explanation": "我的手杖是新的。 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/1.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My skates are old.",
+        "explanation": "我的冰鞋旧了。 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/6.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Look.",
+        "explanation": "看！ 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/9.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My name is on the gate.",
+        "explanation": "大门上有我的名字。 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/10.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Your name is on the cave, too.",
+        "explanation": "洞穴上也有你的名字。 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/7.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "And your name is on the cake!",
+        "explanation": "蛋糕上也有你的名字！ 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/8.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "New skates!",
+        "explanation": "新冰鞋！ 按原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/11.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事结尾，Kate 得到了什么？",
+        "explanation": "Kate 说自己的冰鞋旧了，结尾她收到了新冰鞋。",
+        "bonus": true,
+        "choices": [
+          "A new cane.",
+          "New skates!",
+          "A new gate."
+        ],
+        "answer": 1
+      }
+    ],
+    "id": "phonics-fa7fd326-7a9d-4562-a50b-bdebc3008751",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 困难",
+    "board": "长元音 i：i_e 在本单元发 /aɪ/，词尾 e 不单独发音。\n\nkite：风筝\npine：松树\nripe：成熟的\nfine：身体好的\nlime：青柠\nbike：自行车\ntime：时间\nhike：徒步旅行\nfive：五\nnine：九\ndive：跳水\nline：队列\n\n押韵词：pine/fine/nine/line；lime/time；bike/hike；five/dive。\nfine 在本课表示身体好、状况好；ripe 是成熟的。lime 是青柠，不是普通的黄色柠檬。line 本课表示队列，也可表示线。\nkit/kite、pin/pine、rip/ripe、fin/fine：加上词尾 e，元音读音和词义发生变化。\n朗读80分及以上算对，输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 bike 押韵？",
+        "explanation": "bike 与 hike 都以 /aɪk/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "time",
+          "hike",
+          "five"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：跳水",
+        "reference": "dive",
+        "explanation": "跳水是 dive，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：队列",
+        "reference": "line",
+        "explanation": "队列是 line，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "给 pin 末尾加一个 e，写出表示“松树”的单词。",
+        "reference": "pine",
+        "explanation": "pin → pine，元音由短音变成长音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：What _____ is it?（时间）",
+        "reference": "time",
+        "explanation": "What time is it? 表示几点了？",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：It is a ripe _____.（青柠）",
+        "reference": "lime",
+        "explanation": "青柠是 lime，和 time 押韵。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I ride my bike at nine o'clock.",
+        "explanation": "我九点骑自行车。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/12.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I hike up to the pines at ten o'clock.",
+        "explanation": "我十点徒步上山，到松树林那里。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/13.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I dive in the lake and swim in waves at five o'clock.",
+        "explanation": "我五点跳进湖里，在波浪中游泳。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/14.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It is time to wake up, Mike!",
+        "explanation": "该起床了，迈克！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/15.mp3"
+      }
+    ],
+    "id": "phonics-57879117-b4cb-4252-8334-4ac0bca61305",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 进阶",
+    "board": "长元音 i：i_e 在本单元发 /aɪ/，词尾 e 不单独发音。\n\nkite：风筝\npine：松树\nripe：成熟的\nfine：身体好的\nlime：青柠\nbike：自行车\ntime：时间\nhike：徒步旅行\nfive：五\nnine：九\ndive：跳水\nline：队列\n\n押韵词：pine/fine/nine/line；lime/time；bike/hike；five/dive。\nfine 在本课表示身体好、状况好；ripe 是成熟的。lime 是青柠，不是普通的黄色柠檬。line 本课表示队列，也可表示线。\nkit/kite、pin/pine、rip/ripe、fin/fine：加上词尾 e，元音读音和词义发生变化。\n朗读80分及以上算对，输入题只填要求的英文单词。\nTrack27 是单词吟唱，朗读题只读一个单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "five 表示哪个数字？",
+        "explanation": "five 表示五，nine 表示九。",
+        "bonus": false,
+        "choices": [
+          "五",
+          "九",
+          "十"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：风筝",
+        "reference": "kite",
+        "explanation": "风筝是 kite，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：松树",
+        "reference": "pine",
+        "explanation": "松树是 pine，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：成熟的",
+        "reference": "ripe",
+        "explanation": "成熟的是 ripe，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：身体好的",
+        "reference": "fine",
+        "explanation": "身体好的是 fine，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：五",
+        "reference": "five",
+        "explanation": "五是 five，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：九",
+        "reference": "nine",
+        "explanation": "九是 nine，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "My kite is fine in the pine.",
+        "explanation": "我的风筝在松树上好好的。 歌曲完整保留，可拖动进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/16.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "time",
+        "explanation": "时间。本轨是单词吟唱，找到 time 后只朗读 time。 歌曲完整保留，可拖动进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/17.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The five nines dive in a line.",
+        "explanation": "五个数字9排成一队跳水。 歌曲完整保留，可拖动进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/18.mp3"
+      }
+    ],
+    "id": "phonics-7c85d243-e6c6-405d-9adc-7f629e37f58f",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 简单",
+    "board": "长元音 i：i_e 在本单元发 /aɪ/，词尾 e 不单独发音。\n\nkite：风筝\npine：松树\nripe：成熟的\nfine：身体好的\nlime：青柠\nbike：自行车\ntime：时间\nhike：徒步旅行\nfive：五\nnine：九\ndive：跳水\nline：队列\n\n押韵词：pine/fine/nine/line；lime/time；bike/hike；five/dive。\nfine 在本课表示身体好、状况好；ripe 是成熟的。lime 是青柠，不是普通的黄色柠檬。line 本课表示队列，也可表示线。\nkit/kite、pin/pine、rip/ripe、fin/fine：加上词尾 e，元音读音和词义发生变化。\n朗读80分及以上算对，输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "kite 的中文意思是什么？",
+        "explanation": "kite 是风筝，词尾有 e。",
+        "bonus": false,
+        "choices": [
+          "风筝",
+          "松树",
+          "自行车"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“松树”对应哪个单词？",
+        "explanation": "pine 是松树；pin 是别针。",
+        "bonus": false,
+        "choices": [
+          "pin",
+          "pine",
+          "fine"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "ripe 的中文意思是什么？",
+        "explanation": "ripe 表示成熟的，教材中指成熟的水果。",
+        "bonus": false,
+        "choices": [
+          "生病的",
+          "成熟的",
+          "九"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "fine 在本课表示什么？",
+        "explanation": "fine 表示身体好、状况好。",
+        "bonus": false,
+        "choices": [
+          "时间",
+          "跳水",
+          "身体好的"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：青柠",
+        "reference": "lime",
+        "explanation": "青柠是 lime，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：自行车",
+        "reference": "bike",
+        "explanation": "自行车是 bike，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：时间",
+        "reference": "time",
+        "explanation": "时间是 time，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：徒步旅行",
+        "reference": "hike",
+        "explanation": "徒步旅行是 hike，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "My name is Mike.",
+        "explanation": "我的名字是迈克。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/19.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It is time to wake up, Mike!",
+        "explanation": "该起床了，迈克！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/15.mp3"
+      }
+    ],
+    "id": "phonics-01156359-bb8e-410d-ab08-d43077fe8aba",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 完整故事朗读与理解",
+    "board": "Wake Up, Mike!｜起床啦，迈克！\n先理解意思，再听原声，逐句朗读。\n\n1. My name is Mike.\n我的名字是迈克。\n\n2. I ride my bike at nine o'clock.\n我九点骑自行车。\n\n3. I hike up to the pines at ten o'clock.\n我十点徒步上山，到松树林那里。\n\n4. I dive in the lake and swim in waves at five o'clock.\n我五点跳进湖里，在波浪中游泳。\n\n5. It is time to wake up, Mike!\n该起床了，迈克！\n\n重点表达\nride my bike 骑我的自行车；hike up 向上徒步走。\npines 松树（复数）；dive 跳水；swim 游泳；waves 波浪。\nat nine o'clock 在九点；at ten o'clock 在十点；at five o'clock 在五点。\nIt is time to ... 该做……了；wake up 起床、醒来。\n故事最后妈妈叫 Mike 起床，前面的活动是他的梦境。\n本课5道分句朗读＋5道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "My name is Mike.",
+        "explanation": "我的名字是迈克。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/19.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I ride my bike at nine o'clock.",
+        "explanation": "我九点骑自行车。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/12.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I hike up to the pines at ten o'clock.",
+        "explanation": "我十点徒步上山，到松树林那里。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/13.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I dive in the lake and swim in waves at five o'clock.",
+        "explanation": "我五点跳进湖里，在波浪中游泳。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/14.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It is time to wake up, Mike!",
+        "explanation": "该起床了，迈克！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/15.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事中的男孩叫什么？",
+        "explanation": "My name is Mike. 他的名字是迈克。",
+        "bonus": false,
+        "choices": [
+          "Kate",
+          "Mike",
+          "Dan"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "Mike 在梦中几点骑自行车？",
+        "explanation": "I ride my bike at nine o'clock. nine 表示九。",
+        "bonus": false,
+        "choices": [
+          "九点",
+          "十点",
+          "五点"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "Mike 十点做什么？",
+        "explanation": "I hike up to the pines at ten o'clock. hike 是徒步旅行。",
+        "bonus": false,
+        "choices": [
+          "起床",
+          "吃蛋糕",
+          "徒步到松树林"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "Mike 说五点时自己在做什么？",
+        "explanation": "I dive in the lake and swim in waves at five o'clock. dive 是跳水，swim 是游泳。",
+        "bonus": false,
+        "choices": [
+          "骑自行车",
+          "跳进湖里并游泳",
+          "睡觉"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "结合故事最后一幅图，前面的活动最可能是什么？",
+        "explanation": "最后一幅图中 Mike 躺在床上，妈妈叫他起床；前面的活动画在梦境气泡中。",
+        "bonus": true,
+        "choices": [
+          "Mike 正在做梦",
+          "妈妈在讲自己的经历",
+          "Mike 正在上课"
+        ],
+        "answer": 0
+      }
+    ],
+    "id": "phonics-c6585a2f-cf21-4646-b081-295dac625c46",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 完整故事朗读与理解",
+    "board": "Luke and the Bone｜卢克和骨头\n先理解中文，再听原声，逐句朗读。\n\n1. It's June.\n现在是六月。\n\n2. Luke and his cute mule walk on the sand.\n卢克和他可爱的骡子在沙地上行走。\n\n3. Luke sees a bone in the sand.\n卢克看见沙子里有一根骨头。\n\n4. It is a big bone.\n那是一根大骨头。\n\n5. He has a mule and a rope.\n他有一头骡子和一根绳子。\n\n6. Luke and his mule pull the bone with the rope.\n卢克和骡子用绳子拉那根骨头。\n\n7. Luke is at home.\n卢克在家里。\n\n8. He puts the big bone on the cube.\n他把大骨头放在立方体上。\n\n9. Luke and his mule are happy.\n卢克和他的骡子很开心。\n\n重点表达\nsand 沙子、沙地；walk 行走；sees 看见；pull 拉。\nwith the rope 用绳子；at home 在家；puts 放。\non the cube 在立方体上；happy 开心的。\nIt is 可缩写为 It's。故事中是一根大骨头，不把词汇图中的 bone 误当成故事里完整的骨架。\n本课9道分句朗读＋1道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "It's June.",
+        "explanation": "现在是六月。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/20.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Luke and his cute mule walk on the sand.",
+        "explanation": "卢克和他可爱的骡子在沙地上行走。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/21.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Luke sees a bone in the sand.",
+        "explanation": "卢克看见沙子里有一根骨头。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/22.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It is a big bone.",
+        "explanation": "那是一根大骨头。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/23.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a mule and a rope.",
+        "explanation": "他有一头骡子和一根绳子。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/24.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Luke and his mule pull the bone with the rope.",
+        "explanation": "卢克和骡子用绳子拉那根骨头。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/25.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Luke is at home.",
+        "explanation": "卢克在家里。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/26.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He puts the big bone on the cube.",
+        "explanation": "他把大骨头放在立方体上。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/27.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Luke and his mule are happy.",
+        "explanation": "卢克和他的骡子很开心。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/28.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "根据故事，Luke 和骡子怎样移动大骨头？",
+        "explanation": "Luke and his mule pull the bone with the rope. 表示他们用绳子拉骨头。",
+        "bonus": true,
+        "choices": [
+          "用绳子拉",
+          "把骨头放进软管",
+          "骑着骨头走"
+        ],
+        "answer": 0
+      }
+    ],
+    "id": "phonics-d46c9c8d-5973-4bf6-b028-5cf382b32354",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 困难",
+    "board": "长元音 o、u：词尾 e 在本单元不单独发音。\no_e：home、bone、cone、rope，跟随原声练习长音 o。\nu_e 在 cube、mute、cute、mule 中发 /juː/；在 June、rule 中发 /uː/。tube、tune 在不同口音中可能有 /uː/ 或 /juː/，跟随教材原声，不把口音差异判为拼写错误。\n\nhome：家\nbone：骨头\ncone：蛋筒\nrope：绳子\ncube：立方体\nmute：静音的\ncute：可爱的\nmule：骡子\ntube：软管\nJune：六月\ntune：曲调\nrule：规则\n\ncone 本课图中是冰淇淋蛋筒，也可表示圆锥体。tube 本课指管、软管；mute 图标表示静音。June 是六月，首字母大写。\n押韵词：bone/cone；cute/mute。\n朗读80分及以上算对，输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 cute 押韵？",
+        "explanation": "cute 和 mute 的词尾都读 /juːt/。",
+        "bonus": false,
+        "choices": [
+          "cone",
+          "mute",
+          "home"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：曲调",
+        "reference": "tune",
+        "explanation": "曲调是 tune，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：规则",
+        "reference": "rule",
+        "explanation": "规则是 rule，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The girl is _____.（可爱的）",
+        "reference": "cute",
+        "explanation": "可爱的是 cute，注意结尾 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：He has a _____.（骡子，单数）",
+        "reference": "mule",
+        "explanation": "骡子是 mule，注意不要与 mute 混淆。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：It is _____.（六月）",
+        "reference": "June",
+        "explanation": "六月是 June，规范书写首字母大写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Luke and his cute mule walk on the sand.",
+        "explanation": "卢克和他可爱的骡子在沙地上行走。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/21.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Luke sees a bone in the sand.",
+        "explanation": "卢克看见沙子里有一根骨头。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/22.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Luke and his mule pull the bone with the rope.",
+        "explanation": "卢克和骡子用绳子拉那根骨头。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/25.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He puts the big bone on the cube.",
+        "explanation": "他把大骨头放在立方体上。 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/27.mp3"
+      }
+    ],
+    "id": "phonics-40b38be5-1b30-477f-97f3-15a7b9fd295a",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 简单",
+    "board": "长元音 o、u：词尾 e 在本单元不单独发音。\no_e：home、bone、cone、rope，跟随原声练习长音 o。\nu_e 在 cube、mute、cute、mule 中发 /juː/；在 June、rule 中发 /uː/。tube、tune 在不同口音中可能有 /uː/ 或 /juː/，跟随教材原声，不把口音差异判为拼写错误。\n\nhome：家\nbone：骨头\ncone：蛋筒\nrope：绳子\ncube：立方体\nmute：静音的\ncute：可爱的\nmule：骡子\ntube：软管\nJune：六月\ntune：曲调\nrule：规则\n\ncone 本课图中是冰淇淋蛋筒，也可表示圆锥体。tube 本课指管、软管；mute 图标表示静音。June 是六月，首字母大写。\n押韵词：bone/cone；cute/mute。\n朗读80分及以上算对，输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "home 的中文意思是什么？",
+        "explanation": "home 是家，at home 表示在家。",
+        "bonus": false,
+        "choices": [
+          "家",
+          "绳子",
+          "骨头"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“骨头”对应哪个单词？",
+        "explanation": "bone 是骨头，cone 是蛋筒。",
+        "bonus": false,
+        "choices": [
+          "cone",
+          "bone",
+          "rope"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "cone 在本课词汇图中表示什么？",
+        "explanation": "本课 cone 图中是冰淇淋蛋筒。",
+        "bonus": false,
+        "choices": [
+          "骡子",
+          "规则",
+          "蛋筒"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "“绳子”对应哪个英文单词？",
+        "explanation": "绳子是 rope，tube 表示管。",
+        "bonus": false,
+        "choices": [
+          "rope",
+          "home",
+          "tube"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：立方体",
+        "reference": "cube",
+        "explanation": "立方体是 cube，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：静音的",
+        "reference": "mute",
+        "explanation": "静音的是 mute，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：可爱的",
+        "reference": "cute",
+        "explanation": "可爱的是 cute，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：骡子",
+        "reference": "mule",
+        "explanation": "骡子是 mule，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "It's June.",
+        "explanation": "现在是六月。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/20.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It is a big bone.",
+        "explanation": "那是一根大骨头。 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/23.mp3"
+      }
+    ],
+    "id": "phonics-664f403b-b2d6-4f52-81d1-065c0530f251",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 进阶",
+    "board": "长元音 o、u：词尾 e 在本单元不单独发音。\no_e：home、bone、cone、rope，跟随原声练习长音 o。\nu_e 在 cube、mute、cute、mule 中发 /juː/；在 June、rule 中发 /uː/。tube、tune 在不同口音中可能有 /uː/ 或 /juː/，跟随教材原声，不把口音差异判为拼写错误。\n\nhome：家\nbone：骨头\ncone：蛋筒\nrope：绳子\ncube：立方体\nmute：静音的\ncute：可爱的\nmule：骡子\ntube：软管\nJune：六月\ntune：曲调\nrule：规则\n\ncone 本课图中是冰淇淋蛋筒，也可表示圆锥体。tube 本课指管、软管；mute 图标表示静音。June 是六月，首字母大写。\n押韵词：bone/cone；cute/mute。\n朗读80分及以上算对，输入题只填要求的英文单词。\nTrack44 是单词吟唱，录音只读一个单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "tube 在本课词汇页表示什么？",
+        "explanation": "tube 表示管、软管，教材中画的是一支软管。",
+        "bonus": false,
+        "choices": [
+          "软管",
+          "立方体",
+          "曲调"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：家",
+        "reference": "home",
+        "explanation": "家是 home，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：骨头",
+        "reference": "bone",
+        "explanation": "骨头是 bone，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：蛋筒",
+        "reference": "cone",
+        "explanation": "蛋筒是 cone，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：绳子",
+        "reference": "rope",
+        "explanation": "绳子是 rope，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：软管",
+        "reference": "tube",
+        "explanation": "软管是 tube，注意词尾不发音的 e。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：六月",
+        "reference": "June",
+        "explanation": "六月是 June，注意词尾不发音的 e。 月份首字母要大写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I hop over the rope at home.",
+        "explanation": "我在家里跳过绳子。 歌曲完整保留，可拖动范读进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/29.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "cute",
+        "explanation": "可爱的。本轨是单词吟唱，找到 cute 后只朗读 cute。 歌曲完整保留，可拖动范读进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/30.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Hum a tune on a tube in June.",
+        "explanation": "六月里，在一根管子上哼一段曲调。 歌曲完整保留，可拖动范读进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/31.mp3"
+      }
+    ],
+    "id": "phonics-663fc518-acee-4213-a7d6-ff4894006040",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 进阶",
+    "board": "长元音 a：本单元 ai、ay 都发 /eɪ/。\nai：rain、nail、tail、wait、sail、mail。\nay：bay、day、say、pay、hay、May。\n\nrain：雨\nnail：钉子\ntail：尾巴\nwait：等待\nbay：海湾\nday：一天\nsay：说\npay：付钱\nsail：驾驶帆船\nmail：邮件\nhay：干草\nMay：五月\n\n押韵：nail/tail/sail/mail；bay/day/say/pay/hay/May。\nnail 本课图中是钉子，也可指指甲；mail 本课图中是信件、邮件。May 表示五月，首字母大写；hay 是干草。\n朗读80分及以上算对；输入题只填要求的英文单词。\n本单元两首chant完整保留，Track54只朗读一个单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "sail 的意思是什么？",
+        "explanation": "sail 在本课表示驾驶帆船、航行。",
+        "bonus": false,
+        "choices": [
+          "邮寄",
+          "驾驶帆船",
+          "付钱"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：雨",
+        "reference": "rain",
+        "explanation": "雨是 rain。注意 ai、ay 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：钉子",
+        "reference": "nail",
+        "explanation": "钉子是 nail。注意 ai、ay 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：尾巴",
+        "reference": "tail",
+        "explanation": "尾巴是 tail。注意 ai、ay 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：等待",
+        "reference": "wait",
+        "explanation": "等待是 wait。注意 ai、ay 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：驾驶帆船",
+        "reference": "sail",
+        "explanation": "驾驶帆船是 sail。注意 ai、ay 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：邮件",
+        "reference": "mail",
+        "explanation": "邮件是 mail。注意 ai、ay 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "rain",
+        "explanation": "雨。本轨是单词吟唱，找到 rain 后只朗读 rain。 歌曲完整保留，可拖动进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/32.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I pay for a day at the bay.",
+        "explanation": "我付钱在海湾游玩一天。 歌曲完整保留，可拖动进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/33.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to sail.",
+        "explanation": "我喜欢驾驶帆船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/34.mp3"
+      }
+    ],
+    "id": "phonics-9f60123f-8a0f-4aa2-bc75-e49be7108a93",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 简单",
+    "board": "长元音 a：本单元 ai、ay 都发 /eɪ/。\nai：rain、nail、tail、wait、sail、mail。\nay：bay、day、say、pay、hay、May。\n\nrain：雨\nnail：钉子\ntail：尾巴\nwait：等待\nbay：海湾\nday：一天\nsay：说\npay：付钱\nsail：驾驶帆船\nmail：邮件\nhay：干草\nMay：五月\n\n押韵：nail/tail/sail/mail；bay/day/say/pay/hay/May。\nnail 本课图中是钉子，也可指指甲；mail 本课图中是信件、邮件。May 表示五月，首字母大写；hay 是干草。\n朗读80分及以上算对；输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "rain 的中文意思是什么？",
+        "explanation": "rain 是雨，含 ai。",
+        "bonus": false,
+        "choices": [
+          "雨",
+          "尾巴",
+          "干草"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“钉子”对应哪个单词？",
+        "explanation": "nail 是钉子，tail 是尾巴。",
+        "bonus": false,
+        "choices": [
+          "tail",
+          "nail",
+          "mail"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "tail 的中文意思是什么？",
+        "explanation": "tail 是尾巴，nail 和 tail 押韵。",
+        "bonus": false,
+        "choices": [
+          "海湾",
+          "一天",
+          "尾巴"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "“等待”对应哪个英文单词？",
+        "explanation": "等待是 wait，含 ai。",
+        "bonus": false,
+        "choices": [
+          "wait",
+          "rain",
+          "say"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：海湾",
+        "reference": "bay",
+        "explanation": "海湾是 bay。注意 ai、ay 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：一天",
+        "reference": "day",
+        "explanation": "一天是 day。注意 ai、ay 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：说",
+        "reference": "say",
+        "explanation": "说是 say。注意 ai、ay 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：付钱",
+        "reference": "pay",
+        "explanation": "付钱是 pay。注意 ai、ay 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Hello!",
+        "explanation": "你好！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/35.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My name is Ray.",
+        "explanation": "我的名字是雷。 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/36.mp3"
+      }
+    ],
+    "id": "phonics-5e112b99-373f-4968-b552-6dabb23fcdaa",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 困难",
+    "board": "长元音 a：本单元 ai、ay 都发 /eɪ/。\nai：rain、nail、tail、wait、sail、mail。\nay：bay、day、say、pay、hay、May。\n\nrain：雨\nnail：钉子\ntail：尾巴\nwait：等待\nbay：海湾\nday：一天\nsay：说\npay：付钱\nsail：驾驶帆船\nmail：邮件\nhay：干草\nMay：五月\n\n押韵：nail/tail/sail/mail；bay/day/say/pay/hay/May。\nnail 本课图中是钉子，也可指指甲；mail 本课图中是信件、邮件。May 表示五月，首字母大写；hay 是干草。\n朗读80分及以上算对；输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪组单词押韵？",
+        "explanation": "tail 和 mail 都以 /eɪl/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "rain / day",
+          "tail / mail",
+          "wait / bay"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：干草",
+        "reference": "hay",
+        "explanation": "干草是 hay。注意 ai、ay 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：五月",
+        "reference": "May",
+        "explanation": "五月是 May。注意 ai、ay 的拼写。 月份首字母大写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I _____ the man on the bus.（付钱给）",
+        "reference": "pay",
+        "explanation": "pay the man 表示付钱给那个男人。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I can _____ my name.（说）",
+        "reference": "say",
+        "explanation": "say my name 表示说出我的名字。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：It is a hot _____.（一天）",
+        "reference": "day",
+        "explanation": "a hot day 表示炎热的一天，填 day。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I sail on the bay.",
+        "explanation": "我在海湾里驾驶帆船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/37.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to sail on the bay on a hot day.",
+        "explanation": "我喜欢在炎热的日子里到海湾驾驶帆船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/38.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I sail on the bay on a hot day in May.",
+        "explanation": "五月里一个炎热的日子，我在海湾里驾驶帆船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/39.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I don't like to sail on the bay in the rain.",
+        "explanation": "我不喜欢在雨中到海湾驾驶帆船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/40.mp3"
+      }
+    ],
+    "id": "phonics-8140549a-59bb-4213-9994-848658849911",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 完整故事朗读与理解",
+    "board": "Sail on the Bay｜在海湾驾驶帆船\n先理解中文，再听原声，逐句朗读。\n\n1. Hello!\n你好！\n\n2. My name is Ray.\n我的名字是雷。\n\n3. I like to sail.\n我喜欢驾驶帆船。\n\n4. I sail on the bay.\n我在海湾里驾驶帆船。\n\n5. I like to sail on the bay on a hot day.\n我喜欢在炎热的日子里到海湾驾驶帆船。\n\n6. I sail on the bay on a hot day in May.\n五月里一个炎热的日子，我在海湾里驾驶帆船。\n\n7. I don't like to sail on the bay in the rain.\n我不喜欢在雨中到海湾驾驶帆船。\n\n8. Do you want to sail with me?\n你想和我一起驾驶帆船吗？\n\n重点表达\nlike to sail 喜欢驾驶帆船；on the bay 在海湾里。\non a hot day 在炎热的日子里；in May 在五月；in the rain 在雨中。\nwant to ... 想要做……；with me 和我一起；don't like 不喜欢。\nHello! 为原文独立问候语，保留分句。\n本课8道分句朗读＋2道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "Hello!",
+        "explanation": "你好！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/35.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My name is Ray.",
+        "explanation": "我的名字是雷。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/36.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to sail.",
+        "explanation": "我喜欢驾驶帆船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/34.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I sail on the bay.",
+        "explanation": "我在海湾里驾驶帆船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/37.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to sail on the bay on a hot day.",
+        "explanation": "我喜欢在炎热的日子里到海湾驾驶帆船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/38.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I sail on the bay on a hot day in May.",
+        "explanation": "五月里一个炎热的日子，我在海湾里驾驶帆船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/39.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I don't like to sail on the bay in the rain.",
+        "explanation": "我不喜欢在雨中到海湾驾驶帆船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/40.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Do you want to sail with me?",
+        "explanation": "你想和我一起驾驶帆船吗？ 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/41.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "Ray 说自己在几月的炎热日子里驾驶帆船？",
+        "explanation": "原文 in May，May 是五月。",
+        "bonus": false,
+        "choices": [
+          "六月",
+          "五月",
+          "九月"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "Ray 不喜欢在什么情况下到海湾驾驶帆船？",
+        "explanation": "I don't like to sail on the bay in the rain. 他不喜欢在雨中驾驶帆船。",
+        "bonus": true,
+        "choices": [
+          "炎热的日子",
+          "和别人一起",
+          "下雨时"
+        ],
+        "answer": 2
+      }
+    ],
+    "id": "phonics-7aba5015-f703-4cd1-aeec-9ba4f4077b8e",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 完整故事朗读与理解",
+    "board": "Bees in the Sea｜海里的蜜蜂\n先理解中文，再听原声，逐句朗读。\n\n1. Two bees play in the sea.\n两只蜜蜂在海里玩耍。\n\n2. I like this leaf!\n我喜欢这片叶子！\n\n3. I like this wave!\n我喜欢这朵浪花！\n\n4. I see a key.\n我看到一把钥匙。\n\n5. I see money.\n我看到钱。\n\n6. I see candy.\n我看到糖果。\n\n7. I see feet!\n我看到脚了！\n\n原文最后两格为 I see... 和 ...feet!，属于同一个跨格表达。本包把两段原声按顺序接合为 I see feet!，只移除中间的段落编号，未合成或补读单词。\n重点表达\nTwo bees 两只蜜蜂；play 玩耍；in the sea 在海里。\nthis leaf 这片叶子；this wave 这朵浪花；I see ... 我看见……。\nkey 是可数名词，单数前有 a；money、candy 在这些原句中不加 a；feet 为复数。\n本课7道朗读＋3道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "Two bees play in the sea.",
+        "explanation": "两只蜜蜂在海里玩耍。 80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/42.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like this leaf!",
+        "explanation": "我喜欢这片叶子！ 80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/43.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like this wave!",
+        "explanation": "我喜欢这朵浪花！ 80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/44.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see a key.",
+        "explanation": "我看到一把钥匙。 80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/45.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see money.",
+        "explanation": "我看到钱。 80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/46.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see candy.",
+        "explanation": "我看到糖果。 80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/47.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see feet!",
+        "explanation": "我看到脚了！ 原文跨两格说出 I see... ...feet!，此题合为完整表达，跟读时不读省略号。 80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/48.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事中有几只蜜蜂？",
+        "explanation": "Two bees play in the sea. two 表示二，bees 是蜜蜂的复数。",
+        "bonus": false,
+        "choices": [
+          "一只",
+          "两只",
+          "三只"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "蜜蜂说自己看到了哪一组东西？",
+        "explanation": "原文依次出现 I see a key. I see money. I see candy.。",
+        "bonus": false,
+        "choices": [
+          "钥匙、钱、糖果",
+          "自行车、蛋糕、绳子",
+          "冰鞋、手杖、风筝"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事最后，蜜蜂看到了什么？",
+        "explanation": "原文跨两格说出 I see... ...feet!，最后看到的是脚。",
+        "bonus": true,
+        "choices": [
+          "一棵树",
+          "一只吉普车",
+          "脚"
+        ],
+        "answer": 2
+      }
+    ],
+    "id": "phonics-728e0b95-bb3a-497b-ac37-95909b223a9b",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 简单",
+    "board": "长音 e：本单元 ee、ea 常发 /iː/；词尾 y、ey 在这些词中发类似长音 e 的音，跟随教材原声练习。\nee：bee、feet、seed、jeep。\nea：leaf、eat、sea、meat。\ny：candy、happy；ey：key、money。\n\nbee：蜜蜂\nfeet：脚（复数）\nseed：种子\njeep：吉普车\nleaf：叶子\neat：吃\nsea：海\nmeat：肉\ncandy：糖果\nkey：钥匙\nhappy：开心的\nmoney：钱\n\nfeet 是 foot 的复数；leaf 的复数为 leaves；bee 的复数为 bees。\nsea 表示海，与 see（看见）读音相同，但拼写和意思不同。meat 是肉，不能与 eat（吃）混淆。\n朗读80分及以上算对，输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "bee 的中文意思是什么？",
+        "explanation": "bee 是蜜蜂，含 ee。",
+        "bonus": false,
+        "choices": [
+          "蜜蜂",
+          "种子",
+          "吉普车"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“脚（复数）”对应哪个词？",
+        "explanation": "feet 是 foot 的复数，不在后面加 s。",
+        "bonus": false,
+        "choices": [
+          "foot",
+          "feet",
+          "seed"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "seed 的中文意思是什么？",
+        "explanation": "seed 是种子，含 ee。",
+        "bonus": false,
+        "choices": [
+          "海",
+          "钥匙",
+          "种子"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "“吉普车”对应哪个词？",
+        "explanation": "jeep 是吉普车，注意两个 e。",
+        "bonus": false,
+        "choices": [
+          "jeep",
+          "bee",
+          "leaf"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：叶子",
+        "reference": "leaf",
+        "explanation": "叶子是 leaf，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：吃",
+        "reference": "eat",
+        "explanation": "吃是 eat，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：海",
+        "reference": "sea",
+        "explanation": "海是 sea，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：肉",
+        "reference": "meat",
+        "explanation": "肉是 meat，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I like this leaf!",
+        "explanation": "我喜欢这片叶子！ 80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/43.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see a key.",
+        "explanation": "我看到一把钥匙。 80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/45.mp3"
+      }
+    ],
+    "id": "phonics-0fda0816-52eb-479d-b080-70e9d0e082bd",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 进阶",
+    "board": "长音 e：本单元 ee、ea 常发 /iː/；词尾 y、ey 在这些词中发类似长音 e 的音，跟随教材原声练习。\nee：bee、feet、seed、jeep。\nea：leaf、eat、sea、meat。\ny：candy、happy；ey：key、money。\n\nbee：蜜蜂\nfeet：脚（复数）\nseed：种子\njeep：吉普车\nleaf：叶子\neat：吃\nsea：海\nmeat：肉\ncandy：糖果\nkey：钥匙\nhappy：开心的\nmoney：钱\n\nfeet 是 foot 的复数；leaf 的复数为 leaves；bee 的复数为 bees。\nsea 表示海，与 see（看见）读音相同，但拼写和意思不同。meat 是肉，不能与 eat（吃）混淆。\n朗读80分及以上算对，输入题只填要求的英文单词。\nTrack10为单词吟唱，录音只读一个单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "candy 的中文意思是什么？",
+        "explanation": "candy 是糖果，词尾是 y。",
+        "bonus": false,
+        "choices": [
+          "钱",
+          "糖果",
+          "肉"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：蜜蜂",
+        "reference": "bee",
+        "explanation": "蜜蜂是 bee，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：脚（复数）",
+        "reference": "feet",
+        "explanation": "脚（复数）是 feet，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：种子",
+        "reference": "seed",
+        "explanation": "种子是 seed，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：吉普车",
+        "reference": "jeep",
+        "explanation": "吉普车是 jeep，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：糖果",
+        "reference": "candy",
+        "explanation": "糖果是 candy，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：钥匙",
+        "reference": "key",
+        "explanation": "钥匙是 key，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "A bee with feet!",
+        "explanation": "一只有脚的蜜蜂！原文中的感叹短语，录音只读这一部分。 歌曲完整保留，可拖动范读进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/49.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "sea",
+        "explanation": "海。本轨是单词吟唱，找到 sea 后只朗读 sea。 歌曲完整保留，可拖动范读进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/50.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I have a key, candy, and money.",
+        "explanation": "我有一把钥匙、糖果和钱。 歌曲完整保留，可拖动范读进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/51.mp3"
+      }
+    ],
+    "id": "phonics-ed768996-531a-4db8-b409-848b3e2306cc",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 困难",
+    "board": "长音 e：本单元 ee、ea 常发 /iː/；词尾 y、ey 在这些词中发类似长音 e 的音，跟随教材原声练习。\nee：bee、feet、seed、jeep。\nea：leaf、eat、sea、meat。\ny：candy、happy；ey：key、money。\n\nbee：蜜蜂\nfeet：脚（复数）\nseed：种子\njeep：吉普车\nleaf：叶子\neat：吃\nsea：海\nmeat：肉\ncandy：糖果\nkey：钥匙\nhappy：开心的\nmoney：钱\n\nfeet 是 foot 的复数；leaf 的复数为 leaves；bee 的复数为 bees。\nsea 表示海，与 see（看见）读音相同，但拼写和意思不同。meat 是肉，不能与 eat（吃）混淆。\n朗读80分及以上算对，输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪两个单词读音相同，但意思和拼写不同？",
+        "explanation": "sea 是海，see 是看见，两者都读 /siː/。",
+        "bonus": false,
+        "choices": [
+          "sea / seed",
+          "feet / meat",
+          "sea / see"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：开心的",
+        "reference": "happy",
+        "explanation": "开心的是 happy，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：钱",
+        "reference": "money",
+        "explanation": "钱是 money，注意长音 e 的不同拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I like to _____ cake.（吃）",
+        "reference": "eat",
+        "explanation": "eat 表示吃，meat 才是肉。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：It is a red _____.（叶子，单数）",
+        "reference": "leaf",
+        "explanation": "叶子单数是 leaf，注意 ea。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The _____ is in a pan.（肉）",
+        "reference": "meat",
+        "explanation": "肉是 meat；pan 是平底锅。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Two bees play in the sea.",
+        "explanation": "两只蜜蜂在海里玩耍。 80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/42.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like this wave!",
+        "explanation": "我喜欢这朵浪花！ 80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/44.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see money.",
+        "explanation": "我看到钱。 80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/46.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see feet!",
+        "explanation": "我看到脚了！ 原文跨两格说出 I see... ...feet!，此题合为完整表达，跟读时不读省略号。 80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/48.mp3"
+      }
+    ],
+    "id": "phonics-a29fe26a-7883-4377-866c-f2d4635dad02",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 困难",
+    "board": "长元音 i：本单元 igh、ie、y 都可发 /aɪ/。\nigh：light、night、high、right。\nie：pie、tie、lie、die。\ny：spy、sky、cry、my。\n\nlight：灯\nnight：夜晚\nhigh：高的\nright：右边\npie：派\ntie：领带\nlie：躺\ndie：骰子（单数）\nspy：间谍\nsky：天空\ncry：哭\nmy：我的\n\nlight 本课表示灯、光；right 本课为右边，不按“正确的”出词义题。lie 本课为躺，不按“说谎”出词义题。die 本课为一颗骰子，不按动词“死亡”出词义题。\n押韵：light/night/right；high/pie/tie/lie/die/spy/sky/cry/my。\n朗读80分及以上算对；输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 light 押韵？",
+        "explanation": "light 和 night 都以 /aɪt/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "lie",
+          "night",
+          "sky"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：哭",
+        "reference": "cry",
+        "explanation": "哭是 cry。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：我的",
+        "reference": "my",
+        "explanation": "我的是 my。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The tie is on the _____.（右边）",
+        "reference": "right",
+        "explanation": "on the right 表示在右边。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The sun is _____.（高的）",
+        "reference": "high",
+        "explanation": "high 表示高的、在高处。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：This is _____ pie.（我的）",
+        "reference": "my",
+        "explanation": "我的用 my，放在名词前面。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Let's bake a pie for our cute cub.",
+        "explanation": "我们给可爱的小熊烤一个派吧。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/52.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I have my light.",
+        "explanation": "我带着我的灯。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/53.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Let's find him.",
+        "explanation": "我们去找他吧。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/54.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He is high in the pine!",
+        "explanation": "他在松树的高处！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/55.mp3"
+      }
+    ],
+    "id": "phonics-b9697b54-43af-421c-972c-9a6cd72e5c2e",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 完整故事朗读",
+    "board": "The Cub in the Night｜夜晚的小熊\n先理解中文，再听原声，按原文顺序逐句朗读。\n\n1. Let's bake a pie for our cute cub.\n我们给可爱的小熊烤一个派吧。\n\n2. Where is the cub?\n小熊在哪里？\n\n3. Look at the sky.\n看看天空。\n\n4. It's night.\n现在是晚上。\n\n5. Is he fine?\n他还好吗？\n\n6. Don't cry.\n别哭。\n\n7. I have my light.\n我带着我的灯。\n\n8. Let's find him.\n我们去找他吧。\n\n9. He is high in the pine!\n他在松树的高处！\n\n10. I am fine.\n我很好。\n\n11. We like pie!\n我们喜欢吃派！\n\n重点表达\ncub 幼兽，故事中为小熊；bake a pie 烤派；our 我们的。\nWhere is ...? ……在哪里？Look at ... 看看……。\nDon't cry 别哭；find him 找到他；high in the pine 在松树的高处。\nLet's = Let us；It's = It is；don't = do not。\n全文11句全部提供分句原声，第10句 I am fine. 在简单课练习，故事课按顺序练其余10句。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "Let's bake a pie for our cute cub.",
+        "explanation": "我们给可爱的小熊烤一个派吧。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/52.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Where is the cub?",
+        "explanation": "小熊在哪里？ 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/56.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Look at the sky.",
+        "explanation": "看看天空。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/57.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It's night.",
+        "explanation": "现在是晚上。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/58.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Is he fine?",
+        "explanation": "他还好吗？ 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/59.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Don't cry.",
+        "explanation": "别哭。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/60.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I have my light.",
+        "explanation": "我带着我的灯。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/53.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Let's find him.",
+        "explanation": "我们去找他吧。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/54.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He is high in the pine!",
+        "explanation": "他在松树的高处！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/55.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "We like pie!",
+        "explanation": "我们喜欢吃派！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/61.mp3"
+      }
+    ],
+    "id": "phonics-49ea2c7d-b498-4bbd-be26-3751336bd610",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 进阶",
+    "board": "长元音 i：本单元 igh、ie、y 都可发 /aɪ/。\nigh：light、night、high、right。\nie：pie、tie、lie、die。\ny：spy、sky、cry、my。\n\nlight：灯\nnight：夜晚\nhigh：高的\nright：右边\npie：派\ntie：领带\nlie：躺\ndie：骰子（单数）\nspy：间谍\nsky：天空\ncry：哭\nmy：我的\n\nlight 本课表示灯、光；right 本课为右边，不按“正确的”出词义题。lie 本课为躺，不按“说谎”出词义题。die 本课为一颗骰子，不按动词“死亡”出词义题。\n押韵：light/night/right；high/pie/tie/lie/die/spy/sky/cry/my。\n朗读80分及以上算对；输入题只填要求的英文单词。\nTrack25是单词吟唱，只读一个单词；Track29保留教材原文连续两句。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "spy 的中文意思是什么？",
+        "explanation": "spy 是间谍，sky 才是天空。",
+        "bonus": false,
+        "choices": [
+          "天空",
+          "间谍",
+          "领带"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：灯",
+        "reference": "light",
+        "explanation": "灯是 light。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：夜晚",
+        "reference": "night",
+        "explanation": "夜晚是 night。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：高的",
+        "reference": "high",
+        "explanation": "高的是 high。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：右边",
+        "reference": "right",
+        "explanation": "右边是 right。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：间谍",
+        "reference": "spy",
+        "explanation": "间谍是 spy。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：天空",
+        "reference": "sky",
+        "explanation": "天空是 sky。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The light is on the right at night.",
+        "explanation": "夜晚，灯在右边。 歌曲完整保留，可拖动进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/62.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "pie",
+        "explanation": "派。本轨是单词吟唱，找到 pie 后只朗读 pie。 歌曲完整保留，可拖动进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/63.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A spy can cry. Can the sky cry?",
+        "explanation": "间谍会哭。天空会哭吗？原文连续两句，按顺序朗读。 歌曲完整保留，可拖动进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/64.mp3"
+      }
+    ],
+    "id": "phonics-8c5fde62-69f0-435b-aa75-2743a914a45b",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 简单",
+    "board": "长元音 i：本单元 igh、ie、y 都可发 /aɪ/。\nigh：light、night、high、right。\nie：pie、tie、lie、die。\ny：spy、sky、cry、my。\n\nlight：灯\nnight：夜晚\nhigh：高的\nright：右边\npie：派\ntie：领带\nlie：躺\ndie：骰子（单数）\nspy：间谍\nsky：天空\ncry：哭\nmy：我的\n\nlight 本课表示灯、光；right 本课为右边，不按“正确的”出词义题。lie 本课为躺，不按“说谎”出词义题。die 本课为一颗骰子，不按动词“死亡”出词义题。\n押韵：light/night/right；high/pie/tie/lie/die/spy/sky/cry/my。\n朗读80分及以上算对；输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "light 在本课表示什么？",
+        "explanation": "light 是灯、光；night 才是夜晚。",
+        "bonus": false,
+        "choices": [
+          "灯",
+          "夜晚",
+          "天空"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“夜晚”对应哪个单词？",
+        "explanation": "night 表示夜晚，含 igh。",
+        "bonus": false,
+        "choices": [
+          "light",
+          "night",
+          "right"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "high 的中文意思是什么？",
+        "explanation": "high 表示高的、在高处。",
+        "bonus": false,
+        "choices": [
+          "右边",
+          "我的",
+          "高的"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "right 在本课表示什么？",
+        "explanation": "词汇图是向右箭头，right 表示右边。",
+        "bonus": false,
+        "choices": [
+          "右边",
+          "左边",
+          "间谍"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：派",
+        "reference": "pie",
+        "explanation": "派是 pie。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：领带",
+        "reference": "tie",
+        "explanation": "领带是 tie。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：躺",
+        "reference": "lie",
+        "explanation": "躺是 lie。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：骰子（单数）",
+        "reference": "die",
+        "explanation": "骰子（单数）是 die。注意 igh、ie、y 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I am fine.",
+        "explanation": "我很好。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/65.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Don't cry.",
+        "explanation": "别哭。 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/60.mp3"
+      }
+    ],
+    "id": "phonics-871f053c-b9e5-40e8-9b49-3acf7fb2912c",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 困难",
+    "board": "长元音 o：本单元 oa、ow 发长音 o，跟随教材原声练习。\noa：boat、coat、soap、road、goat、toad。\now：bow、row、yellow、pillow、elbow、window。\n\nboat：小船\ncoat：外套\nsoap：肥皂\nroad：道路\nbow：蝴蝶结\nrow：划船\nyellow：黄色的\npillow：枕头\ngoat：山羊\ntoad：蟾蜍\nelbow：肘部\nwindow：窗户\n\nbow 本课为蝴蝶结，不按“鞠躬”释义；row 本课为划船。\n押韵：boat/coat/goat；road/toad；bow/row。\n在故事里 in the soap 结合画面指在肥皂泡沫里；山羊和蟾蜍在图中为玩具。\n朗读80分及以上算对，输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 boat 押韵？",
+        "explanation": "boat 与 goat 都以 /oʊt/ 结尾，跟随原声辨别词尾。",
+        "bonus": false,
+        "choices": [
+          "soap",
+          "goat",
+          "road"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：肘部",
+        "reference": "elbow",
+        "explanation": "肘部是 elbow，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：窗户",
+        "reference": "window",
+        "explanation": "窗户是 window，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I can _____ a boat.（划）",
+        "reference": "row",
+        "explanation": "row a boat 表示划船。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The soap is _____.（黄色的）",
+        "reference": "yellow",
+        "explanation": "黄色的是 yellow，词尾 ow。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I have a _____ on my coat.（蝴蝶结，单数）",
+        "reference": "bow",
+        "explanation": "蝴蝶结是 bow，词尾 ow。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a goat and a toad in the tub.",
+        "explanation": "他的浴缸里有一只山羊和一只蟾蜍玩具。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/66.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Ben, the goat, and the toad are in the soap.",
+        "explanation": "本、山羊和蟾蜍都在肥皂泡沫里。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/67.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Ben thinks the tub is a boat.",
+        "explanation": "本把浴缸想象成一艘船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/68.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Mom is glad she has her yellow coat!",
+        "explanation": "妈妈很庆幸自己穿着黄色外套！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/69.mp3"
+      }
+    ],
+    "id": "phonics-5b2588c6-c886-4925-8ffd-fc53fed5fa43",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 简单",
+    "board": "长元音 o：本单元 oa、ow 发长音 o，跟随教材原声练习。\noa：boat、coat、soap、road、goat、toad。\now：bow、row、yellow、pillow、elbow、window。\n\nboat：小船\ncoat：外套\nsoap：肥皂\nroad：道路\nbow：蝴蝶结\nrow：划船\nyellow：黄色的\npillow：枕头\ngoat：山羊\ntoad：蟾蜍\nelbow：肘部\nwindow：窗户\n\nbow 本课为蝴蝶结，不按“鞠躬”释义；row 本课为划船。\n押韵：boat/coat/goat；road/toad；bow/row。\n在故事里 in the soap 结合画面指在肥皂泡沫里；山羊和蟾蜍在图中为玩具。\n朗读80分及以上算对，输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "boat 的中文意思是什么？",
+        "explanation": "boat 是小船，含 oa。",
+        "bonus": false,
+        "choices": [
+          "小船",
+          "外套",
+          "枕头"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“外套”对应哪个词？",
+        "explanation": "coat 是外套，goat 是山羊。",
+        "bonus": false,
+        "choices": [
+          "goat",
+          "coat",
+          "boat"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "soap 的中文意思是什么？",
+        "explanation": "soap 表示肥皂，注意 oa。",
+        "bonus": false,
+        "choices": [
+          "道路",
+          "肥皂",
+          "窗户"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "“道路”对应哪个词？",
+        "explanation": "road 是道路，row 是划船。",
+        "bonus": false,
+        "choices": [
+          "row",
+          "toad",
+          "road"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：蝴蝶结",
+        "reference": "bow",
+        "explanation": "蝴蝶结是 bow，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：划船",
+        "reference": "row",
+        "explanation": "划船是 row，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：黄色的",
+        "reference": "yellow",
+        "explanation": "黄色的是 yellow，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：枕头",
+        "reference": "pillow",
+        "explanation": "枕头是 pillow，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Ben is in the tub at home.",
+        "explanation": "本在家里的浴缸中。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/70.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He rows in the soap.",
+        "explanation": "他在肥皂泡沫里做划船的动作。 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/71.mp3"
+      }
+    ],
+    "id": "phonics-1c81a164-5513-4205-90f2-9af68d1449cd",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 进阶",
+    "board": "长元音 o：本单元 oa、ow 发长音 o，跟随教材原声练习。\noa：boat、coat、soap、road、goat、toad。\now：bow、row、yellow、pillow、elbow、window。\n\nboat：小船\ncoat：外套\nsoap：肥皂\nroad：道路\nbow：蝴蝶结\nrow：划船\nyellow：黄色的\npillow：枕头\ngoat：山羊\ntoad：蟾蜍\nelbow：肘部\nwindow：窗户\n\nbow 本课为蝴蝶结，不按“鞠躬”释义；row 本课为划船。\n押韵：boat/coat/goat；road/toad；bow/row。\n在故事里 in the soap 结合画面指在肥皂泡沫里；山羊和蟾蜍在图中为玩具。\n朗读80分及以上算对，输入题只填要求的英文单词。\n本单元两首chant完整保留，Track43只朗读一个单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "goat 的中文意思是什么？",
+        "explanation": "goat 是山羊，toad 是蟾蜍。",
+        "bonus": false,
+        "choices": [
+          "山羊",
+          "蟾蜍",
+          "蝴蝶结"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：小船",
+        "reference": "boat",
+        "explanation": "小船是 boat，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：外套",
+        "reference": "coat",
+        "explanation": "外套是 coat，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：肥皂",
+        "reference": "soap",
+        "explanation": "肥皂是 soap，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：道路",
+        "reference": "road",
+        "explanation": "道路是 road，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：山羊",
+        "reference": "goat",
+        "explanation": "山羊是 goat，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：蟾蜍",
+        "reference": "toad",
+        "explanation": "蟾蜍是 toad，注意 oa、ow 的拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "My soap and coat are on the boat.",
+        "explanation": "我的肥皂和外套在船上。 歌曲完整保留，可拖动进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/72.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "pillow",
+        "explanation": "枕头。本轨是单词吟唱，找到 pillow 后只朗读 pillow。 歌曲完整保留，可拖动进度条定位；录音只读题目显示的英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/73.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Ben thinks the tub is a boat.",
+        "explanation": "本把浴缸想象成一艘船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/68.mp3"
+      }
+    ],
+    "id": "phonics-3c8f4c24-caad-42a4-a083-3c391ca0d005",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 完整故事朗读与理解",
+    "board": "Ben and the Boat｜本和小船\n先理解中文，再听原声，逐句朗读。\n\n1. Ben is in the tub at home.\n本在家里的浴缸中。\n\n2. He has a goat and a toad in the tub.\n他的浴缸里有一只山羊和一只蟾蜍玩具。\n\n3. Ben, the goat, and the toad are in the soap.\n本、山羊和蟾蜍都在肥皂泡沫里。\n\n4. Ben thinks the tub is a boat.\n本把浴缸想象成一艘船。\n\n5. He rows in the soap.\n他在肥皂泡沫里做划船的动作。\n\n6. Mom is glad she has her yellow coat!\n妈妈很庆幸自己穿着黄色外套！\n\n重点表达\ntub 浴缸；at home 在家；in the tub 在浴缸里。\nthinks 认为、想象；rows 划船；glad 高兴的、庆幸的。\nin the soap 在肥皂泡沫里；her yellow coat 她的黄色外套。\n本课6道分句朗读＋4道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "Ben is in the tub at home.",
+        "explanation": "本在家里的浴缸中。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/70.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a goat and a toad in the tub.",
+        "explanation": "他的浴缸里有一只山羊和一只蟾蜍玩具。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/66.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Ben, the goat, and the toad are in the soap.",
+        "explanation": "本、山羊和蟾蜍都在肥皂泡沫里。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/67.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Ben thinks the tub is a boat.",
+        "explanation": "本把浴缸想象成一艘船。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/68.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He rows in the soap.",
+        "explanation": "他在肥皂泡沫里做划船的动作。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/71.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Mom is glad she has her yellow coat!",
+        "explanation": "妈妈很庆幸自己穿着黄色外套！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/69.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事开始时，Ben 在哪里？",
+        "explanation": "Ben is in the tub at home. tub 是浴缸，at home 是在家。",
+        "bonus": false,
+        "choices": [
+          "在海湾的小船里",
+          "在家里的浴缸中",
+          "在道路上"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "Ben 的浴缸里有什么动物玩具？",
+        "explanation": "He has a goat and a toad in the tub. 图中为山羊和蟾蜍玩具。",
+        "bonus": false,
+        "choices": [
+          "山羊和蟾蜍",
+          "蜜蜂和小熊",
+          "山羊和海豚"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "Ben 把浴缸想象成什么？",
+        "explanation": "Ben thinks the tub is a boat. 他把浴缸想象成船。",
+        "bonus": false,
+        "choices": [
+          "外套",
+          "窗户",
+          "小船"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "结合最后一幅图，妈妈为什么庆幸自己穿着外套？",
+        "explanation": "图中 Ben 在浴缸里做划船动作，水花四溅；妈妈穿着带帽的黄色外套。",
+        "bonus": true,
+        "choices": [
+          "她正在给外套打蝴蝶结",
+          "Ben 划水时溅出了水花",
+          "她正在路上骑自行车"
+        ],
+        "answer": 1
+      }
+    ],
+    "id": "phonics-20e3c583-d96e-4e5b-a4f5-1ad82f1f4e74",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 简单",
+    "board": "长元音 u：本单元学习 ue、ui、ew、oo，跟随教材原声练习长音 /uː/ 或带 /j/ 的长音。\nue：blue、glue、clue、Tuesday。\nui：fruit、suit；ew：new、dew；oo：moon、zoo、food、boot。\n\nblue：蓝色的\nglue：胶水\nclue：线索\nTuesday：星期二\nfruit：水果\nsuit：套装\nnew：新的\ndew：露水\nmoon：月亮\nzoo：动物园\nfood：食物\nboot：靴子（单数）\n\nTuesday 是星期二，首字母大写。boot 是一只靴子，boots 是复数。clue 的复数为 clues。\nnew、dew、Tuesday、suit 在不同口音中可能有带 /j/ 或不带 /j/ 的读音，跟随原声练习。\n不要把所有 oo 都概括为长音，本单元 moon、zoo、food、boot 中为长音。\n朗读80分及以上算对；输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "blue 的中文意思是什么？",
+        "explanation": "blue 是蓝色的，glue 才是胶水。",
+        "bonus": false,
+        "choices": [
+          "蓝色的",
+          "胶水",
+          "新的"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“胶水”对应哪个词？",
+        "explanation": "glue 是胶水，注意开头 g。",
+        "bonus": false,
+        "choices": [
+          "clue",
+          "glue",
+          "blue"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "clue 的中文意思是什么？",
+        "explanation": "clue 是线索，复数是 clues。",
+        "bonus": false,
+        "choices": [
+          "月亮",
+          "线索",
+          "露水"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "Tuesday 是星期几？",
+        "explanation": "Tuesday 是星期二，首字母大写。",
+        "bonus": false,
+        "choices": [
+          "星期一",
+          "星期三",
+          "星期二"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：水果",
+        "reference": "fruit",
+        "explanation": "水果是 fruit，注意元音组合。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：套装",
+        "reference": "suit",
+        "explanation": "套装是 suit，注意元音组合。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：新的",
+        "reference": "new",
+        "explanation": "新的是 new，注意元音组合。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：露水",
+        "reference": "dew",
+        "explanation": "露水是 dew，注意元音组合。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "It is Tuesday.",
+        "explanation": "今天是星期二。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/74.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Oh no!",
+        "explanation": "哦，不！ 跟随原声朗读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/75.mp3"
+      }
+    ],
+    "id": "phonics-6dda14f1-4a26-4d41-b72f-1b66c5dc1a45",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 进阶",
+    "board": "长元音 u：本单元学习 ue、ui、ew、oo，跟随教材原声练习长音 /uː/ 或带 /j/ 的长音。\nue：blue、glue、clue、Tuesday。\nui：fruit、suit；ew：new、dew；oo：moon、zoo、food、boot。\n\nblue：蓝色的\nglue：胶水\nclue：线索\nTuesday：星期二\nfruit：水果\nsuit：套装\nnew：新的\ndew：露水\nmoon：月亮\nzoo：动物园\nfood：食物\nboot：靴子（单数）\n\nTuesday 是星期二，首字母大写。boot 是一只靴子，boots 是复数。clue 的复数为 clues。\nnew、dew、Tuesday、suit 在不同口音中可能有带 /j/ 或不带 /j/ 的读音，跟随原声练习。\n不要把所有 oo 都概括为长音，本单元 moon、zoo、food、boot 中为长音。\n朗读80分及以上算对；输入题只填要求的英文单词。\nTrack61是单词吟唱，录音只读一个单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "moon 的中文意思是什么？",
+        "explanation": "moon 是月亮，含 oo。",
+        "bonus": false,
+        "choices": [
+          "月亮",
+          "动物园",
+          "食物"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：蓝色的",
+        "reference": "blue",
+        "explanation": "蓝色的是 blue，注意元音组合。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：胶水",
+        "reference": "glue",
+        "explanation": "胶水是 glue，注意元音组合。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：线索",
+        "reference": "clue",
+        "explanation": "线索是 clue，注意元音组合。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：星期二",
+        "reference": "Tuesday",
+        "explanation": "星期二是 Tuesday，注意元音组合。 星期名称首字母大写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：月亮",
+        "reference": "moon",
+        "explanation": "月亮是 moon，注意元音组合。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：动物园",
+        "reference": "zoo",
+        "explanation": "动物园是 zoo，注意元音组合。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The clue is blue glue on Tuesday.",
+        "explanation": "星期二的线索是蓝色胶水。 歌曲完整保留，可拖动范读进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/76.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I eat fruit in my new suit.",
+        "explanation": "我穿着新套装吃水果。 歌曲完整保留，可拖动范读进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/77.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "food",
+        "explanation": "食物。本轨是单词吟唱，找到 food 后只朗读 food。 歌曲完整保留，可拖动范读进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/78.mp3"
+      }
+    ],
+    "id": "phonics-b2fbd374-265b-4d88-8c49-d1a4b1de0e74",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 困难",
+    "board": "长元音 u：本单元学习 ue、ui、ew、oo，跟随教材原声练习长音 /uː/ 或带 /j/ 的长音。\nue：blue、glue、clue、Tuesday。\nui：fruit、suit；ew：new、dew；oo：moon、zoo、food、boot。\n\nblue：蓝色的\nglue：胶水\nclue：线索\nTuesday：星期二\nfruit：水果\nsuit：套装\nnew：新的\ndew：露水\nmoon：月亮\nzoo：动物园\nfood：食物\nboot：靴子（单数）\n\nTuesday 是星期二，首字母大写。boot 是一只靴子，boots 是复数。clue 的复数为 clues。\nnew、dew、Tuesday、suit 在不同口音中可能有带 /j/ 或不带 /j/ 的读音，跟随原声练习。\n不要把所有 oo 都概括为长音，本单元 moon、zoo、food、boot 中为长音。\n朗读80分及以上算对；输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 boot 押韵？",
+        "explanation": "boot 和 fruit 都以 /uːt/ 结尾，注意最后的辅音。",
+        "bonus": false,
+        "choices": [
+          "food",
+          "fruit",
+          "moon"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：食物",
+        "reference": "food",
+        "explanation": "食物是 food，注意元音组合。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：靴子（单数）",
+        "reference": "boot",
+        "explanation": "靴子（单数）是 boot，注意元音组合。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The _____ is in the bag.（胶水）",
+        "reference": "glue",
+        "explanation": "胶水是 glue，线索才是 clue。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I see _____ on the fruit.（露水）",
+        "reference": "dew",
+        "explanation": "露水是 dew，词尾 ew。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I am looking for a _____.（线索，单数）",
+        "reference": "clue",
+        "explanation": "线索单数是 clue，不加 s。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I see a boy in blue boots.",
+        "explanation": "我看见一个穿蓝色靴子的男孩。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/79.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see a woman in a new suit.",
+        "explanation": "我看见一个穿新套装的女人。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/80.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She has fruit, too.",
+        "explanation": "她也有水果。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/81.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see an elephant with lots of food!",
+        "explanation": "我看见一头大象，它有好多食物！ 跟随原声朗读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/82.mp3"
+      }
+    ],
+    "id": "phonics-1fd5beed-7e6e-4172-87a9-f45fc8af5281",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 完整故事朗读",
+    "board": "Clues at the Zoo｜动物园里的线索\n先理解中文，再听原声，按原文顺序逐句朗读。\n\n1. It is Tuesday.\n今天是星期二。\n\n2. I am at the zoo.\n我在动物园。\n\n3. I am looking for clues.\n我正在寻找线索。\n\n4. I see a boy in blue boots.\n我看见一个穿蓝色靴子的男孩。\n\n5. He has fruit.\n他有水果。\n\n6. Oh no!\n哦，不！\n\n7. The fruit is gone.\n水果不见了。\n\n8. I see a woman in a new suit.\n我看见一个穿新套装的女人。\n\n9. She has fruit, too.\n她也有水果。\n\n10. Oh no!\n哦，不！\n\n11. The fruit is gone.\n水果不见了。\n\n12. I see an elephant with lots of food!\n我看见一头大象，它有好多食物！\n\n重点表达\nlook for clues 寻找线索；a boy in blue boots 穿蓝色靴子的男孩。\na woman in a new suit 穿新套装的女人；gone 不见了。\nfruit 水果；too 也；an elephant 一头大象；lots of food 很多食物。\n原文先出现男孩，再出现女人；两次 Oh no! 和 The fruit is gone. 均保留对应原声，不漏掉重复句。\n全文12个分句，第1句和第6句在简单课练习，其余10句按顺序放在故事课。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "I am at the zoo.",
+        "explanation": "我在动物园。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/83.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I am looking for clues.",
+        "explanation": "我正在寻找线索。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/84.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see a boy in blue boots.",
+        "explanation": "我看见一个穿蓝色靴子的男孩。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/79.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He has fruit.",
+        "explanation": "他有水果。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/85.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The fruit is gone.",
+        "explanation": "水果不见了。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/86.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see a woman in a new suit.",
+        "explanation": "我看见一个穿新套装的女人。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/80.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She has fruit, too.",
+        "explanation": "她也有水果。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/81.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Oh no!",
+        "explanation": "哦，不！ 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/87.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The fruit is gone.",
+        "explanation": "水果不见了。 跟随原声朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/88.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I see an elephant with lots of food!",
+        "explanation": "我看见一头大象，它有好多食物！ 跟随原声朗读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-f268c5e8-c291-44fd-8267-a55e00336f91/82.mp3"
+      }
+    ],
+    "id": "phonics-5a6cce23-f978-48cc-b761-9d15be738a69",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 1 · 困难",
+    "board": "第二册 Unit 1：短元音 a 发 /æ/，嘴张开，跟随教材原声练习。\n\ncat：猫\nant：蚂蚁\nyak：牦牛\nax：斧头（本课拼写）\nram：公羊\njam：果酱\nyam：薯类（本课单词）\ndam：大坝\nfan：风扇\nman：男人\npan：平底锅\ncan：罐子\n\n-am：ram、jam、yam、dam。\n-an：fan、man、pan、can。\ncat、ant、yak、ax 也含短元音 a。\nax 为教材拼写；ram 是公羊；yam 在本教材图中为薯类，按课本单词记忆；can 本课为罐子，不按“能够”出词义题。\n朗读80分及以上算对，输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词和 jam 押韵？",
+        "explanation": "jam 和 dam 都以 /æm/ 结尾；fan 以 /æn/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "cat",
+          "dam",
+          "fan"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：平底锅",
+        "reference": "pan",
+        "explanation": "平底锅是 pan，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：罐子",
+        "reference": "can",
+        "explanation": "罐子是 can，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I see an _____.（蚂蚁，单数）",
+        "reference": "ant",
+        "explanation": "蚂蚁是 ant，前面用 an。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The _____ is at the dam.（男人，单数）",
+        "reference": "man",
+        "explanation": "男人是 man；dam 是大坝。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The _____ is on the yam.（果酱）",
+        "reference": "jam",
+        "explanation": "jam 是果酱，yam 是薯类。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "A man with a van is at the dam.",
+        "explanation": "一个开着面包车的男人在大坝旁。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/0.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a fan, a can, and a yam.",
+        "explanation": "他有一台风扇、一个罐子和一个薯块。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/1.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The ants want the yam!",
+        "explanation": "蚂蚁们想要那个薯块！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/2.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The man puts jam on the yam for the ants.",
+        "explanation": "男人把果酱抹在薯块上，给蚂蚁们吃。 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/3.mp3"
+      }
+    ],
+    "id": "phonics-fca3dfaf-0ba0-463b-87ec-9d20aa645d7c",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 1 · 简单",
+    "board": "第二册 Unit 1：短元音 a 发 /æ/，嘴张开，跟随教材原声练习。\n\ncat：猫\nant：蚂蚁\nyak：牦牛\nax：斧头（本课拼写）\nram：公羊\njam：果酱\nyam：薯类（本课单词）\ndam：大坝\nfan：风扇\nman：男人\npan：平底锅\ncan：罐子\n\n-am：ram、jam、yam、dam。\n-an：fan、man、pan、can。\ncat、ant、yak、ax 也含短元音 a。\nax 为教材拼写；ram 是公羊；yam 在本教材图中为薯类，按课本单词记忆；can 本课为罐子，不按“能够”出词义题。\n朗读80分及以上算对，输入题只填要求的英文单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "cat 的中文意思是什么？",
+        "explanation": "cat 是猫，中间 a 发短音。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "蚂蚁",
+          "公羊"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“蚂蚁”对应哪个词？",
+        "explanation": "ant 是蚂蚁，a 在单词开头。",
+        "bonus": false,
+        "choices": [
+          "cat",
+          "ant",
+          "ax"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "yak 的中文意思是什么？",
+        "explanation": "yak 是牦牛，不是公羊 ram。",
+        "bonus": false,
+        "choices": [
+          "男人",
+          "薯类",
+          "牦牛"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "本课表示“斧头”的单词是哪一个？",
+        "explanation": "教材中斧头写作 ax。",
+        "bonus": false,
+        "choices": [
+          "ax",
+          "ant",
+          "cat"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：公羊",
+        "reference": "ram",
+        "explanation": "公羊是 ram，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：果酱",
+        "reference": "jam",
+        "explanation": "果酱是 jam，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：薯类（本课单词）",
+        "reference": "yam",
+        "explanation": "薯类（本课单词）是 yam，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：大坝",
+        "reference": "dam",
+        "explanation": "大坝是 dam，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a fan, a can, and a yam.",
+        "explanation": "他有一台风扇、一个罐子和一个薯块。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/1.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The ants want the yam!",
+        "explanation": "蚂蚁们想要那个薯块！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/2.mp3"
+      }
+    ],
+    "id": "phonics-89808c5f-ef90-4635-8a8e-10cdca8ff7de",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 1 · 进阶",
+    "board": "第二册 Unit 1：短元音 a 发 /æ/，嘴张开，跟随教材原声练习。\n\ncat：猫\nant：蚂蚁\nyak：牦牛\nax：斧头（本课拼写）\nram：公羊\njam：果酱\nyam：薯类（本课单词）\ndam：大坝\nfan：风扇\nman：男人\npan：平底锅\ncan：罐子\n\n-am：ram、jam、yam、dam。\n-an：fan、man、pan、can。\ncat、ant、yak、ax 也含短元音 a。\nax 为教材拼写；ram 是公羊；yam 在本教材图中为薯类，按课本单词记忆；can 本课为罐子，不按“能够”出词义题。\n朗读80分及以上算对，输入题只填要求的英文单词。\nTrack10是单词吟唱，录音只读一个单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "fan 在本课表示什么？",
+        "explanation": "fan 表示风扇，man 是男人，pan 是平底锅。",
+        "bonus": false,
+        "choices": [
+          "风扇",
+          "男人",
+          "平底锅"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：猫",
+        "reference": "cat",
+        "explanation": "猫是 cat，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：蚂蚁",
+        "reference": "ant",
+        "explanation": "蚂蚁是 ant，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：牦牛",
+        "reference": "yak",
+        "explanation": "牦牛是 yak，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：斧头（本课拼写）",
+        "reference": "ax",
+        "explanation": "斧头（本课拼写）是 ax，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：风扇",
+        "reference": "fan",
+        "explanation": "风扇是 fan，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词：男人",
+        "reference": "man",
+        "explanation": "男人是 man，注意短元音 a。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I see an ant and an ax.",
+        "explanation": "我看到一只蚂蚁和一把斧头。 歌曲完整保留，可拖动范读进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/4.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "jam",
+        "explanation": "果酱。本轨是单词吟唱，找到 jam 后只朗读 jam。 歌曲完整保留，可拖动范读进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/5.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The man has a can and a pan.",
+        "explanation": "这个男人有一个罐子和一个平底锅。 歌曲完整保留，可拖动范读进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/6.mp3"
+      }
+    ],
+    "id": "phonics-89c454e0-5203-4231-917f-6969aa6ff73f",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 1 · 完整故事朗读与理解",
+    "board": "Ants｜蚂蚁\n先理解中文，再听原声，逐句朗读。\n\n1. A man with a van is at the dam.\n一个开着面包车的男人在大坝旁。\n\n2. He has a fan, a can, and a yam.\n他有一台风扇、一个罐子和一个薯块。\n\n3. The ants want the yam!\n蚂蚁们想要那个薯块！\n\n4. The man puts jam on the yam for the ants.\n男人把果酱抹在薯块上，给蚂蚁们吃。\n\n重点表达\nvan 面包车；with 带着、有；at the dam 在大坝旁。\nants 蚂蚁（复数）；want 想要；puts 放、涂抹。\non the yam 在薯块上；for the ants 给蚂蚁们。\nvan 为故事理解词，不额外扩大核心默写范围。\n本课4道分句朗读＋6道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "A man with a van is at the dam.",
+        "explanation": "一个开着面包车的男人在大坝旁。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/0.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a fan, a can, and a yam.",
+        "explanation": "他有一台风扇、一个罐子和一个薯块。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/1.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The ants want the yam!",
+        "explanation": "蚂蚁们想要那个薯块！ 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/2.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The man puts jam on the yam for the ants.",
+        "explanation": "男人把果酱抹在薯块上，给蚂蚁们吃。 跟随原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/3.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事中，男人在哪里？",
+        "explanation": "A man with a van is at the dam. dam 是大坝。",
+        "bonus": false,
+        "choices": [
+          "在动物园",
+          "在大坝旁",
+          "在洞穴里"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "男人带着什么车？",
+        "explanation": "原文 with a van，van 是面包车。",
+        "bonus": false,
+        "choices": [
+          "面包车",
+          "自行车",
+          "帆船"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组是男人拥有的东西？",
+        "explanation": "He has a fan, a can, and a yam.。",
+        "bonus": false,
+        "choices": [
+          "猫、斧头、牦牛",
+          "果酱、蛋糕、雨伞",
+          "风扇、罐子、薯块"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "蚂蚁们想要什么？",
+        "explanation": "The ants want the yam! yam 为本课薯类。",
+        "bonus": false,
+        "choices": [
+          "风扇",
+          "薯块",
+          "面包车"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "男人把什么抹在薯块上？",
+        "explanation": "The man puts jam on the yam ...，jam 是果酱。",
+        "bonus": false,
+        "choices": [
+          "胶水",
+          "肥皂",
+          "果酱"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "男人把加了果酱的薯块给谁？",
+        "explanation": "原文 for the ants，表示给蚂蚁们。",
+        "bonus": true,
+        "choices": [
+          "蚂蚁们",
+          "牦牛",
+          "公羊"
+        ],
+        "answer": 0
+      }
+    ],
+    "id": "phonics-223cf89e-064a-4e68-adbe-49fdb7f0c379",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 进阶",
+    "board": "第二册 Unit 2：短元音 a /æ/。\n\ndad：爸爸\npad：便笺本\nbag：包\nrag：抹布\ncap：鸭舌帽\nmap：地图\nnap：小睡\ntap：水龙头\nbat：球棒\nrat：老鼠\nhat：帽子\nmat：垫子\n\n-ad：dad、pad；-ag：bag、rag；-ap：cap、map、nap、tap；-at：bat、rat、hat、mat。\npad 本课为便笺本；bat 本课为球棒；tap 本课为水龙头。\ncap 指有帽檐的鸭舌帽，hat 是帽子的常用名称。题目按教材图片区分。\ntake a nap 小睡一会儿；use the tap 使用水龙头。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个词与 map 押韵？",
+        "explanation": "map 和 cap 都以 /æp/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "mat",
+          "cap",
+          "bag"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：爸爸",
+        "reference": "dad",
+        "explanation": "爸爸是 dad，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：便笺本",
+        "reference": "pad",
+        "explanation": "便笺本是 pad，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：包",
+        "reference": "bag",
+        "explanation": "包是 bag，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：抹布",
+        "reference": "rag",
+        "explanation": "抹布是 rag，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：球棒",
+        "reference": "bat",
+        "explanation": "球棒是 bat，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：老鼠",
+        "reference": "rat",
+        "explanation": "老鼠是 rat，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "bag",
+        "explanation": "包。本轨为单词吟唱，找到 bag 后只读 bag。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/7.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Is that your cap on the map?",
+        "explanation": "那是你放在地图上的鸭舌帽吗？ 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/8.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "hat",
+        "explanation": "帽子。本轨为单词吟唱，找到 hat 后只读 hat。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/9.mp3"
+      }
+    ],
+    "id": "phonics-217f801c-2e0b-4d07-b608-16f79ae27ba9",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 简单",
+    "board": "第二册 Unit 2：短元音 a /æ/。\n\ndad：爸爸\npad：便笺本\nbag：包\nrag：抹布\ncap：鸭舌帽\nmap：地图\nnap：小睡\ntap：水龙头\nbat：球棒\nrat：老鼠\nhat：帽子\nmat：垫子\n\n-ad：dad、pad；-ag：bag、rag；-ap：cap、map、nap、tap；-at：bat、rat、hat、mat。\npad 本课为便笺本；bat 本课为球棒；tap 本课为水龙头。\ncap 指有帽檐的鸭舌帽，hat 是帽子的常用名称。题目按教材图片区分。\ntake a nap 小睡一会儿；use the tap 使用水龙头。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "dad 的中文意思是什么？",
+        "explanation": "dad 是爸爸。",
+        "bonus": false,
+        "choices": [
+          "爸爸",
+          "地图",
+          "抹布"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“便笺本”对应哪个词？",
+        "explanation": "pad 本课指便笺本。",
+        "bonus": false,
+        "choices": [
+          "bag",
+          "pad",
+          "bat"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "bag 的中文意思是什么？",
+        "explanation": "bag 是包，rag 是抹布。",
+        "bonus": false,
+        "choices": [
+          "垫子",
+          "球棒",
+          "包"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“抹布”？",
+        "explanation": "rag 是抹布，末尾是 g。",
+        "bonus": false,
+        "choices": [
+          "rag",
+          "rat",
+          "hat"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：鸭舌帽",
+        "reference": "cap",
+        "explanation": "鸭舌帽是 cap，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：地图",
+        "reference": "map",
+        "explanation": "地图是 map，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：小睡",
+        "reference": "nap",
+        "explanation": "小睡是 nap，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：水龙头",
+        "reference": "tap",
+        "explanation": "水龙头是 tap，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "This is my dad!",
+        "explanation": "这是我的爸爸！ 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/10.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She has a bat and a cap.",
+        "explanation": "她有一根球棒和一顶鸭舌帽。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/11.mp3"
+      }
+    ],
+    "id": "phonics-1dcddd52-f33a-4159-ae38-0c1fa21de86e",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 困难",
+    "board": "第二册 Unit 2：短元音 a /æ/。\n\ndad：爸爸\npad：便笺本\nbag：包\nrag：抹布\ncap：鸭舌帽\nmap：地图\nnap：小睡\ntap：水龙头\nbat：球棒\nrat：老鼠\nhat：帽子\nmat：垫子\n\n-ad：dad、pad；-ag：bag、rag；-ap：cap、map、nap、tap；-at：bat、rat、hat、mat。\npad 本课为便笺本；bat 本课为球棒；tap 本课为水龙头。\ncap 指有帽檐的鸭舌帽，hat 是帽子的常用名称。题目按教材图片区分。\ntake a nap 小睡一会儿；use the tap 使用水龙头。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "故事里女孩拿着什么？",
+        "explanation": "She has a bat and a cap.。",
+        "bonus": false,
+        "choices": [
+          "一根球棒和一顶鸭舌帽",
+          "一个便笺本和一块抹布",
+          "一张地图和一个垫子"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：帽子",
+        "reference": "hat",
+        "explanation": "帽子是 hat，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：垫子",
+        "reference": "mat",
+        "explanation": "垫子是 mat，a 发短元音 /æ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：She has a _____.（球棒，单数）",
+        "reference": "bat",
+        "explanation": "bat 本课为球棒。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：We use the _____.（水龙头）",
+        "reference": "tap",
+        "explanation": "tap 是水龙头。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：Then we take a _____.（小睡）",
+        "reference": "nap",
+        "explanation": "take a nap 表示小睡一会儿。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a hat, a bag, and a map.",
+        "explanation": "他有一顶帽子、一个包和一张地图。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/12.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "That is my girl.",
+        "explanation": "那是我的女儿。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/13.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "At the house, we use the tap.",
+        "explanation": "在家里，我们使用水龙头。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/14.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Then we take a nap!",
+        "explanation": "然后我们小睡一会儿！ 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/15.mp3"
+      }
+    ],
+    "id": "phonics-abd166d7-7a27-4b6c-8773-5eaea7ff38c7",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 完整故事朗读与理解",
+    "board": "A Day with Dad｜和爸爸在一起的一天\n先理解中文，再听原声，逐句朗读。\n\n1. This is my dad!\n这是我的爸爸！\n\n2. He has a hat, a bag, and a map.\n他有一顶帽子、一个包和一张地图。\n\n3. That is my girl.\n那是我的女儿。\n\n4. She has a bat and a cap.\n她有一根球棒和一顶鸭舌帽。\n\n5. At the house, we use the tap.\n在家里，我们使用水龙头。\n\n6. Then we take a nap!\n然后我们小睡一会儿！\n\n重点表达\nThis is ... 这是……；That is ... 那是……。\nHe has ... 他有……；She has ... 她有……。\nmy girl 在故事里是爸爸对女儿的称呼。\nat the house 在家里；use 使用；then 然后；take a nap 小睡一会儿。\n本课6道分句朗读＋4道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "This is my dad!",
+        "explanation": "这是我的爸爸！ 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/10.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a hat, a bag, and a map.",
+        "explanation": "他有一顶帽子、一个包和一张地图。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/12.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "That is my girl.",
+        "explanation": "那是我的女儿。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/13.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She has a bat and a cap.",
+        "explanation": "她有一根球棒和一顶鸭舌帽。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/11.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "At the house, we use the tap.",
+        "explanation": "在家里，我们使用水龙头。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/14.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Then we take a nap!",
+        "explanation": "然后我们小睡一会儿！ 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/15.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "爸爸带着哪一组东西？",
+        "explanation": "He has a hat, a bag, and a map.。",
+        "bonus": false,
+        "choices": [
+          "帽子、包、地图",
+          "球棒、鸭舌帽、垫子",
+          "抹布、便笺本、水龙头"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "女孩有什么？",
+        "explanation": "She has a bat and a cap.。",
+        "bonus": false,
+        "choices": [
+          "地图和包",
+          "球棒和鸭舌帽",
+          "水龙头和抹布"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "回到家里，他们使用了什么？",
+        "explanation": "At the house, we use the tap.。",
+        "bonus": false,
+        "choices": [
+          "球棒",
+          "地图",
+          "水龙头"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事最后，他们做什么？",
+        "explanation": "Then we take a nap! 表示然后我们小睡一会儿。",
+        "bonus": true,
+        "choices": [
+          "小睡一会儿",
+          "买一个包",
+          "打扫垫子"
+        ],
+        "answer": 0
+      }
+    ],
+    "id": "phonics-d1f73e58-1e02-4f85-916b-0bf796b2075e",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 完整故事朗读与理解",
+    "board": "My Pet Hen｜我的宠物母鸡\n先理解中文，再听原声，逐段朗读。\n\n1. The red hen is wet.\n这只红母鸡湿了。\n\n2. Oh, no! My pet hen is in bed.\n哦，不！我的宠物母鸡躺在床上。\n\n3. We go to the vet.\n我们去看兽医。\n\n4. My hen has ten eggs!\n我的母鸡有十个蛋！\n\n重点表达\nOh, no! 哦，不！（表示惊讶或担心）\nmy pet hen 我的宠物母鸡；in bed 躺在床上。\ngo to the vet 去看兽医；has 有；ten eggs 十个蛋。\n第2段包含感叹语和后面的完整句，两者均保留在同一段音频中。\n本课4道分段朗读＋6道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "The red hen is wet.",
+        "explanation": "这只红母鸡湿了。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/16.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Oh, no! My pet hen is in bed.",
+        "explanation": "哦，不！我的宠物母鸡躺在床上。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/17.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "We go to the vet.",
+        "explanation": "我们去看兽医。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/18.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My hen has ten eggs!",
+        "explanation": "我的母鸡有十个蛋！ 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/19.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事中的母鸡是什么颜色的？",
+        "explanation": "The red hen is wet. 中 red 表示红色的。",
+        "bonus": false,
+        "choices": [
+          "白色",
+          "红色",
+          "绿色"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事开头，母鸡怎么了？",
+        "explanation": "The red hen is wet. 中 wet 表示湿的。",
+        "bonus": false,
+        "choices": [
+          "湿了",
+          "飞走了",
+          "正在写字"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "女孩说宠物母鸡在哪里？",
+        "explanation": "My pet hen is in bed. 表示母鸡躺在床上。",
+        "bonus": false,
+        "choices": [
+          "在网上",
+          "在飞机上",
+          "在床上"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "他们去找谁？",
+        "explanation": "We go to the vet. 表示我们去看兽医。",
+        "bonus": false,
+        "choices": [
+          "教师",
+          "兽医",
+          "司机"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "母鸡有多少个蛋？",
+        "explanation": "My hen has ten eggs! ten 是十。",
+        "bonus": false,
+        "choices": [
+          "两个",
+          "七个",
+          "十个"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事中 my pet hen 的意思是什么？",
+        "explanation": "pet 是宠物，hen 是母鸡，my 表示我的。",
+        "bonus": true,
+        "choices": [
+          "我的宠物母鸡",
+          "我的红钢笔",
+          "我的蜘蛛网"
+        ],
+        "answer": 0
+      }
+    ],
+    "id": "phonics-194e8fce-af20-4107-a66b-72981c649125",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 简单",
+    "board": "第二册 Unit 3：短元音 e /e/（有些词典标为 /ɛ/）。不要读成字母名称 /iː/。\n\nweb：蜘蛛网\negg：蛋\nvet：兽医\nten：十\nwet：湿的\njet：喷气式飞机\nnet：网\npet：宠物\nhen：母鸡\npen：钢笔\nred：红色的\nbed：床\n\n-et：vet、wet、jet、net、pet；-en：ten、hen、pen；-ed：red、bed。\nweb 和 egg 也含短元音 e。\nweb 本课为蜘蛛网；net 是网；jet 为喷气式飞机；pen 按教材表示钢笔。\nhen 是母鸡，pet 是宠物，vet 是兽医，注意首音不同。\nin bed 躺在床上；go to the vet 去看兽医。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "web 的中文意思是什么？",
+        "explanation": "web 本课表示蜘蛛网。",
+        "bonus": false,
+        "choices": [
+          "蜘蛛网",
+          "钢笔",
+          "床"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“蛋”对应哪个单词？",
+        "explanation": "egg 是蛋，注意两个 g。",
+        "bonus": false,
+        "choices": [
+          "wet",
+          "egg",
+          "pet"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "vet 是做什么工作的？",
+        "explanation": "vet 是兽医，为动物看病。",
+        "bonus": false,
+        "choices": [
+          "飞行员",
+          "教师",
+          "兽医"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "ten 表示哪个数字？",
+        "explanation": "ten 表示十。",
+        "bonus": false,
+        "choices": [
+          "10",
+          "2",
+          "7"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：湿的",
+        "reference": "wet",
+        "explanation": "湿的是 wet，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：喷气式飞机",
+        "reference": "jet",
+        "explanation": "喷气式飞机是 jet，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：网",
+        "reference": "net",
+        "explanation": "网是 net，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：宠物",
+        "reference": "pet",
+        "explanation": "宠物是 pet，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The red hen is wet.",
+        "explanation": "这只红母鸡湿了。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/16.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "We go to the vet.",
+        "explanation": "我们去看兽医。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/18.mp3"
+      }
+    ],
+    "id": "phonics-c137f9cb-104b-4a16-aa45-6919eeb3b46a",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 进阶",
+    "board": "第二册 Unit 3：短元音 e /e/（有些词典标为 /ɛ/）。不要读成字母名称 /iː/。\n\nweb：蜘蛛网\negg：蛋\nvet：兽医\nten：十\nwet：湿的\njet：喷气式飞机\nnet：网\npet：宠物\nhen：母鸡\npen：钢笔\nred：红色的\nbed：床\n\n-et：vet、wet、jet、net、pet；-en：ten、hen、pen；-ed：red、bed。\nweb 和 egg 也含短元音 e。\nweb 本课为蜘蛛网；net 是网；jet 为喷气式飞机；pen 按教材表示钢笔。\nhen 是母鸡，pet 是宠物，vet 是兽医，注意首音不同。\nin bed 躺在床上；go to the vet 去看兽医。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 hen 押韵？",
+        "explanation": "hen 和 pen 都以 /en/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "bed",
+          "pen",
+          "pet"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：蜘蛛网",
+        "reference": "web",
+        "explanation": "蜘蛛网是 web，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：蛋",
+        "reference": "egg",
+        "explanation": "蛋是 egg，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：兽医",
+        "reference": "vet",
+        "explanation": "兽医是 vet，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：十",
+        "reference": "ten",
+        "explanation": "十是 ten，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：母鸡",
+        "reference": "hen",
+        "explanation": "母鸡是 hen，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：钢笔",
+        "reference": "pen",
+        "explanation": "钢笔是 pen，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The vet has ten big eggs.",
+        "explanation": "兽医有十个大蛋。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/20.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "wet",
+        "explanation": "湿的。本轨为单词吟唱，找到 wet 后只读 wet。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/21.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The red pen is on the bed.",
+        "explanation": "红色的钢笔在床上。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/22.mp3"
+      }
+    ],
+    "id": "phonics-80f61b8a-d947-4638-b902-a124a727474a",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 困难",
+    "board": "第二册 Unit 3：短元音 e /e/（有些词典标为 /ɛ/）。不要读成字母名称 /iː/。\n\nweb：蜘蛛网\negg：蛋\nvet：兽医\nten：十\nwet：湿的\njet：喷气式飞机\nnet：网\npet：宠物\nhen：母鸡\npen：钢笔\nred：红色的\nbed：床\n\n-et：vet、wet、jet、net、pet；-en：ten、hen、pen；-ed：red、bed。\nweb 和 egg 也含短元音 e。\nweb 本课为蜘蛛网；net 是网；jet 为喷气式飞机；pen 按教材表示钢笔。\nhen 是母鸡，pet 是宠物，vet 是兽医，注意首音不同。\nin bed 躺在床上；go to the vet 去看兽医。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "下面哪一组结尾发音相同？",
+        "explanation": "red 和 bed 都以 /ed/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "red 和 bed",
+          "hen 和 jet",
+          "web 和 wet"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：红色的",
+        "reference": "red",
+        "explanation": "红色的是 red，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：床",
+        "reference": "bed",
+        "explanation": "床是 bed，e 发短元音 /e/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The _____ is wet.（母鸡，单数）",
+        "reference": "hen",
+        "explanation": "母鸡是 hen，宠物是 pet。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：We go to the _____.（兽医）",
+        "reference": "vet",
+        "explanation": "go to the vet 表示去看兽医。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：My hen has _____ eggs.（十）",
+        "reference": "ten",
+        "explanation": "ten 是十；eggs 是蛋的复数。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The red hen is wet.",
+        "explanation": "这只红母鸡湿了。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/16.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Oh, no! My pet hen is in bed.",
+        "explanation": "哦，不！我的宠物母鸡躺在床上。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/17.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "We go to the vet.",
+        "explanation": "我们去看兽医。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/18.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My hen has ten eggs!",
+        "explanation": "我的母鸡有十个蛋！ 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/19.mp3"
+      }
+    ],
+    "id": "phonics-10cfe8b3-cd15-4a02-b720-e2733fddf0b7",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 困难",
+    "board": "第二册 Unit 4：短元音 i /ɪ/，读短而轻，不要读成字母名称 /aɪ/。\n\nhip：髋部\nink：墨水\nzip：飞快地移动\nin：在……里面\nlip：嘴唇\ntip：尖端（如指尖）\nsip：小口喝\nrip：撕裂\nbib：围嘴\nrib：肋骨\nkid：孩子\nlid：盖子\n\n-ip：hip、zip、lip、tip、sip、rip；-ib：bib、rib；-id：kid、lid。\nin、ink 也含短元音 i。\nzip 本课按奔跑图表示飞快地移动，不按“拉链”出词义题。\nhip 是髋部；tip 是尖端，本课图片为指尖；rip 是撕裂；sip 是小口喝。\ncan use 会使用；open a lid 打开盖子；needs a bib 需要一个围嘴。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "下面哪一组结尾发音相同？",
+        "explanation": "kid 和 lid 都以 /ɪd/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "kid 和 lid",
+          "rib 和 rip",
+          "ink 和 in"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：孩子",
+        "reference": "kid",
+        "explanation": "孩子是 kid，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：盖子",
+        "reference": "lid",
+        "explanation": "盖子是 lid，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The kid can use _____.（墨水）",
+        "reference": "ink",
+        "explanation": "ink 是墨水。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：He can open a _____.（盖子，单数）",
+        "reference": "lid",
+        "explanation": "open a lid 表示打开盖子。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：This kid needs a _____!（围嘴，单数）",
+        "reference": "bib",
+        "explanation": "bib 是围嘴，rib 是肋骨，注意首字母。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The kid can use ink.",
+        "explanation": "这个孩子会用墨水。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/23.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He can open a lid.",
+        "explanation": "他会打开盖子。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/24.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He can sip and zip.",
+        "explanation": "他会小口喝，也会飞快地跑。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/25.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "This kid needs a bib!",
+        "explanation": "这个孩子需要一个围嘴！ 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/26.mp3"
+      }
+    ],
+    "id": "phonics-bafe712f-2197-4c10-9b1f-072ddbb0271f",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 进阶",
+    "board": "第二册 Unit 4：短元音 i /ɪ/，读短而轻，不要读成字母名称 /aɪ/。\n\nhip：髋部\nink：墨水\nzip：飞快地移动\nin：在……里面\nlip：嘴唇\ntip：尖端（如指尖）\nsip：小口喝\nrip：撕裂\nbib：围嘴\nrib：肋骨\nkid：孩子\nlid：盖子\n\n-ip：hip、zip、lip、tip、sip、rip；-ib：bib、rib；-id：kid、lid。\nin、ink 也含短元音 i。\nzip 本课按奔跑图表示飞快地移动，不按“拉链”出词义题。\nhip 是髋部；tip 是尖端，本课图片为指尖；rip 是撕裂；sip 是小口喝。\ncan use 会使用；open a lid 打开盖子；needs a bib 需要一个围嘴。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 bib 押韵？",
+        "explanation": "bib 和 rib 都以 /ɪb/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "kid",
+          "rib",
+          "lip"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：髋部",
+        "reference": "hip",
+        "explanation": "髋部是 hip，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：墨水",
+        "reference": "ink",
+        "explanation": "墨水是 ink，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：飞快地移动",
+        "reference": "zip",
+        "explanation": "飞快地移动是 zip，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：在……里面",
+        "reference": "in",
+        "explanation": "在……里面是 in，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：围嘴",
+        "reference": "bib",
+        "explanation": "围嘴是 bib，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：肋骨",
+        "reference": "rib",
+        "explanation": "肋骨是 rib，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "ink",
+        "explanation": "墨水。本轨为单词吟唱，找到 ink 后只读 ink。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/27.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to sip with my lips.",
+        "explanation": "我喜欢用嘴唇小口喝。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/28.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "kid",
+        "explanation": "孩子。本轨为单词吟唱，找到 kid 后只读 kid。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/29.mp3"
+      }
+    ],
+    "id": "phonics-cb956264-cf71-44ac-b0e2-37a95c081413",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 简单",
+    "board": "第二册 Unit 4：短元音 i /ɪ/，读短而轻，不要读成字母名称 /aɪ/。\n\nhip：髋部\nink：墨水\nzip：飞快地移动\nin：在……里面\nlip：嘴唇\ntip：尖端（如指尖）\nsip：小口喝\nrip：撕裂\nbib：围嘴\nrib：肋骨\nkid：孩子\nlid：盖子\n\n-ip：hip、zip、lip、tip、sip、rip；-ib：bib、rib；-id：kid、lid。\nin、ink 也含短元音 i。\nzip 本课按奔跑图表示飞快地移动，不按“拉链”出词义题。\nhip 是髋部；tip 是尖端，本课图片为指尖；rip 是撕裂；sip 是小口喝。\ncan use 会使用；open a lid 打开盖子；needs a bib 需要一个围嘴。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "hip 的中文意思是什么？",
+        "explanation": "hip 是髋部，rib 是肋骨。",
+        "bonus": false,
+        "choices": [
+          "髋部",
+          "盖子",
+          "肋骨"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“墨水”对应哪个单词？",
+        "explanation": "ink 是墨水，注意末尾 nk。",
+        "bonus": false,
+        "choices": [
+          "in",
+          "ink",
+          "kid"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "zip 在本课奔跑图中表示什么？",
+        "explanation": "本课 zip 表示飞快地移动。",
+        "bonus": false,
+        "choices": [
+          "小口喝",
+          "撕裂",
+          "飞快地移动"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“在……里面”？",
+        "explanation": "in 表示在……里面。",
+        "bonus": false,
+        "choices": [
+          "in",
+          "ink",
+          "lip"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：嘴唇",
+        "reference": "lip",
+        "explanation": "嘴唇是 lip，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：尖端（如指尖）",
+        "reference": "tip",
+        "explanation": "尖端（如指尖）是 tip，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：小口喝",
+        "reference": "sip",
+        "explanation": "小口喝是 sip，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：撕裂",
+        "reference": "rip",
+        "explanation": "撕裂是 rip，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The kid can use ink.",
+        "explanation": "这个孩子会用墨水。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/23.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He can open a lid.",
+        "explanation": "他会打开盖子。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/24.mp3"
+      }
+    ],
+    "id": "phonics-5d67a1a1-cf66-484e-a696-0e842a71c185",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 完整故事朗读与理解",
+    "board": "The Kid｜这个孩子\n先理解中文，再听原声，逐句朗读。\n\n1. The kid can use ink.\n这个孩子会用墨水。\n\n2. He can open a lid.\n他会打开盖子。\n\n3. He can sip and zip.\n他会小口喝，也会飞快地跑。\n\n4. This kid needs a bib!\n这个孩子需要一个围嘴！\n\n重点表达\ncan 能、会；use 使用；open 打开；needs 需要。\nuse ink 使用墨水；open a lid 打开盖子；sip 小口喝；zip 飞快地移动。\nneeds a bib 需要一个围嘴。\n本课4道分句朗读＋6道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "The kid can use ink.",
+        "explanation": "这个孩子会用墨水。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/23.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He can open a lid.",
+        "explanation": "他会打开盖子。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/24.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He can sip and zip.",
+        "explanation": "他会小口喝，也会飞快地跑。 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/25.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "This kid needs a bib!",
+        "explanation": "这个孩子需要一个围嘴！ 跟随教材原声读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/26.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事中的 kid 指谁？",
+        "explanation": "kid 表示孩子。",
+        "bonus": false,
+        "choices": [
+          "一个孩子",
+          "一只母鸡",
+          "一名兽医"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "孩子会使用什么？",
+        "explanation": "The kid can use ink.。",
+        "bonus": false,
+        "choices": [
+          "地图",
+          "墨水",
+          "球棒"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "孩子会打开什么？",
+        "explanation": "He can open a lid.。",
+        "bonus": false,
+        "choices": [
+          "一张网",
+          "一张床",
+          "一个盖子"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "sip 的意思是什么？",
+        "explanation": "He can sip and zip. 中 sip 表示小口喝。",
+        "bonus": false,
+        "choices": [
+          "飞快地跑",
+          "小口喝",
+          "撕裂"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事最后，妈妈说孩子需要什么？",
+        "explanation": "This kid needs a bib!。",
+        "bonus": false,
+        "choices": [
+          "一个包",
+          "一顶帽子",
+          "一个围嘴"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "can open a lid 的意思是什么？",
+        "explanation": "can 表示能、会，open 表示打开，lid 是盖子。",
+        "bonus": true,
+        "choices": [
+          "会打开盖子",
+          "需要一个围嘴",
+          "在盒子里面"
+        ],
+        "answer": 0
+      }
+    ],
+    "id": "phonics-bb9e3dd7-9c5a-4caa-9219-e6d1e9c9d9db",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 完整故事朗读与理解",
+    "board": "Help!｜救命！\n先理解中文，再听原声，逐段朗读。\n\n1. Help! My fin is in a net!\n救命！我的鳍被网缠住了！\n\n2. I can rip it with this pin.\n我可以用这枚别针把它撕开。\n\n3. I can dig under the net.\n我可以在网下面挖。\n\n4. I can hit.\n我可以敲打。\n\n5. Thank you! Now I can win!\n谢谢你们！现在我可以赢了！\n\n重点表达\nHelp! 救命！；in a net 在网里；rip it 把它撕开。\nwith this pin 用这枚别针；under the net 在网下面；hit 击打、敲打。\nThank you! 谢谢你们！；now 现在；win 赢。\n第1段保留Help!及后面的句子；第5段保留Thank you!及后面的句子。全部故事原文均已保留。\n本课5道分段朗读＋5道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "Help! My fin is in a net!",
+        "explanation": "救命！我的鳍被网缠住了！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/30.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I can rip it with this pin.",
+        "explanation": "我可以用这枚别针把它撕开。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/31.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I can dig under the net.",
+        "explanation": "我可以在网下面挖。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/32.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I can hit.",
+        "explanation": "我可以敲打。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/33.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Thank you! Now I can win!",
+        "explanation": "谢谢你们！现在我可以赢了！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/34.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "小鱼遇到了什么麻烦？",
+        "explanation": "Help! My fin is in a net!。",
+        "bonus": false,
+        "choices": [
+          "鳍被网缠住了",
+          "丢了假发",
+          "找不到果核"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "章鱼打算用什么撕开网？",
+        "explanation": "I can rip it with this pin. 中 pin 是别针。",
+        "bonus": false,
+        "choices": [
+          "果核",
+          "别针",
+          "假发"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "说 I can dig under the net. 的角色打算做什么？",
+        "explanation": "dig 是挖，under the net 是在网下面。",
+        "bonus": false,
+        "choices": [
+          "在网上飞",
+          "混合食物",
+          "在网下面挖"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "I can hit. 表示什么？",
+        "explanation": "hit 表示击打或敲打，图中角色正在敲打。",
+        "bonus": false,
+        "choices": [
+          "我可以赢",
+          "我可以敲打",
+          "我可以小睡"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "小鱼最后说 Now I can win! 是什么意思？",
+        "explanation": "now 是现在，win 是赢。",
+        "bonus": true,
+        "choices": [
+          "现在我可以挖了",
+          "现在我可以喝了",
+          "现在我可以赢了"
+        ],
+        "answer": 2
+      }
+    ],
+    "id": "phonics-e303bfb8-a877-468a-812c-40f6d8670423",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 困难",
+    "board": "第二册 Unit 5：短元音 i /ɪ/。\n\npin：别针\nfin：鳍\nbin：箱子（盛放物品的容器）\nwin：赢\nfig：无花果\nwig：假发\nbig：大的\ndig：挖\npit：果核\nhit：击打\nsix：六\nmix：混合\n\n-in：pin、fin、bin、win；-ig：fig、wig、big、dig；-it：pit、hit；-ix：six、mix。\nfig 是无花果，不是“挖”；dig 才是挖。\npit 本课为果核，不按“坑”出词义题；bin 为盛放物品的箱子或容器。\n注意 six 和 mix 结尾 x 发 /ks/。\nin a net 在网里；with this pin 用这枚别针；under the net 在网下面。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "下面哪一组结尾发音相同？",
+        "explanation": "fig 和 dig 都以 /ɪɡ/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "fig 和 dig",
+          "pin 和 pit",
+          "win 和 wig"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：六",
+        "reference": "six",
+        "explanation": "六是 six，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：混合",
+        "reference": "mix",
+        "explanation": "混合是 mix，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：My _____ is in a net!（鳍，单数）",
+        "reference": "fin",
+        "explanation": "fin 是鳍，fig 是无花果。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I can _____ under the net.（挖）",
+        "reference": "dig",
+        "explanation": "dig 是挖，under 表示在……下面。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：Now I can _____!（赢）",
+        "reference": "win",
+        "explanation": "win 表示赢，now 表示现在。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Help! My fin is in a net!",
+        "explanation": "救命！我的鳍被网缠住了！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/30.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I can rip it with this pin.",
+        "explanation": "我可以用这枚别针把它撕开。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/31.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I can dig under the net.",
+        "explanation": "我可以在网下面挖。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/32.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Thank you! Now I can win!",
+        "explanation": "谢谢你们！现在我可以赢了！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/34.mp3"
+      }
+    ],
+    "id": "phonics-29e6339c-d3f2-4588-8073-32704cbcc6c8",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 简单",
+    "board": "第二册 Unit 5：短元音 i /ɪ/。\n\npin：别针\nfin：鳍\nbin：箱子（盛放物品的容器）\nwin：赢\nfig：无花果\nwig：假发\nbig：大的\ndig：挖\npit：果核\nhit：击打\nsix：六\nmix：混合\n\n-in：pin、fin、bin、win；-ig：fig、wig、big、dig；-it：pit、hit；-ix：six、mix。\nfig 是无花果，不是“挖”；dig 才是挖。\npit 本课为果核，不按“坑”出词义题；bin 为盛放物品的箱子或容器。\n注意 six 和 mix 结尾 x 发 /ks/。\nin a net 在网里；with this pin 用这枚别针；under the net 在网下面。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "pin 的中文意思是什么？",
+        "explanation": "pin 是别针，pit 是果核。",
+        "bonus": false,
+        "choices": [
+          "别针",
+          "假发",
+          "果核"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“鳍”对应哪个单词？",
+        "explanation": "fin 是鳍，末尾为 n。",
+        "bonus": false,
+        "choices": [
+          "fig",
+          "fin",
+          "bin"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "bin 在本课图片中是什么？",
+        "explanation": "bin 本课是一个盛放物品的容器。",
+        "bonus": false,
+        "choices": [
+          "假发",
+          "果核",
+          "盛放物品的箱子"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“赢”？",
+        "explanation": "win 表示赢。",
+        "bonus": false,
+        "choices": [
+          "win",
+          "wig",
+          "dig"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：无花果",
+        "reference": "fig",
+        "explanation": "无花果是 fig，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：假发",
+        "reference": "wig",
+        "explanation": "假发是 wig，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：大的",
+        "reference": "big",
+        "explanation": "大的是 big，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：挖",
+        "reference": "dig",
+        "explanation": "挖是 dig，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I can rip it with this pin.",
+        "explanation": "我可以用这枚别针把它撕开。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/31.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I can hit.",
+        "explanation": "我可以敲打。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/33.mp3"
+      }
+    ],
+    "id": "phonics-7e201f85-81df-477e-85ff-3f3312bb02c2",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 进阶",
+    "board": "第二册 Unit 5：短元音 i /ɪ/。\n\npin：别针\nfin：鳍\nbin：箱子（盛放物品的容器）\nwin：赢\nfig：无花果\nwig：假发\nbig：大的\ndig：挖\npit：果核\nhit：击打\nsix：六\nmix：混合\n\n-in：pin、fin、bin、win；-ig：fig、wig、big、dig；-it：pit、hit；-ix：six、mix。\nfig 是无花果，不是“挖”；dig 才是挖。\npit 本课为果核，不按“坑”出词义题；bin 为盛放物品的箱子或容器。\n注意 six 和 mix 结尾 x 发 /ks/。\nin a net 在网里；with this pin 用这枚别针；under the net 在网下面。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 six 押韵？",
+        "explanation": "six 和 mix 都以 /ɪks/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "hit",
+          "mix",
+          "pin"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：别针",
+        "reference": "pin",
+        "explanation": "别针是 pin，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：鳍",
+        "reference": "fin",
+        "explanation": "鳍是 fin，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：箱子（盛放物品的容器）",
+        "reference": "bin",
+        "explanation": "箱子（盛放物品的容器）是 bin，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：赢",
+        "reference": "win",
+        "explanation": "赢是 win，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：果核",
+        "reference": "pit",
+        "explanation": "果核是 pit，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：击打",
+        "reference": "hit",
+        "explanation": "击打是 hit，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Can you see a pin in the bin?",
+        "explanation": "你能看见箱子里的一枚别针吗？ 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/35.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "fig",
+        "explanation": "无花果。本轨为单词吟唱，找到 fig 后只读 fig。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/36.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I don't want six pits!",
+        "explanation": "我不想要六个果核！ 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/37.mp3"
+      }
+    ],
+    "id": "phonics-8b71f342-8e75-47b4-af09-39a5d19423a5",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 完整故事朗读与理解",
+    "board": "The Fox｜狐狸\n先理解中文，再听原声，逐句朗读。\n\n1. The fox has a hot pot.\n狐狸有一口热锅。\n\n2. He stands on a log and uses a rod.\n他站在一根原木上，用钓竿钓鱼。\n\n3. The fish hops.\n鱼跳了起来。\n\n4. It doesn't like the rod!\n它不喜欢这根钓竿！\n\n5. The fox hops, too.\n狐狸也跳了起来。\n\n6. He gets wet!\n他浑身湿透了！\n\n重点表达\nstands on a log 站在一根原木上；uses a rod 使用钓竿。\ndoesn't like 不喜欢；too 也；gets wet 弄湿了。\nhops 是 hop 的第三人称单数形式，故事里表示跳了起来。\n本课6道分句朗读＋4道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "The fox has a hot pot.",
+        "explanation": "狐狸有一口热锅。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/38.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He stands on a log and uses a rod.",
+        "explanation": "他站在一根原木上，用钓竿钓鱼。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/39.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The fish hops.",
+        "explanation": "鱼跳了起来。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/40.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It doesn't like the rod!",
+        "explanation": "它不喜欢这根钓竿！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/41.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The fox hops, too.",
+        "explanation": "狐狸也跳了起来。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/42.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He gets wet!",
+        "explanation": "他浑身湿透了！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/43.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "狐狸有一口什么样的锅？",
+        "explanation": "The fox has a hot pot. 中 hot 表示热的。",
+        "bonus": false,
+        "choices": [
+          "热锅",
+          "破锅",
+          "冷锅"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "狐狸站在哪里钓鱼？",
+        "explanation": "He stands on a log and uses a rod.。",
+        "bonus": false,
+        "choices": [
+          "折叠床上",
+          "一根原木上",
+          "陀螺上"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "鱼喜欢这根钓竿吗？",
+        "explanation": "It doesn't like the rod! 表示它不喜欢这根钓竿。",
+        "bonus": false,
+        "choices": [
+          "喜欢",
+          "原文没有说",
+          "不喜欢"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事最后，狐狸怎么了？",
+        "explanation": "He gets wet! 表示他浑身湿透了。",
+        "bonus": true,
+        "choices": [
+          "赢了比赛",
+          "浑身湿透了",
+          "睡着了"
+        ],
+        "answer": 1
+      }
+    ],
+    "id": "phonics-5c4c9564-0d0a-43a4-8206-b47399d7e019",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 进阶",
+    "board": "第二册 Unit 6：短元音 o，跟随教材原声练习，不读成字母名称 /oʊ/。\n\nfox：狐狸\nlog：原木\nox：公牛\nrod：钓竿\npot：锅\nhot：热的\ncot：折叠床\ndot：点\ntop：陀螺\nmop：拖把\nhop：单脚跳\npop：使爆裂（如戳破气球）\n\n-ot：pot、hot、cot、dot；-op：top、mop、hop、pop。\nfox、log、ox、rod 也含短元音 o。\nrod 本课为钓竿；cot 为折叠床；top 为陀螺；pop 按气球图表示使爆裂。\nhop 本课为单脚跳，故事里也用于描述跳跃。\nstands on a log 站在原木上；uses a rod 使用钓竿；gets wet 弄湿了。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 pot 押韵？",
+        "explanation": "pot 和 hot 结尾发音相同。",
+        "bonus": false,
+        "choices": [
+          "pop",
+          "hot",
+          "hop"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：狐狸",
+        "reference": "fox",
+        "explanation": "狐狸是 fox，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：原木",
+        "reference": "log",
+        "explanation": "原木是 log，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：公牛",
+        "reference": "ox",
+        "explanation": "公牛是 ox，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：钓竿",
+        "reference": "rod",
+        "explanation": "钓竿是 rod，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：陀螺",
+        "reference": "top",
+        "explanation": "陀螺是 top，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：拖把",
+        "reference": "mop",
+        "explanation": "拖把是 mop，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "fox",
+        "explanation": "狐狸。本轨为单词吟唱，找到 fox 后只读 fox。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/44.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The hot pot is under the cot.",
+        "explanation": "热锅在折叠床下面。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/45.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "hop",
+        "explanation": "单脚跳。本轨为单词吟唱，找到 hop 后只读 hop。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/46.mp3"
+      }
+    ],
+    "id": "phonics-f1127792-314f-446b-a301-4cd2dcf384b1",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 简单",
+    "board": "第二册 Unit 6：短元音 o，跟随教材原声练习，不读成字母名称 /oʊ/。\n\nfox：狐狸\nlog：原木\nox：公牛\nrod：钓竿\npot：锅\nhot：热的\ncot：折叠床\ndot：点\ntop：陀螺\nmop：拖把\nhop：单脚跳\npop：使爆裂（如戳破气球）\n\n-ot：pot、hot、cot、dot；-op：top、mop、hop、pop。\nfox、log、ox、rod 也含短元音 o。\nrod 本课为钓竿；cot 为折叠床；top 为陀螺；pop 按气球图表示使爆裂。\nhop 本课为单脚跳，故事里也用于描述跳跃。\nstands on a log 站在原木上；uses a rod 使用钓竿；gets wet 弄湿了。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "fox 的中文意思是什么？",
+        "explanation": "fox 是狐狸。",
+        "bonus": false,
+        "choices": [
+          "狐狸",
+          "公牛",
+          "陀螺"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“原木”对应哪个单词？",
+        "explanation": "log 是原木。",
+        "bonus": false,
+        "choices": [
+          "rod",
+          "log",
+          "mop"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "ox 是哪种动物？",
+        "explanation": "ox 是公牛。",
+        "bonus": false,
+        "choices": [
+          "狐狸",
+          "鱼",
+          "公牛"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "rod 在本课表示什么？",
+        "explanation": "rod 按教材图片表示钓竿。",
+        "bonus": false,
+        "choices": [
+          "钓竿",
+          "拖把",
+          "折叠床"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：锅",
+        "reference": "pot",
+        "explanation": "锅是 pot，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：热的",
+        "reference": "hot",
+        "explanation": "热的是 hot，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：折叠床",
+        "reference": "cot",
+        "explanation": "折叠床是 cot，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：点",
+        "reference": "dot",
+        "explanation": "点是 dot，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The fox has a hot pot.",
+        "explanation": "狐狸有一口热锅。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/38.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The fish hops.",
+        "explanation": "鱼跳了起来。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/40.mp3"
+      }
+    ],
+    "id": "phonics-7cac21e3-5a11-448d-97dd-5ae82806d530",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 困难",
+    "board": "第二册 Unit 6：短元音 o，跟随教材原声练习，不读成字母名称 /oʊ/。\n\nfox：狐狸\nlog：原木\nox：公牛\nrod：钓竿\npot：锅\nhot：热的\ncot：折叠床\ndot：点\ntop：陀螺\nmop：拖把\nhop：单脚跳\npop：使爆裂（如戳破气球）\n\n-ot：pot、hot、cot、dot；-op：top、mop、hop、pop。\nfox、log、ox、rod 也含短元音 o。\nrod 本课为钓竿；cot 为折叠床；top 为陀螺；pop 按气球图表示使爆裂。\nhop 本课为单脚跳，故事里也用于描述跳跃。\nstands on a log 站在原木上；uses a rod 使用钓竿；gets wet 弄湿了。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "下面哪一组结尾发音相同？",
+        "explanation": "top 和 mop 都属于 -op 词族。",
+        "bonus": false,
+        "choices": [
+          "top 和 mop",
+          "log 和 rod",
+          "pot 和 pop"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：单脚跳",
+        "reference": "hop",
+        "explanation": "单脚跳是 hop，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：使爆裂（如戳破气球）",
+        "reference": "pop",
+        "explanation": "使爆裂（如戳破气球）是 pop，i 发短元音 /ɪ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The fox has a hot _____.（锅，单数）",
+        "reference": "pot",
+        "explanation": "pot 是锅，hot 是热的。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：He stands on a _____.（原木，单数）",
+        "reference": "log",
+        "explanation": "stands on a log 表示站在一根原木上。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：He uses a _____.（钓竿，单数）",
+        "reference": "rod",
+        "explanation": "rod 本课为钓竿。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "He stands on a log and uses a rod.",
+        "explanation": "他站在一根原木上，用钓竿钓鱼。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/39.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It doesn't like the rod!",
+        "explanation": "它不喜欢这根钓竿！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/41.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The fox hops, too.",
+        "explanation": "狐狸也跳了起来。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/42.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He gets wet!",
+        "explanation": "他浑身湿透了！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/43.mp3"
+      }
+    ],
+    "id": "phonics-a5db449b-e00e-4faa-a080-539d39238024",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 简单",
+    "board": "第二册 Unit 7：短元音 u /ʌ/，不要读成字母名称 /juː/。\n\nsun：太阳\nup：向上\njug：有柄水壶\nhug：拥抱\nbug：小虫\nrug：小地毯\nmug：马克杯\nbud：芽\nmud：泥\npup：小狗\ncup：杯子\n\n-ug：jug、hug、bug、rug、mug；-ud：bud、mud；-up：up、pup、cup。sun 也含短元音 u。\njug 本课为有柄水壶；mug 为马克杯；cup 为杯子。输入题按教材用词作答。\nbud 是芽，mud 是泥；pup 是小狗，bug 是小虫；rug 是小地毯。\ncomes up 升起来；in the mud 在泥里；happy 开心的；sad 伤心的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "sun 的中文意思是什么？",
+        "explanation": "sun 是太阳。",
+        "bonus": false,
+        "choices": [
+          "太阳",
+          "芽",
+          "小狗"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“向上”对应哪个单词？",
+        "explanation": "up 表示向上。",
+        "bonus": false,
+        "choices": [
+          "cup",
+          "up",
+          "pup"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "jug 在本课表示什么？",
+        "explanation": "jug 是有柄水壶，mug 是马克杯。",
+        "bonus": false,
+        "choices": [
+          "小地毯",
+          "马克杯",
+          "有柄水壶"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“拥抱”？",
+        "explanation": "hug 是拥抱，注意首字母 h。",
+        "bonus": false,
+        "choices": [
+          "hug",
+          "bug",
+          "rug"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：小虫",
+        "reference": "bug",
+        "explanation": "小虫是 bug，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：小地毯",
+        "reference": "rug",
+        "explanation": "小地毯是 rug，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：马克杯",
+        "reference": "mug",
+        "explanation": "马克杯是 mug，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：芽",
+        "reference": "bud",
+        "explanation": "芽是 bud，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "There is some mud.",
+        "explanation": "这里有一些泥。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/47.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The mud is sad.",
+        "explanation": "泥很伤心。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/48.mp3"
+      }
+    ],
+    "id": "phonics-ecef3cef-cdef-48f4-b083-83d6540d70d5",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 进阶",
+    "board": "第二册 Unit 7：短元音 u /ʌ/，不要读成字母名称 /juː/。\n\nsun：太阳\nup：向上\njug：有柄水壶\nhug：拥抱\nbug：小虫\nrug：小地毯\nmug：马克杯\nbud：芽\nmud：泥\npup：小狗\ncup：杯子\n\n-ug：jug、hug、bug、rug、mug；-ud：bud、mud；-up：up、pup、cup。sun 也含短元音 u。\njug 本课为有柄水壶；mug 为马克杯；cup 为杯子。输入题按教材用词作答。\nbud 是芽，mud 是泥；pup 是小狗，bug 是小虫；rug 是小地毯。\ncomes up 升起来；in the mud 在泥里；happy 开心的；sad 伤心的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 bud 押韵？",
+        "explanation": "bud 和 mud 都以 /ʌd/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "bug",
+          "mud",
+          "pup"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：太阳",
+        "reference": "sun",
+        "explanation": "太阳是 sun，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：向上",
+        "reference": "up",
+        "explanation": "向上是 up，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：有柄水壶",
+        "reference": "jug",
+        "explanation": "有柄水壶是 jug，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：拥抱",
+        "reference": "hug",
+        "explanation": "拥抱是 hug，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：泥",
+        "reference": "mud",
+        "explanation": "泥是 mud，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：小狗",
+        "reference": "pup",
+        "explanation": "小狗是 pup，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The sun is up!",
+        "explanation": "太阳升起来了！ 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/49.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "mug",
+        "explanation": "马克杯。本轨为单词吟唱，找到 mug 后只读 mug。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/50.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A pup sees a bud in the mud.",
+        "explanation": "一只小狗看见泥里的一个芽。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/51.mp3"
+      }
+    ],
+    "id": "phonics-7b26ccbf-19a7-4615-9731-21a3c1853bd6",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 困难",
+    "board": "第二册 Unit 7：短元音 u /ʌ/，不要读成字母名称 /juː/。\n\nsun：太阳\nup：向上\njug：有柄水壶\nhug：拥抱\nbug：小虫\nrug：小地毯\nmug：马克杯\nbud：芽\nmud：泥\npup：小狗\ncup：杯子\n\n-ug：jug、hug、bug、rug、mug；-ud：bud、mud；-up：up、pup、cup。sun 也含短元音 u。\njug 本课为有柄水壶；mug 为马克杯；cup 为杯子。输入题按教材用词作答。\nbud 是芽，mud 是泥；pup 是小狗，bug 是小虫；rug 是小地毯。\ncomes up 升起来；in the mud 在泥里；happy 开心的；sad 伤心的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "下面哪一组结尾发音相同？",
+        "explanation": "pup 和 cup 都以 /ʌp/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "pup 和 cup",
+          "mud 和 mug",
+          "sun 和 up"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：杯子",
+        "reference": "cup",
+        "explanation": "杯子是 cup，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The _____ comes up.（太阳）",
+        "reference": "sun",
+        "explanation": "The sun comes up. 表示太阳升起来了。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：A _____ digs in the mud.（小狗，单数）",
+        "reference": "pup",
+        "explanation": "pup 是小狗，digs 表示挖。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：It is a _____!（芽，单数）",
+        "reference": "bud",
+        "explanation": "bud 是芽，不是小虫 bug。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：There is some _____.（泥）",
+        "reference": "mud",
+        "explanation": "mud 是泥。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "A pup digs in the mud.",
+        "explanation": "一只小狗在泥里挖。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/52.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A bug puts a pit in the mud.",
+        "explanation": "一只小虫把一颗果核放进泥里。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/53.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The sun comes up.",
+        "explanation": "太阳升起来了。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/54.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Now the mud is happy.",
+        "explanation": "现在泥很开心。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/55.mp3"
+      }
+    ],
+    "id": "phonics-f1822963-122b-4f8d-a163-20e966379682",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 完整故事朗读与理解",
+    "board": "The Mud｜泥\n先理解中文，再听原声，逐句朗读。\n\n1. There is some mud.\n这里有一些泥。\n\n2. The mud is sad.\n泥很伤心。\n\n3. A pup digs in the mud.\n一只小狗在泥里挖。\n\n4. A bug puts a pit in the mud.\n一只小虫把一颗果核放进泥里。\n\n5. The sun comes up.\n太阳升起来了。\n\n6. It is a bud!\n这是一个芽！\n\n7. Now the mud is happy.\n现在泥很开心。\n\n重点表达\nThere is some ... 这里有一些……；sad 伤心的；happy 开心的。\ndigs 挖；puts 放；pit 果核；in the mud 在泥里。\nThe sun comes up. 太阳升起来了。\n故事将泥拟人化，用伤心和开心描述它的心情。\n本课7道分句朗读＋3道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "There is some mud.",
+        "explanation": "这里有一些泥。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/47.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The mud is sad.",
+        "explanation": "泥很伤心。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/48.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A pup digs in the mud.",
+        "explanation": "一只小狗在泥里挖。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/52.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A bug puts a pit in the mud.",
+        "explanation": "一只小虫把一颗果核放进泥里。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/53.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The sun comes up.",
+        "explanation": "太阳升起来了。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/54.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It is a bud!",
+        "explanation": "这是一个芽！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/56.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Now the mud is happy.",
+        "explanation": "现在泥很开心。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/55.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事开头，泥的心情怎样？",
+        "explanation": "The mud is sad. 表示泥很伤心。",
+        "bonus": false,
+        "choices": [
+          "伤心",
+          "开心",
+          "生气"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "小虫把什么放进泥里？",
+        "explanation": "A bug puts a pit in the mud. 中 pit 是果核。",
+        "bonus": false,
+        "choices": [
+          "一只杯子",
+          "一颗果核",
+          "一条地毯"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事最后，泥为什么露出笑容？",
+        "explanation": "It is a bud! Now the mud is happy. 泥里长出了芽，泥变得开心了。",
+        "bonus": true,
+        "choices": [
+          "太阳不见了",
+          "小狗带来了水壶",
+          "泥里长出了芽"
+        ],
+        "answer": 2
+      }
+    ],
+    "id": "phonics-57c04560-c29d-4e37-97ef-d7b1fbc995e8",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 困难",
+    "board": "第二册 Unit 8：短元音 u /ʌ/。\n\nnut：坚果\nhut：小屋\ncut：切\ncub：幼兽（本课为小熊）\ntub：浴缸\ngum：口香糖\nhum：哼唱\nbun：小圆面包\nrun：跑\nfun：乐趣\n\n-ut：nut、hut、cut；-ub：cub、tub；-um：gum、hum；-un：bun、run、fun。\ncub 表示熊、狮等动物的幼崽，本课图片为小熊。\nbun 为小圆面包，不按中式包子出词义题；gum 本课为口香糖。\nhum 哼唱；cut 切；for fun 为了好玩；make buns 做小圆面包。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "下面哪一组结尾发音相同？",
+        "explanation": "gum 和 hum 都以 /ʌm/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "gum 和 hum",
+          "hut 和 tub",
+          "bun 和 cub"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：They live in a _____.（小屋，单数）",
+        "reference": "hut",
+        "explanation": "live in a hut 表示住在一间小屋里。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I like to _____ for fun!（跑）",
+        "reference": "run",
+        "explanation": "run 是跑，for fun 表示为了好玩。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I like to make _____.（小圆面包，复数）",
+        "reference": "buns",
+        "explanation": "bun 的复数是 buns，句中表示做小圆面包。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The cub can _____.（哼唱）",
+        "reference": "hum",
+        "explanation": "hum 表示哼唱，gum 是口香糖。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The cub can _____ nuts.（切）",
+        "reference": "cut",
+        "explanation": "cut nuts 表示切坚果。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The cub and the pup are friends.",
+        "explanation": "小熊和小狗是朋友。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/57.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to run for fun!",
+        "explanation": "我喜欢跑步玩！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/58.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The cub hums and cuts nuts.",
+        "explanation": "小熊哼着歌，切着坚果。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/59.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like buns, too! Yum!",
+        "explanation": "我也喜欢小圆面包！真好吃！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/60.mp3"
+      }
+    ],
+    "id": "phonics-209edb24-8ace-4767-b40a-151f2878c4ce",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 简单",
+    "board": "第二册 Unit 8：短元音 u /ʌ/。\n\nnut：坚果\nhut：小屋\ncut：切\ncub：幼兽（本课为小熊）\ntub：浴缸\ngum：口香糖\nhum：哼唱\nbun：小圆面包\nrun：跑\nfun：乐趣\n\n-ut：nut、hut、cut；-ub：cub、tub；-um：gum、hum；-un：bun、run、fun。\ncub 表示熊、狮等动物的幼崽，本课图片为小熊。\nbun 为小圆面包，不按中式包子出词义题；gum 本课为口香糖。\nhum 哼唱；cut 切；for fun 为了好玩；make buns 做小圆面包。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "nut 的中文意思是什么？",
+        "explanation": "nut 是坚果。",
+        "bonus": false,
+        "choices": [
+          "坚果",
+          "小屋",
+          "浴缸"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“小屋”对应哪个单词？",
+        "explanation": "hut 是小屋。",
+        "bonus": false,
+        "choices": [
+          "nut",
+          "hut",
+          "cut"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "cut 表示什么动作？",
+        "explanation": "cut 表示切。",
+        "bonus": false,
+        "choices": [
+          "跑",
+          "哼唱",
+          "切"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "cub 在本课图片中是哪种角色？",
+        "explanation": "cub 表示幼兽，本课是小熊；pup 是小狗。",
+        "bonus": false,
+        "choices": [
+          "小熊",
+          "小狗",
+          "小虫"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：浴缸",
+        "reference": "tub",
+        "explanation": "浴缸是 tub，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：口香糖",
+        "reference": "gum",
+        "explanation": "口香糖是 gum，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：哼唱",
+        "reference": "hum",
+        "explanation": "哼唱是 hum，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：小圆面包",
+        "reference": "bun",
+        "explanation": "小圆面包是 bun，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "They live in a hut.",
+        "explanation": "它们住在一间小屋里。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/61.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to make buns.",
+        "explanation": "我喜欢做小圆面包。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/62.mp3"
+      }
+    ],
+    "id": "phonics-c61f19e3-94a2-4a8c-bae1-75c7b42f446b",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 完整故事朗读与理解",
+    "board": "Friends｜朋友\n先理解中文，再听原声，逐段朗读。\n\n1. The cub and the pup are friends.\n小熊和小狗是朋友。\n\n2. They live in a hut.\n它们住在一间小屋里。\n\n3. I like to make buns.\n我喜欢做小圆面包。\n\n4. I like to run for fun!\n我喜欢跑步玩！\n\n5. The cub hums and cuts nuts.\n小熊哼着歌，切着坚果。\n\n6. I like buns, too! Yum!\n我也喜欢小圆面包！真好吃！\n\n重点表达\nare friends 是朋友；they 它们；live in 住在……里。\nlike to make buns 喜欢做小圆面包；run for fun 跑步玩。\nhums 哼唱；cuts nuts 切坚果；too 也；Yum! 真好吃！\n最后一段保留Yum!，全部故事原文均已保留。\n本课6道分段朗读＋4道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "The cub and the pup are friends.",
+        "explanation": "小熊和小狗是朋友。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/57.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They live in a hut.",
+        "explanation": "它们住在一间小屋里。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/61.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to make buns.",
+        "explanation": "我喜欢做小圆面包。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/62.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to run for fun!",
+        "explanation": "我喜欢跑步玩！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/58.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The cub hums and cuts nuts.",
+        "explanation": "小熊哼着歌，切着坚果。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/59.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like buns, too! Yum!",
+        "explanation": "我也喜欢小圆面包！真好吃！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/60.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事中，谁是朋友？",
+        "explanation": "The cub and the pup are friends.。",
+        "bonus": false,
+        "choices": [
+          "小熊和小狗",
+          "小熊和小虫",
+          "小狗和狐狸"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "它们住在哪里？",
+        "explanation": "They live in a hut.。",
+        "bonus": false,
+        "choices": [
+          "浴缸里",
+          "一间小屋里",
+          "原木上"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "小熊喜欢做什么食物？",
+        "explanation": "I like to make buns. 是小熊说的话。",
+        "bonus": false,
+        "choices": [
+          "果酱",
+          "果核",
+          "小圆面包"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "The cub hums and cuts nuts. 的意思是什么？",
+        "explanation": "hums 表示哼唱，cuts nuts 表示切坚果。",
+        "bonus": true,
+        "choices": [
+          "小熊在浴缸里跑",
+          "小熊哼着歌，切着坚果",
+          "小狗做小圆面包"
+        ],
+        "answer": 1
+      }
+    ],
+    "id": "phonics-0e4e1f01-9fd6-4c91-bb1c-e5e83d7823b9",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 进阶",
+    "board": "第二册 Unit 8：短元音 u /ʌ/。\n\nnut：坚果\nhut：小屋\ncut：切\ncub：幼兽（本课为小熊）\ntub：浴缸\ngum：口香糖\nhum：哼唱\nbun：小圆面包\nrun：跑\nfun：乐趣\n\n-ut：nut、hut、cut；-ub：cub、tub；-um：gum、hum；-un：bun、run、fun。\ncub 表示熊、狮等动物的幼崽，本课图片为小熊。\nbun 为小圆面包，不按中式包子出词义题；gum 本课为口香糖。\nhum 哼唱；cut 切；for fun 为了好玩；make buns 做小圆面包。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 bun 押韵？",
+        "explanation": "bun 和 run 都以 /ʌn/ 结尾。",
+        "bonus": false,
+        "choices": [
+          "gum",
+          "run",
+          "tub"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：坚果",
+        "reference": "nut",
+        "explanation": "坚果是 nut，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：小屋",
+        "reference": "hut",
+        "explanation": "小屋是 hut，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：切",
+        "reference": "cut",
+        "explanation": "切是 cut，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：幼兽（本课为小熊）",
+        "reference": "cub",
+        "explanation": "幼兽（本课为小熊）是 cub，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：跑",
+        "reference": "run",
+        "explanation": "跑是 run，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：乐趣",
+        "reference": "fun",
+        "explanation": "乐趣是 fun，u 发短元音 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "nut",
+        "explanation": "坚果。本轨为单词吟唱，找到 nut 后只读 nut。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/63.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The cub can hum in the tub.",
+        "explanation": "小熊能在浴缸里哼唱。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/64.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "run",
+        "explanation": "跑。本轨为单词吟唱，找到 run 后只读 run。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-fdb0ea90-8683-4480-8fb4-349848428d14/65.mp3"
+      }
+    ],
+    "id": "phonics-7284542f-e21f-4561-b4bd-8891ff96a034",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 1 · 完整故事朗读与理解",
+    "board": "The Race｜比赛\n先理解中文，再听原声，逐句朗读。\n\n1. There is a race from the park to the farm.\n有一场从公园到农场的比赛。\n\n2. A girl and her sister race in a tractor.\n一个女孩和她的姐妹开着拖拉机参加比赛。\n\n3. The tractor is blue.\n拖拉机是蓝色的。\n\n4. The tractor is slow, but it has big, black tires.\n拖拉机速度慢，但是它有又大又黑的轮胎。\n\n5. A teacher and a doctor race in a car.\n一位老师和一位医生开着汽车参加比赛。\n\n6. The car is red.\n汽车是红色的。\n\n7. The car is fast.\n汽车速度快。\n\n8. The road from the park to the farm is a dirt road with lots of mud.\n从公园到农场的路是一条有很多泥的土路。\n\n9. Who will win?\n谁会赢？\n\n重点表达\nfrom the park to the farm 从公园到农场；race 参加比赛。\nslow 慢的；fast 快的；but 但是；big, black tires 又大又黑的轮胎。\na dirt road 一条土路；lots of mud 很多泥。\nWho will win? 谁会赢？\n教材页底答案：The bird. 鸟。这个答案不属于正文朗读句，理解题明确说明是教材揭晓的答案。\n本课9道分句朗读＋1道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "There is a race from the park to the farm.",
+        "explanation": "有一场从公园到农场的比赛。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/0.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A girl and her sister race in a tractor.",
+        "explanation": "一个女孩和她的姐妹开着拖拉机参加比赛。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/1.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The tractor is blue.",
+        "explanation": "拖拉机是蓝色的。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/2.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The tractor is slow, but it has big, black tires.",
+        "explanation": "拖拉机速度慢，但是它有又大又黑的轮胎。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/3.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A teacher and a doctor race in a car.",
+        "explanation": "一位老师和一位医生开着汽车参加比赛。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/4.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The car is red.",
+        "explanation": "汽车是红色的。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/5.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The car is fast.",
+        "explanation": "汽车速度快。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/6.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The road from the park to the farm is a dirt road with lots of mud.",
+        "explanation": "从公园到农场的路是一条有很多泥的土路。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/7.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Who will win?",
+        "explanation": "谁会赢？ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/8.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "教材页底给出的比赛赢家是谁？",
+        "explanation": "教材倒置答案为 The bird.（鸟）。这是教材页底揭晓的答案，并非故事正文直接说出的结论。",
+        "bonus": true,
+        "choices": [
+          "鸟",
+          "开汽车的老师和医生",
+          "开拖拉机的姐妹"
+        ],
+        "answer": 0
+      }
+    ],
+    "id": "phonics-d3e3e184-c91d-4c2a-b66b-3e1a69c116fc",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 1 · 简单",
+    "board": "第五册 Unit 1：ar、ir、ur、er、or。\n\ncar：汽车\nfarm：农场\npark：公园\nstar：星星\nbird：鸟\ngirl：女孩\nnurse：护士\npurple：紫色的\nteacher：老师\nsister：姐妹\ndoctor：医生\ntractor：拖拉机\n\nar：car、farm、park、star；ir：bird、girl；ur：nurse、purple。\n词尾 er：teacher、sister；词尾 or：doctor、tractor。\n本课 doctor、tractor 的词尾 or 是弱读音，不能按所有 or 都读同一个音来记。\n跟随教材原声模仿，美式读音注意 r 的发音。\nsister 不区分姐姐或妹妹，统一理解为姐妹。\nfrom ... to ... 从……到……；slow 慢的；fast 快的；tire 轮胎；dirt road 土路。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "car 的中文意思是什么？",
+        "explanation": "car 是汽车。",
+        "bonus": false,
+        "choices": [
+          "汽车",
+          "拖拉机",
+          "公园"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“农场”对应哪个单词？",
+        "explanation": "farm 是农场，park 是公园。",
+        "bonus": false,
+        "choices": [
+          "park",
+          "farm",
+          "star"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "park 的中文意思是什么？",
+        "explanation": "park 是公园。",
+        "bonus": false,
+        "choices": [
+          "星星",
+          "汽车",
+          "公园"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“星星”？",
+        "explanation": "star 是星星，注意开头 st。",
+        "bonus": false,
+        "choices": [
+          "star",
+          "car",
+          "farm"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：鸟",
+        "reference": "bird",
+        "explanation": "鸟是 bird，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：女孩",
+        "reference": "girl",
+        "explanation": "女孩是 girl，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：护士",
+        "reference": "nurse",
+        "explanation": "护士是 nurse，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：紫色的",
+        "reference": "purple",
+        "explanation": "紫色的是 purple，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The tractor is blue.",
+        "explanation": "拖拉机是蓝色的。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/2.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The car is red.",
+        "explanation": "汽车是红色的。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/5.mp3"
+      }
+    ],
+    "id": "phonics-a1da87e1-54f8-460a-a23d-f753fb3b6d61",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 1 · 进阶",
+    "board": "第五册 Unit 1：ar、ir、ur、er、or。\n\ncar：汽车\nfarm：农场\npark：公园\nstar：星星\nbird：鸟\ngirl：女孩\nnurse：护士\npurple：紫色的\nteacher：老师\nsister：姐妹\ndoctor：医生\ntractor：拖拉机\n\nar：car、farm、park、star；ir：bird、girl；ur：nurse、purple。\n词尾 er：teacher、sister；词尾 or：doctor、tractor。\n本课 doctor、tractor 的词尾 or 是弱读音，不能按所有 or 都读同一个音来记。\n跟随教材原声模仿，美式读音注意 r 的发音。\nsister 不区分姐姐或妹妹，统一理解为姐妹。\nfrom ... to ... 从……到……；slow 慢的；fast 快的；tire 轮胎；dirt road 土路。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "teacher 的词尾是哪一组字母？",
+        "explanation": "teacher 以 er 结尾，doctor 以 or 结尾。",
+        "bonus": false,
+        "choices": [
+          "or",
+          "er",
+          "ar"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：汽车",
+        "reference": "car",
+        "explanation": "汽车是 car，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：农场",
+        "reference": "farm",
+        "explanation": "农场是 farm，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：公园",
+        "reference": "park",
+        "explanation": "公园是 park，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：星星",
+        "reference": "star",
+        "explanation": "星星是 star，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：老师",
+        "reference": "teacher",
+        "explanation": "老师是 teacher，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：姐妹",
+        "reference": "sister",
+        "explanation": "姐妹是 sister，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "There's a car at the farm and a star in the park.",
+        "explanation": "农场里有一辆汽车，公园里有一颗星星。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/9.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The girl takes her purple bird to the nurse.",
+        "explanation": "女孩带着她的紫色鸟去找护士。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/10.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The teacher, the doctor, and my sister ride a tractor.",
+        "explanation": "老师、医生和我的姐妹乘坐拖拉机。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/11.mp3"
+      }
+    ],
+    "id": "phonics-ad08593c-70ce-4ced-a0b3-ae1fd7de6da8",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 1 · 困难",
+    "board": "第五册 Unit 1：ar、ir、ur、er、or。\n\ncar：汽车\nfarm：农场\npark：公园\nstar：星星\nbird：鸟\ngirl：女孩\nnurse：护士\npurple：紫色的\nteacher：老师\nsister：姐妹\ndoctor：医生\ntractor：拖拉机\n\nar：car、farm、park、star；ir：bird、girl；ur：nurse、purple。\n词尾 er：teacher、sister；词尾 or：doctor、tractor。\n本课 doctor、tractor 的词尾 or 是弱读音，不能按所有 or 都读同一个音来记。\n跟随教材原声模仿，美式读音注意 r 的发音。\nsister 不区分姐姐或妹妹，统一理解为姐妹。\nfrom ... to ... 从……到……；slow 慢的；fast 快的；tire 轮胎；dirt road 土路。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词的词尾与 doctor 一样写作 or？",
+        "explanation": "doctor、tractor 以 or 结尾；teacher、sister 以 er 结尾。",
+        "bonus": false,
+        "choices": [
+          "teacher",
+          "sister",
+          "tractor"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：医生",
+        "reference": "doctor",
+        "explanation": "医生是 doctor，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：拖拉机",
+        "reference": "tractor",
+        "explanation": "拖拉机是 tractor，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The _____ is blue.（拖拉机，单数）",
+        "reference": "tractor",
+        "explanation": "tractor 是拖拉机，故事里它是蓝色的。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：There is a race from the _____ to the farm.（公园）",
+        "reference": "park",
+        "explanation": "from the park to the farm 表示从公园到农场。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：A teacher and a _____ race in a car.（医生，单数）",
+        "reference": "doctor",
+        "explanation": "doctor 是医生，注意词尾 or。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "There is a race from the park to the farm.",
+        "explanation": "有一场从公园到农场的比赛。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/0.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The tractor is slow, but it has big, black tires.",
+        "explanation": "拖拉机速度慢，但是它有又大又黑的轮胎。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/3.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The road from the park to the farm is a dirt road with lots of mud.",
+        "explanation": "从公园到农场的路是一条有很多泥的土路。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/7.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Who will win?",
+        "explanation": "谁会赢？ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/8.mp3"
+      }
+    ],
+    "id": "phonics-b167c2b9-b7ec-4ed5-bb90-1e1fe7ec5aac",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 困难",
+    "board": "第五册 Unit 2：ou、ow、oi、oy、oo、u。\n\nmouse：老鼠\nhouse：房子\ncow：奶牛\nbrown：棕色的\ncoin：硬币\nsoil：土壤\ntoy：玩具\nboy：男孩\nbook：书\nfoot：脚\nbush：灌木丛\npull：拉\n\nou /aʊ/：mouse、house；ow /aʊ/：cow、brown。\noi /ɔɪ/：coin、soil；oy /ɔɪ/：toy、boy。\noo /ʊ/：book、foot；u /ʊ/：bush、pull。这些是本单元词中的读音，不代表字母组合在所有词里都这样读。\n注意 book、foot 的 oo 不是长音 /uː/；pull 不是 pool。\na farm house 农舍；outside 外面；join 加入；only 只有；flip a coin 抛硬币；soft 软的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪一组单词的元音在本课都读 /ʊ/？",
+        "explanation": "book 的 oo 和 pull 的 u 在本课都读 /ʊ/。",
+        "bonus": false,
+        "choices": [
+          "book 和 pull",
+          "cow 和 coin",
+          "boy 和 house"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：灌木丛",
+        "reference": "bush",
+        "explanation": "灌木丛是 bush，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：拉",
+        "reference": "pull",
+        "explanation": "拉是 pull，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The _____ is brown.（土壤）",
+        "reference": "soil",
+        "explanation": "soil 是土壤，含 oi。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：My _____ is cold!（脚，单数）",
+        "reference": "foot",
+        "explanation": "foot 是单数的脚，注意 oo。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：This _____ is good.（书，单数）",
+        "reference": "book",
+        "explanation": "book 是书，注意不是长音 /uː/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "It is cold outside.",
+        "explanation": "外面很冷。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/12.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Hello, boy.",
+        "explanation": "你好，男孩。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/13.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "This book is good.",
+        "explanation": "这本书很好。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/14.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My foot is cold!",
+        "explanation": "我的脚好冷！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/15.mp3"
+      }
+    ],
+    "id": "phonics-60f346c3-3d5e-4c41-82e0-7c70cc686eb0",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 完整故事朗读",
+    "board": "A Cow in the House｜房子里的一头奶牛\n先理解中文，再听原声，逐句朗读。\n\n1. A boy and a mouse play with toys in a farm house.\n一个男孩和一只老鼠在农舍里玩玩具。\n\n2. It is cold outside.\n外面很冷。\n\n3. A brown cow wants to join the boy and the mouse in the house.\n一头棕色奶牛想进屋，和男孩、老鼠待在一起。\n\n4. Hello, brown cow.\n你好，棕色奶牛。\n\n5. Hello, boy.\n你好，男孩。\n\n6. Hello, mouse.\n你好，老鼠。\n\n7. The soil and the bushes are cold.\n泥土和灌木丛都很冷。\n\n8. Can I sleep in your house?\n我可以睡在你们的房子里吗？\n\n9. We only have two beds.\n我们只有两张床。\n\n10. Let's flip a coin.\n我们抛硬币决定吧。\n\n11. Okay.\n好的。\n\n12. This book is good.\n这本书很好。\n\n13. This bed is soft.\n这张床很软。\n\n14. My foot is cold!\n我的脚好冷！\n\n重点表达\nplay with toys 玩玩具；a farm house 农舍；cold outside 外面很冷。\njoin 加入；bushes 是 bush 的复数；Can I ...? 我可以……吗？\nonly 只有；two beds 两张床；Let's flip a coin. 我们抛硬币决定吧。\nsoft 软的；My foot is cold! 我的脚好冷！\n完整故事共有14句。简单课含第4、6句；困难课含第2、5句；故事课含其余10句（第12、14句也在困难课练习）。全部原文均有对应音频。\n本课10道朗读题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "A boy and a mouse play with toys in a farm house.",
+        "explanation": "一个男孩和一只老鼠在农舍里玩玩具。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/16.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A brown cow wants to join the boy and the mouse in the house.",
+        "explanation": "一头棕色奶牛想进屋，和男孩、老鼠待在一起。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/17.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The soil and the bushes are cold.",
+        "explanation": "泥土和灌木丛都很冷。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/18.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Can I sleep in your house?",
+        "explanation": "我可以睡在你们的房子里吗？ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/19.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "We only have two beds.",
+        "explanation": "我们只有两张床。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/20.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Let's flip a coin.",
+        "explanation": "我们抛硬币决定吧。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/21.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Okay.",
+        "explanation": "好的。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/22.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "This book is good.",
+        "explanation": "这本书很好。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/14.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "This bed is soft.",
+        "explanation": "这张床很软。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/23.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My foot is cold!",
+        "explanation": "我的脚好冷！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/15.mp3"
+      }
+    ],
+    "id": "phonics-c76c5083-36be-47e9-a480-f21641a0b60f",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 进阶",
+    "board": "第五册 Unit 2：ou、ow、oi、oy、oo、u。\n\nmouse：老鼠\nhouse：房子\ncow：奶牛\nbrown：棕色的\ncoin：硬币\nsoil：土壤\ntoy：玩具\nboy：男孩\nbook：书\nfoot：脚\nbush：灌木丛\npull：拉\n\nou /aʊ/：mouse、house；ow /aʊ/：cow、brown。\noi /ɔɪ/：coin、soil；oy /ɔɪ/：toy、boy。\noo /ʊ/：book、foot；u /ʊ/：bush、pull。这些是本单元词中的读音，不代表字母组合在所有词里都这样读。\n注意 book、foot 的 oo 不是长音 /uː/；pull 不是 pool。\na farm house 农舍；outside 外面；join 加入；only 只有；flip a coin 抛硬币；soft 软的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个词的元音与 toy 相同？",
+        "explanation": "toy 的 oy 和 coin 的 oi 都读 /ɔɪ/。",
+        "bonus": false,
+        "choices": [
+          "cow",
+          "coin",
+          "book"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：老鼠",
+        "reference": "mouse",
+        "explanation": "老鼠是 mouse，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：房子",
+        "reference": "house",
+        "explanation": "房子是 house，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：奶牛",
+        "reference": "cow",
+        "explanation": "奶牛是 cow，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：棕色的",
+        "reference": "brown",
+        "explanation": "棕色的是 brown，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：书",
+        "reference": "book",
+        "explanation": "书是 book，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：脚",
+        "reference": "foot",
+        "explanation": "脚是 foot，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The mouse and the cow live in a brown house.",
+        "explanation": "老鼠和奶牛住在一所棕色的房子里。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/24.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The boy can see a toy and a coin in the soil.",
+        "explanation": "男孩能看到土壤中的一个玩具和一枚硬币。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/25.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I pull a book from a bush with my foot.",
+        "explanation": "我用脚把一本书从灌木丛里拉出来。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/26.mp3"
+      }
+    ],
+    "id": "phonics-b34719f9-577e-46c2-919f-70c200bfe673",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 2 · 简单",
+    "board": "第五册 Unit 2：ou、ow、oi、oy、oo、u。\n\nmouse：老鼠\nhouse：房子\ncow：奶牛\nbrown：棕色的\ncoin：硬币\nsoil：土壤\ntoy：玩具\nboy：男孩\nbook：书\nfoot：脚\nbush：灌木丛\npull：拉\n\nou /aʊ/：mouse、house；ow /aʊ/：cow、brown。\noi /ɔɪ/：coin、soil；oy /ɔɪ/：toy、boy。\noo /ʊ/：book、foot；u /ʊ/：bush、pull。这些是本单元词中的读音，不代表字母组合在所有词里都这样读。\n注意 book、foot 的 oo 不是长音 /uː/；pull 不是 pool。\na farm house 农舍；outside 外面；join 加入；only 只有；flip a coin 抛硬币；soft 软的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "mouse 的中文意思是什么？",
+        "explanation": "mouse 是老鼠。",
+        "bonus": false,
+        "choices": [
+          "老鼠",
+          "奶牛",
+          "男孩"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“房子”对应哪个单词？",
+        "explanation": "house 是房子。",
+        "bonus": false,
+        "choices": [
+          "mouse",
+          "house",
+          "bush"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "cow 的中文意思是什么？",
+        "explanation": "cow 是奶牛。",
+        "bonus": false,
+        "choices": [
+          "棕色的",
+          "硬币",
+          "奶牛"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“棕色的”？",
+        "explanation": "brown 是棕色的，含 ow。",
+        "bonus": false,
+        "choices": [
+          "brown",
+          "boy",
+          "book"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：硬币",
+        "reference": "coin",
+        "explanation": "硬币是 coin，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：土壤",
+        "reference": "soil",
+        "explanation": "土壤是 soil，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：玩具",
+        "reference": "toy",
+        "explanation": "玩具是 toy，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：男孩",
+        "reference": "boy",
+        "explanation": "男孩是 boy，注意本单元的 r 控制元音和词尾拼写。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Hello, brown cow.",
+        "explanation": "你好，棕色奶牛。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/27.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Hello, mouse.",
+        "explanation": "你好，老鼠。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/28.mp3"
+      }
+    ],
+    "id": "phonics-cd711c27-2273-4595-9279-95bc3b71e13c",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 困难",
+    "board": "第五册 Unit 3：au、aw、all、wa、or、oar。\n\nsauce：酱汁\nAugust：八月\nprawn：虾\ndraw：画\nball：球\ntall：高的\nwater：水\nwalk：走路\nhorse：马\nfork：叉子\nroar：吼叫\nboard：书写板（本课为白板）\n\nau：sauce、August；aw：prawn、draw；all：ball、tall；wa：water、walk；or：horse、fork；oar：roar、board。\n跟随教材原声练习。这些是本单元单词中的读音，不代表字母组合在所有词里都读同一个音。\nAugust 是月份，首字母大写；walk 中 l 不发音。\nboard 是书写板，本课图片为白板；oar 单独作词时表示船桨，是故事学习词。\nbeach 海滩；catch 捉住；cook 烹饪；with a net 拿着网；just like me 就像我一样。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "walk 中哪个字母不发音？",
+        "explanation": "walk 中 l 不发音，跟随教材原声模仿。",
+        "bonus": false,
+        "choices": [
+          "w",
+          "a",
+          "l"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：吼叫",
+        "reference": "roar",
+        "explanation": "吼叫是 roar，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：书写板（本课为白板）",
+        "reference": "board",
+        "explanation": "书写板（本课为白板）是 board，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I walk in the _____ with a net.（水）",
+        "reference": "water",
+        "explanation": "water 是水，with a net 表示拿着网。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The fish are too fast, but the _____ is slow.（虾，单数）",
+        "reference": "prawn",
+        "explanation": "prawn 是虾，slow 是慢的。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I can eat it with sauce and a _____.（叉子，单数）",
+        "reference": "fork",
+        "explanation": "fork 是叉子，sauce 是酱汁。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "My brother and sister play with a ball and an oar on the beach.",
+        "explanation": "我的兄弟和姐妹在海滩上玩球和船桨。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/29.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The fish are too fast, but the prawn is slow.",
+        "explanation": "鱼游得太快，但是这只虾很慢。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/30.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My mother can cook the prawn, and I can eat it with sauce and a fork.",
+        "explanation": "妈妈可以把虾做熟，我可以蘸着酱汁、用叉子吃它。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/31.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It likes to play in the water, just like me.",
+        "explanation": "它喜欢在水里玩，就像我一样。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/32.mp3"
+      }
+    ],
+    "id": "phonics-87160bde-6b6b-4c45-8eee-614e482c6333",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 简单",
+    "board": "第五册 Unit 3：au、aw、all、wa、or、oar。\n\nsauce：酱汁\nAugust：八月\nprawn：虾\ndraw：画\nball：球\ntall：高的\nwater：水\nwalk：走路\nhorse：马\nfork：叉子\nroar：吼叫\nboard：书写板（本课为白板）\n\nau：sauce、August；aw：prawn、draw；all：ball、tall；wa：water、walk；or：horse、fork；oar：roar、board。\n跟随教材原声练习。这些是本单元单词中的读音，不代表字母组合在所有词里都读同一个音。\nAugust 是月份，首字母大写；walk 中 l 不发音。\nboard 是书写板，本课图片为白板；oar 单独作词时表示船桨，是故事学习词。\nbeach 海滩；catch 捉住；cook 烹饪；with a net 拿着网；just like me 就像我一样。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "sauce 的中文意思是什么？",
+        "explanation": "sauce 是酱汁。",
+        "bonus": false,
+        "choices": [
+          "酱汁",
+          "叉子",
+          "水"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“八月”对应哪个单词？",
+        "explanation": "August 是八月，月份首字母大写。",
+        "bonus": false,
+        "choices": [
+          "autumn",
+          "August",
+          "April"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "prawn 是什么？",
+        "explanation": "prawn 是虾。",
+        "bonus": false,
+        "choices": [
+          "马",
+          "船桨",
+          "虾"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“画”？",
+        "explanation": "draw 是画，含 aw。",
+        "bonus": false,
+        "choices": [
+          "draw",
+          "roar",
+          "tall"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：球",
+        "reference": "ball",
+        "explanation": "球是 ball，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：高的",
+        "reference": "tall",
+        "explanation": "高的是 tall，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：水",
+        "reference": "water",
+        "explanation": "水是 water，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：走路",
+        "reference": "walk",
+        "explanation": "走路是 walk，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "It is August.",
+        "explanation": "现在是八月。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/33.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Goodbye, prawn.",
+        "explanation": "再见，小虾。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/34.mp3"
+      }
+    ],
+    "id": "phonics-6838f340-9e70-42af-9638-929101387873",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 进阶",
+    "board": "第五册 Unit 3：au、aw、all、wa、or、oar。\n\nsauce：酱汁\nAugust：八月\nprawn：虾\ndraw：画\nball：球\ntall：高的\nwater：水\nwalk：走路\nhorse：马\nfork：叉子\nroar：吼叫\nboard：书写板（本课为白板）\n\nau：sauce、August；aw：prawn、draw；all：ball、tall；wa：water、walk；or：horse、fork；oar：roar、board。\n跟随教材原声练习。这些是本单元单词中的读音，不代表字母组合在所有词里都读同一个音。\nAugust 是月份，首字母大写；walk 中 l 不发音。\nboard 是书写板，本课图片为白板；oar 单独作词时表示船桨，是故事学习词。\nbeach 海滩；catch 捉住；cook 烹饪；with a net 拿着网；just like me 就像我一样。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 tall 押韵？",
+        "explanation": "tall 和 ball 结尾发音相同。",
+        "bonus": false,
+        "choices": [
+          "water",
+          "ball",
+          "fork"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：酱汁",
+        "reference": "sauce",
+        "explanation": "酱汁是 sauce，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：八月",
+        "reference": "August",
+        "explanation": "八月是 August，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：虾",
+        "reference": "prawn",
+        "explanation": "虾是 prawn，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：画",
+        "reference": "draw",
+        "explanation": "画是 draw，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：马",
+        "reference": "horse",
+        "explanation": "马是 horse，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：叉子",
+        "reference": "fork",
+        "explanation": "叉子是 fork，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I draw and eat prawns with sauce in August.",
+        "explanation": "我在八月画画，并吃蘸酱汁的虾。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/35.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The tall boy can walk with a ball in the water.",
+        "explanation": "高个子男孩可以带着球在水里走。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/36.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I draw a horse and a fork on the board and roar!",
+        "explanation": "我在板上画一匹马和一把叉子，然后大声吼叫！ 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/37.mp3"
+      }
+    ],
+    "id": "phonics-6cf437bb-1e98-41e5-a8f2-3a3b66d9815c",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 3 · 完整故事朗读",
+    "board": "The Prawn in the Water｜水里的虾\n先理解中文，再听原声，逐句朗读。\n\n1. It is August.\n现在是八月。\n\n2. My brother and sister play with a ball and an oar on the beach.\n我的兄弟和姐妹在海滩上玩球和船桨。\n\n3. I walk in the water with a net.\n我拿着网在水里走。\n\n4. The fish are too fast, but the prawn is slow.\n鱼游得太快，但是这只虾很慢。\n\n5. I catch the prawn in my net!\n我用网捉住了这只虾！\n\n6. My mother can cook the prawn, and I can eat it with sauce and a fork.\n妈妈可以把虾做熟，我可以蘸着酱汁、用叉子吃它。\n\n7. Look!\n看！\n\n8. This prawn has brothers and sisters.\n这只虾也有兄弟姐妹。\n\n9. It likes to play in the water, just like me.\n它喜欢在水里玩，就像我一样。\n\n10. Goodbye, prawn.\n再见，小虾。\n\n重点表达\nAugust 八月；oar 船桨；on the beach 在海滩上；with a net 拿着网。\ntoo fast 太快；slow 慢的；catch 捉住；cook 烹饪。\nwith sauce and a fork 蘸着酱汁、用叉子；just like me 就像我一样。\n故事中女孩想到虾也有兄弟姐妹，最后把它放回水里。\n本课10道完整句朗读，包含感叹句Look!，全部正文均已保留。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "It is August.",
+        "explanation": "现在是八月。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/33.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My brother and sister play with a ball and an oar on the beach.",
+        "explanation": "我的兄弟和姐妹在海滩上玩球和船桨。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/29.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I walk in the water with a net.",
+        "explanation": "我拿着网在水里走。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/38.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The fish are too fast, but the prawn is slow.",
+        "explanation": "鱼游得太快，但是这只虾很慢。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/30.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I catch the prawn in my net!",
+        "explanation": "我用网捉住了这只虾！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/39.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My mother can cook the prawn, and I can eat it with sauce and a fork.",
+        "explanation": "妈妈可以把虾做熟，我可以蘸着酱汁、用叉子吃它。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/31.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Look!",
+        "explanation": "看！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/40.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "This prawn has brothers and sisters.",
+        "explanation": "这只虾也有兄弟姐妹。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/41.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It likes to play in the water, just like me.",
+        "explanation": "它喜欢在水里玩，就像我一样。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/32.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Goodbye, prawn.",
+        "explanation": "再见，小虾。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/34.mp3"
+      }
+    ],
+    "id": "phonics-6b36585c-b202-4d99-863c-004e07ffdb1d",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 进阶",
+    "board": "第五册 Unit 4：are、air、ea、ear、eer。\n\nsquare：正方形\nshare：分享\nchair：椅子\nhair：头发\nbread：面包\nhead：头\nbear：熊\npear：梨\near：耳朵\nclear：透明的\ndeer：鹿\ncheer：欢呼\n\nare：square、share；air：chair、hair；ea：bread、head；ear：bear、pear；ear：ear、clear；eer：deer、cheer。\n同样写作 ear，在 bear、pear 中与 ear、clear 中读音不同，请分组跟随教材原声模仿。\nbread、head 的 ea 发短音 /e/；clear 本课按透明碗的图片表示“透明的”。\nhair 是头发，一般不在本课加复数 s；deer 表示鹿。\nshare 分享；both 两者都；must 必须；fight 争抢、打架；short 短的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个词的 ea 与 bread 相同，都读短音 /e/？",
+        "explanation": "bread、head 中 ea 都读短音 /e/。",
+        "bonus": false,
+        "choices": [
+          "pear",
+          "head",
+          "clear"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：正方形",
+        "reference": "square",
+        "explanation": "正方形是 square，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：分享",
+        "reference": "share",
+        "explanation": "分享是 share，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：椅子",
+        "reference": "chair",
+        "explanation": "椅子是 chair，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：头发",
+        "reference": "hair",
+        "explanation": "头发是 hair，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：耳朵",
+        "reference": "ear",
+        "explanation": "耳朵是 ear，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：透明的",
+        "reference": "clear",
+        "explanation": "透明的是 clear，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "We share a big square chair and brush our hair.",
+        "explanation": "我们共坐一把大的方形椅子，梳理头发。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/42.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The bear has a pear and bread on his head.",
+        "explanation": "熊的头上有一个梨和一些面包。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/43.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I cheer when I see the ears on the deer.",
+        "explanation": "当我看见鹿的耳朵时，我欢呼起来。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/44.mp3"
+      }
+    ],
+    "id": "phonics-cf8ecef2-710b-4d26-83ab-45a8b61ffae7",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 简单",
+    "board": "第五册 Unit 4：are、air、ea、ear、eer。\n\nsquare：正方形\nshare：分享\nchair：椅子\nhair：头发\nbread：面包\nhead：头\nbear：熊\npear：梨\near：耳朵\nclear：透明的\ndeer：鹿\ncheer：欢呼\n\nare：square、share；air：chair、hair；ea：bread、head；ear：bear、pear；ear：ear、clear；eer：deer、cheer。\n同样写作 ear，在 bear、pear 中与 ear、clear 中读音不同，请分组跟随教材原声模仿。\nbread、head 的 ea 发短音 /e/；clear 本课按透明碗的图片表示“透明的”。\nhair 是头发，一般不在本课加复数 s；deer 表示鹿。\nshare 分享；both 两者都；must 必须；fight 争抢、打架；short 短的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "square 的中文意思是什么？",
+        "explanation": "square 本课表示正方形。",
+        "bonus": false,
+        "choices": [
+          "正方形",
+          "椅子",
+          "头发"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“分享”对应哪个单词？",
+        "explanation": "share 表示分享。",
+        "bonus": false,
+        "choices": [
+          "chair",
+          "share",
+          "cheer"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "chair 的中文意思是什么？",
+        "explanation": "chair 是椅子。",
+        "bonus": false,
+        "choices": [
+          "梨",
+          "熊",
+          "椅子"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“头发”？",
+        "explanation": "hair 是头发，head 是头。",
+        "bonus": false,
+        "choices": [
+          "hair",
+          "head",
+          "ear"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：面包",
+        "reference": "bread",
+        "explanation": "面包是 bread，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：头",
+        "reference": "head",
+        "explanation": "头是 head，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：熊",
+        "reference": "bear",
+        "explanation": "熊是 bear，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：梨",
+        "reference": "pear",
+        "explanation": "梨是 pear，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Clark has some bread.",
+        "explanation": "克拉克有一些面包。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/45.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Clare has a pear.",
+        "explanation": "克莱尔有一个梨。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/46.mp3"
+      }
+    ],
+    "id": "phonics-d6d83458-f6e1-4288-b563-94b2f9d2e3c7",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 困难",
+    "board": "第五册 Unit 4：are、air、ea、ear、eer。\n\nsquare：正方形\nshare：分享\nchair：椅子\nhair：头发\nbread：面包\nhead：头\nbear：熊\npear：梨\near：耳朵\nclear：透明的\ndeer：鹿\ncheer：欢呼\n\nare：square、share；air：chair、hair；ea：bread、head；ear：bear、pear；ear：ear、clear；eer：deer、cheer。\n同样写作 ear，在 bear、pear 中与 ear、clear 中读音不同，请分组跟随教材原声模仿。\nbread、head 的 ea 发短音 /e/；clear 本课按透明碗的图片表示“透明的”。\nhair 是头发，一般不在本课加复数 s；deer 表示鹿。\nshare 分享；both 两者都；must 必须；fight 争抢、打架；short 短的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 bear 押韵？",
+        "explanation": "bear 和 pear 押韵；ear、deer 属于另一组读音。",
+        "bonus": false,
+        "choices": [
+          "deer",
+          "ear",
+          "pear"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：鹿",
+        "reference": "deer",
+        "explanation": "鹿是 deer，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：欢呼",
+        "reference": "cheer",
+        "explanation": "欢呼是 cheer，注意本课字母组合的拼写和教材读音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：Clare has a _____.（梨，单数）",
+        "reference": "pear",
+        "explanation": "pear 是梨；bear 是熊。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：Clark has some _____.（面包）",
+        "reference": "bread",
+        "explanation": "bread 是面包，本句 some 后仍用 bread。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：They sit on a _____.（椅子，单数）",
+        "reference": "chair",
+        "explanation": "chair 是椅子，含 air。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Clare has small ears and long hair.",
+        "explanation": "克莱尔有小耳朵和长头发。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/47.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Clark has a big head and short hair.",
+        "explanation": "克拉克有一个大脑袋，头发很短。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/48.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Mother says, \"Don't fight! You must share.\"",
+        "explanation": "妈妈说：“不要争抢！你们必须分享。” 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/49.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They share the chair, the bear, the bread, and the pear.",
+        "explanation": "他们分享椅子、玩具熊、面包和梨。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/50.mp3"
+      }
+    ],
+    "id": "phonics-3e144d4c-1607-47ff-9e14-c9ec77412495",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 4 · 完整故事朗读",
+    "board": "Clark and Clare Start to Share｜克拉克和克莱尔开始分享\n先理解中文，再听原声，逐段朗读。\n\n1. This is Clare, and that is Clark.\n这是克莱尔，那是克拉克。\n\n2. Clare has small ears and long hair.\n克莱尔有小耳朵和长头发。\n\n3. Clark has a big head and short hair.\n克拉克有一个大脑袋，头发很短。\n\n4. Clark has some bread.\n克拉克有一些面包。\n\n5. Clare has a pear.\n克莱尔有一个梨。\n\n6. Clark wants the pear, and Clare wants some bread.\n克拉克想要那个梨，克莱尔想要一些面包。\n\n7. Clare and Clark have a bear.\n克莱尔和克拉克有一只玩具熊。\n\n8. They both want the bear.\n他们俩都想要那只玩具熊。\n\n9. Mother says, \"Don't fight! You must share.\"\n妈妈说：“不要争抢！你们必须分享。”\n\n10. Clark and Clare sit on a chair.\n克拉克和克莱尔坐在一把椅子上。\n\n11. They share the chair, the bear, the bread, and the pear.\n他们分享椅子、玩具熊、面包和梨。\n\n12. Mother gives a cheer.\n妈妈欢呼起来。\n\n重点表达\nsmall ears 小耳朵；long hair 长头发；short hair 短头发。\nsome bread 一些面包；both 两者都；want 想要。\nDon't fight! 不要争抢！；You must share. 你们必须分享。\nsit on a chair 坐在椅子上；gives a cheer 欢呼起来。\nbear 在这个故事图片中是玩具熊。\n全部正文分成12段；第4、5段安排在简单课，其余10段在故事课。妈妈的话连同Mother says保留在一段中。\n本课10道朗读题，全部原文均有音频。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "This is Clare, and that is Clark.",
+        "explanation": "这是克莱尔，那是克拉克。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/51.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Clare has small ears and long hair.",
+        "explanation": "克莱尔有小耳朵和长头发。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/47.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Clark has a big head and short hair.",
+        "explanation": "克拉克有一个大脑袋，头发很短。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/48.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Clark wants the pear, and Clare wants some bread.",
+        "explanation": "克拉克想要那个梨，克莱尔想要一些面包。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/52.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Clare and Clark have a bear.",
+        "explanation": "克莱尔和克拉克有一只玩具熊。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/53.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They both want the bear.",
+        "explanation": "他们俩都想要那只玩具熊。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/54.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Mother says, \"Don't fight! You must share.\"",
+        "explanation": "妈妈说：“不要争抢！你们必须分享。” 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/49.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Clark and Clare sit on a chair.",
+        "explanation": "克拉克和克莱尔坐在一把椅子上。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/55.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They share the chair, the bear, the bread, and the pear.",
+        "explanation": "他们分享椅子、玩具熊、面包和梨。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/50.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Mother gives a cheer.",
+        "explanation": "妈妈欢呼起来。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/56.mp3"
+      }
+    ],
+    "id": "phonics-1eecc93d-b85b-4c67-be89-ff72d50f58a7",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 简单",
+    "board": "第五册 Unit 5：元音字母 a、e、i、o、u 的长音。\n\nacorn：橡子\nbaby：婴儿\nelevator：电梯\nlady：女士\nhe：他\nshe：她\ntiger：老虎\nchild：孩子\ncold：冷的\nhotel：旅馆\nuniform：制服\nmusic：音乐\n\na /eɪ/：acorn、baby、elevator、lady 中教材标出的 a。\ne /iː/：he、she；i /aɪ/：tiger、child。\no /oʊ/：cold、hotel；u /juː/：uniform、music。\n这些是本单元词中标出的读音，不代表单词中的每个元音字母都这样读。\nhe 他，she 她，注意首字母区别；uniform 以 /j/ 辅音开头，说一套制服用 a uniform。\nacorn 是橡子；故事中的 acorn pin 为橡子形胸针，baby cat 是小猫。\nshopping 购物；wearing 穿着、戴着；dirty 脏的；kind 友善的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "acorn 的中文意思是什么？",
+        "explanation": "acorn 是橡子，故事中胸针是橡子形状。",
+        "bonus": false,
+        "choices": [
+          "橡子",
+          "制服",
+          "旅馆"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“婴儿”对应哪个单词？",
+        "explanation": "baby 表示婴儿；child 表示孩子。",
+        "bonus": false,
+        "choices": [
+          "lady",
+          "baby",
+          "child"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "elevator 的中文意思是什么？",
+        "explanation": "elevator 是电梯。",
+        "bonus": false,
+        "choices": [
+          "音乐",
+          "女士",
+          "电梯"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“女士”？",
+        "explanation": "lady 是女士。",
+        "bonus": false,
+        "choices": [
+          "lady",
+          "baby",
+          "tiger"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：他",
+        "reference": "he",
+        "explanation": "他是 he，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：她",
+        "reference": "she",
+        "explanation": "她是 she，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：老虎",
+        "reference": "tiger",
+        "explanation": "老虎是 tiger，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：孩子",
+        "reference": "child",
+        "explanation": "孩子是 child，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "She sees a dog.",
+        "explanation": "她看见一只狗。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/57.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She sees the dog.",
+        "explanation": "她看见了那只狗。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/58.mp3"
+      }
+    ],
+    "id": "phonics-675772a2-92fc-424a-be6f-c34696ea2929",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 进阶",
+    "board": "第五册 Unit 5：元音字母 a、e、i、o、u 的长音。\n\nacorn：橡子\nbaby：婴儿\nelevator：电梯\nlady：女士\nhe：他\nshe：她\ntiger：老虎\nchild：孩子\ncold：冷的\nhotel：旅馆\nuniform：制服\nmusic：音乐\n\na /eɪ/：acorn、baby、elevator、lady 中教材标出的 a。\ne /iː/：he、she；i /aɪ/：tiger、child。\no /oʊ/：cold、hotel；u /juː/：uniform、music。\n这些是本单元词中标出的读音，不代表单词中的每个元音字母都这样读。\nhe 他，she 她，注意首字母区别；uniform 以 /j/ 辅音开头，说一套制服用 a uniform。\nacorn 是橡子；故事中的 acorn pin 为橡子形胸针，baby cat 是小猫。\nshopping 购物；wearing 穿着、戴着；dirty 脏的；kind 友善的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“她”？",
+        "explanation": "she 是她，作主语；he 是他。",
+        "bonus": false,
+        "choices": [
+          "he",
+          "she",
+          "her"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：橡子",
+        "reference": "acorn",
+        "explanation": "橡子是 acorn，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：婴儿",
+        "reference": "baby",
+        "explanation": "婴儿是 baby，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：电梯",
+        "reference": "elevator",
+        "explanation": "电梯是 elevator，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：女士",
+        "reference": "lady",
+        "explanation": "女士是 lady，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：冷的",
+        "reference": "cold",
+        "explanation": "冷的是 cold，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：旅馆",
+        "reference": "hotel",
+        "explanation": "旅馆是 hotel，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The lady and her baby have a big acorn.",
+        "explanation": "女士和她的宝宝有一个大橡子。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/59.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a tiger, and she has a child.",
+        "explanation": "他有一只老虎，她有一个孩子。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/60.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I wear my uniform and play music in the hotel.",
+        "explanation": "我穿着制服，在旅馆里演奏音乐。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/61.mp3"
+      }
+    ],
+    "id": "phonics-eda9bdf5-f72d-422f-80f7-b6bda60974de",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 困难",
+    "board": "第五册 Unit 5：元音字母 a、e、i、o、u 的长音。\n\nacorn：橡子\nbaby：婴儿\nelevator：电梯\nlady：女士\nhe：他\nshe：她\ntiger：老虎\nchild：孩子\ncold：冷的\nhotel：旅馆\nuniform：制服\nmusic：音乐\n\na /eɪ/：acorn、baby、elevator、lady 中教材标出的 a。\ne /iː/：he、she；i /aɪ/：tiger、child。\no /oʊ/：cold、hotel；u /juː/：uniform、music。\n这些是本单元词中标出的读音，不代表单词中的每个元音字母都这样读。\nhe 他，she 她，注意首字母区别；uniform 以 /j/ 辅音开头，说一套制服用 a uniform。\nacorn 是橡子；故事中的 acorn pin 为橡子形胸针，baby cat 是小猫。\nshopping 购物；wearing 穿着、戴着；dirty 脏的；kind 友善的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪一种表达正确？",
+        "explanation": "uniform 开头是辅音 /j/，用 a uniform；elevator 前用 an。",
+        "bonus": false,
+        "choices": [
+          "an uniform",
+          "a uniform",
+          "a elevator"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：制服",
+        "reference": "uniform",
+        "explanation": "制服是 uniform，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：音乐",
+        "reference": "music",
+        "explanation": "音乐是 music，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：She takes the _____ up.（电梯，单数）",
+        "reference": "elevator",
+        "explanation": "take the elevator up 表示乘电梯上楼。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：She likes the _____ in the elevator.（音乐）",
+        "reference": "music",
+        "explanation": "music 是音乐，注意字母 u 的长音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The lady drinks _____ soda.（冷的）",
+        "reference": "cold",
+        "explanation": "cold 是冷的，soda 是汽水。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "It is wearing a dirty uniform.",
+        "explanation": "它穿着一身脏制服。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/62.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They are dirty.",
+        "explanation": "它们很脏。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/63.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She is wearing her new gold acorn pin.",
+        "explanation": "她戴着新的金色橡子形胸针。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/64.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The dog has her acorn pin!",
+        "explanation": "狗拿着她的橡子形胸针！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/65.mp3"
+      }
+    ],
+    "id": "phonics-784354f6-eca8-4f24-86ed-284009b1a2d7",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 5 · 完整故事朗读",
+    "board": "The Lady and the Dog｜女士和狗\n先理解中文，再听原声，逐段朗读。\n\n1. A lady is shopping with her baby cat.\n一位女士带着她的小猫购物。\n\n2. She is wearing her new gold acorn pin.\n她戴着新的金色橡子形胸针。\n\n3. She sees a dog.\n她看见一只狗。\n\n4. It is wearing a dirty uniform.\n它穿着一身脏制服。\n\n5. \"I don't like dogs,\" she thinks.\n她想：“我不喜欢狗。”\n\n6. They are dirty.\n它们很脏。\n\n7. Oh, no! She can't find her acorn pin!\n哦，不！她找不到橡子形胸针了！\n\n8. She takes the elevator up.\n她乘电梯上楼。\n\n9. She likes the music in the elevator.\n她喜欢电梯里的音乐。\n\n10. She sees the dog.\n她看见了那只狗。\n\n11. The dog has her acorn pin!\n狗拿着她的橡子形胸针！\n\n12. The lady sits and drinks cold soda.\n女士坐下来，喝着冰凉的汽水。\n\n13. \"I like dogs,\" she thinks.\n她想：“我喜欢狗。”\n\n14. They are kind.\n它们很友善。\n\n重点表达\nshopping 购物；baby cat 小猫；wearing 穿着、戴着。\ngold acorn pin 金色橡子形胸针；dirty 脏的；uniform 制服。\ncan't find 找不到；takes the elevator up 乘电梯上楼；soda 汽水。\nshe thinks 她想；kind 友善的。\n故事开头女士因为狗的制服脏而不喜欢狗，狗帮她找回胸针后，她改变了想法。\n全部故事分14段：简单课第3、10段，困难课第4、6段；其余10段在故事课。复习大纲含全部原文与中文。\n本课10道朗读题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "A lady is shopping with her baby cat.",
+        "explanation": "一位女士带着她的小猫购物。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/66.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She is wearing her new gold acorn pin.",
+        "explanation": "她戴着新的金色橡子形胸针。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/64.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "\"I don't like dogs,\" she thinks.",
+        "explanation": "她想：“我不喜欢狗。” 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/67.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Oh, no! She can't find her acorn pin!",
+        "explanation": "哦，不！她找不到橡子形胸针了！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/68.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She takes the elevator up.",
+        "explanation": "她乘电梯上楼。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/69.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She likes the music in the elevator.",
+        "explanation": "她喜欢电梯里的音乐。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/70.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The dog has her acorn pin!",
+        "explanation": "狗拿着她的橡子形胸针！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/65.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The lady sits and drinks cold soda.",
+        "explanation": "女士坐下来，喝着冰凉的汽水。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/71.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "\"I like dogs,\" she thinks.",
+        "explanation": "她想：“我喜欢狗。” 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/72.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They are kind.",
+        "explanation": "它们很友善。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/73.mp3"
+      }
+    ],
+    "id": "phonics-9d0a9cf0-9e83-4b1c-b1c0-f681673b8436",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 困难",
+    "board": "第五册 Unit 6：schwa 弱读音 /ə/，以及部分单词中 o 的 /ʌ/ 音。\n\npanda：熊猫\ngorilla：大猩猩\nbanana：香蕉\numbrella：雨伞\nchicken：鸡\npencil：铅笔\nlemon：柠檬\nsurprise：惊喜；使惊讶\nmonkey：猴子\nlove：喜爱\nson：儿子\nhoney：蜂蜜\n\n非重读音节里的 a、e、i、o、u 可能弱读，跟随教材原声轻读，不要把每个字母都读得同样重。\npanda、gorilla、banana、umbrella 的词尾 a 轻读。\n教材把 chicken 的 e、pencil 的 i、lemon 的 o、surprise 的 u 放入弱读练习；不同口音可能有 /ɪ/ 或成音节辅音等实现，不强求逐字母读法。\nmonkey、love、son、honey 中标出的 o 按教材读 /ʌ/，与弱读 /ə/ 分开练习。\nchicken 本课是鸡，不是鸡肉；son 是儿子，不是太阳 sun。\nMr. 表示先生，朗读时读 Mister；every day 每天；stall 摊位；hiccups 打嗝。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "本课哪个说法正确？",
+        "explanation": "弱读音 /ə/ 常见于非重读音节；模仿教材原声，注意轻重。",
+        "bonus": false,
+        "choices": [
+          "所有元音都要读得一样重",
+          "son 中的 o 必须读成长音",
+          "非重读音节中的元音可能弱读"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：儿子",
+        "reference": "son",
+        "explanation": "儿子是 son，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：蜂蜜",
+        "reference": "honey",
+        "explanation": "蜂蜜是 honey，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：lemon juice with _____.（蜂蜜）",
+        "reference": "honey",
+        "explanation": "lemon juice with honey 表示加蜂蜜的柠檬汁。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I _____ banana juice!（喜爱）",
+        "reference": "love",
+        "explanation": "love 表示喜爱，其中 o 按教材读 /ʌ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：Mr. Gorilla and his _____.（儿子，单数）",
+        "reference": "son",
+        "explanation": "son 表示儿子，与 sun 同音。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Mr. Monkey goes to Mr. Panda's juice stall every day.",
+        "explanation": "猴子先生每天都去熊猫先生的果汁摊。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/74.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Today, Mr. Panda is selling banana juice and lemon juice with honey.",
+        "explanation": "今天，熊猫先生在卖香蕉汁和加蜂蜜的柠檬汁。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/75.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Hiccup!",
+        "explanation": "嗝！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/76.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Mr. Gorilla and his son roar at Mr. Monkey.",
+        "explanation": "大猩猩先生和他的儿子朝猴子先生大吼。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/77.mp3"
+      }
+    ],
+    "id": "phonics-3822ca59-e795-4375-bfab-97de4498b6df",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 完整故事朗读",
+    "board": "Mr. Monkey Gets a Surprise!｜猴子先生吃了一惊！\n先理解中文，再听原声，逐段朗读。\n\n1. Mr. Monkey goes to Mr. Panda's juice stall every day.\n猴子先生每天都去熊猫先生的果汁摊。\n\n2. Today, Mr. Panda is selling banana juice and lemon juice with honey.\n今天，熊猫先生在卖香蕉汁和加蜂蜜的柠檬汁。\n\n3. Mr. Monkey gives a cheer.\n猴子先生欢呼起来。\n\n4. \"I love banana juice!\" he says.\n他说：“我喜欢香蕉汁！”\n\n5. Mr. Monkey drinks lots of banana juice.\n猴子先生喝了很多香蕉汁。\n\n6. Oh, no! Mr. Monkey has hiccups!\n哦，不！猴子先生打嗝了！\n\n7. \"I don't love hiccups!\" he says.\n他说：“我可不喜欢打嗝！”\n\n8. Hiccup!\n嗝！\n\n9. Mr. Gorilla and his son roar at Mr. Monkey.\n大猩猩先生和他的儿子朝猴子先生大吼。\n\n10. They give him a surprise.\n他们给了他一个意外的惊吓。\n\n11. The surprise stops Mr. Monkey's hiccups.\n这一下惊吓让猴子先生停止了打嗝。\n\n12. \"Thank you,\" says Mr. Monkey.\n猴子先生说：“谢谢你们。”\n\n13. I love surprises!\n我喜欢惊喜！\n\n重点表达\nMr. 先生，朗读读Mister；juice stall 果汁摊；every day 每天。\nis selling 正在卖；with honey 加蜂蜜；lots of 很多。\nhas hiccups 打嗝；roar at 朝……大吼；stops hiccups 止住打嗝。\nsurprise 随语境可表示惊喜或意外的惊吓，这里大吼吓了猴子一跳，帮他止住了打嗝。\n全部故事分13段：简单课练第3、4段，困难课练第8段；故事课练其余10段。复习大纲保留全部原文及中文。\n本课10道朗读题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "Mr. Monkey goes to Mr. Panda's juice stall every day.",
+        "explanation": "猴子先生每天都去熊猫先生的果汁摊。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/74.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Today, Mr. Panda is selling banana juice and lemon juice with honey.",
+        "explanation": "今天，熊猫先生在卖香蕉汁和加蜂蜜的柠檬汁。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/75.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Mr. Monkey drinks lots of banana juice.",
+        "explanation": "猴子先生喝了很多香蕉汁。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/78.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Oh, no! Mr. Monkey has hiccups!",
+        "explanation": "哦，不！猴子先生打嗝了！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/79.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "\"I don't love hiccups!\" he says.",
+        "explanation": "他说：“我可不喜欢打嗝！” 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/80.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Mr. Gorilla and his son roar at Mr. Monkey.",
+        "explanation": "大猩猩先生和他的儿子朝猴子先生大吼。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/77.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They give him a surprise.",
+        "explanation": "他们给了他一个意外的惊吓。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/81.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The surprise stops Mr. Monkey's hiccups.",
+        "explanation": "这一下惊吓让猴子先生停止了打嗝。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/82.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "\"Thank you,\" says Mr. Monkey.",
+        "explanation": "猴子先生说：“谢谢你们。” 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/83.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I love surprises!",
+        "explanation": "我喜欢惊喜！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/84.mp3"
+      }
+    ],
+    "id": "phonics-6eb9fd50-a09b-4ed7-bb62-c967e077f21e",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 进阶",
+    "board": "第五册 Unit 6：schwa 弱读音 /ə/，以及部分单词中 o 的 /ʌ/ 音。\n\npanda：熊猫\ngorilla：大猩猩\nbanana：香蕉\numbrella：雨伞\nchicken：鸡\npencil：铅笔\nlemon：柠檬\nsurprise：惊喜；使惊讶\nmonkey：猴子\nlove：喜爱\nson：儿子\nhoney：蜂蜜\n\n非重读音节里的 a、e、i、o、u 可能弱读，跟随教材原声轻读，不要把每个字母都读得同样重。\npanda、gorilla、banana、umbrella 的词尾 a 轻读。\n教材把 chicken 的 e、pencil 的 i、lemon 的 o、surprise 的 u 放入弱读练习；不同口音可能有 /ɪ/ 或成音节辅音等实现，不强求逐字母读法。\nmonkey、love、son、honey 中标出的 o 按教材读 /ʌ/，与弱读 /ə/ 分开练习。\nchicken 本课是鸡，不是鸡肉；son 是儿子，不是太阳 sun。\nMr. 表示先生，朗读时读 Mister；every day 每天；stall 摊位；hiccups 打嗝。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "本课哪个词表示“儿子”，不是“太阳”？",
+        "explanation": "son 是儿子；sun 是太阳，两者同音但拼写不同。",
+        "bonus": false,
+        "choices": [
+          "sun",
+          "son",
+          "some"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：熊猫",
+        "reference": "panda",
+        "explanation": "熊猫是 panda，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：大猩猩",
+        "reference": "gorilla",
+        "explanation": "大猩猩是 gorilla，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：香蕉",
+        "reference": "banana",
+        "explanation": "香蕉是 banana，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：雨伞",
+        "reference": "umbrella",
+        "explanation": "雨伞是 umbrella，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：猴子",
+        "reference": "monkey",
+        "explanation": "猴子是 monkey，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：喜爱",
+        "reference": "love",
+        "explanation": "喜爱是 love，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "A gorilla and a panda eat a banana under an umbrella.",
+        "explanation": "一只大猩猩和一只熊猫在雨伞下面吃一根香蕉。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/85.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A lemon, a chicken, and a pencil. What a surprise!",
+        "explanation": "一个柠檬、一只鸡和一支铅笔。真意外！ 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/86.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "My son loves monkeys, and he loves honey.",
+        "explanation": "我的儿子喜欢猴子，也喜欢蜂蜜。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/87.mp3"
+      }
+    ],
+    "id": "phonics-76582ab0-95a6-489c-befc-e8a58e329d98",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 简单",
+    "board": "第五册 Unit 6：schwa 弱读音 /ə/，以及部分单词中 o 的 /ʌ/ 音。\n\npanda：熊猫\ngorilla：大猩猩\nbanana：香蕉\numbrella：雨伞\nchicken：鸡\npencil：铅笔\nlemon：柠檬\nsurprise：惊喜；使惊讶\nmonkey：猴子\nlove：喜爱\nson：儿子\nhoney：蜂蜜\n\n非重读音节里的 a、e、i、o、u 可能弱读，跟随教材原声轻读，不要把每个字母都读得同样重。\npanda、gorilla、banana、umbrella 的词尾 a 轻读。\n教材把 chicken 的 e、pencil 的 i、lemon 的 o、surprise 的 u 放入弱读练习；不同口音可能有 /ɪ/ 或成音节辅音等实现，不强求逐字母读法。\nmonkey、love、son、honey 中标出的 o 按教材读 /ʌ/，与弱读 /ə/ 分开练习。\nchicken 本课是鸡，不是鸡肉；son 是儿子，不是太阳 sun。\nMr. 表示先生，朗读时读 Mister；every day 每天；stall 摊位；hiccups 打嗝。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "panda 的中文意思是什么？",
+        "explanation": "panda 是熊猫。",
+        "bonus": false,
+        "choices": [
+          "熊猫",
+          "猴子",
+          "大猩猩"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“大猩猩”对应哪个单词？",
+        "explanation": "gorilla 是大猩猩。",
+        "bonus": false,
+        "choices": [
+          "panda",
+          "gorilla",
+          "monkey"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "banana 的中文意思是什么？",
+        "explanation": "banana 是香蕉。",
+        "bonus": false,
+        "choices": [
+          "蜂蜜",
+          "柠檬",
+          "香蕉"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“雨伞”？",
+        "explanation": "umbrella 是雨伞。",
+        "bonus": false,
+        "choices": [
+          "umbrella",
+          "pencil",
+          "chicken"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：鸡",
+        "reference": "chicken",
+        "explanation": "鸡是 chicken，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：铅笔",
+        "reference": "pencil",
+        "explanation": "铅笔是 pencil，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：柠檬",
+        "reference": "lemon",
+        "explanation": "柠檬是 lemon，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：惊喜；使惊讶",
+        "reference": "surprise",
+        "explanation": "惊喜；使惊讶是 surprise，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Mr. Monkey gives a cheer.",
+        "explanation": "猴子先生欢呼起来。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/88.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "\"I love banana juice!\" he says.",
+        "explanation": "他说：“我喜欢香蕉汁！” 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/89.mp3"
+      }
+    ],
+    "id": "phonics-31770543-62f9-4bd9-9e1f-6fa73527c31e",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 完整故事朗读",
+    "board": "The Comb and the Dragon｜梳子和龙\n先理解中文，再听原声，逐句朗读。\n\n1. I am Henry.\n我是亨利。\n\n2. I live in a castle.\n我住在一座城堡里。\n\n3. My father is the king.\n我的父亲是国王。\n\n4. He can fight dragons with his knife.\n他能用他的刀与龙战斗。\n\n5. I hear the whistle.\n我听见了哨声。\n\n6. A dragon is here!\n一条龙来了！\n\n7. The king's men don't like dragons.\n国王的手下不喜欢龙。\n\n8. I put on my glove.\n我戴上手套。\n\n9. I don't have a knife, but I have a comb.\n我没有刀，但是我有一把梳子。\n\n10. The dragon is on its knees.\n龙跪了下来。\n\n11. I comb the dragon's hair.\n我给龙梳头发。\n\n12. The dragon is as tame as a lamb.\n这条龙像小羊一样温顺。\n\n13. All the king's men are wrong.\n国王的手下全都想错了。\n\n14. Dragons are good, not bad!\n龙是友善的，并不坏！\n\n重点表达\nking 国王；dragon 龙；fight 与……战斗；hear 听见。\nput on 戴上；on its knees 跪着；comb 梳理。\nas tame as a lamb 像小羊一样温顺。\n故事里亨利用梳子给龙梳毛，让大家发现龙很友善。\n全部故事分14句：简单课第1、6句，困难课第3、5句；其余10句在故事课。全部原文均有对应音频，中文完整保留。\n本课10道朗读题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "I live in a castle.",
+        "explanation": "我住在一座城堡里。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/90.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He can fight dragons with his knife.",
+        "explanation": "他能用他的刀与龙战斗。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/91.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The king's men don't like dragons.",
+        "explanation": "国王的手下不喜欢龙。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/92.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I put on my glove.",
+        "explanation": "我戴上手套。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/93.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I don't have a knife, but I have a comb.",
+        "explanation": "我没有刀，但是我有一把梳子。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/94.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The dragon is on its knees.",
+        "explanation": "龙跪了下来。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/95.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I comb the dragon's hair.",
+        "explanation": "我给龙梳头发。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/96.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The dragon is as tame as a lamb.",
+        "explanation": "这条龙像小羊一样温顺。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/97.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "All the king's men are wrong.",
+        "explanation": "国王的手下全都想错了。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/98.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Dragons are good, not bad!",
+        "explanation": "龙是友善的，并不坏！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/99.mp3"
+      }
+    ],
+    "id": "phonics-1830b38a-0717-4278-8510-17ccd946b1f6",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 困难",
+    "board": "第五册 Unit 7：silent letters 不发音字母。\n\nknife：刀\nknee：膝盖\nwrite：写\nwrong：错误的\nlamb：小羊\ncomb：梳子\nglove：手套\nlive：居住\nrhino：犀牛\nrhubarb：食用大黄\nwhistle：哨子\ncastle：城堡\n\nkn：knife、knee 中 k 不发音；wr：write、wrong 中 w 不发音。\nmb：lamb、comb 词尾 b 不发音。\nglove、live 词尾 e 不单独发音；live 本课表示居住，读 /lɪv/，不是形容词“现场的” /laɪv/。\nrh：rhino、rhubarb 中 h 不发音；whistle、castle 中 t 不发音。\nrhubarb 是食用大黄，按教材红色叶柄蔬菜记忆。\ncomb 作名词是梳子，作动词表示梳理；on its knees 跪着；tame 温顺的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "本课表示“居住”的 live 应该怎样读？",
+        "explanation": "live 表示居住时读 /lɪv/，不要只因词尾有 e 就读成长音。",
+        "bonus": false,
+        "choices": [
+          "/laɪv/",
+          "/liːv/",
+          "/lɪv/"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：哨子",
+        "reference": "whistle",
+        "explanation": "哨子是 whistle，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：城堡",
+        "reference": "castle",
+        "explanation": "城堡是 castle，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I put on my _____.（手套，单数）",
+        "reference": "glove",
+        "explanation": "glove 是手套，词尾 e 不单独发音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I have a _____.（梳子，单数）",
+        "reference": "comb",
+        "explanation": "comb 是梳子，词尾 b 不发音。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The dragon is as tame as a _____.（小羊，单数）",
+        "reference": "lamb",
+        "explanation": "lamb 是小羊，词尾 b 不发音。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "My father is the king.",
+        "explanation": "我的父亲是国王。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/100.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I hear the whistle.",
+        "explanation": "我听见了哨声。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/101.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I don't have a knife, but I have a comb.",
+        "explanation": "我没有刀，但是我有一把梳子。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/94.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The dragon is as tame as a lamb.",
+        "explanation": "这条龙像小羊一样温顺。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/97.mp3"
+      }
+    ],
+    "id": "phonics-d2889844-8375-4363-b43c-30fb5aa7c595",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 简单",
+    "board": "第五册 Unit 7：silent letters 不发音字母。\n\nknife：刀\nknee：膝盖\nwrite：写\nwrong：错误的\nlamb：小羊\ncomb：梳子\nglove：手套\nlive：居住\nrhino：犀牛\nrhubarb：食用大黄\nwhistle：哨子\ncastle：城堡\n\nkn：knife、knee 中 k 不发音；wr：write、wrong 中 w 不发音。\nmb：lamb、comb 词尾 b 不发音。\nglove、live 词尾 e 不单独发音；live 本课表示居住，读 /lɪv/，不是形容词“现场的” /laɪv/。\nrh：rhino、rhubarb 中 h 不发音；whistle、castle 中 t 不发音。\nrhubarb 是食用大黄，按教材红色叶柄蔬菜记忆。\ncomb 作名词是梳子，作动词表示梳理；on its knees 跪着；tame 温顺的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "knife 的中文意思是什么？",
+        "explanation": "knife 是刀，开头 k 不发音。",
+        "bonus": false,
+        "choices": [
+          "刀",
+          "梳子",
+          "哨子"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“膝盖”对应哪个单词？",
+        "explanation": "knee 是膝盖，开头 k 不发音。",
+        "bonus": false,
+        "choices": [
+          "knife",
+          "knee",
+          "write"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "write 表示什么？",
+        "explanation": "write 是写，开头 w 不发音。",
+        "bonus": false,
+        "choices": [
+          "居住",
+          "错误的",
+          "写"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“错误的”？",
+        "explanation": "wrong 是错误的，开头 w 不发音。",
+        "bonus": false,
+        "choices": [
+          "wrong",
+          "write",
+          "glove"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：小羊",
+        "reference": "lamb",
+        "explanation": "小羊是 lamb，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：梳子",
+        "reference": "comb",
+        "explanation": "梳子是 comb，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：手套",
+        "reference": "glove",
+        "explanation": "手套是 glove，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：居住",
+        "reference": "live",
+        "explanation": "居住是 live，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I am Henry.",
+        "explanation": "我是亨利。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/102.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A dragon is here!",
+        "explanation": "一条龙来了！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/103.mp3"
+      }
+    ],
+    "id": "phonics-09369d5b-8d2f-4fc2-bb5d-10c983d6bd48",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 进阶",
+    "board": "第五册 Unit 7：silent letters 不发音字母。\n\nknife：刀\nknee：膝盖\nwrite：写\nwrong：错误的\nlamb：小羊\ncomb：梳子\nglove：手套\nlive：居住\nrhino：犀牛\nrhubarb：食用大黄\nwhistle：哨子\ncastle：城堡\n\nkn：knife、knee 中 k 不发音；wr：write、wrong 中 w 不发音。\nmb：lamb、comb 词尾 b 不发音。\nglove、live 词尾 e 不单独发音；live 本课表示居住，读 /lɪv/，不是形容词“现场的” /laɪv/。\nrh：rhino、rhubarb 中 h 不发音；whistle、castle 中 t 不发音。\nrhubarb 是食用大黄，按教材红色叶柄蔬菜记忆。\ncomb 作名词是梳子，作动词表示梳理；on its knees 跪着；tame 温顺的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "comb 中哪个字母不发音？",
+        "explanation": "comb 词尾 b 不发音，拼写仍需保留。",
+        "bonus": false,
+        "choices": [
+          "c",
+          "b",
+          "m"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：刀",
+        "reference": "knife",
+        "explanation": "刀是 knife，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：膝盖",
+        "reference": "knee",
+        "explanation": "膝盖是 knee，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：写",
+        "reference": "write",
+        "explanation": "写是 write，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：错误的",
+        "reference": "wrong",
+        "explanation": "错误的是 wrong，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：犀牛",
+        "reference": "rhino",
+        "explanation": "犀牛是 rhino，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：食用大黄",
+        "reference": "rhubarb",
+        "explanation": "食用大黄是 rhubarb，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "It's wrong to play with a knife on your knee.",
+        "explanation": "把刀放在膝盖上玩是不对的。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/104.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I live with a lamb, a comb, and a glove.",
+        "explanation": "我和一只小羊、一把梳子和一只手套住在一起。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/105.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The rhino in the castle has rhubarb and a whistle.",
+        "explanation": "城堡里的犀牛有食用大黄和一个哨子。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/106.mp3"
+      }
+    ],
+    "id": "phonics-5d3168b8-72d6-4c40-9c29-610a2bc1b1c4",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 完整故事朗读",
+    "board": "The Beautiful Treasure｜美丽的宝藏\n先理解中文，再听原声，逐句朗读。\n\n1. Kelly is famous.\n凯莉很有名。\n\n2. She is on television.\n她上电视了。\n\n3. Kelly is at the station with a picture.\n凯莉带着一幅图片在车站。\n\n4. She wants the box in the picture.\n她想找到图片里的箱子。\n\n5. Kelly has a snake.\n凯莉有一条蛇。\n\n6. Kelly and her snake like nature.\n凯莉和她的蛇喜欢大自然。\n\n7. They climb mountains.\n她和蛇爬山。\n\n8. They walk across a bridge.\n她和蛇走过一座桥。\n\n9. They swing across a river.\n她和蛇荡过一条河。\n\n10. There are crocodiles in the river.\n河里有鳄鱼。\n\n11. It is dangerous.\n这很危险。\n\n12. Kelly's snake is helpful!\n凯莉的蛇很能帮忙！\n\n13. They go into a cave.\n她和蛇走进一个洞穴。\n\n14. Kelly can see the box.\n凯莉能看见那个箱子。\n\n15. There is treasure in the box.\n箱子里有宝藏。\n\n16. The treasure is beautiful!\n宝藏很美丽！\n\n重点表达\non television 上电视；at the station 在车站；with a picture 带着一幅图片。\nclimb mountains 爬山；walk across a bridge 走过桥；swing across a river 荡过河。\ncrocodiles 鳄鱼（复数）；dangerous 危险的；helpful 有帮助的。\ngo into a cave 走进洞穴；treasure 宝藏；beautiful 美丽的。\nthey 在故事中指凯莉和她的蛇。\n全部故事16句：简单课第1、2句，困难课第5、7、11、14句；故事课其余10句。全部原文均有音频和中文。\n本课10道朗读题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "Kelly is at the station with a picture.",
+        "explanation": "凯莉带着一幅图片在车站。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/107.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She wants the box in the picture.",
+        "explanation": "她想找到图片里的箱子。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/108.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Kelly and her snake like nature.",
+        "explanation": "凯莉和她的蛇喜欢大自然。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/109.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They walk across a bridge.",
+        "explanation": "她和蛇走过一座桥。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/110.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They swing across a river.",
+        "explanation": "她和蛇荡过一条河。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/111.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "There are crocodiles in the river.",
+        "explanation": "河里有鳄鱼。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/112.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Kelly's snake is helpful!",
+        "explanation": "凯莉的蛇很能帮忙！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/113.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They go into a cave.",
+        "explanation": "她和蛇走进一个洞穴。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/114.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "There is treasure in the box.",
+        "explanation": "箱子里有宝藏。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/115.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The treasure is beautiful!",
+        "explanation": "宝藏很美丽！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/116.mp3"
+      }
+    ],
+    "id": "phonics-c47476a8-0d04-470d-850b-ac1896c751f0",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 简单",
+    "board": "第五册 Unit 8：ture、sure、tion、sion、ous、ful。\n\npicture：图片\nnature：大自然\ntreasure：宝藏\nmeasure：测量\nstation：车站\ncompetition：比赛\ntelevision：电视\nexcursion：短途旅行\nfamous：著名的\ndangerous：危险的\nbeautiful：美丽的\nhelpful：乐于助人的；有帮助的\n\n-ture：picture、nature；-sure：treasure、measure。\n-tion：station、competition；-sion：television、excursion。\n-ous：famous、dangerous；-ful：beautiful、helpful。\n这些词尾不逐个字母拼读，注意模仿教材中的弱读音节。sion 的读音随单词而异，不能把所有 sion 都当成同一个音。\nful 词尾只有一个 l：beautiful、helpful；competition 注意中间 ti，excursion 注意开头 ex。\nmeasure 在本课作动词“测量”；nature 是大自然；excursion 是短途旅行。\non television 上电视；climb mountains 爬山；across a bridge 过桥；cave 洞穴。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "picture 的中文意思是什么？",
+        "explanation": "picture 是图片。",
+        "bonus": false,
+        "choices": [
+          "图片",
+          "宝藏",
+          "车站"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“大自然”对应哪个单词？",
+        "explanation": "nature 是大自然。",
+        "bonus": false,
+        "choices": [
+          "picture",
+          "nature",
+          "measure"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "treasure 的中文意思是什么？",
+        "explanation": "treasure 是宝藏。",
+        "bonus": false,
+        "choices": [
+          "比赛",
+          "电视",
+          "宝藏"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“测量”？",
+        "explanation": "measure 在本课表示测量。",
+        "bonus": false,
+        "choices": [
+          "measure",
+          "nature",
+          "treasure"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：车站",
+        "reference": "station",
+        "explanation": "车站是 station，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：比赛",
+        "reference": "competition",
+        "explanation": "比赛是 competition，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：电视",
+        "reference": "television",
+        "explanation": "电视是 television，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：短途旅行",
+        "reference": "excursion",
+        "explanation": "短途旅行是 excursion，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Kelly is famous.",
+        "explanation": "凯莉很有名。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/117.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She is on television.",
+        "explanation": "她上电视了。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/118.mp3"
+      }
+    ],
+    "id": "phonics-af38861b-b4c6-4111-8a4f-4c779b9813b1",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 进阶",
+    "board": "第五册 Unit 8：ture、sure、tion、sion、ous、ful。\n\npicture：图片\nnature：大自然\ntreasure：宝藏\nmeasure：测量\nstation：车站\ncompetition：比赛\ntelevision：电视\nexcursion：短途旅行\nfamous：著名的\ndangerous：危险的\nbeautiful：美丽的\nhelpful：乐于助人的；有帮助的\n\n-ture：picture、nature；-sure：treasure、measure。\n-tion：station、competition；-sion：television、excursion。\n-ous：famous、dangerous；-ful：beautiful、helpful。\n这些词尾不逐个字母拼读，注意模仿教材中的弱读音节。sion 的读音随单词而异，不能把所有 sion 都当成同一个音。\nful 词尾只有一个 l：beautiful、helpful；competition 注意中间 ti，excursion 注意开头 ex。\nmeasure 在本课作动词“测量”；nature 是大自然；excursion 是短途旅行。\non television 上电视；climb mountains 爬山；across a bridge 过桥；cave 洞穴。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "beautiful 的末尾应该怎样拼写？",
+        "explanation": "beautiful 和 helpful 的词尾 ful 都只有一个 l。",
+        "bonus": false,
+        "choices": [
+          "full",
+          "ful",
+          "fool"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：图片",
+        "reference": "picture",
+        "explanation": "图片是 picture，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：大自然",
+        "reference": "nature",
+        "explanation": "大自然是 nature，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：宝藏",
+        "reference": "treasure",
+        "explanation": "宝藏是 treasure，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：测量",
+        "reference": "measure",
+        "explanation": "测量是 measure，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：著名的",
+        "reference": "famous",
+        "explanation": "著名的是 famous，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：危险的",
+        "reference": "dangerous",
+        "explanation": "危险的是 dangerous，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I measure the picture of the treasure.",
+        "explanation": "我测量那幅宝藏图片。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/119.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I watch the competition on television.",
+        "explanation": "我在电视上看比赛。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/120.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The famous singer is beautiful and helpful.",
+        "explanation": "这位著名的歌手很美丽，也很乐于助人。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/121.mp3"
+      }
+    ],
+    "id": "phonics-59374d0d-3a06-439a-8081-172e1b3f7d3e",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 困难",
+    "board": "第五册 Unit 8：ture、sure、tion、sion、ous、ful。\n\npicture：图片\nnature：大自然\ntreasure：宝藏\nmeasure：测量\nstation：车站\ncompetition：比赛\ntelevision：电视\nexcursion：短途旅行\nfamous：著名的\ndangerous：危险的\nbeautiful：美丽的\nhelpful：乐于助人的；有帮助的\n\n-ture：picture、nature；-sure：treasure、measure。\n-tion：station、competition；-sion：television、excursion。\n-ous：famous、dangerous；-ful：beautiful、helpful。\n这些词尾不逐个字母拼读，注意模仿教材中的弱读音节。sion 的读音随单词而异，不能把所有 sion 都当成同一个音。\nful 词尾只有一个 l：beautiful、helpful；competition 注意中间 ti，excursion 注意开头 ex。\nmeasure 在本课作动词“测量”；nature 是大自然；excursion 是短途旅行。\non television 上电视；climb mountains 爬山；across a bridge 过桥；cave 洞穴。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词以 tion 结尾？",
+        "explanation": "competition 和 station 以 tion 结尾；television、excursion 以 sion 结尾。",
+        "bonus": false,
+        "choices": [
+          "television",
+          "excursion",
+          "competition"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：美丽的",
+        "reference": "beautiful",
+        "explanation": "美丽的是 beautiful，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：乐于助人的；有帮助的",
+        "reference": "helpful",
+        "explanation": "乐于助人的；有帮助的是 helpful，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：There is _____ in the box.（宝藏）",
+        "reference": "treasure",
+        "explanation": "treasure 是宝藏。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：She is on _____.（电视）",
+        "reference": "television",
+        "explanation": "on television 表示上电视或在电视上。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：Kelly and her snake like _____.（大自然）",
+        "reference": "nature",
+        "explanation": "nature 是大自然。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Kelly has a snake.",
+        "explanation": "凯莉有一条蛇。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/122.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They climb mountains.",
+        "explanation": "她和蛇爬山。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/123.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It is dangerous.",
+        "explanation": "这很危险。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/124.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Kelly can see the box.",
+        "explanation": "凯莉能看见那个箱子。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-c2e8c546-2cd0-43b6-aa29-e4a28b9155d3/125.mp3"
+      }
+    ],
+    "id": "phonics-1585f491-8c49-4e54-ab73-2d2a832797d5",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 完整故事朗读",
+    "board": "My Picture｜我的画\n先理解中文，再听原声，逐句朗读。\n\n1. I can paint a picture by hand.\n我能用手画一幅画。\n\n2. I paint grass and a tree.\n我画上草和一棵树。\n\n3. I paint the sky, too.\n我也画上天空。\n\n4. The grass is green, and the sky is blue.\n草是绿色的，天空是蓝色的。\n\n5. I paint a king with a belt and a queen in a long, pink robe.\n我画了一位系腰带的国王和一位穿着粉色长袍的王后。\n\n6. Then I paint a camp with three tents and a lamp.\n然后我画了一个营地，里面有三顶帐篷和一盏灯。\n\n7. I paint the wind.\n我画上风。\n\n8. It blows the camp.\n风吹向营地。\n\n9. It blows the king and queen, too.\n风也吹向国王和王后。\n\n10. Oh, no!\n哦，不！\n\n重点表达\npaint a picture 画一幅画；by hand 用手；grass 草；sky 天空。\na king with a belt 系腰带的国王；a queen in a long, pink robe 穿粉色长袍的王后。\na camp with three tents and a lamp 有三顶帐篷和一盏灯的营地。\nwind 风；blows 吹；too 也；Then 然后。\n最后画上风后，画中的营地、国王和王后都被风吹动，形成故事的趣味结尾。\n本课10道完整句朗读，包含感叹句Oh, no!。全部正文和中文均已保留。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "I can paint a picture by hand.",
+        "explanation": "我能用手画一幅画。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/0.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I paint grass and a tree.",
+        "explanation": "我画上草和一棵树。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/1.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I paint the sky, too.",
+        "explanation": "我也画上天空。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/2.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The grass is green, and the sky is blue.",
+        "explanation": "草是绿色的，天空是蓝色的。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/3.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I paint a king with a belt and a queen in a long, pink robe.",
+        "explanation": "我画了一位系腰带的国王和一位穿着粉色长袍的王后。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/4.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Then I paint a camp with three tents and a lamp.",
+        "explanation": "然后我画了一个营地，里面有三顶帐篷和一盏灯。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/5.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I paint the wind.",
+        "explanation": "我画上风。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/6.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It blows the camp.",
+        "explanation": "风吹向营地。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/7.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It blows the king and queen, too.",
+        "explanation": "风也吹向国王和王后。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/8.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Oh, no!",
+        "explanation": "哦，不！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/9.mp3"
+      }
+    ],
+    "id": "phonics-53f95e04-27a7-4d4c-a2de-551832c35959",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 困难",
+    "board": "第四册 Unit 6：ng、nk、nd、nt、lt、mp。\n\nking：国王\nlong：长的\nbank：银行\npink：粉色的\nwind：风\nhand：手\ntent：帐篷\npaint：颜料\nbelt：腰带\nadult：成年人\nlamp：灯\ncamp：营地\n\nng：king、long；nk：bank、pink；nd：wind、hand；nt：tent、paint；lt：belt、adult；mp：lamp、camp。\n词尾 ng 在 king、long 中读 /ŋ/，不额外加 /ɡ/；nk 在 bank、pink 中读 /ŋk/。\n词尾 nd、nt、lt、mp 要连贯读出，不在结尾加“呃”。\nwind 本课为风，读 /wɪnd/；paint 在单词图片中是颜料，在故事中作动词表示画、涂画。\nadult 为成年人；camp 为营地；lamp 为灯；belt 为腰带。\nby hand 用手；robe 长袍；blows 吹；three tents 三顶帐篷。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个词以 mp 结尾？",
+        "explanation": "camp 和 lamp 以 mp 结尾，paint 以 nt 结尾。",
+        "bonus": false,
+        "choices": [
+          "paint",
+          "belt",
+          "camp"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：灯",
+        "reference": "lamp",
+        "explanation": "灯是 lamp，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：营地",
+        "reference": "camp",
+        "explanation": "营地是 camp，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I can paint a picture by _____.（手）",
+        "reference": "hand",
+        "explanation": "by hand 表示用手。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：I paint the _____.（风）",
+        "reference": "wind",
+        "explanation": "wind 本课为风，读 /wɪnd/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：a king with a _____.（腰带，单数）",
+        "reference": "belt",
+        "explanation": "belt 是腰带，词尾为 lt。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I can paint a picture by hand.",
+        "explanation": "我能用手画一幅画。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/0.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I paint a king with a belt and a queen in a long, pink robe.",
+        "explanation": "我画了一位系腰带的国王和一位穿着粉色长袍的王后。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/4.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Then I paint a camp with three tents and a lamp.",
+        "explanation": "然后我画了一个营地，里面有三顶帐篷和一盏灯。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/5.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "It blows the king and queen, too.",
+        "explanation": "风也吹向国王和王后。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/8.mp3"
+      }
+    ],
+    "id": "phonics-56c4aeae-f276-4255-a4a5-282783a847fe",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 进阶",
+    "board": "第四册 Unit 6：ng、nk、nd、nt、lt、mp。\n\nking：国王\nlong：长的\nbank：银行\npink：粉色的\nwind：风\nhand：手\ntent：帐篷\npaint：颜料\nbelt：腰带\nadult：成年人\nlamp：灯\ncamp：营地\n\nng：king、long；nk：bank、pink；nd：wind、hand；nt：tent、paint；lt：belt、adult；mp：lamp、camp。\n词尾 ng 在 king、long 中读 /ŋ/，不额外加 /ɡ/；nk 在 bank、pink 中读 /ŋk/。\n词尾 nd、nt、lt、mp 要连贯读出，不在结尾加“呃”。\nwind 本课为风，读 /wɪnd/；paint 在单词图片中是颜料，在故事中作动词表示画、涂画。\nadult 为成年人；camp 为营地；lamp 为灯；belt 为腰带。\nby hand 用手；robe 长袍；blows 吹；three tents 三顶帐篷。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个词的词尾与 king 相同？",
+        "explanation": "king 和 long 都以 ng 结尾，读 /ŋ/。",
+        "bonus": false,
+        "choices": [
+          "bank",
+          "long",
+          "hand"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：国王",
+        "reference": "king",
+        "explanation": "国王是 king，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：长的",
+        "reference": "long",
+        "explanation": "长的是 long，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：银行",
+        "reference": "bank",
+        "explanation": "银行是 bank，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：粉色的",
+        "reference": "pink",
+        "explanation": "粉色的是 pink，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：腰带",
+        "reference": "belt",
+        "explanation": "腰带是 belt，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：成年人",
+        "reference": "adult",
+        "explanation": "成年人是 adult，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The king is at the bank in a long, pink coat.",
+        "explanation": "国王穿着粉色长外套，在银行里。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/10.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Can you paint a tent by hand?",
+        "explanation": "你能用手画一顶帐篷吗？ 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/11.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A man with a belt brings a lamp to the camp.",
+        "explanation": "一个系着腰带的男人把一盏灯带到营地。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/12.mp3"
+      }
+    ],
+    "id": "phonics-c425fcf9-de6e-4bd6-a6e7-2b42ec517809",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 6 · 简单",
+    "board": "第四册 Unit 6：ng、nk、nd、nt、lt、mp。\n\nking：国王\nlong：长的\nbank：银行\npink：粉色的\nwind：风\nhand：手\ntent：帐篷\npaint：颜料\nbelt：腰带\nadult：成年人\nlamp：灯\ncamp：营地\n\nng：king、long；nk：bank、pink；nd：wind、hand；nt：tent、paint；lt：belt、adult；mp：lamp、camp。\n词尾 ng 在 king、long 中读 /ŋ/，不额外加 /ɡ/；nk 在 bank、pink 中读 /ŋk/。\n词尾 nd、nt、lt、mp 要连贯读出，不在结尾加“呃”。\nwind 本课为风，读 /wɪnd/；paint 在单词图片中是颜料，在故事中作动词表示画、涂画。\nadult 为成年人；camp 为营地；lamp 为灯；belt 为腰带。\nby hand 用手；robe 长袍；blows 吹；three tents 三顶帐篷。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "king 的中文意思是什么？",
+        "explanation": "king 是国王。",
+        "bonus": false,
+        "choices": [
+          "国王",
+          "王后",
+          "成年人"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“长的”对应哪个单词？",
+        "explanation": "long 是长的，含 ng。",
+        "bonus": false,
+        "choices": [
+          "lamp",
+          "long",
+          "pink"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "bank 在本课图片中表示什么？",
+        "explanation": "bank 本课表示银行。",
+        "bonus": false,
+        "choices": [
+          "营地",
+          "帐篷",
+          "银行"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“粉色的”？",
+        "explanation": "pink 是粉色的，含 nk。",
+        "bonus": false,
+        "choices": [
+          "pink",
+          "paint",
+          "bank"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：风",
+        "reference": "wind",
+        "explanation": "风是 wind，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：手",
+        "reference": "hand",
+        "explanation": "手是 hand，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：帐篷",
+        "reference": "tent",
+        "explanation": "帐篷是 tent，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：颜料",
+        "reference": "paint",
+        "explanation": "颜料是 paint，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "I paint grass and a tree.",
+        "explanation": "我画上草和一棵树。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/1.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I paint the sky, too.",
+        "explanation": "我也画上天空。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/2.mp3"
+      }
+    ],
+    "id": "phonics-b9d8998d-3870-42d3-aa7b-e4148e5d0eb9",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 困难",
+    "board": "第四册 Unit 7：sk、sc、spr、str、spl、squ。\n\nskunk：臭鼬\ndesk：课桌\nscale：体重秤\nschool：学校\nspray：喷洒\nspring：春天\nstring：细绳\nstrong：强壮的\nsplash：溅水\nsplint：夹板（固定受伤肢体用）\nsquid：鱿鱼\nsquare：正方形\n\nsk：skunk、desk；sc：scale、school；spr：spray、spring；str：string、strong；spl：splash、splint；squ：squid、square。\n这些辅音要连贯读出，不在中间加多余元音。desk 的 sk 在词尾，也要读完整。\nscale 本课指体重秤；spring 为春天；string 为细绳；splint 为固定受伤肢体的夹板。\nsplash 作动词表示溅水，故事中的Splash!是水花声，可理解为“扑通！”。\nsquid 鱿鱼；skunk 臭鼬；spray 喷洒，故事里表示喷出墨汁。\nunder their desks 在他们的课桌下面；picks up 提起；sorry 抱歉的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词以 spl 开头？",
+        "explanation": "splint、splash 都以 spl 开头；spring 是 spr，square 是 squ。",
+        "bonus": false,
+        "choices": [
+          "spring",
+          "square",
+          "splint"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：鱿鱼",
+        "reference": "squid",
+        "explanation": "鱿鱼是 squid，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：正方形",
+        "reference": "square",
+        "explanation": "正方形是 square，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The squid teacher is _____.（强壮的）",
+        "reference": "strong",
+        "explanation": "strong 表示强壮的，开头是 str。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：They _____ black ink.（喷出）",
+        "reference": "spray",
+        "explanation": "spray 本句表示喷出。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：The kids swim under their _____.（课桌，复数）",
+        "reference": "desks",
+        "explanation": "desk 的复数是 desks，表示课桌。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "The squid kids are in school.",
+        "explanation": "鱿鱼孩子们正在上学。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/13.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He wants to catch the squids!",
+        "explanation": "他想抓住这些鱿鱼！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/14.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The skunk can't see!",
+        "explanation": "臭鼬看不见了！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/15.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He picks up the skunk and puts him on the grass.",
+        "explanation": "他把臭鼬提起来，放到草地上。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/16.mp3"
+      }
+    ],
+    "id": "phonics-88d824d3-93cf-44ba-a504-453354fa993b",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 简单",
+    "board": "第四册 Unit 7：sk、sc、spr、str、spl、squ。\n\nskunk：臭鼬\ndesk：课桌\nscale：体重秤\nschool：学校\nspray：喷洒\nspring：春天\nstring：细绳\nstrong：强壮的\nsplash：溅水\nsplint：夹板（固定受伤肢体用）\nsquid：鱿鱼\nsquare：正方形\n\nsk：skunk、desk；sc：scale、school；spr：spray、spring；str：string、strong；spl：splash、splint；squ：squid、square。\n这些辅音要连贯读出，不在中间加多余元音。desk 的 sk 在词尾，也要读完整。\nscale 本课指体重秤；spring 为春天；string 为细绳；splint 为固定受伤肢体的夹板。\nsplash 作动词表示溅水，故事中的Splash!是水花声，可理解为“扑通！”。\nsquid 鱿鱼；skunk 臭鼬；spray 喷洒，故事里表示喷出墨汁。\nunder their desks 在他们的课桌下面；picks up 提起；sorry 抱歉的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "skunk 的中文意思是什么？",
+        "explanation": "skunk 是臭鼬。",
+        "bonus": false,
+        "choices": [
+          "臭鼬",
+          "鱿鱼",
+          "鸭子"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“课桌”对应哪个单词？",
+        "explanation": "desk 是课桌。",
+        "bonus": false,
+        "choices": [
+          "school",
+          "desk",
+          "scale"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "scale 在本课图片中表示什么？",
+        "explanation": "scale 本课是体重秤。",
+        "bonus": false,
+        "choices": [
+          "细绳",
+          "夹板",
+          "体重秤"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词表示“学校”？",
+        "explanation": "school 是学校。",
+        "bonus": false,
+        "choices": [
+          "school",
+          "skunk",
+          "square"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：喷洒",
+        "reference": "spray",
+        "explanation": "喷洒是 spray，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：春天",
+        "reference": "spring",
+        "explanation": "春天是 spring，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：细绳",
+        "reference": "string",
+        "explanation": "细绳是 string，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：强壮的",
+        "reference": "strong",
+        "explanation": "强壮的是 strong，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "It's a pretty spring day.",
+        "explanation": "这是一个美好的春日。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/17.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Splash!",
+        "explanation": "扑通！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/18.mp3"
+      }
+    ],
+    "id": "phonics-e7474434-24b3-4a6d-baf3-272a25be3518",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 进阶",
+    "board": "第四册 Unit 7：sk、sc、spr、str、spl、squ。\n\nskunk：臭鼬\ndesk：课桌\nscale：体重秤\nschool：学校\nspray：喷洒\nspring：春天\nstring：细绳\nstrong：强壮的\nsplash：溅水\nsplint：夹板（固定受伤肢体用）\nsquid：鱿鱼\nsquare：正方形\n\nsk：skunk、desk；sc：scale、school；spr：spray、spring；str：string、strong；spl：splash、splint；squ：squid、square。\n这些辅音要连贯读出，不在中间加多余元音。desk 的 sk 在词尾，也要读完整。\nscale 本课指体重秤；spring 为春天；string 为细绳；splint 为固定受伤肢体的夹板。\nsplash 作动词表示溅水，故事中的Splash!是水花声，可理解为“扑通！”。\nsquid 鱿鱼；skunk 臭鼬；spray 喷洒，故事里表示喷出墨汁。\nunder their desks 在他们的课桌下面；picks up 提起；sorry 抱歉的。\n朗读80分及以上算对；输入题只填指定单词。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词与 spring 的开头组合相同？",
+        "explanation": "spring 和 spray 都以 spr 开头。",
+        "bonus": false,
+        "choices": [
+          "string",
+          "spray",
+          "splash"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：臭鼬",
+        "reference": "skunk",
+        "explanation": "臭鼬是 skunk，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：课桌",
+        "reference": "desk",
+        "explanation": "课桌是 desk，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：体重秤",
+        "reference": "scale",
+        "explanation": "体重秤是 scale，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：学校",
+        "reference": "school",
+        "explanation": "学校是 school，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：溅水",
+        "reference": "splash",
+        "explanation": "溅水是 splash，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课一个完整英文单词：夹板（固定受伤肢体用）",
+        "reference": "splint",
+        "explanation": "夹板（固定受伤肢体用）是 splint，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "A skunk is under the desk at school.",
+        "explanation": "一只臭鼬在学校的课桌下面。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/19.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "In spring, we need string and a can of bug spray.",
+        "explanation": "春天，我们需要细绳和一罐驱虫喷雾。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/20.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Nine big squids splash and play in the bay.",
+        "explanation": "九只大鱿鱼在海湾里溅水玩耍。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/21.mp3"
+      }
+    ],
+    "id": "phonics-6de8315a-30ed-42a7-ad07-fcc668dc06ce",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 7 · 完整故事朗读",
+    "board": "A Bad Skunk｜一只调皮的臭鼬\n先理解中文，再听原声，逐句朗读。\n\n1. It's a pretty spring day.\n这是一个美好的春日。\n\n2. The squid kids are in school.\n鱿鱼孩子们正在上学。\n\n3. A skunk jumps into the sea.\n一只臭鼬跳进海里。\n\n4. Splash!\n扑通！\n\n5. He wants to catch the squids!\n他想抓住这些鱿鱼！\n\n6. The kids swim under their desks.\n孩子们游到课桌下面。\n\n7. They spray black ink.\n他们喷出黑色墨汁。\n\n8. The skunk can't see!\n臭鼬看不见了！\n\n9. The squid teacher is strong.\n鱿鱼老师很强壮。\n\n10. He picks up the skunk and puts him on the grass.\n他把臭鼬提起来，放到草地上。\n\n11. The skunk is sorry!\n臭鼬感到很抱歉！\n\n重点表达\na pretty spring day 一个美好的春日；in school 在上学。\njumps into the sea 跳进海里；catch 抓住；under their desks 在课桌下面。\nspray black ink 喷出黑色墨汁；can't see 看不见。\npicks up 提起；puts him on the grass 把他放到草地上；sorry 抱歉的。\n全文11句，其中Splash!安排在简单课朗读，其余10句放在故事课，全部原文和中文均保留。\n本课10道朗读题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "It's a pretty spring day.",
+        "explanation": "这是一个美好的春日。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/17.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The squid kids are in school.",
+        "explanation": "鱿鱼孩子们正在上学。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/13.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A skunk jumps into the sea.",
+        "explanation": "一只臭鼬跳进海里。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/22.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He wants to catch the squids!",
+        "explanation": "他想抓住这些鱿鱼！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/14.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The kids swim under their desks.",
+        "explanation": "孩子们游到课桌下面。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/23.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They spray black ink.",
+        "explanation": "他们喷出黑色墨汁。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/24.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The skunk can't see!",
+        "explanation": "臭鼬看不见了！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/15.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The squid teacher is strong.",
+        "explanation": "鱿鱼老师很强壮。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/25.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He picks up the skunk and puts him on the grass.",
+        "explanation": "他把臭鼬提起来，放到草地上。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/16.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The skunk is sorry!",
+        "explanation": "臭鼬感到很抱歉！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/26.mp3"
+      }
+    ],
+    "id": "phonics-5dc32fec-ba38-40af-963e-8eb90d33a343",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 简单",
+    "board": "第四册 Unit 8：soft c、soft g、voiced s。\n\nrice：米饭\ncity：城市\nice cream：冰淇淋\ncell phone：手机\ngiraffe：长颈鹿\norange：橙子\ngiant：巨人\ncage：笼子\nrose：玫瑰花\njeans：牛仔裤\ncheese：奶酪\nlegs：腿（复数）\n\nc 的 /s/ 音：rice、city、ice cream 的 ice、cell phone 的 cell。ice cream 中 cream 的 c 仍读 /k/，不能把所有 c 都读成 /s/。\ng 的 /dʒ/ 音：giraffe、orange、giant、cage。\ns 的 /z/ 音：rose、jeans、cheese、legs。/z/ 发音时声带振动，模仿教材原声。\nice cream、cell phone 是教材的两个词组，中间保留空格。\norange 本课为橙子；giant 是巨人；jeans 是牛仔裤；legs 是 leg 的复数。\nhuge 巨大的；named 名叫；very long legs 很长的腿。\n朗读80分及以上算对；输入题按要求填英文单词或词组。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "rice 的中文意思是什么？",
+        "explanation": "rice 是米饭，c 读 /s/。",
+        "bonus": false,
+        "choices": [
+          "米饭",
+          "奶酪",
+          "橙子"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "“城市”对应哪个单词？",
+        "explanation": "city 是城市。",
+        "bonus": false,
+        "choices": [
+          "cage",
+          "city",
+          "giant"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "ice cream 的中文意思是什么？",
+        "explanation": "ice cream 是冰淇淋，中间保留空格。",
+        "bonus": false,
+        "choices": [
+          "手机",
+          "玫瑰花",
+          "冰淇淋"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词组表示“手机”？",
+        "explanation": "cell phone 是手机，中间保留空格。",
+        "bonus": false,
+        "choices": [
+          "cell phone",
+          "ice cream",
+          "blue jeans"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：长颈鹿",
+        "reference": "giraffe",
+        "explanation": "长颈鹿是 giraffe，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：橙子",
+        "reference": "orange",
+        "explanation": "橙子是 orange，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：巨人",
+        "reference": "giant",
+        "explanation": "巨人是 giant，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：笼子",
+        "reference": "cage",
+        "explanation": "笼子是 cage，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "Jim Giant lives in a city.",
+        "explanation": "巨人吉姆住在一座城市里。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/27.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "His lunch is huge, too!",
+        "explanation": "他的午餐也很丰盛！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/28.mp3"
+      }
+    ],
+    "id": "phonics-d554ecdb-2da0-47b1-b85d-f92f68d85c37",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 完整故事朗读与理解",
+    "board": "Jim Giant｜巨人吉姆\n先理解中文，再听原声，逐段朗读。\n\n1. Jim Giant lives in a city.\n巨人吉姆住在一座城市里。\n\n2. He has a big cell phone and huge blue jeans.\n他有一部大手机和一条巨大的蓝色牛仔裤。\n\n3. His lunch is huge, too!\n他的午餐也很丰盛！\n\n4. Jim eats ten plates of rice, nine oranges, a pot of cheese, and one small ice cream cone.\n吉姆吃了十盘米饭、九个橙子、一锅奶酪和一个小蛋筒冰淇淋。\n\n5. He has a pet giraffe named Spot.\n他有一只名叫斯波特的宠物长颈鹿。\n\n6. Spot has a long nose and very long legs.\n斯波特有长鼻子和很长的腿。\n\n7. He likes to eat roses.\n他喜欢吃玫瑰花。\n\n8. No, Spot! Don't eat that rose!\n不，斯波特！别吃那朵玫瑰花！\n\n重点表达\nhuge 巨大的；ten plates of rice 十盘米饭；nine oranges 九个橙子。\na pot of cheese 一锅奶酪；one small ice cream cone 一个小蛋筒冰淇淋。\na pet giraffe named Spot 一只名叫斯波特的宠物长颈鹿。\nvery long legs 很长的腿；roses 是 rose 的复数；Don't eat ... 别吃……。\n第4句较长，先听原声再分组跟读，熟悉后录完整句。\n最后No, Spot!与后面的完整句合在同一段。全部原文及中文保留。\n本课8道分段朗读＋2道理解选择，共10题。朗读80分及以上算对。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "read",
+        "prompt": "Jim Giant lives in a city.",
+        "explanation": "巨人吉姆住在一座城市里。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/27.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a big cell phone and huge blue jeans.",
+        "explanation": "他有一部大手机和一条巨大的蓝色牛仔裤。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/29.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "His lunch is huge, too!",
+        "explanation": "他的午餐也很丰盛！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/28.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Jim eats ten plates of rice, nine oranges, a pot of cheese, and one small ice cream cone.",
+        "explanation": "吉姆吃了十盘米饭、九个橙子、一锅奶酪和一个小蛋筒冰淇淋。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/30.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a pet giraffe named Spot.",
+        "explanation": "他有一只名叫斯波特的宠物长颈鹿。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/31.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Spot has a long nose and very long legs.",
+        "explanation": "斯波特有长鼻子和很长的腿。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/32.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He likes to eat roses.",
+        "explanation": "他喜欢吃玫瑰花。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/33.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "No, Spot! Don't eat that rose!",
+        "explanation": "不，斯波特！别吃那朵玫瑰花！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/34.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "吉姆的宠物是什么？",
+        "explanation": "He has a pet giraffe named Spot.。",
+        "bonus": false,
+        "choices": [
+          "一只名叫斯波特的长颈鹿",
+          "一只名叫斯波特的臭鼬",
+          "一只名叫吉姆的鱿鱼"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "故事最后，吉姆想阻止斯波特做什么？",
+        "explanation": "Don't eat that rose! 表示别吃那朵玫瑰花！",
+        "bonus": true,
+        "choices": [
+          "吃米饭",
+          "吃那朵玫瑰花",
+          "吃橙子"
+        ],
+        "answer": 1
+      }
+    ],
+    "id": "phonics-ca159818-a3ed-4322-8cad-24a504af736f",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 进阶",
+    "board": "第四册 Unit 8：soft c、soft g、voiced s。\n\nrice：米饭\ncity：城市\nice cream：冰淇淋\ncell phone：手机\ngiraffe：长颈鹿\norange：橙子\ngiant：巨人\ncage：笼子\nrose：玫瑰花\njeans：牛仔裤\ncheese：奶酪\nlegs：腿（复数）\n\nc 的 /s/ 音：rice、city、ice cream 的 ice、cell phone 的 cell。ice cream 中 cream 的 c 仍读 /k/，不能把所有 c 都读成 /s/。\ng 的 /dʒ/ 音：giraffe、orange、giant、cage。\ns 的 /z/ 音：rose、jeans、cheese、legs。/z/ 发音时声带振动，模仿教材原声。\nice cream、cell phone 是教材的两个词组，中间保留空格。\norange 本课为橙子；giant 是巨人；jeans 是牛仔裤；legs 是 leg 的复数。\nhuge 巨大的；named 名叫；very long legs 很长的腿。\n朗读80分及以上算对；输入题按要求填英文单词或词组。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "哪个单词的 g 读 /dʒ/？",
+        "explanation": "giraffe 的 g 是软音 /dʒ/；grass、green 的 g 读 /ɡ/。",
+        "bonus": false,
+        "choices": [
+          "grass",
+          "giraffe",
+          "green"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：米饭",
+        "reference": "rice",
+        "explanation": "米饭是 rice，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：城市",
+        "reference": "city",
+        "explanation": "城市是 city，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：冰淇淋",
+        "reference": "ice cream",
+        "explanation": "冰淇淋是 ice cream，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：手机",
+        "reference": "cell phone",
+        "explanation": "手机是 cell phone，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：玫瑰花",
+        "reference": "rose",
+        "explanation": "玫瑰花是 rose，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：牛仔裤",
+        "reference": "jeans",
+        "explanation": "牛仔裤是 jeans，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "People in the city like rice and ice cream.",
+        "explanation": "城市里的人喜欢米饭和冰淇淋。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/35.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The giant giraffe eats an orange in the cage.",
+        "explanation": "巨大的长颈鹿在笼子里吃一个橙子。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/36.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I have cheese, a red rose, and jeans on my legs.",
+        "explanation": "我有奶酪、一朵红玫瑰，腿上穿着牛仔裤。 吟唱完整保留，可拖动进度条定位；录音只读题目英文，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/37.mp3"
+      }
+    ],
+    "id": "phonics-3f0515f8-48ec-4f7f-832d-00b7a4347a21",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "Unit 8 · 困难",
+    "board": "第四册 Unit 8：soft c、soft g、voiced s。\n\nrice：米饭\ncity：城市\nice cream：冰淇淋\ncell phone：手机\ngiraffe：长颈鹿\norange：橙子\ngiant：巨人\ncage：笼子\nrose：玫瑰花\njeans：牛仔裤\ncheese：奶酪\nlegs：腿（复数）\n\nc 的 /s/ 音：rice、city、ice cream 的 ice、cell phone 的 cell。ice cream 中 cream 的 c 仍读 /k/，不能把所有 c 都读成 /s/。\ng 的 /dʒ/ 音：giraffe、orange、giant、cage。\ns 的 /z/ 音：rose、jeans、cheese、legs。/z/ 发音时声带振动，模仿教材原声。\nice cream、cell phone 是教材的两个词组，中间保留空格。\norange 本课为橙子；giant 是巨人；jeans 是牛仔裤；legs 是 leg 的复数。\nhuge 巨大的；named 名叫；very long legs 很长的腿。\n朗读80分及以上算对；输入题按要求填英文单词或词组。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "choice",
+        "prompt": "ice cream 中两处 c 的读音，哪个说法正确？",
+        "explanation": "ice 的 c 是软音 /s/，cream 的 c 仍读 /k/。",
+        "bonus": false,
+        "choices": [
+          "都读 /s/",
+          "都读 /k/",
+          "ice 中读 /s/，cream 中读 /k/"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：奶酪",
+        "reference": "cheese",
+        "explanation": "奶酪是 cheese，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本课完整英文单词或词组：腿（复数）",
+        "reference": "legs",
+        "explanation": "腿（复数）是 legs，注意词中的重音和轻读音节。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的词组：He has a big _____.（手机）",
+        "reference": "cell phone",
+        "explanation": "cell phone 表示手机，两个词之间保留空格。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：He has a pet _____.（长颈鹿，单数）",
+        "reference": "giraffe",
+        "explanation": "giraffe 是长颈鹿，开头 g 读 /dʒ/。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "只输入空格中的单词：Spot has very long _____.（腿，复数）",
+        "reference": "legs",
+        "explanation": "legs 是 leg 的复数，词尾 s 读 /z/。",
+        "bonus": false
+      },
+      {
+        "kind": "read",
+        "prompt": "He has a big cell phone and huge blue jeans.",
+        "explanation": "他有一部大手机和一条巨大的蓝色牛仔裤。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/29.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Jim eats ten plates of rice, nine oranges, a pot of cheese, and one small ice cream cone.",
+        "explanation": "吉姆吃了十盘米饭、九个橙子、一锅奶酪和一个小蛋筒冰淇淋。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/30.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Spot has a long nose and very long legs.",
+        "explanation": "斯波特有长鼻子和很长的腿。 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/32.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "No, Spot! Don't eat that rose!",
+        "explanation": "不，斯波特！别吃那朵玫瑰花！ 跟随教材原声读完整台词，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-a0038d4b-5f75-44f7-a652-3cd109fefc2b/34.mp3"
+      }
+    ],
+    "id": "phonics-ebe29ecb-de94-4acf-8537-e4de418776a8",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项01 · 短元音辨析 · 基础",
+    "board": "专项01｜短元音辨析\n来自第二至第五册已学内容的复习，先练短元音，后续专项再与长元音对比。\na：cat 猫、hat 帽子。\ne：bed 床、egg 蛋。\ni：sit 坐、big 大的。\no：dog 狗、hot 热的。\nu：cup 杯子、sun 太阳。\n\na 常标 /æ/；e 常标 /e/ 或 /ɛ/；i 为 /ɪ/；u 为 /ʌ/。\no 的具体音质受英美口音影响，跟随录音模仿，不按字母名称 /oʊ/ 读。\n听写题先听再拼，不提前显示英文；可重复播放。请不要边答边查看复习大纲。\n本专项用词均为已有教材词汇。朗读80分及以上算对，整套达标规则沿用现有网站设置。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，输入一个完整英文单词：猫",
+        "reference": "cat",
+        "explanation": "猫是 cat。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入一个完整英文单词：床",
+        "reference": "bed",
+        "explanation": "床是 bed。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入一个完整英文单词：坐",
+        "reference": "sit",
+        "explanation": "坐是 sit。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入一个完整英文单词：杯子",
+        "reference": "cup",
+        "explanation": "杯子是 cup。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "hat 的中文意思是什么？",
+        "explanation": "hat 是帽子，hot 是热的，注意 a 与 o。",
+        "bonus": false,
+        "choices": [
+          "热的",
+          "帽子",
+          "大的"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "下面哪一组单词中间的元音相同？",
+        "explanation": "cup 和 sun 的 u 都读 /ʌ/。",
+        "bonus": false,
+        "choices": [
+          "cat 和 cup",
+          "bed 和 big",
+          "cup 和 sun"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "hot",
+        "explanation": "录音为 hot，意思是“热的”。注意中间的短元音。",
+        "bonus": false,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/0.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "egg",
+        "explanation": "录音为 egg，意思是“蛋”。注意中间的短元音。",
+        "bonus": false,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/1.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "dog",
+        "explanation": "先听真人原声，再读 dog（狗），元音短而清楚，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/2.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "big",
+        "explanation": "先听真人原声，再读 big（大的），元音短而清楚，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/3.mp3"
+      }
+    ],
+    "id": "phonics-fc692768-369e-4244-b690-14f745f1222f",
+    "version": 2,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项01 · 短元音辨析 · 进阶",
+    "board": "专项01｜短元音辨析\n来自第二至第五册已学内容的复习，先练短元音，后续专项再与长元音对比。\na：cat 猫、hat 帽子。\ne：bed 床、egg 蛋。\ni：sit 坐、big 大的。\no：dog 狗、hot 热的。\nu：cup 杯子、sun 太阳。\n\na 常标 /æ/；e 常标 /e/ 或 /ɛ/；i 为 /ɪ/；u 为 /ʌ/。\no 的具体音质受英美口音影响，跟随录音模仿，不按字母名称 /oʊ/ 读。\n听写题先听再拼，不提前显示英文；可重复播放。请不要边答边查看复习大纲。\n本专项用词均为已有教材词汇。朗读80分及以上算对，整套达标规则沿用现有网站设置。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "hat",
+        "explanation": "录音为 hat，意思是“帽子”。注意中间的短元音。",
+        "bonus": false,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/4.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "bed",
+        "explanation": "录音为 bed，意思是“床”。注意中间的短元音。",
+        "bonus": false,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/5.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "sit",
+        "explanation": "录音为 sit，意思是“坐”。注意中间的短元音。",
+        "bonus": false,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/6.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "dog",
+        "explanation": "录音为 dog，意思是“狗”。注意中间的短元音。",
+        "bonus": false,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/2.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "cup",
+        "explanation": "录音为 cup，意思是“杯子”。注意中间的短元音。",
+        "bonus": false,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/7.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 sun，表示太阳。",
+        "bonus": false,
+        "choices": [
+          "太阳",
+          "帽子",
+          "蛋"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/8.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 big，表示大的。",
+        "bonus": false,
+        "choices": [
+          "床",
+          "大的",
+          "猫"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/3.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 cat，表示猫。",
+        "bonus": false,
+        "choices": [
+          "热的",
+          "蛋",
+          "猫"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/9.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "egg",
+        "explanation": "先听真人原声，再读 egg（蛋），元音短而清楚，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/1.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "hot",
+        "explanation": "先听真人原声，再读 hot（热的），元音短而清楚，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-3398a4dc-f260-49c3-9d68-42a96831fc22/0.mp3"
+      }
+    ],
+    "id": "phonics-61709905-915b-4c54-9a8d-e12317b1a211",
+    "version": 2,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项05 · 辅音组合与特殊读音 · 进阶",
+    "board": "专项05｜辅音组合与特殊读音\n\nsh：ship；tch：catch；ph：phone。bath 的 th 为清音 /θ/，brother 的 th 为浊音 /ð/。\nking 的 ng 为 /ŋ/，pink 的 nk 为 /ŋk/。city 中 c 为 /s/，giraffe 中 g 为 /dʒ/，rose 中 s 为 /z/。\n本专项涵盖不同规则，先按小组复习再混合检测。不要把所有 th、c、g、s 都读成同一个音。\nbath 按第二册之后教材复习用作洗澡；catch 在故事中为抓住，基础动作中也可表示接住。\n\n复习词汇\nship：轮船\ncatch：接住；抓住\nbath：洗澡\nbrother：兄弟\nking：国王\ncity：城市\nphone：电话\ngiraffe：长颈鹿\nrose：玫瑰花\npink：粉色的\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nHe likes to eat roses.\n他喜欢吃玫瑰花。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "ship",
+        "explanation": "录音是 ship，意思是“轮船”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/0.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "bath",
+        "explanation": "录音是 bath，意思是“洗澡”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/1.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "brother",
+        "explanation": "录音是 brother，意思是“兄弟”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/2.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "king",
+        "explanation": "录音是 king，意思是“国王”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/3.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "city",
+        "explanation": "录音是 city，意思是“城市”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/4.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 catch，表示“接住；抓住”。",
+        "bonus": false,
+        "choices": [
+          "接住；抓住",
+          "城市",
+          "兄弟"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/5.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 city，表示“城市”。",
+        "bonus": false,
+        "choices": [
+          "接住；抓住",
+          "城市",
+          "兄弟"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/4.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 brother，表示“兄弟”。",
+        "bonus": false,
+        "choices": [
+          "接住；抓住",
+          "城市",
+          "兄弟"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/2.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "ship",
+        "explanation": "轮船。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/0.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "He likes to eat roses.",
+        "explanation": "他喜欢吃玫瑰花。 原教材故事分句。整句读完，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/6.mp3"
+      }
+    ],
+    "id": "phonics-71fa6db8-11f3-4d42-9cda-1a3658137039",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项03 · 元音字母组合 · 进阶",
+    "board": "专项03｜元音字母组合\n\nai/ay：rain、day；ee/ea/ey：tree、sea、key；oa：boat、coat；igh/y：light、sky；ue/ew：blue、new；ui：fruit；oo：moon。\n这些是本组单词的读音，不代表所有含相同字母组合的词都如此。new 在不同口音中可能带 /j/，跟随真人录音。\nsea 与 see 同音；本组 sea 只作朗读，不出无提示的听写题。light 按第三册教材表示灯或光，不按“轻的”出词义题。\n\n复习词汇\nrain：雨\nday：一天\nleaf：叶子\nkey：钥匙\nfruit：水果\nmoon：月亮\nboat：小船\ncoat：外套\ntree：树\nsea：海\nlight：灯；光\nsky：天空\nblue：蓝色的\nnew：新的\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nI like to sail on the bay on a hot day.\n我喜欢在炎热的日子里到海湾上驾驶帆船。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "rain",
+        "explanation": "录音是 rain，意思是“雨”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/7.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "day",
+        "explanation": "录音是 day，意思是“一天”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/8.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "blue",
+        "explanation": "录音是 blue，意思是“蓝色的”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/9.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "sky",
+        "explanation": "录音是 sky，意思是“天空”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/10.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "key",
+        "explanation": "录音是 key，意思是“钥匙”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/11.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 boat，表示“小船”。",
+        "bonus": false,
+        "choices": [
+          "小船",
+          "外套",
+          "新的"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/12.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 coat，表示“外套”。",
+        "bonus": false,
+        "choices": [
+          "小船",
+          "外套",
+          "新的"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/13.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 new，表示“新的”。",
+        "bonus": false,
+        "choices": [
+          "小船",
+          "外套",
+          "新的"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/14.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "light",
+        "explanation": "灯；光。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/15.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to sail on the bay on a hot day.",
+        "explanation": "我喜欢在炎热的日子里到海湾上驾驶帆船。 原教材故事分句。整句读完，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/16.mp3"
+      }
+    ],
+    "id": "phonics-9197e086-509c-4b2c-974f-20a247049732",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项07 · 易混元音与弱读 · 进阶",
+    "board": "专项07｜易混元音与弱读\n\nou/ow：house、cow、brown 的 /aʊ/；oi/oy：coin、toy、boy 的 /ɔɪ/。\nbook、foot 中 oo 与 bush、pull 中 u 为 /ʊ/，不同于 moon 中的 /uː/。\nchicken、lemon 的非重读音节要轻读，具体音质可能因口音出现 /ə/、/ɪ/ 或成音节辅音，不逐字母重读。\n本组先辨别双元音，再练短 /ʊ/ 和多音节词轻重。不能把所有 ow、oo、u 都看成同一个音。\n\n复习词汇\nhouse：房子\nbrown：棕色的\ncow：奶牛\ncoin：硬币\ntoy：玩具\nboy：男孩\nbook：书\nfoot：脚\nbush：灌木丛\npull：拉\nchicken：鸡\nlemon：柠檬\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nThis book is good.\n这本书很好。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "boy",
+        "explanation": "录音是 boy，意思是“男孩”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/17.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "book",
+        "explanation": "录音是 book，意思是“书”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/18.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "foot",
+        "explanation": "录音是 foot，意思是“脚”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/19.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "bush",
+        "explanation": "录音是 bush，意思是“灌木丛”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/20.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "pull",
+        "explanation": "录音是 pull，意思是“拉”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/21.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 house，表示“房子”。",
+        "bonus": false,
+        "choices": [
+          "房子",
+          "棕色的",
+          "鸡"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/22.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 brown，表示“棕色的”。",
+        "bonus": false,
+        "choices": [
+          "房子",
+          "棕色的",
+          "鸡"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/23.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 chicken，表示“鸡”。",
+        "bonus": false,
+        "choices": [
+          "房子",
+          "棕色的",
+          "鸡"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/24.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "pull",
+        "explanation": "拉。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/21.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "This book is good.",
+        "explanation": "这本书很好。 原教材故事分句。整句读完，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/25.mp3"
+      }
+    ],
+    "id": "phonics-49de1de6-5185-4ec3-b0da-cf236f6f4ca5",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项07 · 易混元音与弱读 · 基础",
+    "board": "专项07｜易混元音与弱读\n\nou/ow：house、cow、brown 的 /aʊ/；oi/oy：coin、toy、boy 的 /ɔɪ/。\nbook、foot 中 oo 与 bush、pull 中 u 为 /ʊ/，不同于 moon 中的 /uː/。\nchicken、lemon 的非重读音节要轻读，具体音质可能因口音出现 /ə/、/ɪ/ 或成音节辅音，不逐字母重读。\n本组先辨别双元音，再练短 /ʊ/ 和多音节词轻重。不能把所有 ow、oo、u 都看成同一个音。\n\n复习词汇\nhouse：房子\nbrown：棕色的\ncow：奶牛\ncoin：硬币\ntoy：玩具\nboy：男孩\nbook：书\nfoot：脚\nbush：灌木丛\npull：拉\nchicken：鸡\nlemon：柠檬\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nThis book is good.\n这本书很好。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：奶牛",
+        "reference": "cow",
+        "explanation": "奶牛是 cow。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：硬币",
+        "reference": "coin",
+        "explanation": "硬币是 coin。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：玩具",
+        "reference": "toy",
+        "explanation": "玩具是 toy。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：柠檬",
+        "reference": "lemon",
+        "explanation": "柠檬是 lemon。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组单词中的元音相同？",
+        "explanation": "cow 的 ow 和 brown 的 ow 都读 /aʊ/。",
+        "bonus": false,
+        "choices": [
+          "cow 和 brown",
+          "house 和 boy",
+          "coin 和 book"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词的 oo 与 book 不同，通常读长音 /uː/？",
+        "explanation": "moon 的 oo 通常为 /uː/，book、foot、good 为 /ʊ/。",
+        "bonus": false,
+        "choices": [
+          "foot",
+          "moon",
+          "good"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "house",
+        "explanation": "录音是 house，意思是“房子”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/22.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "brown",
+        "explanation": "录音是 brown，意思是“棕色的”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/23.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "book",
+        "explanation": "书。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/18.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "chicken",
+        "explanation": "鸡。先听真人原声再读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/24.mp3"
+      }
+    ],
+    "id": "phonics-79a7f7b3-303b-42fa-a97c-4b059087f336",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项03 · 元音字母组合 · 基础",
+    "board": "专项03｜元音字母组合\n\nai/ay：rain、day；ee/ea/ey：tree、sea、key；oa：boat、coat；igh/y：light、sky；ue/ew：blue、new；ui：fruit；oo：moon。\n这些是本组单词的读音，不代表所有含相同字母组合的词都如此。new 在不同口音中可能带 /j/，跟随真人录音。\nsea 与 see 同音；本组 sea 只作朗读，不出无提示的听写题。light 按第三册教材表示灯或光，不按“轻的”出词义题。\n\n复习词汇\nrain：雨\nday：一天\nleaf：叶子\nkey：钥匙\nfruit：水果\nmoon：月亮\nboat：小船\ncoat：外套\ntree：树\nsea：海\nlight：灯；光\nsky：天空\nblue：蓝色的\nnew：新的\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nI like to sail on the bay on a hot day.\n我喜欢在炎热的日子里到海湾上驾驶帆船。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：叶子",
+        "reference": "leaf",
+        "explanation": "叶子是 leaf。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：水果",
+        "reference": "fruit",
+        "explanation": "水果是 fruit。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：月亮",
+        "reference": "moon",
+        "explanation": "月亮是 moon。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：新的",
+        "reference": "new",
+        "explanation": "新的是 new。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组单词的元音发音相同？",
+        "explanation": "rain 的 ai 和 day 的 ay 都读 /eɪ/。",
+        "bonus": false,
+        "choices": [
+          "rain 和 day",
+          "boat 和 sky",
+          "tree 和 coat"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词中的 ea 在本课读长音 /iː/？",
+        "explanation": "sea 中 ea 读 /iː/；bread、head 中 ea 读短音。",
+        "bonus": false,
+        "choices": [
+          "bread",
+          "sea",
+          "head"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "boat",
+        "explanation": "录音是 boat，意思是“小船”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/12.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "coat",
+        "explanation": "录音是 coat，意思是“外套”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/13.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "tree",
+        "explanation": "树。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/26.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "sea",
+        "explanation": "海。先听真人原声再读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/27.mp3"
+      }
+    ],
+    "id": "phonics-fdb24d1d-d497-4708-a943-c5e6709ecf0a",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项05 · 辅音组合与特殊读音 · 基础",
+    "board": "专项05｜辅音组合与特殊读音\n\nsh：ship；tch：catch；ph：phone。bath 的 th 为清音 /θ/，brother 的 th 为浊音 /ð/。\nking 的 ng 为 /ŋ/，pink 的 nk 为 /ŋk/。city 中 c 为 /s/，giraffe 中 g 为 /dʒ/，rose 中 s 为 /z/。\n本专项涵盖不同规则，先按小组复习再混合检测。不要把所有 th、c、g、s 都读成同一个音。\nbath 按第二册之后教材复习用作洗澡；catch 在故事中为抓住，基础动作中也可表示接住。\n\n复习词汇\nship：轮船\ncatch：接住；抓住\nbath：洗澡\nbrother：兄弟\nking：国王\ncity：城市\nphone：电话\ngiraffe：长颈鹿\nrose：玫瑰花\npink：粉色的\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nHe likes to eat roses.\n他喜欢吃玫瑰花。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：电话",
+        "reference": "phone",
+        "explanation": "电话是 phone。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：长颈鹿",
+        "reference": "giraffe",
+        "explanation": "长颈鹿是 giraffe。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：玫瑰花",
+        "reference": "rose",
+        "explanation": "玫瑰花是 rose。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：粉色的",
+        "reference": "pink",
+        "explanation": "粉色的是 pink。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词的 th 发音时声带振动？",
+        "explanation": "brother 中 th 为 /ð/，bath、thin 中为 /θ/。",
+        "bonus": false,
+        "choices": [
+          "bath",
+          "brother",
+          "thin"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一个说法正确？",
+        "explanation": "giraffe 的 g 为软音 /dʒ/；king 词尾为 /ŋ/，city 的 c 为 /s/。",
+        "bonus": false,
+        "choices": [
+          "king 词尾要额外加 /ɡ/",
+          "city 的 c 读 /k/",
+          "giraffe 的 g 读 /dʒ/"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "ship",
+        "explanation": "录音是 ship，意思是“轮船”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/0.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "catch",
+        "explanation": "录音是 catch，意思是“接住；抓住”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/5.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "bath",
+        "explanation": "洗澡。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/1.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "king",
+        "explanation": "国王。先听真人原声再读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/3.mp3"
+      }
+    ],
+    "id": "phonics-fd0ce7b4-6ca9-4591-8ed4-beb213755a46",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项04 · 辅音连缀 · 进阶",
+    "board": "专项04｜辅音连缀\n\n词首：black 的 bl、clock/club 的 cl、grass 的 gr、spring 的 spr、string/strong 的 str、swim 的 sw。\n词尾：hand 的 nd、tent 的 nt、lamp/camp 的 mp。连缀中的辅音连贯发出，不在中间加“呃”。\nspring 按教材表示春天；club 为俱乐部，camp 为营地。\n\n复习词汇\nblack：黑色的\nclock：钟\nclub：俱乐部\ngrass：草\nspring：春天\nstring：细绳\nstrong：强壮的\nhand：手\ntent：帐篷\nlamp：灯\ncamp：营地\nswim：游泳\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nThe squid teacher is strong.\n鱿鱼老师很强壮。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "grass",
+        "explanation": "录音是 grass，意思是“草”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/28.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "spring",
+        "explanation": "录音是 spring，意思是“春天”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/29.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "club",
+        "explanation": "录音是 club，意思是“俱乐部”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/30.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "swim",
+        "explanation": "录音是 swim，意思是“游泳”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/31.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "strong",
+        "explanation": "录音是 strong，意思是“强壮的”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/32.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 black，表示“黑色的”。",
+        "bonus": false,
+        "choices": [
+          "黑色的",
+          "钟",
+          "手"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/33.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 clock，表示“钟”。",
+        "bonus": false,
+        "choices": [
+          "黑色的",
+          "钟",
+          "手"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/34.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 hand，表示“手”。",
+        "bonus": false,
+        "choices": [
+          "黑色的",
+          "钟",
+          "手"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/35.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "spring",
+        "explanation": "春天。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/29.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The squid teacher is strong.",
+        "explanation": "鱿鱼老师很强壮。 原教材故事分句。整句读完，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/36.mp3"
+      }
+    ],
+    "id": "phonics-a1075673-b10f-4baf-9357-071e25d24a34",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项08 · 不发音字母与词尾 · 基础",
+    "board": "专项08｜不发音字母与词尾\n\n不发音字母：knife 的 k、write 的 w、comb/lamb 的 b、whistle 的 t。拼写时不能把它们漏掉。\n词尾 ture：picture、nature；tion：station；sion：television；sure：treasure；ful：beautiful、helpful。\n词尾 ful 只有一个 l；不要把所有 sion 或 sure 都概括为同一种发音。\nwrite 与 right 同音，因此它的听写题附“写”的中文提示，仅以录音无法唯一确定拼写。\n本专项分成不发音字母与常见词尾两部分，先分组复习再检测。\n\n复习词汇\nknife：刀\ncomb：梳子\nlamb：小羊\nwhistle：哨子\nwrite：写\npicture：图片\nnature：大自然\nstation：车站\ntelevision：电视\ntreasure：宝藏\nbeautiful：美丽的\nhelpful：有帮助的；乐于助人的\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nThere is treasure in the box.\n箱子里有宝藏。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：刀",
+        "reference": "knife",
+        "explanation": "刀是 knife。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：梳子",
+        "reference": "comb",
+        "explanation": "梳子是 comb。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：小羊",
+        "reference": "lamb",
+        "explanation": "小羊是 lamb。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：哨子",
+        "reference": "whistle",
+        "explanation": "哨子是 whistle。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组单词都含不发音的 b？",
+        "explanation": "comb、lamb 词尾 b 不发音。",
+        "bonus": false,
+        "choices": [
+          "comb 和 lamb",
+          "knife 和 write",
+          "picture 和 station"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词的词尾拼写正确？",
+        "explanation": "helpful、beautiful 的词尾 ful 只有一个 l。",
+        "bonus": false,
+        "choices": [
+          "beautifull",
+          "helpfull",
+          "helpful"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "picture",
+        "explanation": "录音是 picture，意思是“图片”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/37.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "nature",
+        "explanation": "录音是 nature，意思是“大自然”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/38.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "station",
+        "explanation": "车站。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/39.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "television",
+        "explanation": "电视。先听真人原声再读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/40.mp3"
+      }
+    ],
+    "id": "phonics-f5266ae2-a219-47e4-b7fb-24339a1322b9",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项02 · 长短元音对比 · 基础",
+    "board": "专项02｜长短元音对比\n\n对比 a：hat /æ/ 与 cake /eɪ/；i：sit /ɪ/ 与 bike /aɪ/；o：hop 与 home；u：cut /ʌ/ 与 cute /juː/；e：bed 的短音与 feet 的 /iː/。\n词尾e常影响前面元音，但不是所有以e结尾的词都照此读。\n本组听写含cat、cake、hat、home等相近词，不提前提供中文意思，以检测长短元音辨别。\n\n复习词汇\ncat：猫\ncake：蛋糕\nhat：帽子\ntape：胶带\nsit：坐\nbike：自行车\nhop：单脚跳\nhome：家\ncut：切\ncute：可爱的\nbed：床\nfeet：脚（复数）\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nKate and her dad skate on a lake.\n凯特和爸爸在湖上滑冰。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：自行车",
+        "reference": "bike",
+        "explanation": "自行车是 bike。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：可爱的",
+        "reference": "cute",
+        "explanation": "可爱的是 cute。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：单脚跳",
+        "reference": "hop",
+        "explanation": "单脚跳是 hop。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：脚（复数）",
+        "reference": "feet",
+        "explanation": "脚（复数）是 feet。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组展示了短元音到长元音的变化？",
+        "explanation": "cap 中 a 为短音，cape 中 a 为长音，词尾 e 不单独发音。",
+        "bonus": false,
+        "choices": [
+          "cap → cape",
+          "cat → cup",
+          "bed → bad"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "cute 中 u 的读音与哪一个最接近？",
+        "explanation": "cute 中 u 读 /juː/，cut、cup 中 u 读 /ʌ/。",
+        "bonus": false,
+        "choices": [
+          "cut 中的 u",
+          "字母 u 的名称 /juː/",
+          "cup 中的 u"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "cat",
+        "explanation": "录音是 cat，意思是“猫”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/41.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "cake",
+        "explanation": "录音是 cake，意思是“蛋糕”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/42.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "bed",
+        "explanation": "床。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/43.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "home",
+        "explanation": "家。先听真人原声再读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/44.mp3"
+      }
+    ],
+    "id": "phonics-d23d2e1e-59da-4247-85a1-06abf622557a",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项06 · r控制元音 · 进阶",
+    "board": "专项06｜r控制元音\n\nar：car、farm、park、star；ir/ur：bird、girl、nurse。\nair：chair、hair；ear 在 bear、pear 中与 ear（耳朵）读音不同。\n美式和英式对 r 的处理可能不同，跟随真人录音，不把口音差异当作拼写错误。\nhair 头发通常不可数；pear 梨与 pair 同音，本组 pear 不安排无提示听写。\n\n复习词汇\ncar：汽车\nfarm：农场\npark：公园\nstar：星星\nbird：鸟\ngirl：女孩\nnurse：护士\nchair：椅子\nhair：头发\nbear：熊\near：耳朵\npear：梨\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nA teacher and a doctor race in a car.\n一位老师和一位医生开着汽车参加比赛。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "girl",
+        "explanation": "录音是 girl，意思是“女孩”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/45.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "chair",
+        "explanation": "录音是 chair，意思是“椅子”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/46.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，写出表示“头发”的一个英文单词。",
+        "reference": "hair",
+        "explanation": "录音是 hair，意思是“头发”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/47.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，写出表示“熊”的一个英文单词。",
+        "reference": "bear",
+        "explanation": "录音是 bear，意思是“熊”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/48.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "nurse",
+        "explanation": "录音是 nurse，意思是“护士”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/49.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 car，表示“汽车”。",
+        "bonus": false,
+        "choices": [
+          "汽车",
+          "鸟",
+          "椅子"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/50.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 bird，表示“鸟”。",
+        "bonus": false,
+        "choices": [
+          "汽车",
+          "鸟",
+          "椅子"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/51.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 chair，表示“椅子”。",
+        "bonus": false,
+        "choices": [
+          "汽车",
+          "鸟",
+          "椅子"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/46.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "park",
+        "explanation": "公园。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/52.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "A teacher and a doctor race in a car.",
+        "explanation": "一位老师和一位医生开着汽车参加比赛。 原教材故事分句。整句读完，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/53.mp3"
+      }
+    ],
+    "id": "phonics-e09cb7ac-eb55-4553-949a-9003b2a9579b",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项02 · 长短元音对比 · 进阶",
+    "board": "专项02｜长短元音对比\n\n对比 a：hat /æ/ 与 cake /eɪ/；i：sit /ɪ/ 与 bike /aɪ/；o：hop 与 home；u：cut /ʌ/ 与 cute /juː/；e：bed 的短音与 feet 的 /iː/。\n词尾e常影响前面元音，但不是所有以e结尾的词都照此读。\n本组听写含cat、cake、hat、home等相近词，不提前提供中文意思，以检测长短元音辨别。\n\n复习词汇\ncat：猫\ncake：蛋糕\nhat：帽子\ntape：胶带\nsit：坐\nbike：自行车\nhop：单脚跳\nhome：家\ncut：切\ncute：可爱的\nbed：床\nfeet：脚（复数）\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nKate and her dad skate on a lake.\n凯特和爸爸在湖上滑冰。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "hat",
+        "explanation": "录音是 hat，意思是“帽子”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/54.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "cake",
+        "explanation": "录音是 cake，意思是“蛋糕”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/42.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "sit",
+        "explanation": "录音是 sit，意思是“坐”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/55.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "home",
+        "explanation": "录音是 home，意思是“家”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/44.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "cut",
+        "explanation": "录音是 cut，意思是“切”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/56.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 cake，表示“蛋糕”。",
+        "bonus": false,
+        "choices": [
+          "蛋糕",
+          "猫",
+          "床"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/42.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 cat，表示“猫”。",
+        "bonus": false,
+        "choices": [
+          "蛋糕",
+          "猫",
+          "床"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/41.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 bed，表示“床”。",
+        "bonus": false,
+        "choices": [
+          "蛋糕",
+          "猫",
+          "床"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/43.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "hat",
+        "explanation": "帽子。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/54.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "Kate and her dad skate on a lake.",
+        "explanation": "凯特和爸爸在湖上滑冰。 原教材故事分句。整句读完，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/57.mp3"
+      }
+    ],
+    "id": "phonics-10f6940e-7768-4604-ac05-a596324b0e25",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项06 · r控制元音 · 基础",
+    "board": "专项06｜r控制元音\n\nar：car、farm、park、star；ir/ur：bird、girl、nurse。\nair：chair、hair；ear 在 bear、pear 中与 ear（耳朵）读音不同。\n美式和英式对 r 的处理可能不同，跟随真人录音，不把口音差异当作拼写错误。\nhair 头发通常不可数；pear 梨与 pair 同音，本组 pear 不安排无提示听写。\n\n复习词汇\ncar：汽车\nfarm：农场\npark：公园\nstar：星星\nbird：鸟\ngirl：女孩\nnurse：护士\nchair：椅子\nhair：头发\nbear：熊\near：耳朵\npear：梨\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nA teacher and a doctor race in a car.\n一位老师和一位医生开着汽车参加比赛。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：农场",
+        "reference": "farm",
+        "explanation": "农场是 farm。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：星星",
+        "reference": "star",
+        "explanation": "星星是 star。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：护士",
+        "reference": "nurse",
+        "explanation": "护士是 nurse。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：梨",
+        "reference": "pear",
+        "explanation": "梨是 pear。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组单词中的元音和 r 组合发音相同？",
+        "explanation": "bird 的 ir 与 nurse 的 ur 在常见读音中相同。",
+        "bonus": false,
+        "choices": [
+          "bird 和 nurse",
+          "car 和 chair",
+          "ear 和 bear"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词与 bear 押韵？",
+        "explanation": "bear 和 pear 押韵；ear 属于另一组读音。",
+        "bonus": false,
+        "choices": [
+          "ear",
+          "pear",
+          "bird"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "car",
+        "explanation": "录音是 car，意思是“汽车”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/50.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "park",
+        "explanation": "录音是 park，意思是“公园”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/52.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "bird",
+        "explanation": "鸟。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/51.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "ear",
+        "explanation": "耳朵。先听真人原声再读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/58.mp3"
+      }
+    ],
+    "id": "phonics-f98aefc5-8565-45d5-923d-685e65c7505b",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项04 · 辅音连缀 · 基础",
+    "board": "专项04｜辅音连缀\n\n词首：black 的 bl、clock/club 的 cl、grass 的 gr、spring 的 spr、string/strong 的 str、swim 的 sw。\n词尾：hand 的 nd、tent 的 nt、lamp/camp 的 mp。连缀中的辅音连贯发出，不在中间加“呃”。\nspring 按教材表示春天；club 为俱乐部，camp 为营地。\n\n复习词汇\nblack：黑色的\nclock：钟\nclub：俱乐部\ngrass：草\nspring：春天\nstring：细绳\nstrong：强壮的\nhand：手\ntent：帐篷\nlamp：灯\ncamp：营地\nswim：游泳\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nThe squid teacher is strong.\n鱿鱼老师很强壮。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：细绳",
+        "reference": "string",
+        "explanation": "细绳是 string。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：帐篷",
+        "reference": "tent",
+        "explanation": "帐篷是 tent。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：灯",
+        "reference": "lamp",
+        "explanation": "灯是 lamp。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，输入本专项英文单词：强壮的",
+        "reference": "strong",
+        "explanation": "强壮的是 strong。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词以 str 开头？",
+        "explanation": "strong 以 str 开头；spring 是 spr，swim 是 sw。",
+        "bonus": false,
+        "choices": [
+          "spring",
+          "strong",
+          "swim"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪两个词的末尾辅音组合相同？",
+        "explanation": "lamp 和 camp 都以 mp 结尾。",
+        "bonus": false,
+        "choices": [
+          "lamp 和 camp",
+          "hand 和 tent",
+          "black 和 grass"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "black",
+        "explanation": "录音是 black，意思是“黑色的”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/33.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "clock",
+        "explanation": "录音是 clock，意思是“钟”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/34.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "hand",
+        "explanation": "手。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/35.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "camp",
+        "explanation": "营地。先听真人原声再读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/59.mp3"
+      }
+    ],
+    "id": "phonics-84cbc048-1c46-469f-b8db-2ddc54da52fc",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "专项08 · 不发音字母与词尾 · 进阶",
+    "board": "专项08｜不发音字母与词尾\n\n不发音字母：knife 的 k、write 的 w、comb/lamb 的 b、whistle 的 t。拼写时不能把它们漏掉。\n词尾 ture：picture、nature；tion：station；sion：television；sure：treasure；ful：beautiful、helpful。\n词尾 ful 只有一个 l；不要把所有 sion 或 sure 都概括为同一种发音。\nwrite 与 right 同音，因此它的听写题附“写”的中文提示，仅以录音无法唯一确定拼写。\n本专项分成不发音字母与常见词尾两部分，先分组复习再检测。\n\n复习词汇\nknife：刀\ncomb：梳子\nlamb：小羊\nwhistle：哨子\nwrite：写\npicture：图片\nnature：大自然\nstation：车站\ntelevision：电视\ntreasure：宝藏\nbeautiful：美丽的\nhelpful：有帮助的；乐于助人的\n\n听写先听后拼，可重复播放；同音词必要时有中文提示。朗读80分及以上算对。\n教材句子\nThere is treasure in the box.\n箱子里有宝藏。\n作答前可复习；检测时请独立作答后再看答案。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "听真人录音，写出表示“写”的一个英文单词。",
+        "reference": "write",
+        "explanation": "录音是 write，意思是“写”。write 与 right 同音，本题根据“写”的意思选择拼写。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/60.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "picture",
+        "explanation": "录音是 picture，意思是“图片”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/37.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "nature",
+        "explanation": "录音是 nature，意思是“大自然”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/38.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "station",
+        "explanation": "录音是 station，意思是“车站”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/39.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入你听到的一个完整英文单词。可以重复播放。",
+        "reference": "television",
+        "explanation": "录音是 television，意思是“电视”。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/40.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 picture，表示“图片”。",
+        "bonus": false,
+        "choices": [
+          "图片",
+          "大自然",
+          "车站"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/37.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 nature，表示“大自然”。",
+        "bonus": false,
+        "choices": [
+          "图片",
+          "大自然",
+          "车站"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/38.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音为 station，表示“车站”。",
+        "bonus": false,
+        "choices": [
+          "图片",
+          "大自然",
+          "车站"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/39.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "write",
+        "explanation": "写。先听真人原声再读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/60.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "There is treasure in the box.",
+        "explanation": "箱子里有宝藏。 原教材故事分句。整句读完，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-689b18d5-4f7e-4338-ac83-6bb631761df3/61.mp3"
+      }
+    ],
+    "id": "phonics-9c35b501-4393-428b-bde3-c0e66356698b",
+    "version": 1,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "第二册 · 整册检测",
+    "board": "第二册 · 整册检测\n本卷30题，先独立作答，再查看每题反馈。\n听写可重复播放；中文拼写只写一个单词；补全句子只填空缺部分。\n朗读单词或完整英文句子，80分及以上算对；不足80分可重录，也可跳过（不计正确）。\n整课90分及以上达标（27/30题）。本页不列词汇答案，以免提前泄露。\n最后一题为王者冲刺题。",
+    "category": "phonics",
+    "folder": "自然拼读第二册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：果酱",
+        "reference": "jam",
+        "explanation": "jam：果酱。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（罐子）：\nThe man has a ____.",
+        "reference": "can",
+        "explanation": "The man has a can.\ncan：罐子。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：鸭舌帽",
+        "reference": "cap",
+        "explanation": "cap：鸭舌帽。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（水龙头）：\nTurn off the ____.",
+        "reference": "tap",
+        "explanation": "Turn off the tap.\ntap：水龙头。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：兽医",
+        "reference": "vet",
+        "explanation": "vet：兽医。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（混合）：\nI ____ red and blue.",
+        "reference": "mix",
+        "explanation": "I mix red and blue.\nmix：混合。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：围嘴",
+        "reference": "bib",
+        "explanation": "bib：围嘴。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（小圆面包）：\nI eat a ____ for lunch.",
+        "reference": "bun",
+        "explanation": "I eat a bun for lunch.\nbun：小圆面包。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：假发",
+        "reference": "wig",
+        "explanation": "wig：假发。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 cap 的意思是什么？",
+        "explanation": "cap：鸭舌帽。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "鸭舌帽"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：钓竿",
+        "reference": "rod",
+        "explanation": "rod：钓竿。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 rod 的意思是什么？",
+        "explanation": "rod：钓竿。",
+        "bonus": false,
+        "choices": [
+          "钓竿",
+          "猫",
+          "床"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：芽",
+        "reference": "bud",
+        "explanation": "bud：芽。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 bud 的意思是什么？",
+        "explanation": "bud：芽。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "芽",
+          "床"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：小屋",
+        "reference": "hut",
+        "explanation": "hut：小屋。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 bib 的意思是什么？",
+        "explanation": "bib：围嘴。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "围嘴"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "cat",
+        "explanation": "录音是 cat，表示“猫”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/0.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 bag，表示“包”。",
+        "bonus": false,
+        "choices": [
+          "太阳",
+          "汽车",
+          "包"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/1.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "bed",
+        "explanation": "录音是 bed，表示“床”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/2.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 big，表示“大的”。",
+        "bonus": false,
+        "choices": [
+          "大的",
+          "汽车",
+          "书"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/3.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。中文提示：太阳。",
+        "reference": "sun",
+        "explanation": "录音是 sun，表示“太阳”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/4.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 cut，表示“切”。",
+        "bonus": false,
+        "choices": [
+          "书",
+          "切",
+          "草"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/5.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "cat 中 a 的发音与哪个词相同？",
+        "explanation": "cat 和 cap 中的 a 都读短音 /æ/。",
+        "bonus": false,
+        "choices": [
+          "cap",
+          "bed",
+          "sun"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组单词押韵？",
+        "explanation": "jam 和 ram 的词尾发音相同。",
+        "bonus": false,
+        "choices": [
+          "bib 和 rod",
+          "jam 和 ram",
+          "cap 和 cat"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词的中间元音发短音 /ɪ/？",
+        "explanation": "wig 的 i 读 /ɪ/。",
+        "bonus": false,
+        "choices": [
+          "hot",
+          "sun",
+          "wig"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "mix 词尾 x 通常表示哪两个音？",
+        "explanation": "mix 的 x 通常读 /ks/。",
+        "bonus": false,
+        "choices": [
+          "/k/ + /s/",
+          "/s/ + /h/",
+          "/t/ + /ʃ/"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "read",
+        "prompt": "hot",
+        "explanation": "热的。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/6.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "egg",
+        "explanation": "鸡蛋。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/7.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "The kid can use ink.",
+        "explanation": "这个孩子会用墨水。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/8.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They live in a hut.",
+        "explanation": "他们住在一间小屋里。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/9.mp3"
+      }
+    ],
+    "id": "phonics-a92f34bb-809f-436a-8944-2470d27de60f",
+    "version": 2,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "第三册 · 整册检测",
+    "board": "第三册 · 整册检测\n本卷30题，先独立作答，再查看每题反馈。\n听写可重复播放；中文拼写只写一个单词；补全句子只填空缺部分。\n朗读单词或完整英文句子，80分及以上算对；不足80分可重录，也可跳过（不计正确）。\n整课90分及以上达标（27/30题）。本页不列词汇答案，以免提前泄露。\n最后一题为王者冲刺题。",
+    "category": "phonics",
+    "folder": "自然拼读第三册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：披风",
+        "reference": "cape",
+        "explanation": "cape：披风。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（名字）：\nMy ____ is Kate.",
+        "reference": "name",
+        "explanation": "My name is Kate.\nname：名字。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：松树",
+        "reference": "pine",
+        "explanation": "pine：松树。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（青柠）：\nThis green fruit is a ____.",
+        "reference": "lime",
+        "explanation": "This green fruit is a lime.\nlime：青柠。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：立方体",
+        "reference": "cube",
+        "explanation": "cube：立方体。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（驾驶帆船）：\nWe ____ on the bay.",
+        "reference": "sail",
+        "explanation": "We sail on the bay.\nsail：驾驶帆船。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：钉子",
+        "reference": "nail",
+        "explanation": "nail：钉子。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（月亮）：\nI can see the ____ at night.",
+        "reference": "moon",
+        "explanation": "I can see the moon at night.\nmoon：月亮。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：种子",
+        "reference": "seed",
+        "explanation": "seed：种子。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 cube 的意思是什么？",
+        "explanation": "cube：立方体。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "立方体"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：领带",
+        "reference": "tie",
+        "explanation": "tie：领带。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 seed 的意思是什么？",
+        "explanation": "seed：种子。",
+        "bonus": false,
+        "choices": [
+          "种子",
+          "猫",
+          "床"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：枕头",
+        "reference": "pillow",
+        "explanation": "pillow：枕头。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 tie 的意思是什么？",
+        "explanation": "tie：领带。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "领带",
+          "床"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：水果",
+        "reference": "fruit",
+        "explanation": "fruit：水果。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 pillow 的意思是什么？",
+        "explanation": "pillow：枕头。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "枕头"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "cake",
+        "explanation": "录音是 cake，表示“蛋糕”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/10.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 rain，表示“雨”。",
+        "bonus": false,
+        "choices": [
+          "雨",
+          "汽车",
+          "书"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/11.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。中文提示：时间。",
+        "reference": "time",
+        "explanation": "录音是 time，表示“时间”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/12.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 sky，表示“天空”。",
+        "bonus": false,
+        "choices": [
+          "书",
+          "天空",
+          "草"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/13.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "home",
+        "explanation": "录音是 home，表示“家”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/14.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 new，表示“新的”。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "新的"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/15.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "cap 变成 cape 后，哪个说法正确？",
+        "explanation": "cape 中 a 读 /eɪ/，末尾 e 不单独发音。",
+        "bonus": false,
+        "choices": [
+          "a 的读音不变",
+          "a 变为长音，末尾 e 不单独发音",
+          "e 必须读出"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组含相同的长元音？",
+        "explanation": "rain 的 ai 和 day 的 ay 都读 /eɪ/。",
+        "bonus": false,
+        "choices": [
+          "rain 和 day",
+          "rain 和 bed",
+          "day 和 cat"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组的 ee 与 ea 都读 /iː/？",
+        "explanation": "seed 的 ee、sea 的 ea 都读 /iː/。",
+        "bonus": false,
+        "choices": [
+          "feet 和 bread",
+          "seed 和 sea",
+          "bed 和 sea"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词的 y 在词尾读 /aɪ/？",
+        "explanation": "sky 的 y 读 /aɪ/。",
+        "bonus": false,
+        "choices": [
+          "happy",
+          "baby",
+          "sky"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "read",
+        "prompt": "sea",
+        "explanation": "海。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/16.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "coat",
+        "explanation": "外套。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/17.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to sail.",
+        "explanation": "我喜欢驾驶帆船。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/18.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "She has fruit, too.",
+        "explanation": "她也有水果。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/19.mp3"
+      }
+    ],
+    "id": "phonics-32b396f8-49be-4658-9ffb-44896d0fa3c8",
+    "version": 2,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "第四册 · 整册检测",
+    "board": "第四册 · 整册检测\n本卷30题，先独立作答，再查看每题反馈。\n听写可重复播放；中文拼写只写一个单词；补全句子只填空缺部分。\n朗读单词或完整英文句子，80分及以上算对；不足80分可重录，也可跳过（不计正确）。\n整课90分及以上达标（27/30题）。本页不列词汇答案，以免提前泄露。\n最后一题为王者冲刺题。",
+    "category": "phonics",
+    "folder": "自然拼读第四册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：毯子",
+        "reference": "blanket",
+        "explanation": "blanket：毯子。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（手表）：\nI wear a ____ on my wrist.",
+        "reference": "watch",
+        "explanation": "I wear a watch on my wrist.\nwatch：手表。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：鼓",
+        "reference": "drum",
+        "explanation": "drum：鼓。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（妈妈）：\nMy ____ is my mom.",
+        "reference": "mother",
+        "explanation": "My mother is my mom.\nmother：妈妈。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：勺子",
+        "reference": "spoon",
+        "explanation": "spoon：勺子。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（颜料）：\nThe artist uses blue ____.",
+        "reference": "paint",
+        "explanation": "The artist uses blue paint.\npaint：颜料。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：海豚",
+        "reference": "dolphin",
+        "explanation": "dolphin：海豚。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（正方形）：\nThis shape is a ____.",
+        "reference": "square",
+        "explanation": "This shape is a square.\nsquare：正方形。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：被子",
+        "reference": "quilt",
+        "explanation": "quilt：被子。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 drum 的意思是什么？",
+        "explanation": "drum：鼓。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "鼓"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：腰带",
+        "reference": "belt",
+        "explanation": "belt：腰带。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 quilt 的意思是什么？",
+        "explanation": "quilt：被子。",
+        "bonus": false,
+        "choices": [
+          "被子",
+          "猫",
+          "床"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：夹板",
+        "reference": "splint",
+        "explanation": "splint：夹板。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 belt 的意思是什么？",
+        "explanation": "belt：腰带。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "腰带",
+          "床"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：牛仔裤",
+        "reference": "jeans",
+        "explanation": "jeans：牛仔裤。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 splint 的意思是什么？",
+        "explanation": "splint：夹板。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "夹板"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "black",
+        "explanation": "录音是 black，表示“黑色的”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/20.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 ship，表示“轮船”。",
+        "bonus": false,
+        "choices": [
+          "书",
+          "轮船",
+          "草"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/21.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "grass",
+        "explanation": "录音是 grass，表示“草”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/22.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 think，表示“想；思考”。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "想；思考"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/23.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "swim",
+        "explanation": "录音是 swim，表示“游泳”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/24.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 city，表示“城市”。",
+        "bonus": false,
+        "choices": [
+          "城市",
+          "床",
+          "太阳"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/25.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个单词以三个辅音连缀 str 开头？",
+        "explanation": "strong 以 str 开头；spring 以 spr 开头。",
+        "bonus": false,
+        "choices": [
+          "spring",
+          "strong",
+          "swim"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组单词的 th 发音相同？",
+        "explanation": "thin、think 的 th 都读清音 /θ/。",
+        "bonus": false,
+        "choices": [
+          "thin 和 think",
+          "thin 和 mother",
+          "think 和 this"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "pink 中 nk 的读音是哪一个？",
+        "explanation": "pink 中 nk 读 /ŋk/。",
+        "bonus": false,
+        "choices": [
+          "/ŋ/",
+          "/n/",
+          "/ŋk/"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "city 中 c 的读音与哪个词的 c 相同？",
+        "explanation": "city 和 cell 中 c 都读 /s/。",
+        "bonus": false,
+        "choices": [
+          "cat",
+          "cell",
+          "clock"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "read",
+        "prompt": "hand",
+        "explanation": "手。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/26.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "strong",
+        "explanation": "强壮的。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/27.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "His dad trains dolphins.",
+        "explanation": "他的爸爸训练海豚。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/28.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "His lunch is huge, too!",
+        "explanation": "他的午餐也很丰盛！\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/29.mp3"
+      }
+    ],
+    "id": "phonics-2d64f0c8-211a-4ec2-aa9f-2e370d6ba995",
+    "version": 2,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "第五册 · 整册检测",
+    "board": "第五册 · 整册检测\n本卷30题，先独立作答，再查看每题反馈。\n听写可重复播放；中文拼写只写一个单词；补全句子只填空缺部分。\n朗读单词或完整英文句子，80分及以上算对；不足80分可重录，也可跳过（不计正确）。\n整课90分及以上达标（27/30题）。",
+    "category": "phonics",
+    "folder": "自然拼读第五册",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：拖拉机",
+        "reference": "tractor",
+        "explanation": "tractor：拖拉机。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（土壤）：\nPlants grow in ____.",
+        "reference": "soil",
+        "explanation": "Plants grow in soil.\nsoil：土壤。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：硬币",
+        "reference": "coin",
+        "explanation": "coin：硬币。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（头发）：\nI comb my ____ every morning.",
+        "reference": "hair",
+        "explanation": "I comb my hair every morning.\nhair：头发。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：八月",
+        "reference": "August",
+        "explanation": "August：八月。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（柠檬）：\nThis yellow fruit is a ____.",
+        "reference": "lemon",
+        "explanation": "This yellow fruit is a lemon.\nlemon：柠檬。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：梨",
+        "reference": "pear",
+        "explanation": "pear：梨。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（宝藏）：\nThere is ____ in the box.",
+        "reference": "treasure",
+        "explanation": "There is treasure in the box.\ntreasure：宝藏。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：制服",
+        "reference": "uniform",
+        "explanation": "uniform：制服。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 uniform 的意思是什么？",
+        "explanation": "uniform：制服。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "制服"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：雨伞",
+        "reference": "umbrella",
+        "explanation": "umbrella：雨伞。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 pear 的意思是什么？",
+        "explanation": "pear：梨。",
+        "bonus": false,
+        "choices": [
+          "梨",
+          "猫",
+          "床"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：犀牛",
+        "reference": "rhino",
+        "explanation": "rhino：犀牛。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 rhino 的意思是什么？",
+        "explanation": "rhino：犀牛。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "犀牛",
+          "床"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：短途旅行",
+        "reference": "excursion",
+        "explanation": "excursion：短途旅行。",
+        "bonus": false
+      },
+      {
+        "kind": "choice",
+        "prompt": "单词 excursion 的意思是什么？",
+        "explanation": "excursion：短途旅行。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "短途旅行"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "car",
+        "explanation": "录音是 car，表示“汽车”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/30.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 bread，表示“面包”。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "面包"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/31.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "book",
+        "explanation": "录音是 book，表示“书”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/32.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 child，表示“孩子”。",
+        "bonus": false,
+        "choices": [
+          "孩子",
+          "床",
+          "太阳"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/33.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "walk",
+        "explanation": "录音是 walk，表示“步行”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/34.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 chicken，表示“鸡”。",
+        "bonus": false,
+        "choices": [
+          "太阳",
+          "鸡",
+          "汽车"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/35.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组中的元音与 r 组合发音相同？",
+        "explanation": "girl 的 ir 和 nurse 的 ur 在常见读音中相同。",
+        "bonus": false,
+        "choices": [
+          "car 和 bear",
+          "girl 和 nurse",
+          "ear 和 pear"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "choice",
+        "prompt": "book 中 oo 与哪个词的元音相同？",
+        "explanation": "book 和 pull 中的元音均为 /ʊ/。",
+        "bonus": false,
+        "choices": [
+          "moon",
+          "food",
+          "pull"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "choice",
+        "prompt": "uniform 前应使用哪个冠词？",
+        "explanation": "a uniform：uniform 以辅音 /j/ 开头。",
+        "bonus": false,
+        "choices": [
+          "a",
+          "an",
+          "不可以使用冠词"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词中的 k 不发音？",
+        "explanation": "knife 的首字母 k 不发音。",
+        "bonus": false,
+        "choices": [
+          "king",
+          "knife",
+          "kite"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "read",
+        "prompt": "write",
+        "explanation": "写。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/36.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "picture",
+        "explanation": "图片。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/37.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "This book is good.",
+        "explanation": "这本书很好。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/38.mp3"
+      },
+      {
+        "kind": "read",
+        "prompt": "They give him a surprise.",
+        "explanation": "他们给了他一个惊喜。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/39.mp3"
+      }
+    ],
+    "id": "phonics-d6f6072f-2815-4db5-b547-2fcb4e7ab847",
+    "version": 3,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "跨册综合A卷 · 第1部分",
+    "board": "跨册综合A卷 · 第1部分\n本卷20题，先独立作答，再查看每题反馈。\n听写可重复播放；中文拼写只写一个单词；补全句子只填空缺部分。\n朗读单词或完整英文句子，80分及以上算对；不足80分可重录，也可跳过（不计正确）。\n整课90分及以上达标（18/20题）。本页不列词汇答案，以免提前泄露。\n最后一题为王者冲刺题。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：抹布",
+        "reference": "rag",
+        "explanation": "rag：抹布。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "hat",
+        "explanation": "录音是 hat，表示“帽子”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/40.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 sun，表示“太阳”。",
+        "bonus": false,
+        "choices": [
+          "太阳",
+          "猫",
+          "床"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/4.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词的 a 与 cat 的 a 发音相同？",
+        "explanation": "bag、cat 的 a 都读 /æ/。",
+        "bonus": false,
+        "choices": [
+          "bag",
+          "cake",
+          "name"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "read",
+        "prompt": "cup",
+        "explanation": "杯子。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/41.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（自行车）：\nI ride my ____ to school.",
+        "reference": "bike",
+        "explanation": "I ride my bike to school.\nbike：自行车。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "cake",
+        "explanation": "录音是 cake，表示“蛋糕”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/10.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 time，表示“时间”。",
+        "bonus": false,
+        "choices": [
+          "床",
+          "时间",
+          "太阳"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/12.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词末尾的 e 不单独发音，并使前面的元音读长音？",
+        "explanation": "cape 中 a 读长音 /eɪ/，末尾 e 不单独发音。",
+        "bonus": false,
+        "choices": [
+          "bed",
+          "cape",
+          "egg"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "read",
+        "prompt": "My cane is new.",
+        "explanation": "我的手杖是新的。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/42.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：叶子",
+        "reference": "leaf",
+        "explanation": "leaf：叶子。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。中文提示：新的。",
+        "reference": "new",
+        "explanation": "录音是 new，表示“新的”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/15.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 rain，表示“雨”。",
+        "bonus": false,
+        "choices": [
+          "太阳",
+          "汽车",
+          "雨"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/11.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组单词的元音发音相同？",
+        "explanation": "seed、feet 的 ee 都读 /iː/。",
+        "bonus": false,
+        "choices": [
+          "boat 和 cat",
+          "sky 和 bed",
+          "seed 和 feet"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "read",
+        "prompt": "I like to sail on the bay on a hot day.",
+        "explanation": "我喜欢在炎热的日子里到海湾上驾驶帆船。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/43.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（细绳）：\nThe kite is tied to a ____.",
+        "reference": "string",
+        "explanation": "The kite is tied to a string.\nstring：细绳。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "black",
+        "explanation": "录音是 black，表示“黑色的”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/20.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 spring，表示“春天”。",
+        "bonus": false,
+        "choices": [
+          "春天",
+          "汽车",
+          "书"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/44.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "spring 的词首辅音连缀是哪一组？",
+        "explanation": "spring 以 spr 开头。",
+        "bonus": false,
+        "choices": [
+          "spr",
+          "str",
+          "spl"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "read",
+        "prompt": "hand",
+        "explanation": "手。听真人范读后朗读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/26.mp3"
+      }
+    ],
+    "id": "phonics-47a30b02-4b2a-4f95-9b79-9c465d4bd406",
+    "version": 2,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "跨册综合A卷 · 第2部分",
+    "board": "跨册综合A卷 · 第2部分\n本卷20题，先独立作答，再查看每题反馈。\n听写可重复播放；中文拼写只写一个单词；补全句子只填空缺部分。\n朗读单词或完整英文句子，80分及以上算对；不足80分可重录，也可跳过（不计正确）。\n整课90分及以上达标（18/20题）。本页不列词汇答案，以免提前泄露。\n最后一题为王者冲刺题。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：电话",
+        "reference": "phone",
+        "explanation": "phone：电话。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "ship",
+        "explanation": "录音是 ship，表示“轮船”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/21.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 bath，表示“洗澡”。",
+        "bonus": false,
+        "choices": [
+          "书",
+          "洗澡",
+          "草"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/45.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "phone 中 ph 的发音是？",
+        "explanation": "phone 中 ph 读 /f/。",
+        "bonus": false,
+        "choices": [
+          "/p/",
+          "/f/",
+          "/h/"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "read",
+        "prompt": "She uses a net to catch fish.",
+        "explanation": "她用网捕鱼。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/46.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（梨）：\nI eat a ____ after lunch.",
+        "reference": "pear",
+        "explanation": "I eat a pear after lunch.\npear：梨。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "girl",
+        "explanation": "录音是 girl，表示“女孩”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/47.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 bear，表示“熊”。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "熊"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/48.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组与 car 押韵？",
+        "explanation": "car、star、far 的词尾读音相同。",
+        "bonus": false,
+        "choices": [
+          "ear 和 bear",
+          "bird 和 nurse",
+          "star 和 far"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "read",
+        "prompt": "car",
+        "explanation": "汽车。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/30.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：硬币",
+        "reference": "coin",
+        "explanation": "coin：硬币。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "house",
+        "explanation": "录音是 house，表示“房子”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/49.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 book，表示“书”。",
+        "bonus": false,
+        "choices": [
+          "书",
+          "床",
+          "太阳"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/32.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组单词中的 oi 和 oy 发音相同？",
+        "explanation": "coin 的 oi 与 toy 的 oy 都读 /ɔɪ/。",
+        "bonus": false,
+        "choices": [
+          "coin 和 toy",
+          "coin 和 coat",
+          "boy 和 book"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "read",
+        "prompt": "chicken",
+        "explanation": "鸡。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/35.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（小刀）：\nUse a ____ to cut the cake.",
+        "reference": "knife",
+        "explanation": "Use a knife to cut the cake.\nknife：小刀。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "picture",
+        "explanation": "录音是 picture，表示“图片”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/37.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 nature，表示“大自然”。",
+        "bonus": false,
+        "choices": [
+          "太阳",
+          "大自然",
+          "汽车"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/50.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个单词含不发音的 w？",
+        "explanation": "write 中 w 不发音。",
+        "bonus": false,
+        "choices": [
+          "water",
+          "write",
+          "window"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "read",
+        "prompt": "There is treasure in the box.",
+        "explanation": "箱子里有宝藏。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/51.mp3"
+      }
+    ],
+    "id": "phonics-7a0d5b17-2860-4f12-8f6d-72338fcf5cae",
+    "version": 2,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "跨册综合B卷 · 第1部分",
+    "board": "跨册综合B卷 · 第1部分\n本卷20题，先独立作答，再查看每题反馈。\n听写可重复播放；中文拼写只写一个单词；补全句子只填空缺部分。\n朗读单词或完整英文句子，80分及以上算对；不足80分可重录，也可跳过（不计正确）。\n整课90分及以上达标（18/20题）。本页不列词汇答案，以免提前泄露。\n最后一题为王者冲刺题。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：围嘴",
+        "reference": "bib",
+        "explanation": "bib：围嘴。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "bed",
+        "explanation": "录音是 bed，表示“床”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/2.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 big，表示“大的”。",
+        "bonus": false,
+        "choices": [
+          "床",
+          "大的",
+          "太阳"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/3.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词的 i 与 sit 的 i 发音相同？",
+        "explanation": "wig、sit 的 i 都读短音 /ɪ/。",
+        "bonus": false,
+        "choices": [
+          "time",
+          "pine",
+          "wig"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "read",
+        "prompt": "dog",
+        "explanation": "狗。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/52.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（可爱的）：\nThe baby cat is ____.",
+        "reference": "cute",
+        "explanation": "The baby cat is cute.\ncute：可爱的。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "home",
+        "explanation": "录音是 home，表示“家”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/14.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 name，表示“名字”。",
+        "bonus": false,
+        "choices": [
+          "太阳",
+          "汽车",
+          "名字"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/53.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一对单词体现了加词尾 e 后元音读音的变化？",
+        "explanation": "hop 为短元音，hope 为长元音，末尾 e 不单独发音。",
+        "bonus": false,
+        "choices": [
+          "hop → hope",
+          "cat → cap",
+          "bag → big"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "read",
+        "prompt": "I ride my bike at nine o'clock.",
+        "explanation": "我九点钟骑自行车。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/54.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：水果",
+        "reference": "fruit",
+        "explanation": "fruit：水果。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。中文提示：蓝色的。",
+        "reference": "blue",
+        "explanation": "录音是 blue，表示“蓝色的”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/55.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 coat，表示“外套”。",
+        "bonus": false,
+        "choices": [
+          "外套",
+          "汽车",
+          "书"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/17.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词中的 ai 读 /eɪ/？",
+        "explanation": "rain 的 ai 读 /eɪ/；said、chair 不属于这组读音。",
+        "bonus": false,
+        "choices": [
+          "said",
+          "rain",
+          "chair"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "read",
+        "prompt": "I see a boy in blue boots.",
+        "explanation": "我看见一个穿着蓝色靴子的男孩。\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/56.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（夹板）：\nThe doctor puts a ____ on his broken arm.",
+        "reference": "splint",
+        "explanation": "The doctor puts a splint on his broken arm.\nsplint：夹板。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "grass",
+        "explanation": "录音是 grass，表示“草”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/22.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 strong，表示“强壮的”。",
+        "bonus": false,
+        "choices": [
+          "书",
+          "强壮的",
+          "草"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/27.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个单词的词首辅音连缀是 squ？",
+        "explanation": "squid 以 squ 开头。",
+        "bonus": false,
+        "choices": [
+          "spring",
+          "string",
+          "squid"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "read",
+        "prompt": "camp",
+        "explanation": "营地。听真人范读后朗读，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/57.mp3"
+      }
+    ],
+    "id": "phonics-1d605a21-4eda-49cf-8f74-98fbe180bd48",
+    "version": 2,
+    "publishedAt": "2026-11-24"
+  },
+  {
+    "title": "跨册综合B卷 · 第2部分",
+    "board": "跨册综合B卷 · 第2部分\n本卷20题，先独立作答，再查看每题反馈。\n听写可重复播放；中文拼写只写一个单词；补全句子只填空缺部分。\n朗读单词或完整英文句子，80分及以上算对；不足80分可重录，也可跳过（不计正确）。\n整课90分及以上达标（18/20题）。本页不列词汇答案，以免提前泄露。\n最后一题为王者冲刺题。",
+    "category": "phonics",
+    "folder": "自然拼读专项复习",
+    "boards": [],
+    "questions": [
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：长颈鹿",
+        "reference": "giraffe",
+        "explanation": "giraffe：长颈鹿。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "catch",
+        "explanation": "录音是 catch，表示“抓住；接住”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/58.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 city，表示“城市”。",
+        "bonus": false,
+        "choices": [
+          "猫",
+          "床",
+          "城市"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/25.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词的 g 读 /dʒ/？",
+        "explanation": "giraffe 的 g 为软音 /dʒ/。",
+        "bonus": false,
+        "choices": [
+          "giraffe",
+          "grass",
+          "globe"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "read",
+        "prompt": "Today, he sees a white whale!",
+        "explanation": "今天，他看到了一头白鲸！\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/59.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（紫色的）：\nMy favorite color is ____.",
+        "reference": "purple",
+        "explanation": "My favorite color is purple.\npurple：紫色的。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "nurse",
+        "explanation": "录音是 nurse，表示“护士”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/60.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 ear，表示“耳朵”。",
+        "bonus": false,
+        "choices": [
+          "耳朵",
+          "床",
+          "太阳"
+        ],
+        "answer": 0,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/61.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组单词与 bear 押韵？",
+        "explanation": "bear、hair、pear 属于相同韵尾的读音。",
+        "bonus": false,
+        "choices": [
+          "ear 和 hear",
+          "hair 和 pear",
+          "car 和 farm"
+        ],
+        "answer": 1
+      },
+      {
+        "kind": "read",
+        "prompt": "park",
+        "explanation": "公园。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/62.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "看中文，写出本册学过的英文单词：玩具",
+        "reference": "toy",
+        "explanation": "toy：玩具。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "brown",
+        "explanation": "录音是 brown，表示“棕色的”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/63.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 pull，表示“拉”。",
+        "bonus": false,
+        "choices": [
+          "太阳",
+          "拉",
+          "汽车"
+        ],
+        "answer": 1,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/64.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪个词中的 oo 读 /ʊ/？",
+        "explanation": "foot 中 oo 读 /ʊ/，moon、food 中 oo 读 /uː/。",
+        "bonus": false,
+        "choices": [
+          "moon",
+          "food",
+          "foot"
+        ],
+        "answer": 2
+      },
+      {
+        "kind": "read",
+        "prompt": "foot",
+        "explanation": "脚。听真人范读后朗读，80分及以上算对。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/65.mp3"
+      },
+      {
+        "kind": "check",
+        "prompt": "根据中文提示补全句子，只输入空缺单词（梳子）：\nI use a ____ for my hair.",
+        "reference": "comb",
+        "explanation": "I use a comb for my hair.\ncomb：梳子。",
+        "bonus": false
+      },
+      {
+        "kind": "check",
+        "prompt": "听真人录音，输入一个完整的英文单词。可重复播放。",
+        "reference": "station",
+        "explanation": "录音是 station，表示“车站”。",
+        "bonus": false,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/66.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "听录音，选择对应的中文意思。",
+        "explanation": "录音是 television，表示“电视”。",
+        "bonus": false,
+        "choices": [
+          "汽车",
+          "书",
+          "电视"
+        ],
+        "answer": 2,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/67.mp3"
+      },
+      {
+        "kind": "choice",
+        "prompt": "哪一组单词都有不发音的 b？",
+        "explanation": "lamb、comb 词尾 b 不发音。",
+        "bonus": false,
+        "choices": [
+          "lamb 和 comb",
+          "book 和 bib",
+          "big 和 bed"
+        ],
+        "answer": 0
+      },
+      {
+        "kind": "read",
+        "prompt": "The treasure is beautiful!",
+        "explanation": "这些宝藏真漂亮！\n教材故事原声。读完整句，80分及以上算对。",
+        "bonus": true,
+        "audio": "./course-media/import-dd727cac-014d-4403-94be-bf5243f637bf/68.mp3"
+      }
+    ],
+    "id": "phonics-d0d7faa8-0666-41da-a4c7-863a724dd12b",
+    "version": 2,
+    "publishedAt": "2026-11-24"
   }
 ];
-globalThis.ERIC_DELETED_COURSES = ["speech-test-ship","phonics-200d5954-50d9-41a0-9e34-e13de0af2668","starter-f3f7930f-5ea7-430d-9403-9f21ba8d8503","starter-c45d0a4a-137b-4016-b1fc-d9091ef93c8f","starter-7565d828-552b-4072-a42d-6673c6d593d0","starter-284c1c1a-1517-445e-9b98-3a6e68ef20a6","starter","grammar","phonics-dea273b3-e28f-49a2-a303-30b2e20cd295","phonics-3bcc1ff2-e947-4484-88e3-9ac6123a1fde","phonics-b5a07f65-a75e-40ce-86c6-cb6e506f2712","grammar-a7155138-22de-4f56-a365-66e7be1ab163","grammar-a9070492-e2cc-448b-af43-3019293ba0be","grammar-2350b52c-6f41-4d5e-ab71-3b593e849b35","grammar-89233884-6541-430f-a17d-3345520c85a2","grammar-ab6cd18f-5870-424c-9929-0e412447f99b","grammar-bb9144f3-8cf9-4e0c-a44a-226817fe6935","grammar-c3743270-c043-415f-86b2-879ddbb3b142","grammar-62d0e56b-e13d-4c59-84f0-211f68d4de0c","grammar-54cbd4af-f5fb-488b-b3d9-008eabfec19c","grammar-ad7dd06e-ab22-483d-9cf1-1c2857a0d707","grammar-69b76131-d25f-4ea9-a0d9-bad99b0b0c6b","grammar-dddba586-f4bd-4075-9c5f-8c121060e6e4","grammar-634dc297-f55c-4c33-9bcc-f24f639c14ca","grammar-482e6269-5644-4685-86fb-75bdb7444648","grammar-b0759478-7cd0-47ad-84c0-b0ddefb2f392","grammar-cd6f990a-d86e-4559-ac28-65e08d9cbf28","grammar-284fb45f-2acd-48df-be2d-1db0d505e534","grammar-205c6b22-315d-4fe4-a59f-a0120c578099","grammar-29e393aa-19ab-4a73-9da3-2103321230f8","grammar-578505ef-6ce5-48e8-93d1-935ec8fc98b5","grammar-093015fd-faa8-48b7-8626-fe6a0d2ec323"];
+globalThis.ERIC_DELETED_COURSES = ["speech-test-ship","phonics-200d5954-50d9-41a0-9e34-e13de0af2668","starter-f3f7930f-5ea7-430d-9403-9f21ba8d8503","starter-c45d0a4a-137b-4016-b1fc-d9091ef93c8f","starter-7565d828-552b-4072-a42d-6673c6d593d0","starter-284c1c1a-1517-445e-9b98-3a6e68ef20a6","starter","grammar","phonics-dea273b3-e28f-49a2-a303-30b2e20cd295","phonics-3bcc1ff2-e947-4484-88e3-9ac6123a1fde","phonics-b5a07f65-a75e-40ce-86c6-cb6e506f2712","grammar-a7155138-22de-4f56-a365-66e7be1ab163","grammar-a9070492-e2cc-448b-af43-3019293ba0be","grammar-2350b52c-6f41-4d5e-ab71-3b593e849b35","grammar-89233884-6541-430f-a17d-3345520c85a2","grammar-ab6cd18f-5870-424c-9929-0e412447f99b","grammar-bb9144f3-8cf9-4e0c-a44a-226817fe6935","grammar-c3743270-c043-415f-86b2-879ddbb3b142","grammar-62d0e56b-e13d-4c59-84f0-211f68d4de0c","grammar-54cbd4af-f5fb-488b-b3d9-008eabfec19c","grammar-ad7dd06e-ab22-483d-9cf1-1c2857a0d707","grammar-69b76131-d25f-4ea9-a0d9-bad99b0b0c6b","grammar-dddba586-f4bd-4075-9c5f-8c121060e6e4","grammar-634dc297-f55c-4c33-9bcc-f24f639c14ca","grammar-482e6269-5644-4685-86fb-75bdb7444648","grammar-b0759478-7cd0-47ad-84c0-b0ddefb2f392","grammar-cd6f990a-d86e-4559-ac28-65e08d9cbf28","grammar-284fb45f-2acd-48df-be2d-1db0d505e534","grammar-205c6b22-315d-4fe4-a59f-a0120c578099","grammar-29e393aa-19ab-4a73-9da3-2103321230f8","grammar-578505ef-6ce5-48e8-93d1-935ec8fc98b5","grammar-093015fd-faa8-48b7-8626-fe6a0d2ec323","phonics-15eaeded-a8d3-417d-87ea-6623e27ac5b0","phonics-24699ffa-7f9f-4ade-aaea-c669dacc963e","phonics-349c808d-d051-496d-9dda-f9781c5ce2b0","phonics-e6bd0f24-9091-4cde-b80f-59098fbac7ae","phonics-13d74ca7-b1ec-4e4c-b1ed-4ae9c89582ca","phonics-a6b7c90e-6bd1-4d64-af5b-e8b4001303e8","phonics-8c71e831-bb75-422c-bc52-b9ddc174f95b","phonics-3f24271d-56c2-4013-95b3-da66bd0a8b8d","phonics"];
