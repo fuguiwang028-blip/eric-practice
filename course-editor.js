@@ -195,6 +195,22 @@ function openCourseEditor(category,existing,seed){
   };
 }
 function wireCourseEditor(category){
+  let draggedId=null;
+  const entries=[...$('view').querySelectorAll('.course-entry')];
+  const clearDrag=()=>{entries.forEach(e=>e.classList.remove('drag-over','drag-source'));draggedId=null;};
+  for(const entry of entries){
+    const handle=entry.querySelector('.course-drag-handle');
+    if(!handle)continue;
+    handle.ondragstart=event=>{draggedId=entry.dataset.courseId;event.dataTransfer.effectAllowed='move';event.dataTransfer.setData('text/plain',draggedId);entry.classList.add('drag-source');};
+    handle.ondragend=clearDrag;
+    entry.ondragover=event=>{const source=findCourse(draggedId),target=findCourse(entry.dataset.courseId);if(!source||!target||source.id===target.id||(source.folder||'未分组')!==(target.folder||'未分组'))return;event.preventDefault();event.dataTransfer.dropEffect='move';entry.classList.add('drag-over');};
+    entry.ondragleave=event=>{if(!entry.contains(event.relatedTarget))entry.classList.remove('drag-over');};
+    entry.ondrop=async event=>{event.preventDefault();const source=findCourse(draggedId),target=findCourse(entry.dataset.courseId);clearDrag();if(!source||!target||source.id===target.id||(source.folder||'未分组')!==(target.folder||'未分组'))return;
+      const ordered=courseList(category),from=ordered.findIndex(c=>c.id===source.id),to=ordered.findIndex(c=>c.id===target.id);ordered.splice(from,1);ordered.splice(to,0,source);
+      try{await saveCourseDrafts(ordered.map((c,order)=>({...c,order})));await refresh();notice('课次排序已保存，导出发布课程后网页版会同步此顺序。');}catch(error){notice(error.message);}
+    };
+  }
+
   const input=$('course-import');
   if(input)input.onchange=async()=>{
     const files=[...input.files];

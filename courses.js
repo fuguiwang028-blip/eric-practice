@@ -70,6 +70,12 @@ function deletedCourseIds(){
   if(localCourseEditor())try{local=JSON.parse(localStorage.getItem(COURSE_DELETIONS_KEY)||'[]');}catch{}
   return new Set([...(globalThis.ERIC_DELETED_COURSES||[]),...(Array.isArray(local)?local:[])]);
 }
+function courseLessonSortKey(course){
+  const title=course.title||'';
+  const unit=title.match(/(?:Unit\s*|\bU)(\d{1,2})\b/i)||title.match(/专项\s*(\d+)/);
+  const difficulty=/故事.*朗读|完整故事/.test(title)?3:/[·｜|]\s*(困难|提高)(?:\s|$)/.test(title)?2:/[·｜|]\s*进阶(?:\s|$)/.test(title)?1:/[·｜|]\s*(简单|基础)(?:\s|$)/.test(title)?0:4;
+  return [unit?Number(unit[1]):99,difficulty];
+}
 function courseList(category){
   const all=new Map(defaultCourses().map(c=>[c.id,c]));
   for(const c of [...(globalThis.ERIC_PUBLISHED_COURSES||[]),...storedDraftCourses()]){
@@ -77,6 +83,6 @@ function courseList(category){
   }
   const deleted=deletedCourseIds();
   return [...all.values()].filter(c=>!deleted.has(c.id)&&(!category||c.category===category))
-    .sort((a,b)=>(Number.isFinite(a.order)?a.order:1000000)-(Number.isFinite(b.order)?b.order:1000000));
+    .sort((a,b)=>{const manual=(Number.isFinite(a.order)?a.order:1000000)-(Number.isFinite(b.order)?b.order:1000000);if(manual)return manual;if(a.category==='phonics'&&b.category==='phonics'&&(a.folder||'')===(b.folder||'')){const ka=courseLessonSortKey(a),kb=courseLessonSortKey(b);return ka[0]-kb[0]||ka[1]-kb[1];}return 0;});
 }
 function findCourse(id){return courseList().find(c=>c.id===id);}

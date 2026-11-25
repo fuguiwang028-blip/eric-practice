@@ -258,7 +258,7 @@ async function localAPI(path,body) {
         }
         const old=progress.lessons[course.category]||{attempts:0,best:0};
         progress.lessons[course.category]={attempts:old.attempts+1,best:Math.max(old.best,correctCount)};
-        if(!module.finishedBefore&&passed)earned=grantAward(progress,day,'course-'+course.id);
+        if(!passedBefore&&passed)earned=grantAward(progress,day,'course-'+course.id);
       }
       if(earned)result.earned=true;
       persist(progress);

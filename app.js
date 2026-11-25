@@ -78,6 +78,11 @@ function wireReviewSlides(host,model){
   };
   show(0);
 }
+function topicProgressWindow(items,progress){
+  const passed=items.filter(c=>coursePassed(progress,c)).length;
+  const lit=items.length?Math.round(passed/items.length*4):0;
+  return `<span class="topic-progress-window" role="img" aria-label="已达标 ${passed}/${items.length} 课次，点亮 ${lit}/4 格" title="已达标 ${passed}/${items.length} 课次">${Array.from({length:4},(_,i)=>`<i class="${i<lit?'lit':''}" aria-hidden="true"></i>`).join('')}</span>`;
+}
 async function review(key,id,mode){
   const category=Object.hasOwn(MODULES,key)?key:Object.keys(MODULES)[0];
   const path=`#review/${category}`;
@@ -109,19 +114,76 @@ async function review(key,id,mode){
     if(!folders.has(folder))folders.set(folder,[]);
     folders.get(folder).push(course);
   }
+  const starterUnitNames=['Look at Me!','Family Time','At School','Play Time','Look at Us!','I Can See','Pam and Mom','Food Shapes','Let’s Look at Bugs!','Pets to Pat','Sounds in the Park'];
+  function lessonDisplayTitle(c){
+    let title=c.title;
+    if(category==='grammar'){
+      const prefix=(c.folder||'').trim();
+      if(prefix&&title.startsWith(prefix)){const rest=title.slice(prefix.length);if(/^[\s·｜|:：-]/.test(rest))title=rest.replace(/^[\s·｜|:：-]+/,'')||title;}
+    }
+    if(category==='starter'){const parts=title.split(/[·｜|]/).map(x=>x.trim()).filter(Boolean);if(/^Unit\s*\d+/i.test(parts[0])&&parts.length>=3)title=parts.slice(2).join(' · ');}
+    return title;
+  }
   function courseRow(c){
     const href=path+'/'+c.id;
-    const isNew=recentlyPublished(c,state.day)&&!courseFinished(progress,c);
-    return `<div class="course-row"><div class="path-item ${isNew?'has-new':''}">${isNew?'<span class="course-new">NEW</span>':''}<span>${E(c.title)}</span><small>${c.questions.length} 题${coursePassed(progress,c)?' · 已完成':''}</small></div>
+    const passed=coursePassed(progress,c);
+    const isNew=recentlyPublished(c,state.day)&&!passed;
+    return `<article class="course-entry" data-course-id="${c.id}"><div class="course-row"><div class="path-item ${passed||isNew?'has-new':''}">${passed?'<span class="course-new course-passed-ribbon">已达标</span>':isNew?'<span class="course-new">NEW</span>':''}<span>${E(lessonDisplayTitle(c))}</span><small>${c.questions.length} 题</small></div>
       <div class="course-actions"><a class="secondary" href="${href}/review">复习</a>
       ${practiceUnlocked(progress,c)?`<a class="primary" href="${href}/practice">练习</a>`:'<button class="primary" disabled title="打开复习后解锁">练习</button>'}
-      ${local?`<button class="secondary" data-edit-course="${c.id}">编辑</button><button class="secondary" data-move-course="${c.id}" data-offset="-1">上移</button><button class="secondary" data-move-course="${c.id}" data-offset="1">下移</button><button class="secondary course-delete" data-delete-course="${c.id}">删除</button>`:''}</div></div>
-      ${local?`<details class="course-question-list"><summary>题目名称</summary><ol>${c.questions.map(q=>`<li>${E(q.prompt)}</li>`).join('')}</ol></details>`:''}`;
+      ${local?`<button type="button" class="secondary course-drag-handle" draggable="true" aria-label="拖动排序 ${E(c.title)}" title="拖到同目录的其他课次上排序">⠿ 拖动</button><button class="secondary" data-edit-course="${c.id}">编辑</button><button class="secondary" data-move-course="${c.id}" data-offset="-1">上移</button><button class="secondary" data-move-course="${c.id}" data-offset="1">下移</button><button class="secondary course-delete" data-delete-course="${c.id}">删除</button>`:''}</div></div>
+      ${local?`<details class="course-question-list"><summary>题目名称</summary><ol>${c.questions.map(q=>`<li>${E(q.prompt)}</li>`).join('')}</ol></details>`:''}</article>`;
   }
-  host.innerHTML=`<section class="panel course-list"><div class="row course-head"><h2>课次</h2>
-    ${local?'<div class="action-row"><label>导入课件 ZIP / JSON <input id="course-import" type="file" multiple accept=".zip,.json,application/zip,application/json"></label><button id="publish-courses" class="secondary">导出发布课程</button><button id="publish-course-media" class="secondary">导出课件媒体</button></div>':''}</div>
-    ${[...folders].map(([name,items])=>`<details class="course-folder" ${folders.size===1?'open':''}><summary>${E(name)} <small>${items.length} 个课次</small></summary><div class="path-items">${local?`<div class="course-folder-tools"><button class="secondary" type="button" data-rename-folder="${E(name)}">修改目录名</button></div>`:''}${items.map(courseRow).join('')}</div></details>`).join('')||'<p class="muted">这个模块暂无课次。</p>'}</section>`;
-  if(local)wireCourseEditor(category);
+  const memoryKey='eric-review-browser-v2-'+state.user.id+'-'+category;
+  let memory={};try{memory=JSON.parse(localStorage.getItem(memoryKey)||'{}');}catch{}
+  let groupsOverride={};try{groupsOverride=JSON.parse(localStorage.getItem('eric-topic-groups-v1')||'{}');}catch{}
+  const grammarGroups={'名词':'词类与表达','人称代词':'词类与表达','冠词':'词类与表达','比较级与最高级':'词类与表达','连词':'句子与连接','特殊疑问句':'句子与连接','宾语从句':'句子与连接','地点介词':'时间与空间','时间介词':'时间与空间'};
+  const topics=[];
+  for(const [folder,items]of folders){
+    const units=new Map();
+    for(const c of items){
+      const match=['phonics','starter'].includes(category)?c.title.match(/(?:Unit\s*|\bU)(\d{1,2})\b/i):null;
+      const unit=match?'Unit '+Number(match[1]):'';
+      const final=category==='phonics'&&/整册检测|跨册综合|期末/.test(c.title);
+      const bucket=final?'期末检测':unit;
+      if(!units.has(bucket))units.set(bucket,[]);units.get(bucket).push(c);
+    }
+    for(const [unit,rows]of units){
+      const final=category==='phonics'&&unit==='期末检测';
+      const group=final?'自然拼读期末检测':groupsOverride[category+'|'+folder]||(category==='grammar'?(grammarGroups[folder]||'动词与时态'):folder);
+      const number=Number(unit.replace('Unit ',''));
+      const name=category==='starter'&&number>=1&&number<=11?unit+' '+starterUnitNames[number-1]:final?(folder.includes('专项')?'跨册综合检测':folder+' · 整册检测'):unit||folder;
+      topics.push({id:JSON.stringify([folder,unit]),folder,group,name,items:rows});
+    }
+  }
+  const groupRank=name=>{if(category!=='phonics')return 0;for(const [text,rank]of [['第二册',2],['第三册',3],['第四册',4],['第五册',5],['期末',6],['专项',7]])if(name.includes(text))return rank;return 99;};
+  topics.sort((a,b)=>groupRank(a.group)-groupRank(b.group)||(a.group===b.group?a.name.localeCompare(b.name,'zh-CN',{numeric:true}):0));
+  let selected=topics.find(t=>t.id===memory.topic)||topics[0],search='',filter='all';
+  const remember=()=>{try{localStorage.setItem(memoryKey,JSON.stringify({topic:selected?.id,open:memory.open||{}}));}catch{}};
+  function drawBrowser(focusSearch=false){
+    const matching=topics.filter(t=>!search||[t.group,t.folder,t.name,...t.items.map(c=>c.title)].some(x=>x.toLowerCase().includes(search)));
+    if(search&&selected&&!matching.includes(selected))selected=matching[0];
+    const visible=selected?selected.items.filter(c=>(!search||[selected.group,selected.folder,selected.name,c.title].some(x=>x.toLowerCase().includes(search)))&&(filter==='all'||(filter==='passed'?coursePassed(progress,c):filter==='unpassed'?!coursePassed(progress,c):courseFinished(progress,c)&&!coursePassed(progress,c)))):[];
+    const topicGroups=new Map();for(const t of matching){if(!topicGroups.has(t.group))topicGroups.set(t.group,[]);topicGroups.get(t.group).push(t);}
+    const passed=selected?selected.items.filter(c=>coursePassed(progress,c)).length:0;
+    host.innerHTML=`<div class="review-browser"><aside class="review-topic-sidebar"><label><span class="sr-only">搜索主题或课次</span><input id="review-topic-search" type="search" placeholder="搜索主题或课次" value="${E(search)}"></label><div class="review-topic-tree">${[...topicGroups].map(([name,ts],i)=>`<details class="review-topic-group" data-topic-group="${E(name)}" ${search||selected?.group===name||memory.open?.[name]?'open':''}><summary>${E(name)} <small>${ts.length} 个主题</small></summary>${ts.map(t=>`<button type="button" class="review-topic-link" data-topic-index="${topics.indexOf(t)}" ${selected===t?'aria-current="true"':''}><span class="topic-window-label">${topicProgressWindow(t.items,progress)}<span>${E(t.name)}</span></span><small>${t.items.length} 课次</small></button>`).join('')}</details>`).join('')||'<p class="muted">没有找到匹配的主题。</p>'}</div><p class="muted topic-memory-hint">${topics.length} 个主题 · 自动记住上次位置</p></aside>
+    <section class="panel course-list review-topic-main"><header class="review-topic-heading"><div><p class="eyebrow">${selected&&selected.group!==selected.name?E(selected.group):''}</p><h2>${selected?E(selected.name):'暂无主题'}</h2><p>${selected?selected.items.length:0} 个课次</p></div><div class="course-progress"><span>已达标 ${passed} / ${selected?selected.items.length:0}</span><progress max="${Math.max(1,selected?.items.length||0)}" value="${passed}" aria-label="当前主题达标课次"></progress></div></header>
+    <div class="review-topic-filters">${[['all','全部'],['unpassed','未达标'],['passed','已达标'],['retry','待巩固']].map(([v,label])=>`<button type="button" class="secondary" data-topic-filter="${v}" aria-pressed="${filter===v}">${label}</button>`).join('')}</div>
+    ${selected?(()=>{const resumed=selected.items.find(c=>!coursePassed(progress,c)&&localModule(progress,c,state.day).results.length>0&&localModule(progress,c,state.day).results.length<c.questions.length);return resumed?`<a class="resume-course" href="${path}/${resumed.id}/practice">继续上次练习：${E(resumed.title)}</a>`:'';})():''}
+    ${local?`<details class="review-course-management"><summary>课程管理</summary><div class="action-row"><label>导入课件 ZIP / JSON<input id="course-import" type="file" multiple accept=".zip,.json,application/zip,application/json"></label><button id="publish-courses" class="secondary">导出发布课程</button><button id="publish-course-media" class="secondary">导出课件媒体</button>${selected?`<button class="secondary" data-rename-folder="${E(selected.folder)}">修改目录名</button><button class="secondary" id="edit-topic-group">调整主题组</button>`:''}</div></details>`:''}
+    <div class="review-topic-courses">${visible.map(courseRow).join('')||'<p class="muted">没有符合条件的课次。</p>'}</div></section></div>`;
+    $('review-topic-search').oninput=e=>{const pos=e.target.selectionStart;search=e.target.value.trim().toLowerCase();drawBrowser(true);try{$('review-topic-search').setSelectionRange(pos,pos);}catch{}};
+    if(focusSearch)$('review-topic-search').focus();
+    host.querySelectorAll('[data-topic-index]').forEach(btn=>btn.onclick=()=>{selected=topics[Number(btn.dataset.topicIndex)];filter='all';remember();drawBrowser();});
+    host.querySelectorAll('[data-topic-filter]').forEach(btn=>btn.onclick=()=>{filter=btn.dataset.topicFilter;drawBrowser();});
+    host.querySelectorAll('[data-topic-group]').forEach(details=>details.ontoggle=()=>{memory.open={...memory.open,[details.dataset.topicGroup]:details.open};remember();});
+    if(local){wireCourseEditor(category);if($('edit-topic-group'))$('edit-topic-group').onclick=()=>{
+      popup(`<h2>调整主题组</h2><p>把「${E(selected.folder)}」放入哪个主题组？题目和原目录名称不变。</p><form id="topic-group-form" class="form"><label>主题组名称<input name="group" required maxlength="80" value="${E(selected.group)}"></label><button class="primary">保存</button></form>`);
+      $('topic-group-form').onsubmit=e=>{e.preventDefault();const name=new FormData(e.currentTarget).get('group').trim();if(!name)return;try{groupsOverride[category+'|'+selected.folder]=name;localStorage.setItem('eric-topic-groups-v1',JSON.stringify(groupsOverride));$('popup').close();refresh().catch(error=>notice(error.message));}catch(error){notice(error.message);}};
+    }}
+    remember();
+  }
+  drawBrowser();
 }
 function pronunciationFeedback(scores,prompt){
   if(!scores)return '';
@@ -162,7 +224,7 @@ function task(m,view,back){
     const passed=m.completed&&percentage>=90;
     const summary=m.task?.testOnly
       ? Number.isFinite(testScore)?`<p>讯飞朗读评分 <strong>${E(testScore)} / 100</strong></p>${pronunciationFeedback(m.results[0].scores,m.task.questions[0].prompt)}`:'<p>已完成跟读，本次没有评测分数。</p>'
-      : `<p>本轮 ${Math.round(percentage*10)/10} 分，答对 ${correct} / ${m.task?scored(m.task).length:0} 题。${passed?(m.results.at(-1)?.newFloor?'首次达标，楼层 +1。':'已完成，本次为复练。'):'达到 90 分才能显示已完成并建楼。'}${earned?'本次获得一次抽卡机会。':'首次完成课次且达到 90 分可获抽卡机会，每天最多 4 次。'}</p>`;
+      : `<p>本轮 ${Math.round(percentage*10)/10} 分，答对 ${correct} / ${m.task?scored(m.task).length:0} 题。${passed?(m.results.at(-1)?.newFloor?'首次达标，楼层 +1。':'已完成，本次为复练。'):'达到 90 分才能显示已完成并建楼。'}${earned?'本次获得一次抽卡机会。':'本课首次达到 90 分可获抽卡机会，每天最多 4 次。'}</p>`;
     view.innerHTML=title+`<section class="panel"><h2>${m.completed?(passed?'已完成':'本轮结束 · 请再练习'):'老师还没有发布今日练习'}</h2>
       ${m.completed?summary:''}
       <div class="action-row"><a class="secondary" href="${back}">返回课程复习</a>
@@ -175,14 +237,14 @@ function task(m,view,back){
     return;
   }
   const index=m.results.length;
-  const rewardNote=m.task.testOnly?'':'每个课次首次整套达到 90 分可建一层。'+(coursePassed(readProgress(),m.task)?'本课已完成，可继续复练。':'首次完成达标可获抽卡机会，每天最多 4 次。');
+  const rewardNote=m.task.testOnly?'':'每个课次首次整套达到 90 分可建一层。'+(coursePassed(readProgress(),m.task)?'本课已完成，可继续复练。':'本课首次达标可获抽卡机会，每天最多 4 次。');
   const question=m.task.questions[index];
   if(!question){$('view').textContent='任务进度已更新，请刷新。';return;}
   const shipSample=question.prompt.trim().toLowerCase()==='ship';
   const providedSample=question.audio&&validReadAudio(question.audio)?question.audio:'';
   const reading=question.kind==='read', checking=question.kind==='check', total=m.task.questions.length;
   view.innerHTML=`<div class="question-wrap">${title}<section class="panel">${rewardNote?'<p class="muted">'+rewardNote+'</p>':''}<p><a href="${back}">返回课次复习资料</a></p>
-    <p class="eyebrow" style="margin-top:15px">第 ${index+1} / ${total} 题 · ${question.bonus?'王者冲刺 · ':''}${reading?'朗读题':checking?(providedSample?'听音写单词':'作答后对照'):providedSample?'听音选择题':'选择题'}</p>
+    <div class="question-font-menu"><div class="question-font-tools" aria-label="题目字号"><button type="button" class="secondary" id="question-font-minus" aria-label="缩小题目字体">A−</button><output id="question-font-value"></output><button type="button" class="secondary" id="question-font-plus" aria-label="放大题目字体">A＋</button></div></div><p class="eyebrow" style="margin-top:15px">第 ${index+1} / ${total} 题 · ${question.bonus?'王者冲刺 · ':''}${reading?'朗读题':checking?(providedSample?'听音写单词':'作答后对照'):providedSample?'听音选择题':'选择题'}</p>
     <div class="steps" role="progressbar" aria-valuemin="0" aria-valuemax="${total}" aria-valuenow="${index}"><i style="width:${index/total*100}%"></i></div>
     <form id="answer-form"><fieldset><legend>${E(question.prompt)}</legend>
     ${reading?`<div id="read-box"><p class="muted">${state.speechReady?`提交后由讯飞评测，${READ_PASS_SCORE} 分及以上算对；不足 ${READ_PASS_SCORE} 分可重录或跳过。`:`当前可本机录音回听。评分服务接通后，${READ_PASS_SCORE} 分及以上算对，也可跳过本题。`}</p>
@@ -195,6 +257,10 @@ function task(m,view,back){
     <button id="submit-answer" type="submit" class="primary" style="margin-top:12px" ${reading?'disabled':checking?'':'hidden'}>${reading?(state.speechReady?'提交评测':'请在正式网页进行评测'):checking?'提交答案':''}</button>
     ${reading?'<button type="button" class="secondary" id="skip-reading">跳过本题</button>':''}
     <button id="next-question" type="button" class="primary" hidden></button></form></section></div>`;
+  let fontSize=22;try{fontSize=Math.max(16,Math.min(40,Number(localStorage.getItem('eric-question-font-size'))||22));}catch{}
+  const applyQuestionFont=()=>{view.querySelector('.question-wrap').style.setProperty('--question-font',fontSize+'px');$('question-font-value').textContent=fontSize+'px';$('question-font-minus').disabled=fontSize<=16;$('question-font-plus').disabled=fontSize>=40;};
+  const resizeQuestionFont=delta=>{fontSize=Math.max(16,Math.min(40,fontSize+delta));applyQuestionFont();try{localStorage.setItem('eric-question-font-size',String(fontSize));}catch{}};
+  $('question-font-minus').onclick=()=>resizeQuestionFont(-2);$('question-font-plus').onclick=()=>resizeQuestionFont(2);applyQuestionFont();
   if(!reading&&providedSample){
     const host=$('answer-form');
     const audio=new Audio(providedSample);
@@ -355,14 +421,14 @@ function showCardSide(c,back){
 }
 async function collection(){
   const view=$('view');
-  view.innerHTML=`<section class="collection-page"><header class="collection-banner"><h1>我的收藏</h1><span>抽卡与收藏分区</span><div class="collection-skyline" aria-hidden="true"></div></header><div id="collection-panel">正在读取卡片册…</div></section>`;
+  view.innerHTML=`<section class="collection-page"><header class="collection-banner"><h1>我的收藏</h1><div class="collection-skyline" aria-hidden="true"></div></header><div id="collection-panel">正在读取卡片册…</div></section>`;
   const host=$('collection-panel'),requestKey='draw-request-'+state.user.id;
   let busy=false,latest,rarity='all',order='number',ownership='all';
   function show(data){
     if(!host.isConnected)return;
     latest=data;const owned=data.cards.filter(c=>c.quantity).length;
     const rarities=[...new Set(data.cards.filter(c=>c.quantity).map(c=>c.rarity))];
-    host.innerHTML=`<div class="collection-layout"><section class="draw-station"><h2>▱ 抽卡站</h2><div class="draw-station-body"><div class="station-pack"><img src="./collection-assets/pack.png" alt="城市卡包"></div><div class="draw-balances"><span>可抽 <b>${data.available}</b> 次</span><span>今日剩余额度 <b>${data.remaining}</b> 次</span></div><button class="primary station-draw" id="draw" ${busy||!(data.available||sessionStorage.getItem(requestKey))?'disabled':''}>${busy?'正在开包…':'抽卡'}</button><section class="draw-rules"><h3>获得规则</h3><p>首次完成课次达90分、成功复习5个到期词，可获抽卡机会；每日最多4次。</p><p>允许重复获得，重复卡会累计张数。</p></section></div></section><section class="collection-album"><header><h2>▤ 收藏册</h2><p>已收集 <b>${owned}</b> / ${data.cards.length}</p></header><div class="album-filters"><label><span class="sr-only">获得状态</span><select id="album-ownership"><option value="all">全部卡片</option><option value="owned">已获得</option><option value="locked">未获得</option></select></label><label><span class="sr-only">稀有度</span><select id="album-rarity"><option value="all">全部稀有度</option>${rarities.map(r=>`<option value="${E(r)}">${E(r)}级</option>`).join('')}</select></label><label><span class="sr-only">排列方式</span><select id="album-order"><option value="number">按卡片编号</option><option value="quantity">按获得数量</option></select></label></div><div class="card-grid" id="album-grid"></div><p class="collection-total" aria-live="polite">共 ${data.total} 张</p></section></div>`;
+    host.innerHTML=`<div class="collection-layout"><section class="draw-station"><h2>▱ 抽卡站</h2><div class="draw-station-body"><div class="station-pack"><img src="./collection-assets/pack.png" alt="城市卡包"></div><div class="draw-balances"><span>可抽 <b>${data.available}</b> 次</span><span>今日剩余额度 <b>${data.remaining}</b> 次</span></div><button class="primary station-draw" id="draw" ${busy||!(data.available||sessionStorage.getItem(requestKey))?'disabled':''}>${busy?'正在开包…':'抽卡'}</button><section class="draw-rules"><h3>获得规则</h3><p>本课首次达90分、成功复习5个到期词，可获抽卡机会；每日最多4次。</p><p>允许重复获得，重复卡会累计张数。</p></section></div></section><section class="collection-album"><header><h2>▤ 收藏册</h2><p>已收集 <b>${owned}</b> / ${data.cards.length}</p></header><div class="album-filters"><label><span class="sr-only">获得状态</span><select id="album-ownership"><option value="all">全部卡片</option><option value="owned">已获得</option><option value="locked">未获得</option></select></label><label><span class="sr-only">稀有度</span><select id="album-rarity"><option value="all">全部稀有度</option>${rarities.map(r=>`<option value="${E(r)}">${E(r)}级</option>`).join('')}</select></label><label><span class="sr-only">排列方式</span><select id="album-order"><option value="number">按卡片编号</option><option value="quantity">按获得数量</option></select></label></div><div class="card-grid" id="album-grid"></div><p class="collection-total" aria-live="polite">共 ${data.total} 张</p></section></div>`;
     $('album-ownership').value=ownership;$('album-rarity').value=rarity;$('album-order').value=order;
     function renderCards(){
       const list=data.cards.map((c,i)=>({c,i})).filter(({c})=>(ownership==='all'||(ownership==='owned'?!!c.quantity:!c.quantity))&&(rarity==='all'||c.quantity&&c.rarity===rarity));
@@ -426,6 +492,7 @@ function cleanupRecorder(){
 function render(){
   cleanupRecorder();
   const [raw,key,id,mode]=location.hash.slice(1).split('/');
+  document.body.classList.toggle('focus-practice',!!state.user&&raw==='review'&&mode==='practice');
   if(!state.user||raw==='profiles'||raw==='profile'){profilePage(raw==='profile');return;}
   $('menu').hidden=false;
   $('profile-link').hidden=false;
