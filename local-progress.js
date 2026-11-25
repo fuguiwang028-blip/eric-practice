@@ -16,6 +16,7 @@ function validateProgress(state) {
   for (const [word,result] of Object.entries(state.words)) {
     if (!/^[a-z][a-z' -]{0,60}$/i.test(word) || !record(result) || !safeCount(result.stage) || result.stage>5 || !datePattern.test(result.due) || (result.reviewed!==null && !datePattern.test(result.reviewed))) throw Error('单词记录格式有误。');
   }
+  if(state.customWords!==undefined&&(!record(state.customWords)||Object.entries(state.customWords).some(([w,m])=>!/^[a-z][a-z' -]{0,60}$/i.test(w)||typeof m!=='string'||!m.trim()||m.length>300)))throw Error('自定义单词格式有误。');
   for (const [id,count] of Object.entries(state.cards)) {
     if (!CARDS.some(c=>c.id===id) || !safeCount(count)) throw Error('卡片记录格式有误。');
   }
@@ -48,6 +49,7 @@ function validateProgress(state) {
   }
   for(const [id,day] of Object.entries(state.drawDays||{}))if(!has(state.draws||{},id)||!datePattern.test(day))throw Error('抽卡日期格式有误。');
   if (cardTotal(state) > Object.keys(state.awards).length) throw Error('收藏和抽卡机会不一致。');
+  if(state.economy&&typeof validateEconomy==='function')validateEconomy(state.economy);
   return state;
 }
 const READ_PASS_SCORE=80;
@@ -56,6 +58,7 @@ function coursePercentage(results,total){return total?countCorrect(results)/tota
 function dailyAwards(progress,day){return Object.keys(progress.awards).filter(key=>key.startsWith(day+':')).length;}
 function grantAward(progress,day,id){
   const key=taskKey(day,id);
+  if(['phonics','grammar','starter'].includes(id)&&Object.keys(progress.awards).some(k=>{if(!k.startsWith(day+':course-'))return false;return courseList().some(c=>'course-'+c.id===k.slice(11)&&c.category===id);}))return false;
   if(progress.awards[key]||dailyAwards(progress,day)>=DAILY_DRAW_LIMIT)return false;
   progress.awards[key]=true;return true;
 }
@@ -120,7 +123,7 @@ function localModule(progress,course,day) {
 function localBook(progress,day){
   const words=Object.entries(progress.words).map(([word,info])=>({word,...info}));
   return {words,day,intervals,due:words.filter(w=>w.due<=day).length,
-    added:words.filter(w=>w.added===day).length,reviewed:words.filter(w=>w.reviewed===day).length,
+    added:words.filter(w=>w.added===day&&w.source!=='import').length,imported:words.filter(w=>w.added===day&&w.source==='import').length,reviewed:words.filter(w=>w.reviewed===day).length,
     climbed:!!progress.climbs[taskKey(day,'words')]};
 }
 function cardCatalog(progress) {
@@ -182,6 +185,7 @@ async function localAPI(path,body) {
   const [route]=path.split('?');
   const day=localDay(), progress=readProgress();
   switch(route) {
+    case 'equipment':return equipmentAction(progress,body||{action:'read'});
     case 'state':{
       const book=localBook(progress,day);
       const user=currentProfile();
@@ -247,6 +251,7 @@ async function localAPI(path,body) {
       const percentage=coursePercentage(results,course.questions.length);
       const passed=completed&&percentage>=90;
       result.passed=passed;
+      if(passed&&!course.testOnly&&typeof syncEconomy==='function'){syncEconomy(progress);progress.economy.taskDays[day]=true;}
       result.newFloor=passed&&!passedBefore&&!course.testOnly;
       result.percentage=percentage;
       if(completed&&!course.testOnly) {
@@ -258,7 +263,7 @@ async function localAPI(path,body) {
         }
         const old=progress.lessons[course.category]||{attempts:0,best:0};
         progress.lessons[course.category]={attempts:old.attempts+1,best:Math.max(old.best,correctCount)};
-        if(!passedBefore&&passed)earned=grantAward(progress,day,'course-'+course.id);
+        if(!passedBefore&&passed)earned=grantAward(progress,day,course.category);
       }
       if(earned)result.earned=true;
       persist(progress);
@@ -279,6 +284,14 @@ async function localAPI(path,body) {
       }
       persist(progress);
       return localBook(progress,day);
+    }
+    case 'word-import':{
+      if(!Array.isArray(body?.entries)||!body.entries.length||body.entries.length>1000)throw Error('请一次导入1至1000个单词。');
+      const dictionary=WORD_DATA[0],entries=body.entries.map(r=>({word:String(r.word||'').trim().toLowerCase(),meaning:String(r.meaning||'').trim()}));
+      for(const r of entries){if(!/^[a-z][a-z' -]{0,60}$/i.test(r.word))throw Error('单词格式有误：'+r.word);if(!r.meaning)r.meaning=dictionary[r.word]||'';if(!r.meaning||r.meaning.length>300)throw Error('请填写中文释义：'+r.word);}
+      let added=0;progress.customWords={...progress.customWords};
+      for(const {word,meaning}of entries){progress.customWords[word]=meaning;if(!has(progress.words,word)){progress.words[word]={stage:0,due:day,reviewed:null,added:day,source:'import'};added++;}}
+      persist(progress);return {added,existing:entries.length-added};
     }
     case 'words-review':{
       const {word,stage,known}=body;

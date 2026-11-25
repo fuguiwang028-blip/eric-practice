@@ -1,5 +1,5 @@
 const lexicalDetails=async()=>WORD_DATA[1];
-const lexicon=async()=>WORD_DATA[0];
+const lexicon=async()=>({...WORD_DATA[0],...readProgress().customWords});
 
 let wordRecording;
 function stopWordRecording(){
@@ -47,7 +47,7 @@ async function wordCanvas(){
   const site=$('blueprint-site'),stage=document.createElement('div');stage.className='blueprint-stage';while(site.firstChild)stage.append(site.firstChild);site.append(stage);
   const exit=document.createElement('button');exit.className='secondary blueprint-exit';exit.textContent='退出全屏';exit.onclick=()=>document.fullscreenElement?document.exitFullscreen():page.classList.remove('blueprint-expanded');site.append(exit);
   try{
-    const [words,initial,meta]=await Promise.all([lexicon(),api('words'),lexicalDetails()]);
+    const [words,initial,meta]=await Promise.all([Promise.resolve(WORD_DATA[0]),api('words'),lexicalDetails()]);
     if(!page.isConnected)return;
     const entries=Object.entries(words), buttons=new Map(), positions=new Map();
     let current=initial,records=new Map(),filter='all',activeWord=null,activeZone=null,selected=null;
@@ -135,17 +135,26 @@ async function wordbook(){
   try{
     const [data,words]=await Promise.all([api('words'),lexicon()]);
     if(!host.isConnected)return;
-    const queue=data.words.filter(w=>w.due<=data.day).sort((a,b)=>Number(b.added===data.day)-Number(a.added===data.day)).slice(0,20);
+    const dueWords=data.words.filter(w=>w.due<=data.day).sort((a,b)=>Number(b.added===data.day)-Number(a.added===data.day));
+    let queue=dueWords.slice(0,5);
     let index=0,correct=0;
     const variant=Math.floor(Math.random()*4);
     function home(){
-      host.innerHTML=`<div class="row"><h2>今日待复习 ${data.due} 个</h2><a class="secondary" href="#words">去点亮单词</a></div>
-          <p>已点亮 ${data.words.length} 个 · 今日新增 ${data.added}/5 · 今日复习 ${Math.min(data.reviewed,5)}/5 · ${data.climbed?'今日已登楼':'成功复习 5 词可建一层'}</p>
-          <h3>艾宾浩斯复习计划</h3><div class="curve"><svg viewBox="0 0 540 105" role="img" aria-label="记忆随时间减弱，复习后回升示意"><path d="M5 20 Q20 70 74 76 L80 20 Q110 63 166 72 L172 20 Q215 53 260 67 L266 20 Q305 48 350 60 L356 20 Q404 46 440 54 L446 20 Q485 33 535 49" fill="none" stroke="currentColor" stroke-width="3"/></svg></div>
-          <p class="muted">答对后逐步延长复习间隔（${data.intervals.join('、')} 天）。答错或选不认识的词会留在今天的复习列表。</p>
-          <button class="primary" id="start-review" ${queue.length?'':'disabled'}>开始复习（本组 ${queue.length} 词）</button>
-          <details><summary>查看生词及下次复习日期</summary><ul class="wordbook-list">${data.words.map(w=>`<li><b>${E(w.word)}</b>　${E(words[w.word])} <small>${E(w.due)}</small></li>`).join('')}</ul></details>`;
-      $('start-review').onclick=question;
+      host.innerHTML=`<section class="wordbook-today"><div><p class="eyebrow">今日待复习</p><h2>${data.due}<small> 词</small></h2><p>已收录 ${data.words.length} 词 · 今日新增 ${data.added+(data.imported||0)} 词</p><div class="action-row"><button class="primary" id="start-review" ${queue.length?'':'disabled'}>${queue.length?'先复习 '+queue.length+' 词':'今天的到期词已复习完'}</button><button class="secondary" id="import-parent-words">批量导入单词</button><a class="secondary" href="#words">从1000词添加</a></div></div><div class="wordbook-brick-task"><h3>今日复习 ${Math.min(data.reviewed,5)}/5</h3><div class="review-five-bricks" role="img" aria-label="今日成功复习 ${Math.min(data.reviewed,5)} 个不同单词，目标5个">${Array.from({length:5},(_,i)=>`<i class="${i<Math.min(data.reviewed,5)?'lit':''}"></i>`).join('')}</div><p>${data.climbed?'今日已建楼，继续复习也能巩固单词。':'成功复习5个不同单词，可建一层。'}</p></div></section>
+      <section class="wordbook-browser"><div class="row"><div class="action-row"><button class="secondary" id="wordbook-due" aria-pressed="true">待复习 ${data.due}</button><button class="secondary" id="wordbook-all" aria-pressed="false">全部单词 ${data.words.length}</button></div><label><span class="sr-only">搜索生词</span><input id="wordbook-search" type="search" placeholder="搜索单词或中文释义"></label></div><div class="wordbook-table-wrap"><table class="wordbook-table"><thead><tr><th>单词</th><th>释义</th><th>发音</th><th>状态</th><th>下次复习</th></tr></thead><tbody id="wordbook-rows"></tbody></table></div></section>
+      <details class="wordbook-rules"><summary>复习规则</summary><p>答对后按 ${data.intervals.join('、')} 天逐步安排下次复习；答错或选择“不认识”，会继续留在待复习列表。具体日期以每次作答后的结果为准。</p><p>这些间隔是默认安排，不代表到了某一天就永久记住。今日建楼按成功复习的不同单词计数，同一个词不会重复点亮砖块。</p></details>`;
+      let filter='due';
+      const relativeDue=day=>{const n=Math.round((Date.parse(day+'T00:00:00Z')-Date.parse(data.day+'T00:00:00Z'))/86400000);return n<=0?'今天':n===1?'明天':n+'天后';};
+      function rows(){
+        const q=$('wordbook-search').value.trim().toLowerCase();
+        const list=data.words.filter(w=>(filter==='all'||w.due<=data.day)&&(!q||w.word.toLowerCase().includes(q)||(words[w.word]||'').includes(q)));
+        $('wordbook-rows').innerHTML=list.map(w=>`<tr><th scope="row">${E(w.word)}</th><td>${E(words[w.word]||'')}</td><td>${recordedWords.has(w.word)?`<button class="plain wordbook-speak" data-word="${E(w.word)}" aria-label="播放 ${E(w.word)} 真人发音"><img src="./word-assets/speaker-icon.svg" alt=""></button>`:'<span class="muted">待补录</span>'}</td><td><span class="wordbook-status">${w.due<=data.day?'待复习':w.reviewed===data.day?'今日已复习':'未到期'}</span></td><td title="${E(w.due)}">${relativeDue(w.due)}</td></tr>`).join('')||'<tr><td colspan="5">暂无符合条件的单词。</td></tr>';
+        host.querySelectorAll('.wordbook-speak').forEach(b=>b.onclick=()=>pronounce(b.dataset.word));
+      }
+      $('wordbook-search').oninput=rows;
+      for(const value of ['due','all'])$('wordbook-'+value).onclick=()=>{filter=value;for(const v of ['due','all'])$('wordbook-'+v).setAttribute('aria-pressed',String(v===value));rows();};
+      $('import-parent-words').onclick=parentWordImport;
+      $('start-review').onclick=question;rows();
     }
     function question(){
       if(index>=queue.length){
@@ -189,3 +198,22 @@ async function wordbook(){
   }catch(error){if(host.isConnected)host.textContent=error.message;}
 }
 
+
+function parseParentWords(text){
+  const seen=new Set();return text.replace(/^\uFEFF/,'').split(/\r?\n/).filter(l=>l.trim()).map((line,i)=>{
+    const parts=line.trim().split(/\t|[,，]|[;；]/),word=parts.shift().trim().replace(/^"|"$/g,'').toLowerCase(),meaning=parts.join('，').trim().replace(/^"|"$/g,'');
+    if(i===0&&/^(word|单词|英文)$/i.test(word))return null;
+    if(!/^[a-z][a-z' -]{0,60}$/i.test(word))throw Error('第'+(i+1)+'行单词格式有误，请使用「英文,中文释义」。');
+    if(seen.has(word))return null;seen.add(word);
+    const value=meaning||WORD_DATA[0][word];if(!value)throw Error('请为 '+word+' 填写中文释义。');if(value.length>300)throw Error(word+' 的释义过长。');return {word,meaning:value};
+  }).filter(Boolean);
+}
+function parentWordImport(){
+  popup(`<h2>批量导入生词</h2><p>家长可粘贴当天授课的新单词，每行一个：英文,中文释义。支持1000词以外的新词。</p><label>导入 TXT / CSV / TSV<input id="parent-words-file" type="file" accept=".txt,.csv,.tsv,text/plain,text/csv"></label><label>单词清单<textarea id="parent-words-text" rows="10" placeholder="apple,苹果&#10;classroom,教室"></textarea></label><p>重复单词保留原有复习进度；释义会按本次导入更新。数据保存在当前学生、当前浏览器，请定期备份。</p><button class="secondary" id="preview-parent-words">预览导入</button><div id="parent-words-preview" role="status"></div><button class="primary" id="save-parent-words" disabled>确认导入</button>`);
+  let entries=[];
+  const invalidate=()=>{entries=[];$('save-parent-words').disabled=true;$('parent-words-preview').textContent='';};
+  $('parent-words-text').oninput=invalidate;
+  $('parent-words-file').onchange=async e=>{const f=e.target.files[0];if(!f)return;if(f.size>1024*1024){notice('文件请小于1MB。');return;}$('parent-words-text').value=await f.text();invalidate();};
+  $('preview-parent-words').onclick=()=>{try{entries=parseParentWords($('parent-words-text').value);if(!entries.length||entries.length>1000)throw Error('请一次导入1至1000个单词。');$('parent-words-preview').innerHTML=`<p>共 ${entries.length} 个单词：</p><div class="import-word-preview">${entries.map(r=>`<p><b>${E(r.word)}</b> · ${E(r.meaning)}</p>`).join('')}</div>`;$('save-parent-words').disabled=false;}catch(e){invalidate();$('parent-words-preview').textContent=e.message;}};
+  $('save-parent-words').onclick=async()=>{const b=$('save-parent-words');b.disabled=true;try{const r=await api('word-import',{entries});$('popup').close();await wordbook();notice(`已新增 ${r.added} 个词，${r.existing} 个已有词保留复习进度。`);}catch(e){b.disabled=false;notice(e.message);}};
+}

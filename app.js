@@ -11,7 +11,7 @@ const api = localAPI;
 function notice(message=''){$('notice').textContent=message;$('notice').hidden=!message;}
 const doneCount=()=>state.modules.filter(m=>m.climbed).length;
 function moduleLinks(active){
-  return state.modules.map(m=>`<a class="path-item" href="#review/${m.key}" ${m.key===active?'aria-current="page"':''}><span>${m.label}</span><small>${m.climbed?'今日已登楼':''}</small></a>`).join('');
+  return state.modules.map(m=>`<a class="path-item" href="#review/${m.key}" ${m.key===active?'aria-current="page"':''}><span>${m.label}</span><small>${m.climbed?'今日已建造':''}</small></a>`).join('');
 }
 function sectionHeader(title,label=''){
   return `<p class="eyebrow">${E(label)}</p><h1 class="view-title">${title}</h1>`;
@@ -160,6 +160,13 @@ async function review(key,id,mode){
   topics.sort((a,b)=>groupRank(a.group)-groupRank(b.group)||(a.group===b.group?a.name.localeCompare(b.name,'zh-CN',{numeric:true}):0));
   let selected=topics.find(t=>t.id===memory.topic)||topics[0],search='',filter='all';
   const remember=()=>{try{localStorage.setItem(memoryKey,JSON.stringify({topic:selected?.id,open:memory.open||{}}));}catch{}};
+  function topicChests(){
+    if(!selected||typeof equipmentModel!=='function')return '';
+    const unit=selected.items[0]?.title.match(/(?:Unit\s*|\bU)(\d{1,2})\b/i);
+    const key=category==='grammar'?'grammar|'+(selected.folder||'未分组'):unit?'unit|'+selected.folder+'|'+Number(unit[1]):'';
+    const m=equipmentModel(progress).milestones.find(m=>m.key===key);if(!m)return '';
+    return `<div class="topic-chests">${['half','full'].map((tier,i)=>{const claimed=m[tier+'Claimed'],ready=m[tier];return `<button class="topic-chest ${ready?'ready':''}" data-milestone-key="${E(key)}" data-milestone-tier="${tier}" style="left:${i?100:50}%" ${claimed||!ready?'disabled':''} title="${i?'全部达标':'达标过半'} · ${claimed?'已领取':ready?'点击领取':'尚未达成'}" aria-label="${i?'全部达标40金币':'达标过半20金币'} · ${claimed?'已开启':ready?'可领取':'未开启'}"><img src="./equipment-assets/rent-${claimed?'open':'closed'}.png" alt="${claimed?'已开启宝箱':'未开启宝箱'}"><small>${claimed?'已领取':(i?40:20)+'金币'}</small></button>`;}).join('')}</div>`;
+  }
   function drawBrowser(focusSearch=false){
     const matching=topics.filter(t=>!search||[t.group,t.folder,t.name,...t.items.map(c=>c.title)].some(x=>x.toLowerCase().includes(search)));
     if(search&&selected&&!matching.includes(selected))selected=matching[0];
@@ -167,11 +174,12 @@ async function review(key,id,mode){
     const topicGroups=new Map();for(const t of matching){if(!topicGroups.has(t.group))topicGroups.set(t.group,[]);topicGroups.get(t.group).push(t);}
     const passed=selected?selected.items.filter(c=>coursePassed(progress,c)).length:0;
     host.innerHTML=`<div class="review-browser"><aside class="review-topic-sidebar"><label><span class="sr-only">搜索主题或课次</span><input id="review-topic-search" type="search" placeholder="搜索主题或课次" value="${E(search)}"></label><div class="review-topic-tree">${[...topicGroups].map(([name,ts],i)=>`<details class="review-topic-group" data-topic-group="${E(name)}" ${search||selected?.group===name||memory.open?.[name]?'open':''}><summary>${E(name)} <small>${ts.length} 个主题</small></summary>${ts.map(t=>`<button type="button" class="review-topic-link" data-topic-index="${topics.indexOf(t)}" ${selected===t?'aria-current="true"':''}><span class="topic-window-label">${topicProgressWindow(t.items,progress)}<span>${E(t.name)}</span></span><small>${t.items.length} 课次</small></button>`).join('')}</details>`).join('')||'<p class="muted">没有找到匹配的主题。</p>'}</div><p class="muted topic-memory-hint">${topics.length} 个主题 · 自动记住上次位置</p></aside>
-    <section class="panel course-list review-topic-main"><header class="review-topic-heading"><div><p class="eyebrow">${selected&&selected.group!==selected.name?E(selected.group):''}</p><h2>${selected?E(selected.name):'暂无主题'}</h2><p>${selected?selected.items.length:0} 个课次</p></div><div class="course-progress"><span>已达标 ${passed} / ${selected?selected.items.length:0}</span><progress max="${Math.max(1,selected?.items.length||0)}" value="${passed}" aria-label="当前主题达标课次"></progress></div></header>
+    <section class="panel course-list review-topic-main"><header class="review-topic-heading"><div><p class="eyebrow">${selected&&selected.group!==selected.name?E(selected.group):''}</p><h2>${selected?E(selected.name):'暂无主题'}</h2><p>${selected?selected.items.length:0} 个课次</p></div><div class="course-progress"><span>已达标 ${passed} / ${selected?selected.items.length:0}</span><progress max="${Math.max(1,selected?.items.length||0)}" value="${passed}" aria-label="当前主题达标课次"></progress>${topicChests()}</div></header>
     <div class="review-topic-filters">${[['all','全部'],['unpassed','未达标'],['passed','已达标'],['retry','待巩固']].map(([v,label])=>`<button type="button" class="secondary" data-topic-filter="${v}" aria-pressed="${filter===v}">${label}</button>`).join('')}</div>
     ${selected?(()=>{const resumed=selected.items.find(c=>!coursePassed(progress,c)&&localModule(progress,c,state.day).results.length>0&&localModule(progress,c,state.day).results.length<c.questions.length);return resumed?`<a class="resume-course" href="${path}/${resumed.id}/practice">继续上次练习：${E(resumed.title)}</a>`:'';})():''}
     ${local?`<details class="review-course-management"><summary>课程管理</summary><div class="action-row"><label>导入课件 ZIP / JSON<input id="course-import" type="file" multiple accept=".zip,.json,application/zip,application/json"></label><button id="publish-courses" class="secondary">导出发布课程</button><button id="publish-course-media" class="secondary">导出课件媒体</button>${selected?`<button class="secondary" data-rename-folder="${E(selected.folder)}">修改目录名</button><button class="secondary" id="edit-topic-group">调整主题组</button>`:''}</div></details>`:''}
     <div class="review-topic-courses">${visible.map(courseRow).join('')||'<p class="muted">没有符合条件的课次。</p>'}</div></section></div>`;
+    host.querySelectorAll('[data-milestone-key]').forEach(b=>b.onclick=async()=>{b.disabled=true;try{await api('equipment',{action:'milestone',key:b.dataset.milestoneKey,tier:b.dataset.milestoneTier});Object.assign(progress,readProgress());drawBrowser();}catch(e){notice(e.message);b.disabled=false;}});
     $('review-topic-search').oninput=e=>{const pos=e.target.selectionStart;search=e.target.value.trim().toLowerCase();drawBrowser(true);try{$('review-topic-search').setSelectionRange(pos,pos);}catch{}};
     if(focusSearch)$('review-topic-search').focus();
     host.querySelectorAll('[data-topic-index]').forEach(btn=>btn.onclick=()=>{selected=topics[Number(btn.dataset.topicIndex)];filter='all';remember();drawBrowser();});
@@ -224,7 +232,7 @@ function task(m,view,back){
     const passed=m.completed&&percentage>=90;
     const summary=m.task?.testOnly
       ? Number.isFinite(testScore)?`<p>讯飞朗读评分 <strong>${E(testScore)} / 100</strong></p>${pronunciationFeedback(m.results[0].scores,m.task.questions[0].prompt)}`:'<p>已完成跟读，本次没有评测分数。</p>'
-      : `<p>本轮 ${Math.round(percentage*10)/10} 分，答对 ${correct} / ${m.task?scored(m.task).length:0} 题。${passed?(m.results.at(-1)?.newFloor?'首次达标，楼层 +1。':'已完成，本次为复练。'):'达到 90 分才能显示已完成并建楼。'}${earned?'本次获得一次抽卡机会。':'本课首次达到 90 分可获抽卡机会，每天最多 4 次。'}</p>`;
+      : `<p>本轮 ${Math.round(percentage*10)/10} 分，答对 ${correct} / ${m.task?scored(m.task).length:0} 题。${passed?(m.results.at(-1)?.newFloor?'首次达标，楼层 +1。':'已完成，本次为复练。'):'达到 90 分才能显示已完成并建楼。'}${earned?'本次获得一次抽卡机会。':'每条路线每天首次建造可获一次抽卡机会，四条路线共最多4次。'}</p>`;
     view.innerHTML=title+`<section class="panel"><h2>${m.completed?(passed?'已完成':'本轮结束 · 请再练习'):'老师还没有发布今日练习'}</h2>
       ${m.completed?summary:''}
       <div class="action-row"><a class="secondary" href="${back}">返回课程复习</a>
@@ -237,7 +245,7 @@ function task(m,view,back){
     return;
   }
   const index=m.results.length;
-  const rewardNote=m.task.testOnly?'':'每个课次首次整套达到 90 分可建一层。'+(coursePassed(readProgress(),m.task)?'本课已完成，可继续复练。':'本课首次达标可获抽卡机会，每天最多 4 次。');
+  const rewardNote=m.task.testOnly?'':'每个课次首次整套达到 90 分可建一层。'+(coursePassed(readProgress(),m.task)?'本课已完成，可继续复练。':'每条路线每天首次建造可获一次抽卡机会。');
   const question=m.task.questions[index];
   if(!question){$('view').textContent='任务进度已更新，请刷新。';return;}
   const shipSample=question.prompt.trim().toLowerCase()==='ship';
@@ -428,7 +436,7 @@ async function collection(){
     if(!host.isConnected)return;
     latest=data;const owned=data.cards.filter(c=>c.quantity).length;
     const rarities=[...new Set(data.cards.filter(c=>c.quantity).map(c=>c.rarity))];
-    host.innerHTML=`<div class="collection-layout"><section class="draw-station"><h2>▱ 抽卡站</h2><div class="draw-station-body"><div class="station-pack"><img src="./collection-assets/pack.png" alt="城市卡包"></div><div class="draw-balances"><span>可抽 <b>${data.available}</b> 次</span><span>今日剩余额度 <b>${data.remaining}</b> 次</span></div><button class="primary station-draw" id="draw" ${busy||!(data.available||sessionStorage.getItem(requestKey))?'disabled':''}>${busy?'正在开包…':'抽卡'}</button><section class="draw-rules"><h3>获得规则</h3><p>本课首次达90分、成功复习5个到期词，可获抽卡机会；每日最多4次。</p><p>允许重复获得，重复卡会累计张数。</p></section></div></section><section class="collection-album"><header><h2>▤ 收藏册</h2><p>已收集 <b>${owned}</b> / ${data.cards.length}</p></header><div class="album-filters"><label><span class="sr-only">获得状态</span><select id="album-ownership"><option value="all">全部卡片</option><option value="owned">已获得</option><option value="locked">未获得</option></select></label><label><span class="sr-only">稀有度</span><select id="album-rarity"><option value="all">全部稀有度</option>${rarities.map(r=>`<option value="${E(r)}">${E(r)}级</option>`).join('')}</select></label><label><span class="sr-only">排列方式</span><select id="album-order"><option value="number">按卡片编号</option><option value="quantity">按获得数量</option></select></label></div><div class="card-grid" id="album-grid"></div><p class="collection-total" aria-live="polite">共 ${data.total} 张</p></section></div>`;
+    host.innerHTML=`<div class="collection-layout"><section class="draw-station"><h2>▱ 抽卡站</h2><div class="draw-station-body"><div class="station-pack"><img src="./collection-assets/pack.png" alt="城市卡包"></div><div class="draw-balances"><span>可抽 <b>${data.available}</b> 次</span><span>今日剩余额度 <b>${data.remaining}</b> 次</span></div><button class="primary station-draw" id="draw" ${busy||!(data.available||sessionStorage.getItem(requestKey))?'disabled':''}>${busy?'正在开包…':'抽卡'}</button><section class="draw-rules"><h3>获得规则</h3><p>自然拼读、语法初阶、语言运用：新课首次达90分建造时，每条路线每天各获一次机会；生词本成功复习5个到期词每天一次，共最多4次。</p><p>允许重复获得，重复卡会累计张数。</p></section></div></section><section class="collection-album"><header><h2>▤ 收藏册</h2><p>已收集 <b>${owned}</b> / ${data.cards.length}</p></header><div class="album-filters"><label><span class="sr-only">获得状态</span><select id="album-ownership"><option value="all">全部卡片</option><option value="owned">已获得</option><option value="locked">未获得</option></select></label><label><span class="sr-only">稀有度</span><select id="album-rarity"><option value="all">全部稀有度</option>${rarities.map(r=>`<option value="${E(r)}">${E(r)}级</option>`).join('')}</select></label><label><span class="sr-only">排列方式</span><select id="album-order"><option value="number">按卡片编号</option><option value="quantity">按获得数量</option></select></label></div><div class="card-grid" id="album-grid"></div><p class="collection-total" aria-live="polite">共 ${data.total} 张</p></section></div>`;
     $('album-ownership').value=ownership;$('album-rarity').value=rarity;$('album-order').value=order;
     function renderCards(){
       const list=data.cards.map((c,i)=>({c,i})).filter(({c})=>(ownership==='all'||(ownership==='owned'?!!c.quantity:!c.quantity))&&(rarity==='all'||c.quantity&&c.rarity===rarity));
@@ -480,6 +488,7 @@ function backup() {
   $('restore').onclick=()=>{if(pending && saveProgress(pending)){backup();notify('进度已恢复。');}};
 }
 function cleanupRecorder(){
+  if(typeof disposeEquipmentAvatar==='function')disposeEquipmentAvatar();
   releaseReviewImage?.();
   releaseReviewImage=null;
   releaseCityScene?.();
@@ -503,8 +512,9 @@ function render(){
     if(a.hash==='#'+nav)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   }
   const tower=cityTower;
-  const pages={tower,review,collection,words:wordCanvas,wordbook,backup};
+  const pages={tower,review,collection,words:wordCanvas,wordbook,equipment:equipmentPage,backup};
   (Object.hasOwn(pages,page)?pages[page]:tower)(key,id,mode);
+  if(page==='tower')renderRentWidget();
 }
 async function refresh(){
   if(typeof initCourseDraftStore==='function')await initCourseDraftStore();

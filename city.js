@@ -174,7 +174,7 @@ function cityTower(){
         ${location.protocol==='file:'?'<section class="panel city-phrase-editor"><h2>住户流行语</h2><p class="muted">每次回家随机一句，气泡显示 3 秒。</p><button type="button" class="secondary" id="city-edit-phrases">编辑 / 导出流行语库</button></section>':''}
         <section class="panel"><h2>今日路线</h2><p class="muted">今日练习建楼 ${state.todayFloors} 层 · 每课首次达 90 分建一层</p>
           <div class="path-items daily-route">${moduleLinks()}
-            <a class="path-item" href="#wordbook"><span>我的生词本</span><small>${state.wordReview.climbed?'今日已登楼':'今日复习 '+state.wordReview.reviewed+'/5'}</small></a>
+            <a class="path-item" href="#wordbook"><span>我的生词本</span><small>${state.wordReview.climbed?'今日已建造':'今日复习 '+state.wordReview.reviewed+'/5'}</small></a>
             <a class="secondary" href="#collection">去抽卡</a>
           </div>
         </section>
