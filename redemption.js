@@ -40,6 +40,7 @@ function redemptionTransaction(db,digest,profileId,reward,phase){
         // The read/write IDB transaction serializes the synchronous wallet update across tabs.
         p.redemptions={...p.redemptions,[digest]:{type:reward.type,amount:reward.amount,day:localDay()}};
         if(reward.type==='coins'){syncEconomy(p);economyTransaction(p,reward.amount,'兑换码奖励');}
+        else p.awards[taskKey(localDay(),'course-redeem-'+digest)]=true;
         validateProgress(p);persist(p);
         store.put({...previous,status:'applied'});
         outcome={...reward,balance:p.economy?.balance||0,banked:credits(p)};

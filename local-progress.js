@@ -6,7 +6,7 @@ const record = value => value !== null && typeof value === 'object' && !Array.is
 const safeCount = n => Number.isSafeInteger(n) && n >= 0 && n <= 1000000;
 const sum = values => values.reduce((a,b)=>a+b,0);
 const cardTotal = state => sum(Object.values(state.cards));
-const redeemedDrawCredits = state => Object.values(state.redemptions||{}).filter(r=>r.type==='draw').reduce((n,r)=>n+r.amount,0);
+const redeemedDrawCredits = state => Object.entries(state.redemptions||{}).filter(([digest,r])=>r.type==='draw'&&!state.awards[r.day+':course-redeem-'+digest]).reduce((n,[,r])=>n+r.amount,0);
 const credits = state => Math.max(0, Object.keys(state.awards).length+redeemedDrawCredits(state)-cardTotal(state));
 const has = (obj,key) => Object.hasOwn(obj,key);
 function validateProgress(state) {
@@ -57,7 +57,7 @@ function validateProgress(state) {
 const READ_PASS_SCORE=80;
 const DAILY_DRAW_LIMIT=4;
 function coursePercentage(results,total){return total?countCorrect(results)/total*100:0;}
-function dailyAwards(progress,day){return Object.keys(progress.awards).filter(key=>key.startsWith(day+':')).length;}
+function dailyAwards(progress,day){return Object.keys(progress.awards).filter(key=>key.startsWith(day+':')&&!key.startsWith(day+':course-redeem-')).length;}
 function grantAward(progress,day,id){
   const key=taskKey(day,id);
   if(['phonics','grammar','starter'].includes(id)&&Object.keys(progress.awards).some(k=>{if(!k.startsWith(day+':course-'))return false;return courseList().some(c=>'course-'+c.id===k.slice(11)&&c.category===id);}))return false;
