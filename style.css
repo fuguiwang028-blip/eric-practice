@@ -425,3 +425,6 @@ dialog:has(.pack-opening){width:min(620px,calc(100% - 24px));overflow-x:hidden}.
 
 /* Theme rewards and parent word imports */
 .course-progress{position:relative;padding-bottom:66px;padding-right:32px}.topic-chests{position:absolute;left:0;right:32px;bottom:4px;height:60px}.topic-chest{position:absolute;transform:translateX(-50%);display:grid;justify-items:center;background:transparent;border:0;padding:0;min-width:54px;opacity:.65}.topic-chest.ready{opacity:1}.topic-chest img{width:42px;height:38px;object-fit:contain}.topic-chest small{font-size:11px;white-space:nowrap}.topic-chest:disabled{cursor:default}.import-word-preview{max-height:240px;overflow:auto}#parent-words-text{display:block;width:100%;box-sizing:border-box}
+
+/* About page and local gift-code rewards */
+.about-page-host{margin:0 -20px}.redeem-panel{max-width:760px;margin:auto}.redeem-balances{display:flex;flex-wrap:wrap;gap:18px;padding:18px;background:#eaf1e4;border-radius:12px;margin-bottom:25px}.redeem-balances b{font-size:24px}.redeem-panel input{font-size:25px;letter-spacing:5px;max-width:360px}.redeem-success{color:#176449;font-weight:700}.redeem-error{color:#a64030}.redeem-panel .muted{font-size:14px;line-height:1.9}.redeem-panel .form{gap:15px}@media(max-width:640px){.about-page-host{margin:0 -12px}.redeem-panel input{max-width:100%;width:100%;font-size:22px}}

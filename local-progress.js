@@ -6,7 +6,8 @@ const record = value => value !== null && typeof value === 'object' && !Array.is
 const safeCount = n => Number.isSafeInteger(n) && n >= 0 && n <= 1000000;
 const sum = values => values.reduce((a,b)=>a+b,0);
 const cardTotal = state => sum(Object.values(state.cards));
-const credits = state => Math.max(0, Object.keys(state.awards).length-cardTotal(state));
+const redeemedDrawCredits = state => Object.values(state.redemptions||{}).filter(r=>r.type==='draw').reduce((n,r)=>n+r.amount,0);
+const credits = state => Math.max(0, Object.keys(state.awards).length+redeemedDrawCredits(state)-cardTotal(state));
 const has = (obj,key) => Object.hasOwn(obj,key);
 function validateProgress(state) {
   if (!record(state) || state.version !== 1 || !['lessons','words','awards','cards'].every(k=>record(state[k]))) throw Error('这不是有效的练习进度文件。');
@@ -48,7 +49,8 @@ function validateProgress(state) {
     if(rest.length||!datePattern.test(day)||!has(LESSONS,category)||!safeCount(count))throw Error('建楼记录格式有误。');
   }
   for(const [id,day] of Object.entries(state.drawDays||{}))if(!has(state.draws||{},id)||!datePattern.test(day))throw Error('抽卡日期格式有误。');
-  if (cardTotal(state) > Object.keys(state.awards).length) throw Error('收藏和抽卡机会不一致。');
+  if(state.redemptions!==undefined&&(!record(state.redemptions)||Object.entries(state.redemptions).some(([digest,r])=>!/^([a-f0-9]{64})$/.test(digest)||!record(r)||!datePattern.test(r.day)||!((r.type==='coins'&&r.amount===30)||(r.type==='draw'&&r.amount===1)))))throw Error('兑换记录格式有误。');
+  if (cardTotal(state) > Object.keys(state.awards).length+redeemedDrawCredits(state)) throw Error('收藏和抽卡机会不一致。');
   if(state.economy&&typeof validateEconomy==='function')validateEconomy(state.economy);
   return state;
 }

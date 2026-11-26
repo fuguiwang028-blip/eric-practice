@@ -436,7 +436,7 @@ async function collection(){
     if(!host.isConnected)return;
     latest=data;const owned=data.cards.filter(c=>c.quantity).length;
     const rarities=[...new Set(data.cards.filter(c=>c.quantity).map(c=>c.rarity))];
-    host.innerHTML=`<div class="collection-layout"><section class="draw-station"><h2>▱ 抽卡站</h2><div class="draw-station-body"><div class="station-pack"><img src="./collection-assets/pack.png" alt="城市卡包"></div><div class="draw-balances"><span>可抽 <b>${data.available}</b> 次</span><span>今日剩余额度 <b>${data.remaining}</b> 次</span></div><button class="primary station-draw" id="draw" ${busy||!(data.available||sessionStorage.getItem(requestKey))?'disabled':''}>${busy?'正在开包…':'抽卡'}</button><section class="draw-rules"><h3>获得规则</h3><p>自然拼读、语法初阶、语言运用：新课首次达90分建造时，每条路线每天各获一次机会；生词本成功复习5个到期词每天一次，共最多4次。</p><p>允许重复获得，重复卡会累计张数。</p></section></div></section><section class="collection-album"><header><h2>▤ 收藏册</h2><p>已收集 <b>${owned}</b> / ${data.cards.length}</p></header><div class="album-filters"><label><span class="sr-only">获得状态</span><select id="album-ownership"><option value="all">全部卡片</option><option value="owned">已获得</option><option value="locked">未获得</option></select></label><label><span class="sr-only">稀有度</span><select id="album-rarity"><option value="all">全部稀有度</option>${rarities.map(r=>`<option value="${E(r)}">${E(r)}级</option>`).join('')}</select></label><label><span class="sr-only">排列方式</span><select id="album-order"><option value="number">按卡片编号</option><option value="quantity">按获得数量</option></select></label></div><div class="card-grid" id="album-grid"></div><p class="collection-total" aria-live="polite">共 ${data.total} 张</p></section></div>`;
+    host.innerHTML=`<div class="collection-layout"><section class="draw-station"><h2>▱ 抽卡站</h2><div class="draw-station-body"><div class="station-pack"><img src="./collection-assets/pack.png" alt="城市卡包"></div><div class="draw-balances"><span>可抽 <b>${data.available}</b> 次</span><span>今日剩余额度 <b>${data.remaining}</b> 次</span></div><button class="primary station-draw" id="draw" ${busy||!(data.available||sessionStorage.getItem(requestKey))?'disabled':''}>${busy?'正在开包…':'抽卡'}</button><section class="draw-rules"><h3>获得规则</h3><p><a class="secondary" href="#redeem">兑换老师赠送的奖励</a></p><p>自然拼读、语法初阶、语言运用：新课首次达90分建造时，每条路线每天各获一次机会；生词本成功复习5个到期词每天一次，共最多4次。</p><p>允许重复获得，重复卡会累计张数。</p></section></div></section><section class="collection-album"><header><h2>▤ 收藏册</h2><p>已收集 <b>${owned}</b> / ${data.cards.length}</p></header><div class="album-filters"><label><span class="sr-only">获得状态</span><select id="album-ownership"><option value="all">全部卡片</option><option value="owned">已获得</option><option value="locked">未获得</option></select></label><label><span class="sr-only">稀有度</span><select id="album-rarity"><option value="all">全部稀有度</option>${rarities.map(r=>`<option value="${E(r)}">${E(r)}级</option>`).join('')}</select></label><label><span class="sr-only">排列方式</span><select id="album-order"><option value="number">按卡片编号</option><option value="quantity">按获得数量</option></select></label></div><div class="card-grid" id="album-grid"></div><p class="collection-total" aria-live="polite">共 ${data.total} 张</p></section></div>`;
     $('album-ownership').value=ownership;$('album-rarity').value=rarity;$('album-order').value=order;
     function renderCards(){
       const list=data.cards.map((c,i)=>({c,i})).filter(({c})=>(ownership==='all'||(ownership==='owned'?!!c.quantity:!c.quantity))&&(rarity==='all'||c.quantity&&c.rarity===rarity));
@@ -502,17 +502,17 @@ function render(){
   cleanupRecorder();
   const [raw,key,id,mode]=location.hash.slice(1).split('/');
   document.body.classList.toggle('focus-practice',!!state.user&&raw==='review'&&mode==='practice');
-  if(!state.user||raw==='profiles'||raw==='profile'){profilePage(raw==='profile');return;}
+  if((!state.user&&raw!=='about')||raw==='profiles'||raw==='profile'){profilePage(raw==='profile');return;}
   $('menu').hidden=false;
-  $('profile-link').hidden=false;
-  $('profile-link').textContent=state.user.avatar+' '+state.user.alias;
+  $('profile-link').hidden=!state.user;
+  if(state.user)$('profile-link').textContent=state.user.avatar+' '+state.user.alias;
   const page=raw==='home'?'tower':raw==='lesson'?'review':raw||'tower';
   const nav=page==='wordbook'?'words':page;
   for(const a of $('menu').querySelectorAll('a')){
     if(a.hash==='#'+nav)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   }
   const tower=cityTower;
-  const pages={tower,review,collection,words:wordCanvas,wordbook,equipment:equipmentPage,backup};
+  const pages={tower,review,collection,words:wordCanvas,wordbook,equipment:equipmentPage,redeem:redemptionPage,about:aboutPage,backup};
   (Object.hasOwn(pages,page)?pages[page]:tower)(key,id,mode);
   if(page==='tower')renderRentWidget();
 }
