@@ -111,6 +111,17 @@ function cityAtmosphere(height){
   if(height>=15)return ['air','高空航路','🎈','✈'];
   return ['street','城市天际线','',''];
 }
+function cityTraffic(scene){
+  const icons={
+    bird:'<path d="m15 39 21-8 12 3 11-8 15 5-12 7-12 9-16-3Z" fill="#33555b"/><path class="city-bird-wing" d="m43 36-8-23 24 17Z" fill="#466e78"/><path d="m70 31 10 4-10 3Z" fill="#eebf57"/>',
+    balloon:'<path d="M25 15Q48-6 71 15Q88 35 64 63H32Q8 35 25 15Z" fill="#eebd50" stroke="#825f40" stroke-width="2"/><path d="M39 8Q25 32 43 63H53Q70 32 57 8" fill="#d77850"/><path d="m34 63 5 15m23-15-5 15" stroke="#746247" stroke-width="2"/><path d="M37 76h22v15H37Z" fill="#916440"/><path d="M39 79h18v4H39Z" fill="#c59761"/>',
+    plane:'<path d="m7 46 10-5 21 1 15-26h10l-5 27 22 2 8 6-9 5-22-1 5 26H52L37 54l-20-2-9 8H3l4-14Z" fill="#f5f0d8" stroke="#315763" stroke-width="2"/><path d="m39 42 18 1-5 10-15 1Z" fill="#5c9ab2"/><path d="m72 45 9 1 5 4-12 1Z" fill="#5a9dba"/><path d="M11 43h7v10h-7Z" fill="#c88449"/>',
+    rocket:'<path d="m10 59-8 10 24-1-4-11Z" fill="#efb74a"/><path d="m18 58-6 8 13-3Z" fill="#f8ed9b"/><path d="m24 48 17-23 13 19-20 19-10-15Z" fill="#dc7250"/><path d="m20 51 31-31Q72 4 88 8Q93 23 75 42L44 73Z" fill="#eee9d5" stroke="#476a73" stroke-width="2"/><path d="m68 12 16-4 4 16Z" fill="#d86c48"/><circle cx="62" cy="34" r="9" fill="#5ca5bb" stroke="#416675" stroke-width="3"/><path d="m34 62 20-16 14 13-25 8Z" fill="#c76849"/>',
+    ufo:'<path d="M29 41q2-28 19-28t20 28" fill="#8acacb" stroke="#3b6c72" stroke-width="2"/><path d="M29 38h39v9H29Z" fill="#c4e3d7"/><ellipse cx="48" cy="48" rx="42" ry="12" fill="#98a9af" stroke="#4b6676" stroke-width="3"/><path d="M9 49q39 18 78 0q-7 22-39 22T9 49Z" fill="#627e90"/><circle cx="25" cy="50" r="4" fill="#f5d66a"/><circle cx="48" cy="54" r="4" fill="#f5d66a"/><circle cx="71" cy="50" r="4" fill="#f5d66a"/>'
+  };
+  const sets={street:[['bird',48,24,22,-5,22],['bird',40,58,29,-17,66]],air:[['balloon',72,25,34,-11,26],['plane',106,56,20,-13,66]],space:[['rocket',102,62,18,-6,24],['ufo',106,23,26,-18,67]]};
+  return (sets[scene]||sets.street).map(([kind,size,y,duration,delay,x],i)=>`<div class="city-flyer city-flyer-${kind} ${i?'city-flyer-return':''}" data-kind="${kind}" style="--flyer-size:${size}px;--flight-y:${y}%;--flight-duration:${duration}s;--flight-delay:${delay}s;--still-x:${x}%"><svg viewBox="0 0 96 96" aria-hidden="true">${icons[kind]}</svg></div>`).join('');
+}
 function updateCity(profileKey,mutate){
   if(progressKey()!==profileKey)return false;
   const progress=readProgress();
@@ -128,7 +139,7 @@ function cityRoof(){
 function cityBuilding(style,count){
   return `<div class="city-building theme-${style}" data-storeys="${count}" aria-label="${CITY_STYLES[style].name}，已建${count}层">${count===CITY_STYLES[style].floors?cityRoof():''}${cityStorey().repeat(Math.max(0,count-1))}${count>0?cityStorey(true):''}<div class="city-foundation" aria-hidden="true"></div></div>`;
 }
-function cityCameraLayout(count,capacity,stageHeight,mode='full'){
+function cityCameraLayout(count,capacity,stageHeight,mode='full',stageWidth=640){
   const completed=count===capacity;
   const towerHeight=count*CITY_TILE_SIZE+CITY_FOUNDATION_HEIGHT+(completed?30:0);
   // Keep square floors intact. Move/scale the camera, never truncate the tower.
@@ -137,7 +148,11 @@ function cityCameraLayout(count,capacity,stageHeight,mode='full'){
   const scale=mode==='near'?1:Math.min(1,available/worldHeight);
   const bottom=mode==='near'&&worldHeight>available?stageHeight-CITY_CAMERA_TOP-worldHeight:CITY_CAMERA_BOTTOM;
   const residentBottom=Math.max(60,Math.min(stageHeight-160,bottom+(count*CITY_TILE_SIZE+CITY_FOUNDATION_HEIGHT)*scale));
-  return {worldHeight,scale,bottom,residentBottom};
+  const worldWidth=Math.max(1,stageWidth)/scale;
+  const screenTop=stageHeight-bottom-worldHeight*scale;
+  const trafficTop=(80-screenTop)/scale;
+  const trafficHeight=Math.max(120,stageHeight-180)/scale;
+  return {worldHeight,worldWidth,scale,bottom,residentBottom,trafficTop,trafficHeight};
 }
 function cityTower(){
   const user=state.user;
@@ -163,6 +178,7 @@ function cityTower(){
     </header>
     <div class="city-layout">
       <section class="city-stage" id="city-stage" aria-label="摩天楼施工场景">
+        <div class="city-world" id="city-world">
         <div class="city-celestial" aria-hidden="true"></div><div class="city-stars" aria-hidden="true"></div>
         <div class="city-skyline" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
         <div class="city-aircraft" id="city-aircraft" aria-hidden="true"></div>
@@ -173,9 +189,10 @@ function cityTower(){
           <div class="city-site-hoarding"><i></i></div>
           <div class="city-site-cone city-site-cone-left"></div><div class="city-site-cone city-site-cone-right"></div>
         </div>
+        <div id="city-construction" class="city-construction"></div>
+        </div>
         <div class="city-scene-top"><span id="city-building-name"></span><span id="city-altitude"></span></div>
         <div class="city-view-controls" role="group" aria-label="建筑视角"><button type="button" id="city-view-full" aria-pressed="true">全楼</button><button type="button" id="city-view-near" aria-pressed="false">近景</button><span id="city-view-description" class="sr-only"></span></div>
-        <div id="city-construction" class="city-construction"></div>
         <div id="city-residents" class="city-residents" aria-hidden="true"></div>
         <p id="city-status" class="city-status" role="status">新课次首次达到 90 分，吊车就会放下一层。</p>
       </section>
@@ -194,16 +211,21 @@ function cityTower(){
         </section>
       </aside>
     </div>`;
-  const stage=$('city-stage'),construction=$('city-construction');
+  const stage=$('city-stage'),world=$('city-world'),construction=$('city-construction');
   const stillHere=()=>stage.isConnected&&progressKey()===profileKey;
   let bubbleTimer, bubbleShown=false, cameraObserver;
   function updateCamera(){
     if(!stillHere())return;
     const count=cityCountAt(city,visible,index);
-    const layout=cityCameraLayout(count,cityCapacity(city,index),stage.clientHeight||640,cameraMode);
-    construction.style.setProperty('--city-world-height',layout.worldHeight+'px');
-    construction.style.setProperty('--city-camera-scale',layout.scale);
-    construction.style.setProperty('--city-camera-bottom',layout.bottom+'px');
+    const layout=cityCameraLayout(count,cityCapacity(city,index),stage.clientHeight||640,cameraMode,stage.clientWidth||640);
+    world.style.setProperty('--city-world-height',layout.worldHeight+'px');
+    world.style.setProperty('--city-world-width',layout.worldWidth+'px');
+    world.style.setProperty('--city-camera-scale',layout.scale);
+    world.style.setProperty('--city-camera-bottom',layout.bottom+'px');
+    world.style.setProperty('--city-traffic-top',layout.trafficTop+'px');
+    world.style.setProperty('--city-traffic-height',layout.trafficHeight+'px');
+    const skyline=world.querySelector('.city-skyline'),number=Math.ceil(layout.worldWidth/110)+2;
+    if(skyline.children.length!==number)skyline.innerHTML=Array.from({length:number},(_,i)=>`<i style="--city-background-height:${[420,240,330,480,380,520,340][i%7]}px"></i>`).join('');
     stage.style.setProperty('--city-resident-bottom',layout.residentBottom+'px');
     stage.dataset.view=cameraMode;
     $('city-view-full').setAttribute('aria-pressed',String(cameraMode==='full'));
@@ -251,10 +273,10 @@ function cityTower(){
     const count=cityCountAt(city,visible,index);
     const name=CITY_STYLES[style].name;
     $('city-building-name').textContent=`第 ${index+1} 栋 · ${name}`;
-    const [scene,label,first,second]=cityAtmosphere(count);
+    const [scene,label]=cityAtmosphere(count);
     if(stage.dataset.scene!==scene){
       stage.dataset.scene=scene;
-      $('city-aircraft').innerHTML=`<span>${first}</span><span>${second}</span>`;
+      $('city-aircraft').innerHTML=cityTraffic(scene);
     }
     $('city-altitude').textContent=label;
     $('city-building-floor').textContent=`${count}/${cityCapacity(city,index)}`;
