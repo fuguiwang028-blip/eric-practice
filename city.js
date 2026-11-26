@@ -7,7 +7,8 @@ const CITY_STYLES = {
 const CITY_STYLE_IDS=Object.keys(CITY_STYLES);
 const CITY_TILE_SIZE=84;
 const CITY_FOUNDATION_HEIGHT=26;
-const CITY_VISIBLE_FLOORS=4;
+const CITY_CAMERA_TOP=64;
+const CITY_CAMERA_BOTTOM=37;
 
 let releaseCityScene;
 const CITY_PHRASES_KEY='eric-city-phrases-v1';
@@ -106,8 +107,8 @@ function cityDigits(n){
   return String(n).padStart(5,'0').split('').map(value=>`<b>${value}</b>`).join('');
 }
 function cityAtmosphere(height){
-  if(height>=40)return ['space','近地轨道','🚀','🛸'];
-  if(height>=20)return ['air','高空航路','🎈','✈'];
+  if(height>=35)return ['space','近地轨道','🚀','🛸'];
+  if(height>=15)return ['air','高空航路','🎈','✈'];
   return ['street','城市天际线','',''];
 }
 function updateCity(profileKey,mutate){
@@ -125,7 +126,18 @@ function cityRoof(){
   return '<div class="city-roof" aria-hidden="true"><i></i></div>';
 }
 function cityBuilding(style,count){
-  return `<div class="city-building theme-${style}">${count===CITY_STYLES[style].floors?cityRoof():''}${cityStorey().repeat(Math.min(Math.max(0,count-1),CITY_VISIBLE_FLOORS))}${count>0&&count<=CITY_VISIBLE_FLOORS?cityStorey(true):''}<div class="city-foundation" aria-hidden="true"></div></div>`;
+  return `<div class="city-building theme-${style}" data-storeys="${count}" aria-label="${CITY_STYLES[style].name}，已建${count}层">${count===CITY_STYLES[style].floors?cityRoof():''}${cityStorey().repeat(Math.max(0,count-1))}${count>0?cityStorey(true):''}<div class="city-foundation" aria-hidden="true"></div></div>`;
+}
+function cityCameraLayout(count,capacity,stageHeight,mode='full'){
+  const completed=count===capacity;
+  const towerHeight=count*CITY_TILE_SIZE+CITY_FOUNDATION_HEIGHT+(completed?30:0);
+  // Keep square floors intact. Move/scale the camera, never truncate the tower.
+  const worldHeight=towerHeight+(completed?70:270);
+  const available=Math.max(1,stageHeight-CITY_CAMERA_TOP-CITY_CAMERA_BOTTOM);
+  const scale=mode==='near'?1:Math.min(1,available/worldHeight);
+  const bottom=mode==='near'&&worldHeight>available?stageHeight-CITY_CAMERA_TOP-worldHeight:CITY_CAMERA_BOTTOM;
+  const residentBottom=Math.max(60,Math.min(stageHeight-160,bottom+(count*CITY_TILE_SIZE+CITY_FOUNDATION_HEIGHT)*scale));
+  return {worldHeight,scale,bottom,residentBottom};
 }
 function cityTower(){
   const user=state.user;
@@ -137,6 +149,7 @@ function cityTower(){
   let index=cityActive(city,visible);
   let population=cityPopulation(city,visible);
   let buildingInProgress=false;
+  let cameraMode='full';
   let selectedLot=null;
   let mapPage=Math.floor((cityLotAssignments(city,index+1).get(index)||0)/25);
   const view=$('view');
@@ -161,6 +174,7 @@ function cityTower(){
           <div class="city-site-cone city-site-cone-left"></div><div class="city-site-cone city-site-cone-right"></div>
         </div>
         <div class="city-scene-top"><span id="city-building-name"></span><span id="city-altitude"></span></div>
+        <div class="city-view-controls" role="group" aria-label="建筑视角"><button type="button" id="city-view-full" aria-pressed="true">全楼</button><button type="button" id="city-view-near" aria-pressed="false">近景</button><span id="city-view-description" class="sr-only"></span></div>
         <div id="city-construction" class="city-construction"></div>
         <div id="city-residents" class="city-residents" aria-hidden="true"></div>
         <p id="city-status" class="city-status" role="status">新课次首次达到 90 分，吊车就会放下一层。</p>
@@ -182,7 +196,23 @@ function cityTower(){
     </div>`;
   const stage=$('city-stage'),construction=$('city-construction');
   const stillHere=()=>stage.isConnected&&progressKey()===profileKey;
-  let bubbleTimer, bubbleShown=false;
+  let bubbleTimer, bubbleShown=false, cameraObserver;
+  function updateCamera(){
+    if(!stillHere())return;
+    const count=cityCountAt(city,visible,index);
+    const layout=cityCameraLayout(count,cityCapacity(city,index),stage.clientHeight||640,cameraMode);
+    construction.style.setProperty('--city-world-height',layout.worldHeight+'px');
+    construction.style.setProperty('--city-camera-scale',layout.scale);
+    construction.style.setProperty('--city-camera-bottom',layout.bottom+'px');
+    stage.style.setProperty('--city-resident-bottom',layout.residentBottom+'px');
+    stage.dataset.view=cameraMode;
+    $('city-view-full').setAttribute('aria-pressed',String(cameraMode==='full'));
+    $('city-view-near').setAttribute('aria-pressed',String(cameraMode==='near'));
+    $('city-view-description').textContent=cameraMode==='full'?`全楼视角，完整显示已建${count}层`:'近景视角，查看楼顶；切换全楼可查看所有楼层';
+  }
+  for(const mode of ['full','near'])$('city-view-'+mode).onclick=()=>{cameraMode=mode;stage.querySelectorAll('.city-speech-bubble').forEach(b=>b.remove());updateCamera();};
+  if(typeof ResizeObserver!=='undefined'){cameraObserver=new ResizeObserver(updateCamera);cameraObserver.observe(stage);}
+  else window.addEventListener('resize',updateCamera);
   function updateTime(){
     if(!stillHere())return;
     const {phase,greeting}=cityTime();
@@ -191,11 +221,12 @@ function cityTower(){
   }
   updateTime();
   const clockTimer=setInterval(updateTime,60000);
-  releaseCityScene=()=>{clearInterval(clockTimer);clearTimeout(bubbleTimer);};
+  releaseCityScene=()=>{clearInterval(clockTimer);clearTimeout(bubbleTimer);cameraObserver?.disconnect();if(typeof window!=='undefined')window.removeEventListener('resize',updateCamera);};
   if(location.protocol==='file:')$('city-edit-phrases').onclick=editCityPhrases;
   function showResidentBubble(){
     if(bubbleShown||!stillHere())return;
-    const floors=[...construction.querySelectorAll('.city-building > .city-storey')];
+    const viewport=stage.getBoundingClientRect();
+    const floors=[...construction.querySelectorAll('.city-building > .city-storey')].filter(f=>{const r=f.getBoundingClientRect();return r.bottom>viewport.top+70&&r.top<viewport.bottom-50;});
     const phrase=randomCityPhrase();
     if(!floors.length||!phrase)return;
     bubbleShown=true;
@@ -220,16 +251,17 @@ function cityTower(){
     const count=cityCountAt(city,visible,index);
     const name=CITY_STYLES[style].name;
     $('city-building-name').textContent=`第 ${index+1} 栋 · ${name}`;
-    const [scene,label,first,second]=cityAtmosphere(Math.max(count,visible));
+    const [scene,label,first,second]=cityAtmosphere(count);
     if(stage.dataset.scene!==scene){
       stage.dataset.scene=scene;
       $('city-aircraft').innerHTML=`<span>${first}</span><span>${second}</span>`;
     }
     $('city-altitude').textContent=label;
     $('city-building-floor').textContent=`${count}/${cityCapacity(city,index)}`;
-    stage.style.setProperty('--built',Math.min(count,CITY_VISIBLE_FLOORS));
+    stage.style.setProperty('--built',count);
     construction.innerHTML=cityBuilding(style,count)+
       (count<cityCapacity(city,index)?`<div class="city-crane theme-${style}" id="city-crane" aria-hidden="true"><div class="city-cable"></div><div class="city-hook"></div>${cityStorey(count===0)}</div>`:'');
+    updateCamera();
   }
   function setStats(){
     $('city-floor-count').textContent=visible;
@@ -317,7 +349,7 @@ function cityTower(){
       $('city-status').textContent='打卡完成！吊车正在安装新楼层。';
       const crane=$('city-crane');
       if(motion()&&crane?.animate){
-        const offset=construction.offsetHeight-Math.min(cityCountAt(city,visible,index),CITY_VISIBLE_FLOORS)*CITY_TILE_SIZE-CITY_FOUNDATION_HEIGHT-CITY_TILE_SIZE-105;
+        const offset=construction.offsetHeight-cityCountAt(city,visible,index)*CITY_TILE_SIZE-CITY_FOUNDATION_HEIGHT-CITY_TILE_SIZE-105;
         const animation=crane.animate([{transform:'translate(-50%, 0)'},{transform:`translate(-50%, ${Math.max(45,offset)}px)`}],{duration:720,easing:'cubic-bezier(.6,.05,.65,1)',fill:'forwards'});
         await animation.finished.catch(()=>{});
       }
