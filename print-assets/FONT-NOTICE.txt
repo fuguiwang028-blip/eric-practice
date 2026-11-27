@@ -1,0 +1,4 @@
+Eric Print Sans is a modified worksheet font assembled from Noto Sans SC (regular 400 instance) and IPA/accent glyphs from Noto Sans (regular 400, width 100).
+Source fonts: https://github.com/google/fonts/tree/main/ofl/notosanssc and https://github.com/google/fonts/tree/main/ofl/notosans
+Both source font licenses are included as OFL.txt and NotoSans-OFL.txt.
+The merged font is renamed Eric Print Sans; language-specific shaping tables are omitted for the worksheet use case.

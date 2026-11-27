@@ -17,6 +17,7 @@ function validateProgress(state) {
   for (const [word,result] of Object.entries(state.words)) {
     if (!/^[a-z][a-z' -]{0,60}$/i.test(word) || !record(result) || !safeCount(result.stage) || result.stage>5 || !datePattern.test(result.due) || (result.reviewed!==null && !datePattern.test(result.reviewed))) throw Error('单词记录格式有误。');
   }
+  for(const entry of Object.values(state.words))if(entry.mastered!==undefined&&typeof entry.mastered!=='boolean')throw Error('单词掌握状态格式有误。');
   if(state.customWords!==undefined&&(!record(state.customWords)||Object.entries(state.customWords).some(([w,m])=>!/^[a-z][a-z' -]{0,60}$/i.test(w)||typeof m!=='string'||!m.trim()||m.length>300)))throw Error('自定义单词格式有误。');
   for (const [id,count] of Object.entries(state.cards)) {
     if (!CARDS.some(c=>c.id===id) || !safeCount(count)) throw Error('卡片记录格式有误。');
@@ -90,8 +91,19 @@ function progressKey(){const profile=currentProfile();return profile?KEY+':'+pro
 function readProgress() {
   try {
     const stored=JSON.parse(localStorage.getItem(progressKey()));
-    return stored ? restoreMissedScores({...empty(),...validateProgress(stored)}) : empty();
+    return stored ? migrateRetiredWords(restoreMissedScores({...empty(),...validateProgress(stored)})) : empty();
   } catch {return empty();}
+}
+function migrateRetiredWords(progress){
+  const retired=typeof WORD_RETIRED_DATA==='object'?WORD_RETIRED_DATA:{};
+  let changed=false;
+  for(const word of Object.keys(progress.words)){
+    if(retired[word]&&!Object.hasOwn(WORD_DATA[0],word)&&!Object.hasOwn(progress.customWords||{},word)){
+      progress.customWords={...progress.customWords,[word]:retired[word].meaning};changed=true;
+    }
+  }
+  if(changed)saveProgress(progress);
+  return progress;
 }
 function saveProgress(next) {
   try {localStorage.setItem(progressKey(),JSON.stringify(next));return true;}
@@ -125,7 +137,7 @@ function localModule(progress,course,day) {
 function localBook(progress,day){
   const words=Object.entries(progress.words).map(([word,info])=>({word,...info}));
   return {words,day,intervals,due:words.filter(w=>w.due<=day).length,
-    added:words.filter(w=>w.added===day&&w.source!=='import').length,imported:words.filter(w=>w.added===day&&w.source==='import').length,reviewed:words.filter(w=>w.reviewed===day).length,
+    added:words.filter(w=>w.added===day&&w.source!=='import'&&Object.hasOwn(WORD_DATA[0],w.word)).length,imported:words.filter(w=>w.added===day&&w.source==='import').length,reviewed:words.filter(w=>w.reviewed===day).length,
     climbed:!!progress.climbs[taskKey(day,'words')]};
 }
 function cardCatalog(progress) {
@@ -295,29 +307,11 @@ async function localAPI(path,body) {
       for(const {word,meaning}of entries){progress.customWords[word]=meaning;if(!has(progress.words,word)){progress.words[word]={stage:0,due:day,reviewed:null,added:day,source:'import'};added++;}}
       persist(progress);return {added,existing:entries.length-added};
     }
+    case 'word-mastery':return a4SetSelfKnown(progress,day,body.word,body.mastered===true);
+    case 'a4':return a4Action(progress,day,body||{});
     case 'words-review':{
       const {word,stage,known}=body;
-      const entry=progress.words[word];
-      if(!has(progress.words,word)||entry.stage!==stage||entry.due>day) throw conflict('该词的复习进度已变化。');
-      let newFloor=false;
-      if(known){
-        const due=new Date(day+'T00:00:00Z');
-        due.setUTCDate(due.getUTCDate()+intervals[entry.stage]);
-        entry.due=due.toISOString().slice(0,10);
-        entry.stage=Math.min(entry.stage+1,intervals.length-1);
-        entry.reviewed=day;
-        if(localBook(progress,day).reviewed>=5){
-          const key=taskKey(day,'words');
-          grantAward(progress,day,'words');
-          if(!progress.climbs[key]){
-            progress.city=citySettings(progress);
-            progress.climbs[key]=true;
-            newFloor=true;
-          }
-        }
-      }
-      persist(progress);
-      return {due:entry.due,newFloor};
+      const result=applyA4WordReview(progress,day,word,stage,known);persist(progress);return result;
     }
     case 'collection':return localCollection(progress);
     case 'draw':{
@@ -337,4 +331,28 @@ async function localAPI(path,body) {
     }
     default:throw Error('此功能需要完整版。');
   }
+}
+
+function applyA4WordReview(progress,day,word,stage,known){
+      const entry=progress.words[word];
+      if(!has(progress.words,word)||entry.stage!==stage||entry.due>day) throw conflict('该词的复习进度已变化。');
+      let newFloor=false;
+      if(known){
+        const due=new Date(day+'T00:00:00Z');
+        due.setUTCDate(due.getUTCDate()+(entry.mastered?14:intervals[entry.stage]));
+        entry.due=due.toISOString().slice(0,10);
+        entry.stage=Math.min(entry.stage+1,intervals.length-1);
+        entry.reviewed=day;
+        if(localBook(progress,day).reviewed>=5){
+          const key=taskKey(day,'words');
+          grantAward(progress,day,'words');
+          if(!progress.climbs[key]){
+            progress.city=citySettings(progress);
+            progress.climbs[key]=true;
+            newFloor=true;
+          }
+        }
+      }
+      if(!known){entry.mastered=false;entry.stage=0;entry.due=day;delete entry.masterySource;delete entry.masteredOn;}
+      return {due:entry.due,newFloor};
 }

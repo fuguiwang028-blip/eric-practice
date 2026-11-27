@@ -1,4 +1,9 @@
 const lexicalDetails=async()=>WORD_DATA[1];
+function wordExampleMarkup(word){
+  const detail=WORD_DATA[1][word];
+  if(!detail?.example)return '';
+  return '<p class="word-example-en" lang="en">'+E(detail.example)+'</p>'+(detail.exampleZh?'<p class="word-example-zh">'+E(detail.exampleZh)+'</p>':'');
+}
 const lexicon=async()=>({...WORD_DATA[0],...readProgress().customWords});
 
 let wordRecording;
@@ -9,7 +14,7 @@ function stopWordRecording(){
 function pronounce(word){
   stopWordRecording();
   if(!recordedWords.has(word))return;
-  const audio=new Audio('./word-audio/'+encodeURIComponent(word)+'.ogg');
+  const audio=new Audio(wordAudioSource(word));
   wordRecording=audio;
   audio.play().catch(()=>{
     if(wordRecording===audio)notice('录音暂时无法播放，请再试一次。');
@@ -69,15 +74,15 @@ async function wordCanvas(){
       $('close-word-zone').onclick=()=>{deck.hidden=true;activeZone=null;plane.querySelectorAll('.zone-active').forEach(el=>el.classList.remove('zone-active'));};deck.querySelectorAll('[data-zone-word]').forEach(b=>b.onclick=()=>pick(b.dataset.zoneWord));
     }
     function update(data){
-      current=data;records=new Map(data.words.map(r=>[r.word,r]));const counts={new:0,due:0,mastered:0};
+      current=data;records=new Map(data.words.map(r=>[r.word,r]));const coreCount=data.words.filter(r=>Object.hasOwn(words,r.word)).length;const counts={new:0,due:0,mastered:0};
       for(const [w,b]of buttons){const st=status(w);counts[st]++;b.className='word-brick '+st+(matches(w)?'':' filtered')+(w===activeWord?' selected':'');}
-      $('word-total').textContent=`${data.words.length} / ${entries.length}`;$('blueprint-count').textContent=entries.length;
-      $('word-progress').style.width=(data.words.length/entries.length*100)+'%';$('word-added').textContent=`${data.added} / 5`;$('word-reviewed').textContent=`${Math.min(data.reviewed,5)} / 5`;
+      $('word-total').textContent=`${coreCount} / ${entries.length}`;$('blueprint-count').textContent=entries.length;
+      $('word-progress').style.width=(coreCount/entries.length*100)+'%';$('word-added').textContent=`${data.added} / 5`;$('word-reviewed').textContent=`${Math.min(data.reviewed,5)} / 5`;
       $('word-date').textContent=data.day+' · 词汇建设中';
       $('word-legend').innerHTML=['mastered','due','new'].map(st=>`<span><i class="${st}"></i>${labels[st]}（${counts[st]}）</span>`).join('');
       for(const st of Object.keys(counts))$('yard-'+st).textContent=counts[st]+' 块';
-      const remaining=Math.max(0,5-data.added);$('random-words').disabled=!remaining||data.words.length>=entries.length;
-      $('random-words').textContent=remaining?`▶ 按词频学习 ${Math.min(remaining,entries.length-data.words.length)} 词`:'今日点亮已完成';
+      const remaining=Math.max(0,5-data.added);$('random-words').disabled=!remaining||coreCount>=entries.length;
+      $('random-words').textContent=remaining?`▶ 按词频学习 ${Math.min(remaining,entries.length-coreCount)} 词`:'今日点亮已完成';
       $('word-status').textContent=`实际词库 ${entries.length} 词 · 每区 50 词 · 点击结构区展开单词，或搜索定位。`;
       if(activeZone!==null)openZone(activeZone);if(activeWord)renderDetail(activeWord);
     }
@@ -89,7 +94,7 @@ async function wordCanvas(){
     function renderDetail(word){
       const detail=meta[word]||{},r=records.get(word),st=status(word),z=positions.get(word);
       $('word-inspector').innerHTML=`<h2><img class="word-heading-icon" src="./word-assets/crane-icon.svg" alt="">词块检测 <span class="word-state ${st}">${labels[st]}</span></h2><div class="inspector-word"><h3>${E(word)}</h3>${recordedWords.has(word)?`<button class="plain" id="play-word" aria-label="播放 ${E(word)} 的真人发音"><img class="word-speaker-icon" src="./word-assets/speaker-icon.svg" alt=""></button>`:''}</div><p class="inspector-ipa">${E(detail.ipa||'')}</p><p class="inspector-meaning">${detail.pos?`<span>${E(detail.pos)}</span> `:''}${E(words[word])}</p>${recordedWords.has(word)?'':'<p class="muted">真人录音待补</p>'}
-        <section class="word-example" aria-label="例句，待导入"><h4>例句</h4><div class="word-example-empty"></div></section>
+        <section class="word-example" aria-label="例句"><h4>例句</h4>${wordExampleMarkup(word)||'<div class="word-example-empty"></div>'}</section>
         <section class="word-construction-info"><h3><img class="word-heading-icon" src="./word-assets/construction-icon.svg" alt="">施工信息</h3><dl><div><dt>所属结构区</dt><dd>${String(z+1).padStart(2,'0')}（${z*50+1}–${Math.min((z+1)*50,entries.length)}）</dd></div><div><dt>施工状态</dt><dd><i class="status-square ${st}"></i>${labels[st]}</dd></div><div><dt>点亮日期</dt><dd>${r?E(r.added):'—'}</dd></div><div><dt>上次复习</dt><dd>${r?.reviewed?E(r.reviewed):'—'}</dd></div><div><dt>下次复习</dt><dd>${r?(r.due<=current.day?'今天待复习':E(r.due)):'点亮后安排'}</dd></div></dl></section>
         ${r?'<a class="primary inspector-action" href="#wordbook">✎ 去生词本复习</a>':'<button class="primary inspector-action" id="light-word">点亮 · 加入生词本</button>'}<p id="word-dialog-status" role="status"></p>`;
       if($('play-word'))$('play-word').onclick=()=>pronounce(word);

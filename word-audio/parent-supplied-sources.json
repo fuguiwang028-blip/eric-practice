@@ -1,0 +1,137 @@
+{
+  "note": "2026-11-27 用户提供的 Commons 自定义单词包；保留原音频格式。文件名映射用于来源追溯，未据此推定单项许可。",
+  "files": [
+    {
+      "word": "lead",
+      "originalFile": "lead__us_1.mp3"
+    },
+    {
+      "word": "should",
+      "originalFile": "should__us_3_rr.mp3"
+    },
+    {
+      "word": "look",
+      "originalFile": "look__us_1.mp3"
+    },
+    {
+      "word": "good",
+      "originalFile": "En-us-good.ogg"
+    },
+    {
+      "word": "knock",
+      "originalFile": "En-us-knock.ogg"
+    },
+    {
+      "word": "give",
+      "originalFile": "En-us-give.ogg"
+    },
+    {
+      "word": "world",
+      "originalFile": "world__us_1.mp3"
+    },
+    {
+      "word": "orange",
+      "originalFile": "orange__us_1_rr.mp3"
+    },
+    {
+      "word": "cheap",
+      "originalFile": "cheap__us_1.mp3"
+    },
+    {
+      "word": "hit",
+      "originalFile": "En-us-hit.ogg"
+    },
+    {
+      "word": "wood",
+      "originalFile": "wood__us_1.mp3"
+    },
+    {
+      "word": "gas",
+      "originalFile": "En-us-gas.ogg"
+    },
+    {
+      "word": "basic",
+      "originalFile": "basic__us_3.mp3"
+    },
+    {
+      "word": "mrs",
+      "originalFile": "mrs.ogg"
+    },
+    {
+      "word": "tire",
+      "originalFile": "tire__us_1.mp3"
+    },
+    {
+      "word": "evening",
+      "originalFile": "evening__us_1.mp3"
+    },
+    {
+      "word": "pack",
+      "originalFile": "pack__us_1.mp3"
+    },
+    {
+      "word": "admit",
+      "originalFile": "En-us-admit.ogg"
+    },
+    {
+      "word": "advertise",
+      "originalFile": "En-us-advertize.ogg"
+    },
+    {
+      "word": "school",
+      "originalFile": "school__us_1.mp3"
+    },
+    {
+      "word": "wrong",
+      "originalFile": "En-us-wrong.ogg"
+    },
+    {
+      "word": "an",
+      "originalFile": "En-us-an.ogg.mp3"
+    },
+    {
+      "word": "football",
+      "originalFile": "football__us_4.mp3"
+    },
+    {
+      "word": "bother",
+      "originalFile": "bother__us_1.mp3"
+    },
+    {
+      "word": "free",
+      "originalFile": "En-us-free.ogg"
+    },
+    {
+      "word": "fish",
+      "originalFile": "En-us-fish.ogg"
+    },
+    {
+      "word": "involve",
+      "originalFile": "involve__us_1.mp3"
+    },
+    {
+      "word": "food",
+      "originalFile": "food__us_1.mp3"
+    },
+    {
+      "word": "long",
+      "originalFile": "En-us-long.ogg"
+    },
+    {
+      "word": "this",
+      "originalFile": "En-us-this.ogg"
+    },
+    {
+      "word": "film",
+      "originalFile": "film__us_1.mp3"
+    },
+    {
+      "word": "thing",
+      "originalFile": "En-us-thing.ogg"
+    },
+    {
+      "word": "cool",
+      "originalFile": "cool__us_1.mp3"
+    }
+  ]
+}

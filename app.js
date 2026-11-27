@@ -100,8 +100,9 @@ async function review(key,id,mode){
       host.innerHTML=`<section class="panel"><p>请先打开本课复习，再开始练习。</p><a class="primary" href="${href}/review">打开复习</a></section>`;
       return;
     }
-    host.innerHTML=`<section class="panel">${material(module,module.task)}<div class="action-row"><a class="secondary" href="${path}">返回课次</a><span id="review-unlock"></span></div></section>`;
+    host.innerHTML=`<section class="panel">${material(module,module.task)}<div class="action-row"><a class="secondary" href="${path}">返回课次</a><span id="review-unlock"></span><button class="secondary" id="export-course-pdf">${course.category==='grammar'?'导出本主题 PDF':'导出本 Unit PDF'}</button></div></section>`;
     wireReviewSlides(host,module.task);
+    $('export-course-pdf').onclick=()=>CoursePDF.forCourse(course);
     try{
       await api('open-review',{module:course.id});
       if(host.isConnected)$('review-unlock').innerHTML=`<a class="primary" href="${href}/practice">${module.completed?'查看练习结果':module.results.length?'继续练习':'开始练习'} · ${module.task.questions.length} 题</a>`;
@@ -175,10 +176,12 @@ async function review(key,id,mode){
     const passed=selected?selected.items.filter(c=>coursePassed(progress,c)).length:0;
     host.innerHTML=`<div class="review-browser"><aside class="review-topic-sidebar"><label><span class="sr-only">搜索主题或课次</span><input id="review-topic-search" type="search" placeholder="搜索主题或课次" value="${E(search)}"></label><div class="review-topic-tree">${[...topicGroups].map(([name,ts],i)=>`<details class="review-topic-group" data-topic-group="${E(name)}" ${search||selected?.group===name||memory.open?.[name]?'open':''}><summary>${E(name)} <small>${ts.length} 个主题</small></summary>${ts.map(t=>`<button type="button" class="review-topic-link" data-topic-index="${topics.indexOf(t)}" ${selected===t?'aria-current="true"':''}><span class="topic-window-label">${topicProgressWindow(t.items,progress)}<span>${E(t.name)}</span></span><small>${t.items.length} 课次</small></button>`).join('')}</details>`).join('')||'<p class="muted">没有找到匹配的主题。</p>'}</div><p class="muted topic-memory-hint">${topics.length} 个主题 · 自动记住上次位置</p></aside>
     <section class="panel course-list review-topic-main"><header class="review-topic-heading"><div><p class="eyebrow">${selected&&selected.group!==selected.name?E(selected.group):''}</p><h2>${selected?E(selected.name):'暂无主题'}</h2><p>${selected?selected.items.length:0} 个课次</p></div><div class="course-progress"><span>已达标 ${passed} / ${selected?selected.items.length:0}</span><progress max="${Math.max(1,selected?.items.length||0)}" value="${passed}" aria-label="当前主题达标课次"></progress>${topicChests()}</div></header>
+    ${selected?`<div class="review-export-row"><button class="secondary" id="export-topic-pdf">${category==='grammar'?'导出本主题 PDF':'导出本 Unit PDF'}</button><span class="muted">下载打印，离屏复习</span></div>`:''}
     <div class="review-topic-filters">${[['all','全部'],['unpassed','未达标'],['passed','已达标'],['retry','待巩固']].map(([v,label])=>`<button type="button" class="secondary" data-topic-filter="${v}" aria-pressed="${filter===v}">${label}</button>`).join('')}</div>
     ${selected?(()=>{const resumed=selected.items.find(c=>!coursePassed(progress,c)&&localModule(progress,c,state.day).results.length>0&&localModule(progress,c,state.day).results.length<c.questions.length);return resumed?`<a class="resume-course" href="${path}/${resumed.id}/practice">继续上次练习：${E(resumed.title)}</a>`:'';})():''}
     ${local?`<details class="review-course-management"><summary>课程管理</summary><div class="action-row"><label>导入课件 ZIP / JSON<input id="course-import" type="file" multiple accept=".zip,.json,application/zip,application/json"></label><button id="publish-courses" class="secondary">导出发布课程</button><button id="publish-course-media" class="secondary">导出课件媒体</button>${selected?`<button class="secondary" data-rename-folder="${E(selected.folder)}">修改目录名</button><button class="secondary" id="edit-topic-group">调整主题组</button>`:''}</div></details>`:''}
     <div class="review-topic-courses">${visible.map(courseRow).join('')||'<p class="muted">没有符合条件的课次。</p>'}</div></section></div>`;
+    if($('export-topic-pdf'))$('export-topic-pdf').onclick=()=>CoursePDF.open((selected.folder||selected.group)+' · '+selected.name,selected.items);
     host.querySelectorAll('[data-milestone-key]').forEach(b=>b.onclick=async()=>{b.disabled=true;try{await api('equipment',{action:'milestone',key:b.dataset.milestoneKey,tier:b.dataset.milestoneTier});Object.assign(progress,readProgress());drawBrowser();}catch(e){notice(e.message);b.disabled=false;}});
     $('review-topic-search').oninput=e=>{const pos=e.target.selectionStart;search=e.target.value.trim().toLowerCase();drawBrowser(true);try{$('review-topic-search').setSelectionRange(pos,pos);}catch{}};
     if(focusSearch)$('review-topic-search').focus();
@@ -512,7 +515,7 @@ function render(){
     if(a.hash==='#'+nav)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');
   }
   const tower=cityTower;
-  const pages={tower,review,collection,words:wordCanvas,wordbook,equipment:equipmentPage,redeem:redemptionPage,about:aboutPage,backup};
+  const pages={tower,review,collection,words:wordCanvas,wordbook,equipment:equipmentPage,redeem:redemptionPage,about:aboutPage,resources:resourcesPage,backup};
   (Object.hasOwn(pages,page)?pages[page]:tower)(key,id,mode);
   if(page==='tower')renderRentWidget();
 }
